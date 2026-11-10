@@ -1,0 +1,5 @@
+$ ['make', 'clean']
+(rc=0, 0.03s)
+rm -rf bin
+rm -rf frontend/dist frontend/bindings
+rm -f frontend/e2e/results.json frontend/e2e/oracle.json

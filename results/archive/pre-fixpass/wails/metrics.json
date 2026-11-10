@@ -1,0 +1,414 @@
+{
+  "app": "wails",
+  "bench": {
+    "errors": [],
+    "events_seen": [
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ]
+    ],
+    "memory": {
+      "peak_process_tree_mb": {
+        "max": 214.8,
+        "median": 214.1
+      },
+      "peak_total_mb": {
+        "max": 929.7,
+        "median": 901.0
+      },
+      "peak_webkit_mb": {
+        "max": 715.6,
+        "median": 686.2
+      }
+    },
+    "runs": 5,
+    "summary": {
+      "cards_scroll": {
+        "max_gap_ms": {
+          "max": 9,
+          "median": 6,
+          "min": 6,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 6,
+          "median": 6,
+          "min": 5,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "switch_ms": {
+          "max": 196,
+          "median": 193,
+          "min": 192,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 4002,
+          "median": 4000,
+          "min": 3998,
+          "n": 5
+        }
+      },
+      "export": {
+        "max_gap_ms": {
+          "max": 6,
+          "median": 6,
+          "min": 5,
+          "n": 5
+        },
+        "ms": {
+          "max": 529,
+          "median": 513,
+          "min": 512,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 6,
+          "median": 5,
+          "min": 5,
+          "n": 5
+        },
+        "rows": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "jump": {
+        "ms": {
+          "max": 91,
+          "median": 87,
+          "min": 85,
+          "n": 5
+        }
+      },
+      "ready": {
+        "ms": {
+          "max": 653,
+          "median": 622,
+          "min": 605,
+          "n": 5
+        }
+      },
+      "scroll": {
+        "max_gap_ms": {
+          "max": 31,
+          "median": 24,
+          "min": 19,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 13,
+          "median": 12,
+          "min": 12,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 24,
+          "median": 24,
+          "min": 23,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 4257,
+          "median": 4247,
+          "min": 4213,
+          "n": 5
+        }
+      },
+      "search": {
+        "ms": {
+          "max": 105,
+          "median": 100,
+          "min": 100,
+          "n": 5
+        },
+        "total": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "sort": {
+        "ms": {
+          "max": 288,
+          "median": 285,
+          "min": 280,
+          "n": 5
+        }
+      }
+    }
+  },
+  "cgoprobe": {
+    "rc": 0,
+    "results": [
+      {
+        "reason": "builds and the export code runs with the C checksum",
+        "result": "PASS",
+        "target": "desktop"
+      },
+      {
+        "reason": "builds and serves",
+        "result": "PASS",
+        "target": "web"
+      }
+    ],
+    "secs": 7.96
+  },
+  "cold_build": {
+    "rc": 0,
+    "secs": 40.55
+  },
+  "cross": {
+    "cross-linux": {
+      "rc": 0,
+      "secs": 176.03,
+      "status": "PASS",
+      "tail": "(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:\n  - `__dirname` (vite.config.ts:15:33). Use `import.meta.dirname` instead\nSet `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.\n[plugin builtin:vite-reporter] \n(!) Some chunks are larger than 500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit."
+    },
+    "cross-windows": {
+      "rc": 0,
+      "secs": 6.8,
+      "status": "PASS",
+      "tail": "npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:\nnpm warn install-scripts   fsevents@2.3.3 (install: (install scripts present))\nnpm warn install-scripts\nnpm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.\ntask: Task \"build:frontend (DEV= RUNNER=npm)\" is up to date\ntask: [windows:generate:syso] wails3 generate syso -arch amd64 -icon windows/icon.ico -manifest windows/wails.exe.manifest -info windows/info.json -out ../wails_windows_amd64.syso\ntask: [windows:build:native] go build -tags production -trimpath -buildvcs=false -ldflags=\"-w -s -H windowsgui\" -o \"bin/gguix-wails.exe\"\ntask: [windows:build:native] rm -f *.syso"
+    }
+  },
+  "idle_rss": {
+    "process_tree_mb": 131.6,
+    "total_mb": 306.2,
+    "webkit_mb": 174.6
+  },
+  "incremental_build": {
+    "BuildMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 2.51
+    },
+    "UIMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 4.01
+    }
+  },
+  "loc": {
+    "app": "wails",
+    "build_tagged_files": 5,
+    "by_category": {
+      "bench": 143,
+      "desktop": 239,
+      "shared": 2976,
+      "test": 514,
+      "web": 128
+    },
+    "by_category_language": {
+      "bench": {
+        "go": 24,
+        "ts": 119
+      },
+      "desktop": {
+        "go": 228,
+        "make": 11
+      },
+      "shared": {
+        "css": 124,
+        "go": 880,
+        "html": 13,
+        "js": 6,
+        "make": 103,
+        "svelte": 743,
+        "ts": 1107
+      },
+      "test": {
+        "go": 235,
+        "ts": 279
+      },
+      "web": {
+        "go": 82,
+        "make": 10,
+        "svelte": 36
+      }
+    },
+    "by_language": {
+      "css": 124,
+      "go": 1449,
+      "html": 13,
+      "js": 6,
+      "make": 124,
+      "svelte": 779,
+      "ts": 1505
+    },
+    "custom_rendering_lines": 100,
+    "dual_target_overhead_lines": 367,
+    "dual_target_overhead_pct": 11,
+    "excluded_generated_lines": {
+      "ts": 662
+    },
+    "excluded_vendored_lines": {
+      "svelte": 2242,
+      "ts": 351
+    },
+    "files": 48,
+    "inline_marker_blocks": 4,
+    "longest_go_func": "menu_desktop.go:buildMenu",
+    "longest_go_func_lines": 51
+  },
+  "plain_go_build_from_clean": {
+    "rc": 1,
+    "secs": 0.14,
+    "tail": "main.go:18:12: pattern all:frontend/dist: no matching files found"
+  },
+  "sizes": {
+    "app_bundle": "bin/GGUIX-wails.app",
+    "app_bundle_kb": 11612,
+    "binary_bytes": 10194322,
+    "bundled_frameworks_kb": null,
+    "bundled_refs": [],
+    "external_dylibs": [],
+    "package": {
+      "rc": 0,
+      "secs": 3.11
+    }
+  },
+  "step_secs": {
+    "bench": 53.9,
+    "cgoprobe": 10.9,
+    "cold_build": 44.4,
+    "cross": 182.8,
+    "idle_rss": 7.1,
+    "incremental": 9.9,
+    "loc": 0.1,
+    "plain_build": 0.2,
+    "sizes": 3.1,
+    "tests": 14.7,
+    "toolchain": 6.0,
+    "web": 307.0
+  },
+  "tests": {
+    "line": {
+      "failed": 0,
+      "not_feasible": 0,
+      "passed": 33
+    },
+    "rc": 0,
+    "secs": 14.73
+  },
+  "toolchain": {
+    "frontend/package.json": {
+      "direct_deps": 5,
+      "direct_dev_deps": 19,
+      "installed_packages": 0,
+      "node_modules_kb": null,
+      "npm_audit": null
+    },
+    "make_deps_warm": {
+      "rc": 0,
+      "secs": 4.58
+    }
+  },
+  "warm_noop_build": {
+    "rc": 0,
+    "secs": 3.56
+  },
+  "web": {
+    "bench-web": {
+      "console_errors": [],
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 3.2,
+          "p95_gap_ms": 2.2,
+          "placeholder_steps": 0,
+          "switch_ms": 185.7,
+          "total_ms": 3410.7
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 2.5,
+          "ms": 530.6,
+          "p95_gap_ms": 2.2,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 76.9
+        },
+        "ready": {
+          "ms": 169.3
+        },
+        "scroll": {
+          "max_gap_ms": 11.4,
+          "p95_gap_ms": 7.4,
+          "placeholder_steps": 25,
+          "total_ms": 3559.8
+        },
+        "search": {
+          "ms": 96.1,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 273.6
+        }
+      },
+      "initial_transfer_kb": 792,
+      "peak_dom_nodes": 78418,
+      "peak_js_heap_mb": 43.8,
+      "server_ready_secs": 2.03,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "wall_ms": 8355
+    }
+  }
+}

@@ -1,0 +1,4 @@
+$ ['make', 'build']
+(rc=0, 0.5s)
+Done in 89ms
+go build -trimpath -ldflags "-s -w" -o bin/gguix-gotth ./cmd/desktop

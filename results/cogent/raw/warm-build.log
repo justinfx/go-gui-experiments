@@ -1,0 +1,9 @@
+$ ['make', 'build']
+(rc=0, 1.13s)
+mkdir -p bin/_b
+~/go/bin/core build -o bin/_b/gguix-cogent
+core build succeeded
+mv bin/_b/gguix-cogent/gguix-cogent bin/gguix-cogent
+rmdir bin/_b/gguix-cogent bin/_b
+# gguix/apps/cogent
+ld: warning: ignoring duplicate libraries: '-lobjc'

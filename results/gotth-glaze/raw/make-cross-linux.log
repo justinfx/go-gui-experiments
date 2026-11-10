@@ -1,0 +1,7 @@
+$ ['make', 'cross-linux']
+(rc=0, 1.61s)
+Done in 71ms
+== web for linux/amd64 (CGO_ENABLED=0 go build)
+CROSS linux web PASS  14M
+== desktop for linux/amd64 (CGO_ENABLED=0 go build)
+CROSS linux desktop PASS  14M

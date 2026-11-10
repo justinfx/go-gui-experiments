@@ -1,0 +1,339 @@
+{
+  "app": "miqt",
+  "bench": {
+    "errors": [],
+    "events_seen": [
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ]
+    ],
+    "memory": {
+      "peak_process_tree_mb": {
+        "max": 722.2,
+        "median": 705.6
+      },
+      "peak_total_mb": {
+        "max": 722.2,
+        "median": 705.6
+      },
+      "peak_webkit_mb": {
+        "max": 0.0,
+        "median": 0.0
+      }
+    },
+    "runs": 5,
+    "summary": {
+      "cards_scroll": {
+        "max_gap_ms": {
+          "max": 437.2,
+          "median": 435.5,
+          "min": 322.9,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 355.7,
+          "median": 307.6,
+          "min": 227.1,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 68,
+          "median": 67,
+          "min": 65,
+          "n": 5
+        },
+        "switch_ms": {
+          "max": 1046.3,
+          "median": 908.2,
+          "min": 898.2,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 5670.1,
+          "median": 5535.6,
+          "min": 5449.6,
+          "n": 5
+        }
+      },
+      "export": {
+        "max_gap_ms": {
+          "max": 5.9,
+          "median": 4.7,
+          "min": 2,
+          "n": 5
+        },
+        "ms": {
+          "max": 520,
+          "median": 513.4,
+          "min": 512.7,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 2.9,
+          "median": 1.1,
+          "min": 0.1,
+          "n": 5
+        },
+        "rows": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "jump": {
+        "ms": {
+          "max": 658.9,
+          "median": 652.4,
+          "min": 642.4,
+          "n": 5
+        }
+      },
+      "ready": {
+        "ms": {
+          "max": 834.9,
+          "median": 429.6,
+          "min": 416.2,
+          "n": 5
+        }
+      },
+      "scroll": {
+        "max_gap_ms": {
+          "max": 263.5,
+          "median": 253.9,
+          "min": 245.1,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 239.7,
+          "median": 231.8,
+          "min": 228.4,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 119,
+          "median": 117,
+          "min": 115,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 8267.7,
+          "median": 7994.6,
+          "min": 7972.3,
+          "n": 5
+        }
+      },
+      "search": {
+        "ms": {
+          "max": 149.1,
+          "median": 71.9,
+          "min": 61,
+          "n": 5
+        },
+        "total": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "sort": {
+        "ms": {
+          "max": 625.6,
+          "median": 614.3,
+          "min": 448.2,
+          "n": 5
+        }
+      }
+    }
+  },
+  "cgoprobe": {
+    "rc": 0,
+    "results": [
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "desktop"
+      }
+    ],
+    "secs": 4.75
+  },
+  "cold_build": {
+    "rc": 0,
+    "secs": 110.75
+  },
+  "cross": {
+    "cross-linux": {
+      "rc": 0,
+      "secs": 1459.26,
+      "status": "PASS",
+      "tail": "DOCKER_DEFAULT_PLATFORM=linux/amd64 DOCKER=apps/miqt/desktop/docker-notty.sh MIQTDOCKER_FLAGS=\"-v core:/core:ro\" \\\n\t  ~/go/bin/miqt-docker linux64-go1.27-qt6.12 go build -ldflags '-s -w' -o bin/gguix-miqt-linux-amd64 .\n2026/11/08 19:03:59 Selecting dockerfile: linux64-go1.27-qt6.12-dynamic.Dockerfile\n2026/11/08 19:04:01 Skipping user isolation because: OS is \"darwin\""
+    },
+    "cross-windows": {
+      "rc": 2,
+      "secs": 3.31,
+      "status": "FAIL",
+      "tail": "DOCKER_DEFAULT_PLATFORM=linux/amd64 DOCKER=apps/miqt/desktop/docker-notty.sh MIQTDOCKER_FLAGS=\"-v core:/core:ro\" \\\n\t  ~/go/bin/miqt-docker win64-qt6-static -windows-build --tags=windowsqtstatic\n2026/11/08 19:03:55 Selecting dockerfile: win64-cross-go1.26-qt6.5-static.Dockerfile\n2026/11/08 19:03:56 Skipping user isolation because: OS is \"darwin\"\ngo: downloading go1.27.0 (linux/amd64)\ngo: download go1.27.0: golang.org/toolchain@v0.0.1-go1.27.0.linux-amd64: Get \"https://proxy.golang.org/golang.org/toolchain/@v/v0.0.1-go1.27.0.linux-amd64.zip\": tls: failed to verify certificate: x509: certificate signed by unknown authority\n2026/11/08 19:03:59 exit status 1\nmake: *** [cross-windows] Error 1"
+    }
+  },
+  "idle_rss": {
+    "process_tree_mb": 196.0,
+    "total_mb": 196.0,
+    "webkit_mb": 0.0
+  },
+  "incremental_build": {
+    "BuildMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 1.89
+    }
+  },
+  "loc": {
+    "app": "miqt",
+    "build_tagged_files": 9,
+    "by_category": {
+      "bench": 28,
+      "desktop": 2304,
+      "shared": 22,
+      "test": 603,
+      "web": 2
+    },
+    "by_category_language": {
+      "bench": {
+        "go": 28
+      },
+      "desktop": {
+        "go": 2264,
+        "make": 40
+      },
+      "shared": {
+        "go": 3,
+        "make": 19
+      },
+      "test": {
+        "go": 603
+      },
+      "web": {
+        "make": 2
+      }
+    },
+    "by_language": {
+      "go": 2898,
+      "make": 61
+    },
+    "custom_rendering_lines": 300,
+    "dual_target_overhead_lines": 2306,
+    "dual_target_overhead_pct": 99.1,
+    "excluded_generated_lines": {},
+    "excluded_vendored_lines": {},
+    "files": 11,
+    "inline_marker_blocks": 2,
+    "longest_go_func": "form_desktop.go:newDetailForm",
+    "longest_go_func_lines": 138,
+    "marker_errors": [
+      "Makefile:75 end without start",
+      "Makefile:80 end without start",
+      "main_desktop.go:32 end without start"
+    ]
+  },
+  "plain_go_build_from_clean": {
+    "rc": 0,
+    "secs": 12.22,
+    "tail": ""
+  },
+  "sizes": {
+    "app_bundle": "bin/GGUIX-miqt.app",
+    "app_bundle_kb": 113184,
+    "binary_bytes": 31394994,
+    "bundled_frameworks_kb": 80228,
+    "bundled_refs": [
+      "@executable_path/../Frameworks/QtWidgets.framework/Versions/A/QtWidgets",
+      "@executable_path/../Frameworks/QtGui.framework/Versions/A/QtGui",
+      "@executable_path/../Frameworks/QtCore.framework/Versions/A/QtCore"
+    ],
+    "external_dylibs": [],
+    "package": {
+      "rc": 0,
+      "secs": 16.73
+    }
+  },
+  "step_secs": {
+    "bench": 91.3,
+    "cgoprobe": 4.9,
+    "cold_build": 111.1,
+    "cross": 1462.6,
+    "idle_rss": 7.1,
+    "incremental": 3.8,
+    "loc": 0.1,
+    "plain_build": 12.3,
+    "sizes": 16.8,
+    "tests": 5.2,
+    "toolchain": 3.7
+  },
+  "tests": {
+    "line": {
+      "failed": 0,
+      "not_feasible": 0,
+      "passed": 18
+    },
+    "rc": 0,
+    "secs": 5.18
+  },
+  "toolchain": {
+    "make_deps_warm": {
+      "rc": 0,
+      "secs": 3.72
+    }
+  },
+  "warm_noop_build": {
+    "rc": 0,
+    "secs": 0.19
+  }
+}

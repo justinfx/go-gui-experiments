@@ -1,0 +1,569 @@
+{
+  "app": "wails-fit",
+  "artifacts": {
+    "bench": {
+      "binary": {
+        "mtime": "2026-11-09T09:48:13.704593+00:00",
+        "path": "apps/wails-fit/bin/gguix-wails",
+        "sha256": "0d1e708ddf4aee9306ca3c234e3db9fe6e402d90346d9424921a9356a785b5b5",
+        "size": 10194322
+      },
+      "build": {
+        "rc": 0,
+        "secs": 1.52
+      }
+    },
+    "cold_build": {
+      "binary": {
+        "mtime": "2026-11-09T09:47:52.005144+00:00",
+        "path": "apps/wails-fit/bin/gguix-wails",
+        "sha256": "0d1e708ddf4aee9306ca3c234e3db9fe6e402d90346d9424921a9356a785b5b5",
+        "size": 10194322
+      }
+    },
+    "idle_rss": {
+      "binary": {
+        "mtime": "2026-11-09T09:48:04.866444+00:00",
+        "path": "apps/wails-fit/bin/gguix-wails",
+        "sha256": "0d1e708ddf4aee9306ca3c234e3db9fe6e402d90346d9424921a9356a785b5b5",
+        "size": 10194322
+      }
+    },
+    "incremental": {
+      "binary": {
+        "mtime": "2026-11-09T09:48:01.845735+00:00",
+        "path": "apps/wails-fit/bin/gguix-wails",
+        "sha256": "0d1e708ddf4aee9306ca3c234e3db9fe6e402d90346d9424921a9356a785b5b5",
+        "size": 10194322
+      }
+    },
+    "sizes": {
+      "app_bundle": {
+        "files": 5,
+        "mtime": "2026-11-09T09:48:04.879282+00:00",
+        "path": "apps/wails-fit/bin/GGUIX-wails.app",
+        "size_kb": 11612,
+        "tree_sha256": "725d84128def46bf9d8426267f4506dd544ed2e1881f7caf0b8c250e9f5c3228"
+      },
+      "binary": {
+        "mtime": "2026-11-09T09:48:01.845735+00:00",
+        "path": "apps/wails-fit/bin/gguix-wails",
+        "sha256": "0d1e708ddf4aee9306ca3c234e3db9fe6e402d90346d9424921a9356a785b5b5",
+        "size": 10194322
+      }
+    }
+  },
+  "bench": {
+    "errors": [],
+    "events_seen": [
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ]
+    ],
+    "launch": "bin/gguix-wails (direct, after one make build)",
+    "memory": {
+      "peak_process_tree_mb": {
+        "max": 170.2,
+        "median": 169.9
+      },
+      "peak_total_mb": {
+        "max": 855.1,
+        "median": 819.1
+      },
+      "peak_webkit_mb": {
+        "max": 686.7,
+        "median": 649.2
+      }
+    },
+    "runs": 5,
+    "summary": {
+      "cards_scroll": {
+        "max_gap_ms": {
+          "max": 15,
+          "median": 8,
+          "min": 8,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 7,
+          "median": 6,
+          "min": 6,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "switch_ms": {
+          "max": 105,
+          "median": 103,
+          "min": 102,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3217,
+          "median": 3204,
+          "min": 3201,
+          "n": 5
+        }
+      },
+      "export": {
+        "max_gap_ms": {
+          "max": 16,
+          "median": 6,
+          "min": 6,
+          "n": 5
+        },
+        "ms": {
+          "max": 515,
+          "median": 514,
+          "min": 513,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 6,
+          "median": 6,
+          "min": 5,
+          "n": 5
+        },
+        "rows": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "jump": {
+        "ms": {
+          "max": 108,
+          "median": 94,
+          "min": 81,
+          "n": 5
+        }
+      },
+      "ready": {
+        "ms": {
+          "max": 606,
+          "median": 592,
+          "min": 574,
+          "n": 5
+        }
+      },
+      "scroll": {
+        "max_gap_ms": {
+          "max": 224,
+          "median": 201,
+          "min": 149,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 134,
+          "median": 108,
+          "min": 100,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 9,
+          "median": 1,
+          "min": 0,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3230,
+          "median": 3218,
+          "min": 3215,
+          "n": 5
+        }
+      },
+      "search": {
+        "ms": {
+          "max": 119,
+          "median": 111,
+          "min": 98,
+          "n": 5
+        },
+        "total": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "sort": {
+        "ms": {
+          "max": 294,
+          "median": 287,
+          "min": 281,
+          "n": 5
+        }
+      }
+    }
+  },
+  "cgoprobe": {
+    "rc": 0,
+    "results": [
+      {
+        "reason": "builds and the export code runs with the C checksum",
+        "result": "PASS",
+        "target": "desktop"
+      },
+      {
+        "reason": "builds and serves",
+        "result": "PASS",
+        "target": "web"
+      }
+    ],
+    "secs": 8.02
+  },
+  "cold_build": {
+    "rc": 0,
+    "secs": 39.25
+  },
+  "cross": {
+    "cross-linux": {
+      "rc": 0,
+      "secs": 178.11,
+      "status": "PASS",
+      "tail": "(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:\n  - `__dirname` (vite.config.ts:15:33). Use `import.meta.dirname` instead\nSet `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.\n[plugin builtin:vite-reporter] \n(!) Some chunks are larger than 500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit."
+    },
+    "cross-windows": {
+      "rc": 0,
+      "secs": 7.87,
+      "status": "PASS",
+      "tail": "[plugin builtin:vite-reporter] \n(!) Some chunks are larger than 500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\ntask: [windows:generate:syso] wails3 generate syso -arch amd64 -icon windows/icon.ico -manifest windows/wails.exe.manifest -info windows/info.json -out ../wails_windows_amd64.syso\ntask: [windows:build:native] go build -tags production -trimpath -buildvcs=false -ldflags=\"-w -s -H windowsgui\" -o \"bin/gguix-wails.exe\"\ntask: [windows:build:native] rm -f *.syso"
+    }
+  },
+  "idle_rss": {
+    "process_tree_mb": 132.4,
+    "total_mb": 307.5,
+    "webkit_mb": 175.2
+  },
+  "incremental_build": {
+    "BuildMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 2.34
+    },
+    "UIMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 4.03
+    }
+  },
+  "loc": {
+    "app": "wails-fit",
+    "build_tagged_files": 6,
+    "by_category": {
+      "bench": 148,
+      "desktop": 239,
+      "shared": 4081,
+      "test": 573,
+      "web": 197
+    },
+    "by_category_language": {
+      "bench": {
+        "go": 24,
+        "ts": 124
+      },
+      "desktop": {
+        "go": 228,
+        "make": 11
+      },
+      "shared": {
+        "css": 124,
+        "go": 970,
+        "html": 13,
+        "js": 6,
+        "make": 1009,
+        "svelte": 743,
+        "ts": 1216
+      },
+      "test": {
+        "go": 264,
+        "ts": 309
+      },
+      "web": {
+        "go": 151,
+        "make": 10,
+        "svelte": 36
+      }
+    },
+    "by_language": {
+      "css": 124,
+      "go": 1637,
+      "html": 13,
+      "js": 6,
+      "make": 1030,
+      "svelte": 779,
+      "ts": 1649
+    },
+    "custom_rendering_lines": 100,
+    "dual_target_overhead_lines": 436,
+    "dual_target_overhead_pct": 9.7,
+    "excluded_generated_lines": {
+      "ts": 685
+    },
+    "excluded_vendored_lines": {
+      "svelte": 2242,
+      "ts": 351
+    },
+    "files": 55,
+    "inline_marker_blocks": 4,
+    "longest_go_func": "menu_desktop.go:buildMenu",
+    "longest_go_func_lines": 51
+  },
+  "plain_go_build_from_clean": {
+    "gen": {
+      "cmd": "wails3 task common:build:frontend",
+      "rc": 0,
+      "secs": 5.33
+    },
+    "plain_build_note": "generated sources were present: `wails3 task common:build:frontend` ran untimed after make clean, then go build ./... was timed",
+    "rc": 0,
+    "secs": 1.54,
+    "tail": "ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-3552653050/000042.o) was built for newer 'macOS' version (26.0) than being linked (11.0)\nld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-3552653050/000043.o) was built for newer 'macOS' version (26.0) than being linked (11.0)\nld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-3552653050/000044.o) was built for newer 'macOS' version (26.0) than being linked (11.0)\nld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-3552653050/000045.o) was built for newer 'macOS' version (26.0) than being linked (11.0)\nld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-3552653050/000046.o) was built for newer 'macOS' version (26.0) than being linked (11.0)\nld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-3552653050/000047.o) was built for newer 'macOS' version (26.0) than being linked (11.0)"
+  },
+  "provenance": {
+    "app_tree": {
+      "files": 235,
+      "sha256": "9b6a5a1b481558c816fe1dda8ca0314c35659c6bf3d1026df1dea251f2b53637"
+    },
+    "core_tree": {
+      "files": 42,
+      "sha256": "b476612a729e8e2c2c0aed249c21133264b798c4659b3cceb92c2ea637527b9b"
+    },
+    "gguix_env_inherited": {},
+    "gguix_env_passed": {
+      "GGUIX_DPR": "2"
+    },
+    "gguix_env_scrubbed": [],
+    "recorded_at": "2026-11-09T09:46:55.708969+00:00"
+  },
+  "sizes": {
+    "app_bundle": "bin/GGUIX-wails.app",
+    "app_bundle_kb": 11612,
+    "binary_bytes": 10194322,
+    "bundled_frameworks_kb": null,
+    "bundled_refs": [],
+    "external_dylibs": [],
+    "package": {
+      "rc": 0,
+      "secs": 3.16
+    }
+  },
+  "step_secs": {
+    "bench": 49.3,
+    "cgoprobe": 11.5,
+    "cold_build": 43.2,
+    "cross": 186.0,
+    "idle_rss": 7.1,
+    "incremental": 9.8,
+    "loc": 0.1,
+    "plain_build": 6.9,
+    "sizes": 3.2,
+    "tests": 17.5,
+    "toolchain": 6.2,
+    "web": 308.5
+  },
+  "step_times": {
+    "bench": {
+      "end": "2026-11-09T09:49:01.478201+00:00",
+      "start": "2026-11-09T09:48:12.189009+00:00"
+    },
+    "cgoprobe": {
+      "end": "2026-11-09T09:49:30.445654+00:00",
+      "start": "2026-11-09T09:49:18.947523+00:00"
+    },
+    "cold_build": {
+      "end": "2026-11-09T09:47:52.014802+00:00",
+      "start": "2026-11-09T09:47:08.848027+00:00"
+    },
+    "cross": {
+      "end": "2026-11-09T09:52:36.421555+00:00",
+      "start": "2026-11-09T09:49:30.446006+00:00"
+    },
+    "idle_rss": {
+      "end": "2026-11-09T09:48:12.188523+00:00",
+      "start": "2026-11-09T09:48:05.051112+00:00"
+    },
+    "incremental": {
+      "end": "2026-11-09T09:48:01.856434+00:00",
+      "start": "2026-11-09T09:47:52.015275+00:00"
+    },
+    "loc": {
+      "end": "2026-11-09T09:57:45.064199+00:00",
+      "start": "2026-11-09T09:57:44.953128+00:00"
+    },
+    "plain_build": {
+      "end": "2026-11-09T09:47:08.847561+00:00",
+      "start": "2026-11-09T09:47:01.940408+00:00"
+    },
+    "sizes": {
+      "end": "2026-11-09T09:48:05.050701+00:00",
+      "start": "2026-11-09T09:48:01.856989+00:00"
+    },
+    "tests": {
+      "end": "2026-11-09T09:49:18.947183+00:00",
+      "start": "2026-11-09T09:49:01.478593+00:00"
+    },
+    "toolchain": {
+      "end": "2026-11-09T09:47:01.939791+00:00",
+      "start": "2026-11-09T09:46:55.733786+00:00"
+    },
+    "web": {
+      "end": "2026-11-09T09:57:44.952027+00:00",
+      "start": "2026-11-09T09:52:36.421994+00:00"
+    }
+  },
+  "tests": {
+    "line": {
+      "failed": 0,
+      "not_feasible": 0,
+      "passed": 36
+    },
+    "rc": 0,
+    "secs": 17.47
+  },
+  "toolchain": {
+    "frontend/package.json": {
+      "direct_deps": 5,
+      "direct_dev_deps": 19,
+      "installed_packages": 154,
+      "node_modules_kb": 198792,
+      "npm_audit": null
+    },
+    "make_deps_warm": {
+      "rc": 0,
+      "secs": 5.24
+    }
+  },
+  "warm_noop_build": {
+    "rc": 0,
+    "secs": 3.63
+  },
+  "web": {
+    "bench-web": {
+      "chrome_version": "156.0.8078.80",
+      "console_errors": [],
+      "dpr": 2,
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 4.5,
+          "p95_gap_ms": 2.8,
+          "placeholder_steps": 0,
+          "switch_ms": 86.4,
+          "total_ms": 3201.5
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 21.4,
+          "ms": 528.3,
+          "p95_gap_ms": 2.4,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 80
+        },
+        "ready": {
+          "ms": 172.5
+        },
+        "scroll": {
+          "max_gap_ms": 30.1,
+          "p95_gap_ms": 11.2,
+          "placeholder_steps": 0,
+          "total_ms": 3200.5
+        },
+        "search": {
+          "ms": 94.8,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 274.2
+        }
+      },
+      "initial_transfer_kb": 256,
+      "memory_sampling_error": null,
+      "peak_dom_nodes": 51309,
+      "peak_gpu_rss_mb": 153.6,
+      "peak_js_heap_mb": 46.4,
+      "peak_renderer_rss_mb": 722.5,
+      "provenance": {
+        "bundle_sha256": {
+          "assets/index-CiLnbPXF.js": "e6cd34770ac13bb761df34385b14793b83a0c88e5c58f15db5fb295f6e81bdf3"
+        },
+        "ended": "2026-11-09T09:57:44.951955+00:00",
+        "index_html_sha256": "5730d958e515ab5591038d3a54ba572a8fae573dd2dba75a31f349d53f4f9e42",
+        "served_dir": "apps/wails-fit/frontend/dist",
+        "server_binary": {
+          "mtime": "2026-11-09T09:52:38.718114+00:00",
+          "path": "apps/wails-fit/bin/gguix-wails-server",
+          "sha256": "b4824d919de563e436e6483b0f673f73b4905a2f951f293e9029ef7c15fb83d9",
+          "size": 11521938
+        },
+        "started": "2026-11-09T09:52:36.633967+00:00"
+      },
+      "renderer_pids": [
+        98267,
+        98268,
+        98266
+      ],
+      "server_ready_secs": 3.05,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "viewport": {
+        "height": 800,
+        "width": 1280
+      },
+      "wall_ms": 7690
+    }
+  }
+}

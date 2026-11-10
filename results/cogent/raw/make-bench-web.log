@@ -1,0 +1,9 @@
+~/go/bin/core build wasm -o bin/web
+# gguix/apps/cogent
+ld: warning: ignoring duplicate libraries: '-lobjc'
+bundle app.wasm: 30.1 MB (gzip 6.8 MB, brotli 5.4 MB)
+core build succeeded
+Open http://localhost:8097/?bench=1 and read the browser console
+cd ../../core && go run ./cmd/server -static ../apps/cogent/bin/web -addr :8097
+2026/11/09 19:42:05 gguix server on :8097 (rows=1000000 latency=50ms cgoprobe=false static="../apps/cogent/bin/web")
+make: *** [bench-web] Terminated: 15

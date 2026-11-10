@@ -1,0 +1,4 @@
+$ ['make', 'cross-linux']
+(rc=2, 0.05s)
+UNSUPPORTED: no miqt-docker image includes QtWebEngine (docker/linux64-go1.27-qt6.12-dynamic.Dockerfile installs only the base linux_gcc_64 Qt; the win64 images are a QtWebEngine-less static MinGW build)
+make: *** [cross-linux] Error 3

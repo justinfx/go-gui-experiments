@@ -1,0 +1,766 @@
+signal time=1794186028.408043 sender=org.freedesktop.DBus -> destination=:1.0 serial=2 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameAcquired
+   string ":1.0"
+signal time=1794186028.408131 sender=org.freedesktop.DBus -> destination=:1.0 serial=4 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameLost
+   string ":1.0"
+method call time=1794186029.544575 sender=:1.1 -> destination=org.freedesktop.DBus serial=1 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=Hello
+method return time=1794186029.544788 sender=org.freedesktop.DBus -> destination=:1.1 serial=1 reply_serial=1
+   string ":1.1"
+signal time=1794186029.544855 sender=org.freedesktop.DBus -> destination=(null destination) serial=5 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameOwnerChanged
+   string ":1.1"
+   string ""
+   string ":1.1"
+signal time=1794186029.545015 sender=org.freedesktop.DBus -> destination=:1.1 serial=2 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameAcquired
+   string ":1.1"
+method call time=1794186029.558728 sender=:1.1 -> destination=org.freedesktop.DBus serial=2 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RequestName
+   string "org.freedesktop.Notifications"
+   uint32 0
+signal time=1794186029.558856 sender=org.freedesktop.DBus -> destination=(null destination) serial=6 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameOwnerChanged
+   string "org.freedesktop.Notifications"
+   string ""
+   string ":1.1"
+signal time=1794186029.558982 sender=org.freedesktop.DBus -> destination=:1.1 serial=3 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameAcquired
+   string "org.freedesktop.Notifications"
+method return time=1794186029.559050 sender=org.freedesktop.DBus -> destination=:1.1 serial=4 reply_serial=2
+   uint32 1
+method call time=1794186034.548124 sender=:1.2 -> destination=org.freedesktop.DBus serial=1 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=Hello
+method return time=1794186034.548212 sender=org.freedesktop.DBus -> destination=:1.2 serial=1 reply_serial=1
+   string ":1.2"
+signal time=1794186034.548236 sender=org.freedesktop.DBus -> destination=(null destination) serial=7 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameOwnerChanged
+   string ":1.2"
+   string ""
+   string ":1.2"
+signal time=1794186034.548390 sender=org.freedesktop.DBus -> destination=:1.2 serial=2 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameAcquired
+   string ":1.2"
+method call time=1794186034.548495 sender=:1.2 -> destination=org.freedesktop.portal.IBus serial=2 path=/org/freedesktop/IBus; interface=org.freedesktop.IBus.Portal; member=CreateInputContext
+   string "cogentcore"
+error time=1794186034.548523 sender=org.freedesktop.DBus -> destination=:1.2 error_name=org.freedesktop.DBus.Error.ServiceUnknown reply_serial=2
+   string "The name org.freedesktop.portal.IBus was not provided by any .service files"
+signal time=1794186034.548597 sender=org.freedesktop.DBus -> destination=:1.2 serial=4 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameLost
+   string ":1.2"
+signal time=1794186034.548624 sender=org.freedesktop.DBus -> destination=(null destination) serial=8 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameOwnerChanged
+   string ":1.2"
+   string ":1.2"
+   string ""
+method call time=1794186034.560654 sender=:1.3 -> destination=org.freedesktop.DBus serial=1 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=Hello
+method return time=1794186034.560705 sender=org.freedesktop.DBus -> destination=:1.3 serial=1 reply_serial=1
+   string ":1.3"
+signal time=1794186034.560786 sender=org.freedesktop.DBus -> destination=(null destination) serial=9 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameOwnerChanged
+   string ":1.3"
+   string ""
+   string ":1.3"
+signal time=1794186034.560893 sender=org.freedesktop.DBus -> destination=:1.3 serial=2 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameAcquired
+   string ":1.3"
+method call time=1794186034.560983 sender=:1.3 -> destination=org.freedesktop.portal.Desktop serial=2 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.portal.Settings; member=ReadOne
+   string "org.freedesktop.appearance"
+   string "color-scheme"
+method call time=1794186034.563786 sender=:1.4 -> destination=org.freedesktop.DBus serial=1 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=Hello
+method return time=1794186034.563822 sender=org.freedesktop.DBus -> destination=:1.4 serial=1 reply_serial=1
+   string ":1.4"
+signal time=1794186034.563849 sender=org.freedesktop.DBus -> destination=(null destination) serial=10 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameOwnerChanged
+   string ":1.4"
+   string ""
+   string ":1.4"
+signal time=1794186034.563952 sender=org.freedesktop.DBus -> destination=:1.4 serial=2 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameAcquired
+   string ":1.4"
+method call time=1794186034.564035 sender=:1.4 -> destination=org.freedesktop.DBus serial=2 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.DBus',interface='org.freedesktop.DBus',member='NameOwnerChanged',path='/org/freedesktop/DBus'"
+method return time=1794186034.564063 sender=org.freedesktop.DBus -> destination=:1.4 serial=3 reply_serial=2
+method call time=1794186034.564127 sender=:1.4 -> destination=org.freedesktop.DBus serial=3 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.DBus',interface='org.freedesktop.DBus',member='NameOwnerChanged',path='/org/freedesktop/DBus',arg0='org.freedesktop.portal.Documents'"
+method return time=1794186034.564159 sender=org.freedesktop.DBus -> destination=:1.4 serial=4 reply_serial=3
+method call time=1794186034.564197 sender=:1.4 -> destination=org.freedesktop.DBus serial=4 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.portal.Documents"
+error time=1794186034.564236 sender=org.freedesktop.DBus -> destination=:1.4 error_name=org.freedesktop.DBus.Error.NameHasNoOwner reply_serial=4
+   string "Could not get owner of name 'org.freedesktop.portal.Documents': no such name"
+method call time=1794186034.564291 sender=:1.4 -> destination=org.freedesktop.DBus serial=5 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.portal.Documents',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/portal/documents',arg0='org.freedesktop.portal.Documents'"
+method return time=1794186034.564346 sender=org.freedesktop.DBus -> destination=:1.4 serial=6 reply_serial=5
+method call time=1794186034.564357 sender=:1.4 -> destination=org.freedesktop.DBus serial=6 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.portal.Documents',interface='org.freedesktop.portal.Documents',path='/org/freedesktop/portal/documents'"
+method return time=1794186034.564429 sender=org.freedesktop.DBus -> destination=:1.4 serial=7 reply_serial=6
+method call time=1794186034.564453 sender=:1.4 -> destination=org.freedesktop.DBus serial=7 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.portal.Documents"
+   uint32 0
+method call time=1794186034.566076 sender=:1.5 -> destination=org.freedesktop.DBus serial=1 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=Hello
+method return time=1794186034.566113 sender=org.freedesktop.DBus -> destination=:1.5 serial=1 reply_serial=1
+   string ":1.5"
+signal time=1794186034.566137 sender=org.freedesktop.DBus -> destination=(null destination) serial=8 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameOwnerChanged
+   string ":1.5"
+   string ""
+   string ":1.5"
+signal time=1794186034.566224 sender=org.freedesktop.DBus -> destination=:1.5 serial=2 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameAcquired
+   string ":1.5"
+method call time=1794186034.566372 sender=:1.5 -> destination=org.freedesktop.DBus serial=2 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.DBus',interface='org.freedesktop.DBus',member='NameOwnerChanged',path='/org/freedesktop/DBus',arg0='org.freedesktop.impl.portal.PermissionStore'"
+method return time=1794186034.566414 sender=org.freedesktop.DBus -> destination=:1.5 serial=3 reply_serial=2
+method call time=1794186034.566470 sender=:1.5 -> destination=org.freedesktop.DBus serial=3 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.PermissionStore"
+error time=1794186034.566495 sender=org.freedesktop.DBus -> destination=:1.5 error_name=org.freedesktop.DBus.Error.NameHasNoOwner reply_serial=3
+   string "Could not get owner of name 'org.freedesktop.impl.portal.PermissionStore': no such name"
+method call time=1794186034.566556 sender=:1.5 -> destination=org.freedesktop.DBus serial=4 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.PermissionStore',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/impl/portal/PermissionStore',arg0='org.freedesktop.impl.portal.PermissionStore'"
+method return time=1794186034.566612 sender=org.freedesktop.DBus -> destination=:1.5 serial=5 reply_serial=4
+method call time=1794186034.566640 sender=:1.5 -> destination=org.freedesktop.DBus serial=5 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.PermissionStore',interface='org.freedesktop.impl.portal.PermissionStore',path='/org/freedesktop/impl/portal/PermissionStore'"
+method return time=1794186034.566699 sender=org.freedesktop.DBus -> destination=:1.5 serial=6 reply_serial=5
+method call time=1794186034.566740 sender=:1.5 -> destination=org.freedesktop.DBus serial=6 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.PermissionStore"
+   uint32 0
+method call time=1794186034.568004 sender=:1.6 -> destination=org.freedesktop.DBus serial=1 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=Hello
+method return time=1794186034.568028 sender=org.freedesktop.DBus -> destination=:1.6 serial=1 reply_serial=1
+   string ":1.6"
+signal time=1794186034.568044 sender=org.freedesktop.DBus -> destination=(null destination) serial=9 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameOwnerChanged
+   string ":1.6"
+   string ""
+   string ":1.6"
+signal time=1794186034.568138 sender=org.freedesktop.DBus -> destination=:1.6 serial=2 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameAcquired
+   string ":1.6"
+method call time=1794186034.568331 sender=:1.6 -> destination=org.freedesktop.DBus serial=2 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RequestName
+   string "org.freedesktop.impl.portal.PermissionStore"
+   uint32 1
+signal time=1794186034.568420 sender=org.freedesktop.DBus -> destination=(null destination) serial=8 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameOwnerChanged
+   string "org.freedesktop.impl.portal.PermissionStore"
+   string ""
+   string ":1.6"
+method return time=1794186034.568551 sender=org.freedesktop.DBus -> destination=:1.5 serial=7 reply_serial=6
+   uint32 1
+signal time=1794186034.568578 sender=org.freedesktop.DBus -> destination=:1.6 serial=3 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameAcquired
+   string "org.freedesktop.impl.portal.PermissionStore"
+method return time=1794186034.568638 sender=org.freedesktop.DBus -> destination=:1.6 serial=4 reply_serial=2
+   uint32 1
+method call time=1794186034.568687 sender=:1.5 -> destination=org.freedesktop.DBus serial=7 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.PermissionStore"
+method return time=1794186034.568768 sender=org.freedesktop.DBus -> destination=:1.5 serial=9 reply_serial=7
+   string ":1.6"
+method call time=1794186034.568832 sender=:1.5 -> destination=:1.6 serial=8 path=/org/freedesktop/impl/portal/PermissionStore; interface=org.freedesktop.DBus.Properties; member=GetAll
+   string "org.freedesktop.impl.portal.PermissionStore"
+method return time=1794186034.568908 sender=:1.6 -> destination=:1.5 serial=3 reply_serial=8
+   array [
+      dict entry(
+         string "version"
+         variant             uint32 2
+      )
+   ]
+method call time=1794186034.569145 sender=:1.5 -> destination=org.freedesktop.DBus serial=9 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.DBus',interface='org.freedesktop.DBus',member='NameOwnerChanged',path='/org/freedesktop/DBus'"
+method return time=1794186034.569174 sender=org.freedesktop.DBus -> destination=:1.5 serial=10 reply_serial=9
+method call time=1794186034.569186 sender=:1.5 -> destination=org.freedesktop.DBus serial=10 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RequestName
+   string "org.freedesktop.portal.Documents"
+   uint32 1
+signal time=1794186034.569276 sender=org.freedesktop.DBus -> destination=(null destination) serial=13 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameOwnerChanged
+   string "org.freedesktop.portal.Documents"
+   string ""
+   string ":1.5"
+method return time=1794186034.569418 sender=org.freedesktop.DBus -> destination=:1.4 serial=10 reply_serial=7
+   uint32 1
+signal time=1794186034.569476 sender=org.freedesktop.DBus -> destination=:1.5 serial=11 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameAcquired
+   string "org.freedesktop.portal.Documents"
+method return time=1794186034.569534 sender=org.freedesktop.DBus -> destination=:1.5 serial=12 reply_serial=10
+   uint32 1
+method call time=1794186034.569621 sender=:1.4 -> destination=org.freedesktop.DBus serial=8 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.portal.Documents"
+method return time=1794186034.569653 sender=org.freedesktop.DBus -> destination=:1.4 serial=11 reply_serial=8
+   string ":1.5"
+method call time=1794186034.569712 sender=:1.4 -> destination=:1.5 serial=9 path=/org/freedesktop/portal/documents; interface=org.freedesktop.DBus.Properties; member=GetAll
+   string "org.freedesktop.portal.Documents"
+method call time=1794186034.570441 sender=:1.5 -> destination=org.freedesktop.DBus serial=11 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=ReleaseName
+   string "org.freedesktop.portal.Documents"
+signal time=1794186034.570491 sender=org.freedesktop.DBus -> destination=:1.5 serial=14 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameLost
+   string "org.freedesktop.portal.Documents"
+signal time=1794186034.570555 sender=org.freedesktop.DBus -> destination=(null destination) serial=12 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameOwnerChanged
+   string "org.freedesktop.portal.Documents"
+   string ":1.5"
+   string ""
+method return time=1794186034.570696 sender=org.freedesktop.DBus -> destination=:1.5 serial=15 reply_serial=11
+   uint32 1
+signal time=1794186034.570792 sender=org.freedesktop.DBus -> destination=:1.5 serial=16 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameLost
+   string ":1.5"
+signal time=1794186034.570841 sender=org.freedesktop.DBus -> destination=(null destination) serial=13 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameOwnerChanged
+   string ":1.5"
+   string ":1.5"
+   string ""
+error time=1794186034.570870 sender=org.freedesktop.DBus -> destination=:1.4 error_name=org.freedesktop.DBus.Error.NoReply reply_serial=9
+   string "Message recipient disconnected from message bus without replying"
+method call time=1794186034.571118 sender=:1.4 -> destination=:1.5 serial=10 path=/org/freedesktop/portal/documents; interface=org.freedesktop.portal.Documents; member=GetMountPoint
+error time=1794186034.571155 sender=org.freedesktop.DBus -> destination=:1.4 error_name=org.freedesktop.DBus.Error.ServiceUnknown reply_serial=10
+   string "The name :1.5 was not provided by any .service files"
+method call time=1794186034.571444 sender=:1.4 -> destination=org.freedesktop.DBus serial=11 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.DBus',interface='org.freedesktop.DBus',member='NameOwnerChanged',path='/org/freedesktop/DBus',arg0='org.freedesktop.impl.portal.PermissionStore'"
+method return time=1794186034.571476 sender=org.freedesktop.DBus -> destination=:1.4 serial=16 reply_serial=11
+method call time=1794186034.571509 sender=:1.4 -> destination=org.freedesktop.DBus serial=12 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.PermissionStore"
+method return time=1794186034.571579 sender=org.freedesktop.DBus -> destination=:1.4 serial=17 reply_serial=12
+   string ":1.6"
+method call time=1794186034.571598 sender=:1.4 -> destination=org.freedesktop.DBus serial=13 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.PermissionStore',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/impl/portal/PermissionStore',arg0='org.freedesktop.impl.portal.PermissionStore'"
+method return time=1794186034.571655 sender=org.freedesktop.DBus -> destination=:1.4 serial=18 reply_serial=13
+method call time=1794186034.571666 sender=:1.4 -> destination=org.freedesktop.DBus serial=14 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.PermissionStore',interface='org.freedesktop.impl.portal.PermissionStore',path='/org/freedesktop/impl/portal/PermissionStore'"
+method return time=1794186034.571686 sender=org.freedesktop.DBus -> destination=:1.4 serial=19 reply_serial=14
+method call time=1794186034.571697 sender=:1.4 -> destination=org.freedesktop.DBus serial=15 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.PermissionStore"
+   uint32 0
+method return time=1794186034.571729 sender=org.freedesktop.DBus -> destination=:1.4 serial=20 reply_serial=15
+   uint32 2
+method call time=1794186034.571804 sender=:1.4 -> destination=org.freedesktop.DBus serial=16 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.PermissionStore"
+method return time=1794186034.571826 sender=org.freedesktop.DBus -> destination=:1.4 serial=21 reply_serial=16
+   string ":1.6"
+method call time=1794186034.571855 sender=:1.4 -> destination=:1.6 serial=17 path=/org/freedesktop/impl/portal/PermissionStore; interface=org.freedesktop.DBus.Properties; member=GetAll
+   string "org.freedesktop.impl.portal.PermissionStore"
+method return time=1794186034.571969 sender=:1.6 -> destination=:1.4 serial=4 reply_serial=17
+   array [
+      dict entry(
+         string "version"
+         variant             uint32 2
+      )
+   ]
+method call time=1794186034.572307 sender=:1.4 -> destination=org.freedesktop.DBus serial=18 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.DBus',interface='org.freedesktop.DBus',member='NameOwnerChanged',path='/org/freedesktop/DBus',arg0='org.freedesktop.impl.portal.desktop.gnome'"
+method return time=1794186034.572353 sender=org.freedesktop.DBus -> destination=:1.4 serial=22 reply_serial=18
+method call time=1794186034.572364 sender=:1.4 -> destination=org.freedesktop.DBus serial=19 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gnome"
+error time=1794186034.572409 sender=org.freedesktop.DBus -> destination=:1.4 error_name=org.freedesktop.DBus.Error.NameHasNoOwner reply_serial=19
+   string "Could not get owner of name 'org.freedesktop.impl.portal.desktop.gnome': no such name"
+method call time=1794186034.572444 sender=:1.4 -> destination=org.freedesktop.DBus serial=20 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/portal/desktop',arg0='org.freedesktop.impl.portal.Lockdown'"
+method return time=1794186034.572458 sender=org.freedesktop.DBus -> destination=:1.4 serial=24 reply_serial=20
+method call time=1794186034.572468 sender=:1.4 -> destination=org.freedesktop.DBus serial=21 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.impl.portal.Lockdown',path='/org/freedesktop/portal/desktop'"
+method return time=1794186034.572518 sender=org.freedesktop.DBus -> destination=:1.4 serial=25 reply_serial=21
+method call time=1794186034.572538 sender=:1.4 -> destination=org.freedesktop.DBus serial=22 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.desktop.gnome"
+   uint32 0
+method call time=1794186034.582302 sender=:1.7 -> destination=org.freedesktop.DBus serial=1 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=Hello
+method return time=1794186034.582335 sender=org.freedesktop.DBus -> destination=:1.7 serial=1 reply_serial=1
+   string ":1.7"
+signal time=1794186034.582360 sender=org.freedesktop.DBus -> destination=(null destination) serial=26 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameOwnerChanged
+   string ":1.7"
+   string ""
+   string ":1.7"
+signal time=1794186034.582496 sender=org.freedesktop.DBus -> destination=:1.7 serial=2 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameAcquired
+   string ":1.7"
+method call time=1794186034.583004 sender=:1.7 -> destination=org.freedesktop.DBus serial=2 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/org/gnome/desktop/a11y/'"
+method return time=1794186034.583040 sender=org.freedesktop.DBus -> destination=:1.7 serial=3 reply_serial=2
+method call time=1794186034.583061 sender=:1.7 -> destination=org.freedesktop.DBus serial=3 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/org/gnome/desktop/a11y/interface/'"
+method return time=1794186034.583154 sender=org.freedesktop.DBus -> destination=:1.7 serial=4 reply_serial=3
+method call time=1794186034.583170 sender=:1.7 -> destination=org.freedesktop.DBus serial=4 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/org/gnome/desktop/calendar/'"
+method return time=1794186034.583224 sender=org.freedesktop.DBus -> destination=:1.7 serial=5 reply_serial=4
+method call time=1794186034.583283 sender=:1.7 -> destination=org.freedesktop.DBus serial=5 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/org/gnome/desktop/input-sources/'"
+method return time=1794186034.583310 sender=org.freedesktop.DBus -> destination=:1.7 serial=6 reply_serial=5
+method call time=1794186034.583332 sender=:1.7 -> destination=org.freedesktop.DBus serial=6 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/org/gnome/desktop/interface/'"
+method return time=1794186034.583398 sender=org.freedesktop.DBus -> destination=:1.7 serial=7 reply_serial=6
+method call time=1794186034.583497 sender=:1.7 -> destination=org.freedesktop.DBus serial=7 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/org/gnome/desktop/peripherals/mouse/'"
+method return time=1794186034.583562 sender=org.freedesktop.DBus -> destination=:1.7 serial=8 reply_serial=7
+method call time=1794186034.583587 sender=:1.7 -> destination=org.freedesktop.DBus serial=8 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/org/gnome/desktop/privacy/'"
+method return time=1794186034.583611 sender=org.freedesktop.DBus -> destination=:1.7 serial=9 reply_serial=8
+method call time=1794186034.583643 sender=:1.7 -> destination=org.freedesktop.DBus serial=9 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/org/gnome/desktop/sound/'"
+method return time=1794186034.583707 sender=org.freedesktop.DBus -> destination=:1.7 serial=10 reply_serial=9
+method call time=1794186034.583718 sender=:1.7 -> destination=org.freedesktop.DBus serial=10 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/org/gnome/desktop/wm/preferences/'"
+method return time=1794186034.583777 sender=org.freedesktop.DBus -> destination=:1.7 serial=11 reply_serial=10
+method call time=1794186034.587141 sender=:1.7 -> destination=org.freedesktop.DBus serial=11 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RequestName
+   string "org.freedesktop.impl.portal.desktop.gnome"
+   uint32 1
+signal time=1794186034.587184 sender=org.freedesktop.DBus -> destination=(null destination) serial=28 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameOwnerChanged
+   string "org.freedesktop.impl.portal.desktop.gnome"
+   string ""
+   string ":1.7"
+method return time=1794186034.587255 sender=org.freedesktop.DBus -> destination=:1.4 serial=27 reply_serial=22
+   uint32 1
+signal time=1794186034.587295 sender=org.freedesktop.DBus -> destination=:1.7 serial=12 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameAcquired
+   string "org.freedesktop.impl.portal.desktop.gnome"
+method return time=1794186034.587311 sender=org.freedesktop.DBus -> destination=:1.7 serial=13 reply_serial=11
+   uint32 1
+method call time=1794186034.587376 sender=:1.7 -> destination=org.freedesktop.DBus serial=12 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.DBus',interface='org.freedesktop.DBus',member='NameOwnerChanged',path='/org/freedesktop/DBus',arg0='org.gnome.Shell.Introspect'"
+method return time=1794186034.587398 sender=org.freedesktop.DBus -> destination=:1.7 serial=14 reply_serial=12
+method call time=1794186034.587406 sender=:1.7 -> destination=org.freedesktop.DBus serial=13 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.gnome.Shell.Introspect"
+error time=1794186034.587419 sender=org.freedesktop.DBus -> destination=:1.7 error_name=org.freedesktop.DBus.Error.NameHasNoOwner reply_serial=13
+   string "Could not get owner of name 'org.gnome.Shell.Introspect': no such name"
+method call time=1794186034.587435 sender=:1.4 -> destination=org.freedesktop.DBus serial=23 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gnome"
+method return time=1794186034.587478 sender=org.freedesktop.DBus -> destination=:1.4 serial=29 reply_serial=23
+   string ":1.7"
+method call time=1794186034.587497 sender=:1.4 -> destination=:1.7 serial=24 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.DBus.Properties; member=GetAll
+   string "org.freedesktop.impl.portal.Lockdown"
+error time=1794186034.587626 sender=:1.7 -> destination=:1.4 error_name=org.freedesktop.DBus.Error.InvalidArgs reply_serial=24
+   string "No such interface “org.freedesktop.impl.portal.Lockdown”"
+method call time=1794186034.590677 sender=:1.4 -> destination=org.freedesktop.DBus serial=25 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.DBus',interface='org.freedesktop.DBus',member='NameOwnerChanged',path='/org/freedesktop/DBus',arg0='com.feralinteractive.GameMode'"
+method return time=1794186034.590719 sender=org.freedesktop.DBus -> destination=:1.4 serial=30 reply_serial=25
+method call time=1794186034.590755 sender=:1.4 -> destination=org.freedesktop.DBus serial=26 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "com.feralinteractive.GameMode"
+error time=1794186034.590781 sender=org.freedesktop.DBus -> destination=:1.4 error_name=org.freedesktop.DBus.Error.NameHasNoOwner reply_serial=26
+   string "Could not get owner of name 'com.feralinteractive.GameMode': no such name"
+method call time=1794186034.590798 sender=:1.4 -> destination=org.freedesktop.DBus serial=27 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='com.feralinteractive.GameMode',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/com/feralinteractive/GameMode',arg0='com.feralinteractive.GameMode'"
+method return time=1794186034.590814 sender=org.freedesktop.DBus -> destination=:1.4 serial=32 reply_serial=27
+method call time=1794186034.590863 sender=:1.4 -> destination=org.freedesktop.DBus serial=28 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='com.feralinteractive.GameMode',interface='com.feralinteractive.GameMode',path='/com/feralinteractive/GameMode'"
+method return time=1794186034.590885 sender=org.freedesktop.DBus -> destination=:1.4 serial=33 reply_serial=28
+method call time=1794186034.590898 sender=:1.4 -> destination=org.freedesktop.DBus serial=29 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "com.feralinteractive.GameMode"
+error time=1794186034.590954 sender=org.freedesktop.DBus -> destination=:1.4 error_name=org.freedesktop.DBus.Error.NameHasNoOwner reply_serial=29
+   string "Could not get owner of name 'com.feralinteractive.GameMode': no such name"
+method call time=1794186034.590977 sender=:1.4 -> destination=org.freedesktop.DBus serial=30 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/system/proxy/'"
+method return time=1794186034.591011 sender=org.freedesktop.DBus -> destination=:1.4 serial=35 reply_serial=30
+method call time=1794186034.591039 sender=:1.4 -> destination=org.freedesktop.DBus serial=31 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/system/proxy/http/'"
+method return time=1794186034.591085 sender=org.freedesktop.DBus -> destination=:1.4 serial=36 reply_serial=31
+method call time=1794186034.591109 sender=:1.4 -> destination=org.freedesktop.DBus serial=32 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/system/proxy/https/'"
+method return time=1794186034.591134 sender=org.freedesktop.DBus -> destination=:1.4 serial=37 reply_serial=32
+method call time=1794186034.591170 sender=:1.4 -> destination=org.freedesktop.DBus serial=33 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/system/proxy/ftp/'"
+method return time=1794186034.591219 sender=org.freedesktop.DBus -> destination=:1.4 serial=38 reply_serial=33
+method call time=1794186034.591245 sender=:1.4 -> destination=org.freedesktop.DBus serial=34 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/system/proxy/socks/'"
+method return time=1794186034.591263 sender=org.freedesktop.DBus -> destination=:1.4 serial=39 reply_serial=34
+method call time=1794186034.591341 sender=:1.4 -> destination=org.freedesktop.DBus serial=35 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/portal/desktop',arg0='org.freedesktop.impl.portal.FileChooser'"
+method return time=1794186034.591365 sender=org.freedesktop.DBus -> destination=:1.4 serial=40 reply_serial=35
+method call time=1794186034.591373 sender=:1.4 -> destination=org.freedesktop.DBus serial=36 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.impl.portal.FileChooser',path='/org/freedesktop/portal/desktop'"
+method return time=1794186034.591425 sender=org.freedesktop.DBus -> destination=:1.4 serial=41 reply_serial=36
+method call time=1794186034.591441 sender=:1.4 -> destination=org.freedesktop.DBus serial=37 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.desktop.gnome"
+   uint32 0
+method return time=1794186034.591490 sender=org.freedesktop.DBus -> destination=:1.4 serial=42 reply_serial=37
+   uint32 2
+method call time=1794186034.591510 sender=:1.4 -> destination=org.freedesktop.DBus serial=38 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gnome"
+method return time=1794186034.591529 sender=org.freedesktop.DBus -> destination=:1.4 serial=43 reply_serial=38
+   string ":1.7"
+method call time=1794186034.591549 sender=:1.4 -> destination=:1.7 serial=39 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.DBus.Properties; member=GetAll
+   string "org.freedesktop.impl.portal.FileChooser"
+error time=1794186034.591592 sender=:1.7 -> destination=:1.4 error_name=org.freedesktop.DBus.Error.InvalidArgs reply_serial=39
+   string "No such interface “org.freedesktop.impl.portal.FileChooser”"
+method call time=1794186034.591749 sender=:1.4 -> destination=org.freedesktop.DBus serial=40 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/portal/desktop',arg0='org.freedesktop.impl.portal.AppChooser'"
+method return time=1794186034.591773 sender=org.freedesktop.DBus -> destination=:1.4 serial=44 reply_serial=40
+method call time=1794186034.591792 sender=:1.4 -> destination=org.freedesktop.DBus serial=41 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.impl.portal.AppChooser',path='/org/freedesktop/portal/desktop'"
+method return time=1794186034.591838 sender=org.freedesktop.DBus -> destination=:1.4 serial=45 reply_serial=41
+method call time=1794186034.591846 sender=:1.4 -> destination=org.freedesktop.DBus serial=42 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.desktop.gnome"
+   uint32 0
+method return time=1794186034.591905 sender=org.freedesktop.DBus -> destination=:1.4 serial=46 reply_serial=42
+   uint32 2
+method call time=1794186034.591931 sender=:1.4 -> destination=org.freedesktop.DBus serial=43 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gnome"
+method return time=1794186034.591990 sender=org.freedesktop.DBus -> destination=:1.4 serial=47 reply_serial=43
+   string ":1.7"
+method call time=1794186034.592012 sender=:1.4 -> destination=:1.7 serial=44 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.DBus.Properties; member=GetAll
+   string "org.freedesktop.impl.portal.AppChooser"
+error time=1794186034.592065 sender=:1.7 -> destination=:1.4 error_name=org.freedesktop.DBus.Error.InvalidArgs reply_serial=44
+   string "No such interface “org.freedesktop.impl.portal.AppChooser”"
+method call time=1794186034.592412 sender=:1.4 -> destination=org.freedesktop.DBus serial=45 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/portal/desktop',arg0='org.freedesktop.impl.portal.Print'"
+method return time=1794186034.592445 sender=org.freedesktop.DBus -> destination=:1.4 serial=48 reply_serial=45
+method call time=1794186034.592483 sender=:1.4 -> destination=org.freedesktop.DBus serial=46 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.impl.portal.Print',path='/org/freedesktop/portal/desktop'"
+method return time=1794186034.592512 sender=org.freedesktop.DBus -> destination=:1.4 serial=49 reply_serial=46
+method call time=1794186034.592521 sender=:1.4 -> destination=org.freedesktop.DBus serial=47 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.desktop.gnome"
+   uint32 0
+method return time=1794186034.592610 sender=org.freedesktop.DBus -> destination=:1.4 serial=50 reply_serial=47
+   uint32 2
+method call time=1794186034.592674 sender=:1.4 -> destination=org.freedesktop.DBus serial=48 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gnome"
+method return time=1794186034.592696 sender=org.freedesktop.DBus -> destination=:1.4 serial=51 reply_serial=48
+   string ":1.7"
+method call time=1794186034.592732 sender=:1.4 -> destination=:1.7 serial=49 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.DBus.Properties; member=GetAll
+   string "org.freedesktop.impl.portal.Print"
+error time=1794186034.592774 sender=:1.7 -> destination=:1.4 error_name=org.freedesktop.DBus.Error.InvalidArgs reply_serial=49
+   string "No such interface “org.freedesktop.impl.portal.Print”"
+method call time=1794186034.592971 sender=:1.4 -> destination=org.freedesktop.DBus serial=50 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.DBus',interface='org.freedesktop.DBus',member='NameOwnerChanged',path='/org/freedesktop/DBus',arg0='org.freedesktop.impl.portal.desktop.gtk'"
+method return time=1794186034.593006 sender=org.freedesktop.DBus -> destination=:1.4 serial=52 reply_serial=50
+method call time=1794186034.593016 sender=:1.4 -> destination=org.freedesktop.DBus serial=51 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gtk"
+error time=1794186034.593059 sender=org.freedesktop.DBus -> destination=:1.4 error_name=org.freedesktop.DBus.Error.NameHasNoOwner reply_serial=51
+   string "Could not get owner of name 'org.freedesktop.impl.portal.desktop.gtk': no such name"
+method call time=1794186034.593095 sender=:1.4 -> destination=org.freedesktop.DBus serial=52 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gtk',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/portal/desktop',arg0='org.freedesktop.impl.portal.Notification'"
+method return time=1794186034.593118 sender=org.freedesktop.DBus -> destination=:1.4 serial=54 reply_serial=52
+method call time=1794186034.593165 sender=:1.4 -> destination=org.freedesktop.DBus serial=53 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gtk',interface='org.freedesktop.impl.portal.Notification',path='/org/freedesktop/portal/desktop'"
+method return time=1794186034.593190 sender=org.freedesktop.DBus -> destination=:1.4 serial=55 reply_serial=53
+method call time=1794186034.593205 sender=:1.4 -> destination=org.freedesktop.DBus serial=54 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.desktop.gtk"
+   uint32 0
+error time=1794186034.598512 sender=org.freedesktop.DBus -> destination=:1.4 error_name=org.freedesktop.DBus.Error.Spawn.ChildExited reply_serial=54
+   string "Process org.freedesktop.impl.portal.desktop.gtk exited with status 1"
+method call time=1794186034.598676 sender=:1.4 -> destination=org.freedesktop.DBus serial=55 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gtk',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/portal/desktop',arg0='org.freedesktop.impl.portal.Notification'"
+method return time=1794186034.598733 sender=org.freedesktop.DBus -> destination=:1.4 serial=57 reply_serial=55
+method call time=1794186034.598750 sender=:1.4 -> destination=org.freedesktop.DBus serial=56 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gtk',interface='org.freedesktop.impl.portal.Notification',path='/org/freedesktop/portal/desktop'"
+method return time=1794186034.598797 sender=org.freedesktop.DBus -> destination=:1.4 serial=58 reply_serial=56
+method call time=1794186034.598852 sender=:1.4 -> destination=org.freedesktop.DBus serial=57 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',sender='org.freedesktop.DBus',interface='org.freedesktop.DBus',member='NameOwnerChanged',path='/org/freedesktop/DBus',arg0='org.freedesktop.impl.portal.desktop.gtk'"
+method return time=1794186034.598888 sender=org.freedesktop.DBus -> destination=:1.4 serial=59 reply_serial=57
+method call time=1794186034.598903 sender=:1.4 -> destination=org.freedesktop.DBus serial=58 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.DBus',interface='org.freedesktop.DBus',member='NameOwnerChanged',path='/org/freedesktop/DBus',arg0='org.freedesktop.impl.portal.desktop.gtk'"
+method return time=1794186034.598973 sender=org.freedesktop.DBus -> destination=:1.4 serial=60 reply_serial=58
+method call time=1794186034.598988 sender=:1.4 -> destination=org.freedesktop.DBus serial=59 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gtk"
+error time=1794186034.599040 sender=org.freedesktop.DBus -> destination=:1.4 error_name=org.freedesktop.DBus.Error.NameHasNoOwner reply_serial=59
+   string "Could not get owner of name 'org.freedesktop.impl.portal.desktop.gtk': no such name"
+method call time=1794186034.599059 sender=:1.4 -> destination=org.freedesktop.DBus serial=60 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gtk',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/portal/desktop',arg0='org.freedesktop.impl.portal.Inhibit'"
+method return time=1794186034.599128 sender=org.freedesktop.DBus -> destination=:1.4 serial=62 reply_serial=60
+method call time=1794186034.599144 sender=:1.4 -> destination=org.freedesktop.DBus serial=61 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gtk',interface='org.freedesktop.impl.portal.Inhibit',path='/org/freedesktop/portal/desktop'"
+method return time=1794186034.599199 sender=org.freedesktop.DBus -> destination=:1.4 serial=63 reply_serial=61
+method call time=1794186034.599220 sender=:1.4 -> destination=org.freedesktop.DBus serial=62 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.desktop.gtk"
+   uint32 0
+error time=1794186034.603780 sender=org.freedesktop.DBus -> destination=:1.4 error_name=org.freedesktop.DBus.Error.Spawn.ChildExited reply_serial=62
+   string "Process org.freedesktop.impl.portal.desktop.gtk exited with status 1"
+method call time=1794186034.603903 sender=:1.4 -> destination=org.freedesktop.DBus serial=63 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gtk',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/portal/desktop',arg0='org.freedesktop.impl.portal.Inhibit'"
+method return time=1794186034.603931 sender=org.freedesktop.DBus -> destination=:1.4 serial=65 reply_serial=63
+method call time=1794186034.603962 sender=:1.4 -> destination=org.freedesktop.DBus serial=64 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gtk',interface='org.freedesktop.impl.portal.Inhibit',path='/org/freedesktop/portal/desktop'"
+method return time=1794186034.604022 sender=org.freedesktop.DBus -> destination=:1.4 serial=66 reply_serial=64
+method call time=1794186034.604051 sender=:1.4 -> destination=org.freedesktop.DBus serial=65 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',sender='org.freedesktop.DBus',interface='org.freedesktop.DBus',member='NameOwnerChanged',path='/org/freedesktop/DBus',arg0='org.freedesktop.impl.portal.desktop.gtk'"
+method return time=1794186034.604101 sender=org.freedesktop.DBus -> destination=:1.4 serial=67 reply_serial=65
+method call time=1794186034.604127 sender=:1.4 -> destination=org.freedesktop.DBus serial=66 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/portal/desktop',arg0='org.freedesktop.impl.portal.Access'"
+method return time=1794186034.604144 sender=org.freedesktop.DBus -> destination=:1.4 serial=68 reply_serial=66
+method call time=1794186034.604175 sender=:1.4 -> destination=org.freedesktop.DBus serial=67 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.impl.portal.Access',path='/org/freedesktop/portal/desktop'"
+method return time=1794186034.604197 sender=org.freedesktop.DBus -> destination=:1.4 serial=69 reply_serial=67
+method call time=1794186034.604217 sender=:1.4 -> destination=org.freedesktop.DBus serial=68 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.desktop.gnome"
+   uint32 0
+method return time=1794186034.604272 sender=org.freedesktop.DBus -> destination=:1.4 serial=70 reply_serial=68
+   uint32 2
+method call time=1794186034.604296 sender=:1.4 -> destination=org.freedesktop.DBus serial=69 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gnome"
+method return time=1794186034.604354 sender=org.freedesktop.DBus -> destination=:1.4 serial=71 reply_serial=69
+   string ":1.7"
+method call time=1794186034.604373 sender=:1.4 -> destination=:1.7 serial=70 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.DBus.Properties; member=GetAll
+   string "org.freedesktop.impl.portal.Access"
+error time=1794186034.604419 sender=:1.7 -> destination=:1.4 error_name=org.freedesktop.DBus.Error.InvalidArgs reply_serial=70
+   string "No such interface “org.freedesktop.impl.portal.Access”"
+method call time=1794186034.604668 sender=:1.4 -> destination=org.freedesktop.DBus serial=71 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.desktop.gnome"
+   uint32 0
+method return time=1794186034.604708 sender=org.freedesktop.DBus -> destination=:1.4 serial=72 reply_serial=71
+   uint32 2
+method call time=1794186034.604883 sender=:1.4 -> destination=org.freedesktop.DBus serial=72 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gnome"
+method return time=1794186034.604908 sender=org.freedesktop.DBus -> destination=:1.4 serial=73 reply_serial=72
+   string ":1.7"
+method call time=1794186034.604984 sender=:1.4 -> destination=:1.7 serial=73 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.DBus.Properties; member=GetAll
+   string "org.freedesktop.impl.portal.Access"
+error time=1794186034.605158 sender=:1.7 -> destination=:1.4 error_name=org.freedesktop.DBus.Error.InvalidArgs reply_serial=73
+   string "No such interface “org.freedesktop.impl.portal.Access”"
+method call time=1794186034.605284 sender=:1.4 -> destination=org.freedesktop.DBus serial=74 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.desktop.gnome"
+   uint32 0
+method return time=1794186034.605343 sender=org.freedesktop.DBus -> destination=:1.4 serial=74 reply_serial=74
+   uint32 2
+method call time=1794186034.605393 sender=:1.4 -> destination=org.freedesktop.DBus serial=75 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gnome"
+method return time=1794186034.605454 sender=org.freedesktop.DBus -> destination=:1.4 serial=75 reply_serial=75
+   string ":1.7"
+method call time=1794186034.605710 sender=:1.4 -> destination=:1.7 serial=76 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.DBus.Properties; member=GetAll
+   string "org.freedesktop.impl.portal.Access"
+error time=1794186034.605735 sender=:1.7 -> destination=:1.4 error_name=org.freedesktop.DBus.Error.InvalidArgs reply_serial=76
+   string "No such interface “org.freedesktop.impl.portal.Access”"
+method call time=1794186034.606108 sender=:1.4 -> destination=org.freedesktop.DBus serial=77 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/portal/desktop',arg0='org.freedesktop.impl.portal.Screenshot'"
+method return time=1794186034.606140 sender=org.freedesktop.DBus -> destination=:1.4 serial=76 reply_serial=77
+method call time=1794186034.606166 sender=:1.4 -> destination=org.freedesktop.DBus serial=78 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.impl.portal.Screenshot',path='/org/freedesktop/portal/desktop'"
+method return time=1794186034.606189 sender=org.freedesktop.DBus -> destination=:1.4 serial=77 reply_serial=78
+method call time=1794186034.606223 sender=:1.4 -> destination=org.freedesktop.DBus serial=79 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.desktop.gnome"
+   uint32 0
+method return time=1794186034.606252 sender=org.freedesktop.DBus -> destination=:1.4 serial=78 reply_serial=79
+   uint32 2
+method call time=1794186034.606273 sender=:1.4 -> destination=org.freedesktop.DBus serial=80 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gnome"
+method return time=1794186034.606340 sender=org.freedesktop.DBus -> destination=:1.4 serial=79 reply_serial=80
+   string ":1.7"
+method call time=1794186034.606369 sender=:1.4 -> destination=:1.7 serial=81 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.DBus.Properties; member=GetAll
+   string "org.freedesktop.impl.portal.Screenshot"
+error time=1794186034.606412 sender=:1.7 -> destination=:1.4 error_name=org.freedesktop.DBus.Error.InvalidArgs reply_serial=81
+   string "No such interface “org.freedesktop.impl.portal.Screenshot”"
+method call time=1794186034.606643 sender=:1.4 -> destination=org.freedesktop.DBus serial=82 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.desktop.gnome"
+   uint32 0
+method return time=1794186034.606674 sender=org.freedesktop.DBus -> destination=:1.4 serial=80 reply_serial=82
+   uint32 2
+method call time=1794186034.606741 sender=:1.4 -> destination=org.freedesktop.DBus serial=83 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gnome"
+method return time=1794186034.606776 sender=org.freedesktop.DBus -> destination=:1.4 serial=81 reply_serial=83
+   string ":1.7"
+method call time=1794186034.606834 sender=:1.4 -> destination=:1.7 serial=84 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.DBus.Properties; member=GetAll
+   string "org.freedesktop.impl.portal.Access"
+error time=1794186034.606991 sender=:1.7 -> destination=:1.4 error_name=org.freedesktop.DBus.Error.InvalidArgs reply_serial=84
+   string "No such interface “org.freedesktop.impl.portal.Access”"
+method call time=1794186034.607145 sender=:1.4 -> destination=org.freedesktop.DBus serial=85 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.desktop.gnome"
+   uint32 0
+method return time=1794186034.607196 sender=org.freedesktop.DBus -> destination=:1.4 serial=82 reply_serial=85
+   uint32 2
+method call time=1794186034.607295 sender=:1.4 -> destination=org.freedesktop.DBus serial=86 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gnome"
+method return time=1794186034.607327 sender=org.freedesktop.DBus -> destination=:1.4 serial=83 reply_serial=86
+   string ":1.7"
+method call time=1794186034.607556 sender=:1.4 -> destination=:1.7 serial=87 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.DBus.Properties; member=GetAll
+   string "org.freedesktop.impl.portal.Access"
+error time=1794186034.607641 sender=:1.7 -> destination=:1.4 error_name=org.freedesktop.DBus.Error.InvalidArgs reply_serial=87
+   string "No such interface “org.freedesktop.impl.portal.Access”"
+method call time=1794186034.607847 sender=:1.4 -> destination=org.freedesktop.DBus serial=88 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/portal/desktop',arg0='org.freedesktop.impl.portal.Background'"
+method return time=1794186034.607874 sender=org.freedesktop.DBus -> destination=:1.4 serial=84 reply_serial=88
+method call time=1794186034.607883 sender=:1.4 -> destination=org.freedesktop.DBus serial=89 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.impl.portal.Background',path='/org/freedesktop/portal/desktop'"
+method return time=1794186034.607931 sender=org.freedesktop.DBus -> destination=:1.4 serial=85 reply_serial=89
+method call time=1794186034.607942 sender=:1.4 -> destination=org.freedesktop.DBus serial=90 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.desktop.gnome"
+   uint32 0
+method return time=1794186034.607989 sender=org.freedesktop.DBus -> destination=:1.4 serial=86 reply_serial=90
+   uint32 2
+method call time=1794186034.608035 sender=:1.4 -> destination=org.freedesktop.DBus serial=91 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gnome"
+method return time=1794186034.608107 sender=org.freedesktop.DBus -> destination=:1.4 serial=87 reply_serial=91
+   string ":1.7"
+method call time=1794186034.608154 sender=:1.4 -> destination=:1.7 serial=92 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.DBus.Properties; member=GetAll
+   string "org.freedesktop.impl.portal.Background"
+error time=1794186034.608209 sender=:1.7 -> destination=:1.4 error_name=org.freedesktop.DBus.Error.InvalidArgs reply_serial=92
+   string "No such interface “org.freedesktop.impl.portal.Background”"
+method call time=1794186034.608758 sender=:1.8 -> destination=org.freedesktop.DBus serial=1 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=Hello
+method return time=1794186034.608781 sender=org.freedesktop.DBus -> destination=:1.8 serial=1 reply_serial=1
+   string ":1.8"
+signal time=1794186034.608797 sender=org.freedesktop.DBus -> destination=(null destination) serial=88 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameOwnerChanged
+   string ":1.8"
+   string ""
+   string ":1.8"
+signal time=1794186034.608886 sender=org.freedesktop.DBus -> destination=:1.8 serial=2 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameAcquired
+   string ":1.8"
+method call time=1794186034.608955 sender=:1.8 -> destination=org.freedesktop.DBus serial=2 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RequestName
+   string "org.freedesktop.background.Monitor"
+   uint32 6
+signal time=1794186034.609028 sender=org.freedesktop.DBus -> destination=(null destination) serial=89 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameOwnerChanged
+   string "org.freedesktop.background.Monitor"
+   string ""
+   string ":1.8"
+signal time=1794186034.609099 sender=org.freedesktop.DBus -> destination=:1.8 serial=3 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameAcquired
+   string "org.freedesktop.background.Monitor"
+method return time=1794186034.609135 sender=org.freedesktop.DBus -> destination=:1.8 serial=4 reply_serial=2
+   uint32 1
+method call time=1794186034.609242 sender=:1.4 -> destination=org.freedesktop.DBus serial=93 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/portal/desktop',arg0='org.freedesktop.impl.portal.Wallpaper'"
+method return time=1794186034.609271 sender=org.freedesktop.DBus -> destination=:1.4 serial=90 reply_serial=93
+method call time=1794186034.609301 sender=:1.4 -> destination=org.freedesktop.DBus serial=94 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.impl.portal.Wallpaper',path='/org/freedesktop/portal/desktop'"
+method return time=1794186034.609372 sender=org.freedesktop.DBus -> destination=:1.4 serial=91 reply_serial=94
+method call time=1794186034.609409 sender=:1.4 -> destination=org.freedesktop.DBus serial=95 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.desktop.gnome"
+   uint32 0
+method return time=1794186034.609448 sender=org.freedesktop.DBus -> destination=:1.4 serial=92 reply_serial=95
+   uint32 2
+method call time=1794186034.609520 sender=:1.4 -> destination=org.freedesktop.DBus serial=96 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gnome"
+method return time=1794186034.609550 sender=org.freedesktop.DBus -> destination=:1.4 serial=93 reply_serial=96
+   string ":1.7"
+method call time=1794186034.609594 sender=:1.4 -> destination=:1.7 serial=97 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.DBus.Properties; member=GetAll
+   string "org.freedesktop.impl.portal.Wallpaper"
+error time=1794186034.609673 sender=:1.7 -> destination=:1.4 error_name=org.freedesktop.DBus.Error.InvalidArgs reply_serial=97
+   string "No such interface “org.freedesktop.impl.portal.Wallpaper”"
+method call time=1794186034.609784 sender=:1.4 -> destination=org.freedesktop.DBus serial=98 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.desktop.gnome"
+   uint32 0
+method return time=1794186034.609823 sender=org.freedesktop.DBus -> destination=:1.4 serial=94 reply_serial=98
+   uint32 2
+method call time=1794186034.609937 sender=:1.4 -> destination=org.freedesktop.DBus serial=99 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gnome"
+method return time=1794186034.609968 sender=org.freedesktop.DBus -> destination=:1.4 serial=95 reply_serial=99
+   string ":1.7"
+method call time=1794186034.610067 sender=:1.4 -> destination=:1.7 serial=100 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.DBus.Properties; member=GetAll
+   string "org.freedesktop.impl.portal.Access"
+error time=1794186034.610142 sender=:1.7 -> destination=:1.4 error_name=org.freedesktop.DBus.Error.InvalidArgs reply_serial=100
+   string "No such interface “org.freedesktop.impl.portal.Access”"
+method call time=1794186034.610420 sender=:1.4 -> destination=org.freedesktop.DBus serial=101 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/portal/desktop',arg0='org.freedesktop.impl.portal.Account'"
+method return time=1794186034.610448 sender=org.freedesktop.DBus -> destination=:1.4 serial=96 reply_serial=101
+method call time=1794186034.610459 sender=:1.4 -> destination=org.freedesktop.DBus serial=102 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.impl.portal.Account',path='/org/freedesktop/portal/desktop'"
+method return time=1794186034.610476 sender=org.freedesktop.DBus -> destination=:1.4 serial=97 reply_serial=102
+method call time=1794186034.610513 sender=:1.4 -> destination=org.freedesktop.DBus serial=103 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.desktop.gnome"
+   uint32 0
+method return time=1794186034.610591 sender=org.freedesktop.DBus -> destination=:1.4 serial=98 reply_serial=103
+   uint32 2
+method call time=1794186034.610616 sender=:1.4 -> destination=org.freedesktop.DBus serial=104 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gnome"
+method return time=1794186034.610659 sender=org.freedesktop.DBus -> destination=:1.4 serial=99 reply_serial=104
+   string ":1.7"
+method call time=1794186034.610730 sender=:1.4 -> destination=:1.7 serial=105 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.DBus.Properties; member=GetAll
+   string "org.freedesktop.impl.portal.Account"
+error time=1794186034.610872 sender=:1.7 -> destination=:1.4 error_name=org.freedesktop.DBus.Error.InvalidArgs reply_serial=105
+   string "No such interface “org.freedesktop.impl.portal.Account”"
+method call time=1794186034.611163 sender=:1.4 -> destination=org.freedesktop.DBus serial=106 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.DBus',interface='org.freedesktop.DBus',member='NameOwnerChanged',path='/org/freedesktop/DBus',arg0='org.freedesktop.impl.portal.desktop.gtk'"
+method return time=1794186034.611190 sender=org.freedesktop.DBus -> destination=:1.4 serial=100 reply_serial=106
+method call time=1794186034.611212 sender=:1.4 -> destination=org.freedesktop.DBus serial=107 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gtk"
+error time=1794186034.611271 sender=org.freedesktop.DBus -> destination=:1.4 error_name=org.freedesktop.DBus.Error.NameHasNoOwner reply_serial=107
+   string "Could not get owner of name 'org.freedesktop.impl.portal.desktop.gtk': no such name"
+method call time=1794186034.611315 sender=:1.4 -> destination=org.freedesktop.DBus serial=108 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gtk',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/portal/desktop',arg0='org.freedesktop.impl.portal.Email'"
+method return time=1794186034.611348 sender=org.freedesktop.DBus -> destination=:1.4 serial=102 reply_serial=108
+method call time=1794186034.611374 sender=:1.4 -> destination=org.freedesktop.DBus serial=109 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gtk',interface='org.freedesktop.impl.portal.Email',path='/org/freedesktop/portal/desktop'"
+method return time=1794186034.611400 sender=org.freedesktop.DBus -> destination=:1.4 serial=103 reply_serial=109
+method call time=1794186034.611432 sender=:1.4 -> destination=org.freedesktop.DBus serial=110 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.desktop.gtk"
+   uint32 0
+error time=1794186034.616179 sender=org.freedesktop.DBus -> destination=:1.4 error_name=org.freedesktop.DBus.Error.Spawn.ChildExited reply_serial=110
+   string "Process org.freedesktop.impl.portal.desktop.gtk exited with status 1"
+method call time=1794186034.616356 sender=:1.4 -> destination=org.freedesktop.DBus serial=111 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gtk',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/portal/desktop',arg0='org.freedesktop.impl.portal.Email'"
+method return time=1794186034.616381 sender=org.freedesktop.DBus -> destination=:1.4 serial=105 reply_serial=111
+method call time=1794186034.616390 sender=:1.4 -> destination=org.freedesktop.DBus serial=112 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gtk',interface='org.freedesktop.impl.portal.Email',path='/org/freedesktop/portal/desktop'"
+method return time=1794186034.616405 sender=org.freedesktop.DBus -> destination=:1.4 serial=106 reply_serial=112
+method call time=1794186034.616421 sender=:1.4 -> destination=org.freedesktop.DBus serial=113 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',sender='org.freedesktop.DBus',interface='org.freedesktop.DBus',member='NameOwnerChanged',path='/org/freedesktop/DBus',arg0='org.freedesktop.impl.portal.desktop.gtk'"
+method return time=1794186034.616436 sender=org.freedesktop.DBus -> destination=:1.4 serial=107 reply_serial=113
+method call time=1794186034.616463 sender=:1.4 -> destination=org.freedesktop.DBus serial=114 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/portal/desktop',arg0='org.freedesktop.impl.portal.DynamicLauncher'"
+method return time=1794186034.616512 sender=org.freedesktop.DBus -> destination=:1.4 serial=108 reply_serial=114
+method call time=1794186034.616521 sender=:1.4 -> destination=org.freedesktop.DBus serial=115 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.impl.portal.DynamicLauncher',path='/org/freedesktop/portal/desktop'"
+method return time=1794186034.616551 sender=org.freedesktop.DBus -> destination=:1.4 serial=109 reply_serial=115
+method call time=1794186034.616576 sender=:1.4 -> destination=org.freedesktop.DBus serial=116 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.desktop.gnome"
+   uint32 0
+method return time=1794186034.616639 sender=org.freedesktop.DBus -> destination=:1.4 serial=110 reply_serial=116
+   uint32 2
+method call time=1794186034.616664 sender=:1.4 -> destination=org.freedesktop.DBus serial=117 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gnome"
+method return time=1794186034.616714 sender=org.freedesktop.DBus -> destination=:1.4 serial=111 reply_serial=117
+   string ":1.7"
+method call time=1794186034.616739 sender=:1.4 -> destination=:1.7 serial=118 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.DBus.Properties; member=GetAll
+   string "org.freedesktop.impl.portal.DynamicLauncher"
+error time=1794186034.616796 sender=:1.7 -> destination=:1.4 error_name=org.freedesktop.DBus.Error.InvalidArgs reply_serial=118
+   string "No such interface “org.freedesktop.impl.portal.DynamicLauncher”"
+method call time=1794186034.617091 sender=:1.4 -> destination=org.freedesktop.DBus serial=119 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/portal/desktop',arg0='org.freedesktop.impl.portal.ScreenCast'"
+method return time=1794186034.617118 sender=org.freedesktop.DBus -> destination=:1.4 serial=112 reply_serial=119
+method call time=1794186034.617129 sender=:1.4 -> destination=org.freedesktop.DBus serial=120 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.impl.portal.ScreenCast',path='/org/freedesktop/portal/desktop'"
+method return time=1794186034.617159 sender=org.freedesktop.DBus -> destination=:1.4 serial=113 reply_serial=120
+method call time=1794186034.617185 sender=:1.4 -> destination=org.freedesktop.DBus serial=121 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.desktop.gnome"
+   uint32 0
+method return time=1794186034.617255 sender=org.freedesktop.DBus -> destination=:1.4 serial=114 reply_serial=121
+   uint32 2
+method call time=1794186034.617302 sender=:1.4 -> destination=org.freedesktop.DBus serial=122 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gnome"
+method return time=1794186034.617345 sender=org.freedesktop.DBus -> destination=:1.4 serial=115 reply_serial=122
+   string ":1.7"
+method call time=1794186034.617386 sender=:1.4 -> destination=:1.7 serial=123 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.DBus.Properties; member=GetAll
+   string "org.freedesktop.impl.portal.ScreenCast"
+error time=1794186034.617471 sender=:1.7 -> destination=:1.4 error_name=org.freedesktop.DBus.Error.InvalidArgs reply_serial=123
+   string "No such interface “org.freedesktop.impl.portal.ScreenCast”"
+method call time=1794186034.617745 sender=:1.4 -> destination=org.freedesktop.DBus serial=124 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/portal/desktop',arg0='org.freedesktop.impl.portal.RemoteDesktop'"
+method return time=1794186034.617769 sender=org.freedesktop.DBus -> destination=:1.4 serial=116 reply_serial=124
+method call time=1794186034.617781 sender=:1.4 -> destination=org.freedesktop.DBus serial=125 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.impl.portal.RemoteDesktop',path='/org/freedesktop/portal/desktop'"
+method return time=1794186034.617828 sender=org.freedesktop.DBus -> destination=:1.4 serial=117 reply_serial=125
+method call time=1794186034.617842 sender=:1.4 -> destination=org.freedesktop.DBus serial=126 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.desktop.gnome"
+   uint32 0
+method return time=1794186034.617900 sender=org.freedesktop.DBus -> destination=:1.4 serial=118 reply_serial=126
+   uint32 2
+method call time=1794186034.617936 sender=:1.4 -> destination=org.freedesktop.DBus serial=127 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gnome"
+method return time=1794186034.617974 sender=org.freedesktop.DBus -> destination=:1.4 serial=119 reply_serial=127
+   string ":1.7"
+method call time=1794186034.617992 sender=:1.4 -> destination=:1.7 serial=128 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.DBus.Properties; member=GetAll
+   string "org.freedesktop.impl.portal.RemoteDesktop"
+error time=1794186034.618042 sender=:1.7 -> destination=:1.4 error_name=org.freedesktop.DBus.Error.InvalidArgs reply_serial=128
+   string "No such interface “org.freedesktop.impl.portal.RemoteDesktop”"
+method call time=1794186034.618344 sender=:1.4 -> destination=org.freedesktop.DBus serial=129 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/portal/desktop',arg0='org.freedesktop.impl.portal.Clipboard'"
+method return time=1794186034.618372 sender=org.freedesktop.DBus -> destination=:1.4 serial=120 reply_serial=129
+method call time=1794186034.618383 sender=:1.4 -> destination=org.freedesktop.DBus serial=130 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.impl.portal.Clipboard',path='/org/freedesktop/portal/desktop'"
+method return time=1794186034.618438 sender=org.freedesktop.DBus -> destination=:1.4 serial=121 reply_serial=130
+method call time=1794186034.618449 sender=:1.4 -> destination=org.freedesktop.DBus serial=131 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.desktop.gnome"
+   uint32 0
+method return time=1794186034.618504 sender=org.freedesktop.DBus -> destination=:1.4 serial=122 reply_serial=131
+   uint32 2
+method call time=1794186034.618552 sender=:1.4 -> destination=org.freedesktop.DBus serial=132 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gnome"
+method return time=1794186034.618570 sender=org.freedesktop.DBus -> destination=:1.4 serial=123 reply_serial=132
+   string ":1.7"
+method call time=1794186034.618585 sender=:1.4 -> destination=:1.7 serial=133 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.DBus.Properties; member=GetAll
+   string "org.freedesktop.impl.portal.Clipboard"
+error time=1794186034.618634 sender=:1.7 -> destination=:1.4 error_name=org.freedesktop.DBus.Error.InvalidArgs reply_serial=133
+   string "No such interface “org.freedesktop.impl.portal.Clipboard”"
+method call time=1794186034.618879 sender=:1.4 -> destination=org.freedesktop.DBus serial=134 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.DBus.Properties',member='PropertiesChanged',path='/org/freedesktop/portal/desktop',arg0='org.freedesktop.impl.portal.InputCapture'"
+method return time=1794186034.618917 sender=org.freedesktop.DBus -> destination=:1.4 serial=124 reply_serial=134
+method call time=1794186034.618954 sender=:1.4 -> destination=org.freedesktop.DBus serial=135 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',sender='org.freedesktop.impl.portal.desktop.gnome',interface='org.freedesktop.impl.portal.InputCapture',path='/org/freedesktop/portal/desktop'"
+method return time=1794186034.619044 sender=org.freedesktop.DBus -> destination=:1.4 serial=125 reply_serial=135
+method call time=1794186034.619060 sender=:1.4 -> destination=org.freedesktop.DBus serial=136 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=StartServiceByName
+   string "org.freedesktop.impl.portal.desktop.gnome"
+   uint32 0
+method return time=1794186034.619107 sender=org.freedesktop.DBus -> destination=:1.4 serial=126 reply_serial=136
+   uint32 2
+method call time=1794186034.619158 sender=:1.4 -> destination=org.freedesktop.DBus serial=137 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=GetNameOwner
+   string "org.freedesktop.impl.portal.desktop.gnome"
+method return time=1794186034.619221 sender=org.freedesktop.DBus -> destination=:1.4 serial=127 reply_serial=137
+   string ":1.7"
+method call time=1794186034.619255 sender=:1.4 -> destination=:1.7 serial=138 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.DBus.Properties; member=GetAll
+   string "org.freedesktop.impl.portal.InputCapture"
+error time=1794186034.619345 sender=:1.7 -> destination=:1.4 error_name=org.freedesktop.DBus.Error.InvalidArgs reply_serial=138
+   string "No such interface “org.freedesktop.impl.portal.InputCapture”"
+method call time=1794186034.619459 sender=:1.4 -> destination=org.freedesktop.DBus serial=139 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RequestName
+   string "org.freedesktop.portal.Desktop"
+   uint32 1
+signal time=1794186034.619493 sender=org.freedesktop.DBus -> destination=(null destination) serial=130 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameOwnerChanged
+   string "org.freedesktop.portal.Desktop"
+   string ""
+   string ":1.4"
+signal time=1794186034.619567 sender=org.freedesktop.DBus -> destination=:1.4 serial=128 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameAcquired
+   string "org.freedesktop.portal.Desktop"
+method return time=1794186034.619601 sender=org.freedesktop.DBus -> destination=:1.4 serial=129 reply_serial=139
+   uint32 1
+error time=1794186034.619656 sender=:1.4 -> destination=:1.3 error_name=org.freedesktop.DBus.Error.UnknownMethod reply_serial=2
+   string "No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop"
+method call time=1794186034.619836 sender=:1.3 -> destination=org.freedesktop.portal.Desktop serial=3 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.portal.Settings; member=Read
+   string "org.freedesktop.appearance"
+   string "color-scheme"
+error time=1794186034.619916 sender=:1.4 -> destination=:1.3 error_name=org.freedesktop.DBus.Error.UnknownMethod reply_serial=3
+   string "No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop"
+signal time=1794186034.620132 sender=org.freedesktop.DBus -> destination=:1.3 serial=3 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameLost
+   string ":1.3"
+signal time=1794186034.620160 sender=org.freedesktop.DBus -> destination=(null destination) serial=131 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameOwnerChanged
+   string ":1.3"
+   string ":1.3"
+   string ""

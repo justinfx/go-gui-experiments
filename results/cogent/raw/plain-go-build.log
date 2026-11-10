@@ -1,0 +1,4 @@
+$ go build ./...
+(rc=0, 3.57s)
+# gguix/apps/cogent
+ld: warning: ignoring duplicate libraries: '-lobjc'

@@ -1,0 +1,41 @@
+$ ['make', 'package']
+(rc=0, 33.26s)
+Done in 73ms
+go build -trimpath -ldflags '-s -w' -o bin/gguix-miqt ./cmd/desktop
+mkdir -p bin/GGUIX-miqt-gotth.app/Contents/MacOS
+cp bin/gguix-miqt bin/GGUIX-miqt-gotth.app/Contents/MacOS/gguix-miqt
+cp desktop/Info.plist bin/GGUIX-miqt-gotth.app/Contents/Info.plist
+size before macdeployqt:  38M
+/opt/homebrew/opt/qt/bin/macdeployqt bin/GGUIX-miqt-gotth.app
+ln -sfn ../../../../../../ bin/GGUIX-miqt-gotth.app/Contents/Frameworks/QtWebEngineCore.framework/Versions/A/Helpers/QtWebEngineProcess.app/Contents/Frameworks
+codesign --force --deep -s - bin/GGUIX-miqt-gotth.app 2>&1 | tail -1
+bin/GGUIX-miqt-gotth.app: replacing existing signature
+size after macdeployqt: 335M
+ERROR: Cannot resolve rpath "@rpath/QtSvg.framework/Versions/A/QtSvg"
+ERROR:  using QList("/opt/homebrew/opt/qtbase/lib", "/opt/homebrew/opt/qtwebchannel/lib", "/opt/homebrew/opt/qtdeclarative/lib", "/opt/homebrew/opt/qtwebengine/lib", "/opt/homebrew/opt/qtpositioning/lib", "/opt/homebrew/opt/md4c/lib", "/opt/homebrew/opt/zstd/lib", "/opt/homebrew/opt/brotli/lib", "/opt/homebrew/Cellar/dbus/1.16.2_1/lib", "/opt/homebrew/opt/graphite2/lib", "apps/miqt-gotth/bin/lib")
+ERROR: Cannot resolve rpath "@rpath/QtVirtualKeyboardQml.framework/Versions/A/QtVirtualKeyboardQml"
+ERROR:  using QList("/opt/homebrew/opt/qtbase/lib", "/opt/homebrew/opt/qtwebchannel/lib", "/opt/homebrew/opt/qtdeclarative/lib", "/opt/homebrew/opt/qtwebengine/lib", "/opt/homebrew/opt/qtpositioning/lib", "/opt/homebrew/opt/md4c/lib", "/opt/homebrew/opt/zstd/lib", "/opt/homebrew/opt/brotli/lib", "/opt/homebrew/Cellar/dbus/1.16.2_1/lib", "/opt/homebrew/opt/graphite2/lib", "apps/miqt-gotth/bin/lib")
+ERROR: Cannot resolve rpath "@rpath/QtVirtualKeyboard.framework/Versions/A/QtVirtualKeyboard"
+ERROR:  using QList("/opt/homebrew/opt/qtbase/lib", "/opt/homebrew/opt/qtwebchannel/lib", "/opt/homebrew/opt/qtdeclarative/lib", "/opt/homebrew/opt/qtwebengine/lib", "/opt/homebrew/opt/qtpositioning/lib", "/opt/homebrew/opt/md4c/lib", "/opt/homebrew/opt/zstd/lib", "/opt/homebrew/opt/brotli/lib", "/opt/homebrew/Cellar/dbus/1.16.2_1/lib", "/opt/homebrew/opt/graphite2/lib", "apps/miqt-gotth/bin/lib")
+ERROR: Cannot resolve rpath "@rpath/libbrotlicommon.1.dylib"
+ERROR:  using QList("apps/miqt-gotth/bin/GGUIX-miqt-gotth.app/Contents/lib")
+ERROR: Cannot resolve rpath "@rpath/libsharpyuv.0.dylib"
+ERROR:  using QList("apps/miqt-gotth/bin/GGUIX-miqt-gotth.app/Contents/lib")
+ERROR: Cannot resolve rpath "@rpath/libwebp.7.dylib"
+ERROR:  using QList("apps/miqt-gotth/bin/GGUIX-miqt-gotth.app/Contents/lib")
+ERROR: Cannot resolve rpath "@rpath/libsharpyuv.0.dylib"
+ERROR:  using QList("apps/miqt-gotth/bin/GGUIX-miqt-gotth.app/Contents/lib")
+ERROR: Cannot resolve rpath "@rpath/libwebp.7.dylib"
+ERROR:  using QList("apps/miqt-gotth/bin/GGUIX-miqt-gotth.app/Contents/lib")
+ERROR: Cannot resolve rpath "@rpath/libsharpyuv.0.dylib"
+ERROR:  using QList("apps/miqt-gotth/bin/GGUIX-miqt-gotth.app/Contents/lib")
+ERROR: Cannot resolve rpath "@rpath/QtSvg.framework/Versions/A/QtSvg"
+ERROR:  using QList("apps/miqt-gotth/bin/lib")
+ERROR: Cannot resolve rpath "@rpath/QtVirtualKeyboardQml.framework/Versions/A/QtVirtualKeyboardQml"
+ERROR:  using QList("apps/miqt-gotth/bin/lib")
+ERROR: Cannot resolve rpath "@rpath/QtVirtualKeyboard.framework/Versions/A/QtVirtualKeyboard"
+ERROR:  using QList("apps/miqt-gotth/bin/lib")
+ERROR: Cannot resolve rpath "@rpath/QtVirtualKeyboardQml.framework/Versions/A/QtVirtualKeyboardQml"
+ERROR:  using QList("apps/miqt-gotth/bin/lib")
+ERROR: Cannot resolve rpath "@rpath/QtVirtualKeyboard.framework/Versions/A/QtVirtualKeyboard"
+ERROR:  using QList("apps/miqt-gotth/bin/lib")

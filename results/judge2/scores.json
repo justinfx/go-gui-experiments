@@ -1,0 +1,22 @@
+{
+  "base": {
+    "bootstrap_build_loop": {"fyne": 4, "cogent": 4, "wails": 3, "gotth": 3, "miqt": 3},
+    "runtime_requirements": {"fyne": 5, "cogent": 5, "wails": 4, "gotth": 3, "miqt": 3},
+    "toolchain_footprint": {"fyne": 4, "cogent": 4, "wails": 2, "gotth": 3, "miqt": 2},
+    "native_widgets": {"fyne": 3, "cogent": 2, "wails": 4, "gotth": 3, "miqt": 5},
+    "desktop_web_reach": {"fyne": 3, "cogent": 5, "wails": 4, "gotth": 4, "miqt": "N/A"},
+    "cgo_core_tolerance": {"fyne": 4, "cogent": 4, "wails": 5, "gotth": 5, "miqt": 3},
+    "code_clarity": {"fyne": 4, "cogent": 3, "wails": 2, "gotth": 3, "miqt": 3},
+    "testability": {"fyne": 4, "cogent": 4, "wails": 4, "gotth": 3, "miqt": 4},
+    "performance": {"fyne": 4, "cogent": 5, "wails": 5, "gotth": 3, "miqt": 2},
+    "style_appeal": {"fyne": 3, "cogent": 2, "wails": 4, "gotth": 4, "miqt": 3},
+    "native_host_access": {"fyne": 4, "cogent": 4, "wails": 4, "gotth": 4, "miqt": 4},
+    "custom_rendering": {"fyne": 3, "cogent": 4, "wails": 5, "gotth": 4, "miqt": 3}
+  },
+  "fitcap_performance": {"fyne-fitcap": 4, "cogent-fitcap": 5, "wails-fitcap": 5, "gotth-fitcap": 2, "miqt-fitcap": 4},
+  "gotth_shells": {
+    "gotth": {"build_loop": 3, "runtime": 3, "toolchain": 3, "native_integration": 3, "cross_builds": 4, "performance": 3, "linux_function": 3},
+    "gotth-glaze": {"build_loop": 4, "runtime": 4, "toolchain": 4, "native_integration": 3, "cross_builds": 5, "performance": 3, "linux_function": 3},
+    "miqt-gotth": {"build_loop": 2, "runtime": 1, "toolchain": 2, "native_integration": 4, "cross_builds": 1, "performance": 2, "linux_function": 2}
+  }
+}

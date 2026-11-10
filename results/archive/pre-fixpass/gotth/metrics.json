@@ -1,0 +1,414 @@
+{
+  "app": "gotth",
+  "bench": {
+    "errors": [],
+    "events_seen": [
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ]
+    ],
+    "memory": {
+      "peak_process_tree_mb": {
+        "max": 163.8,
+        "median": 162.1
+      },
+      "peak_total_mb": {
+        "max": 738.7,
+        "median": 717.4
+      },
+      "peak_webkit_mb": {
+        "max": 576.5,
+        "median": 553.6
+      }
+    },
+    "runs": 5,
+    "summary": {
+      "cards_scroll": {
+        "max_gap_ms": {
+          "max": 82,
+          "median": 79,
+          "min": 77,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 56,
+          "median": 52,
+          "min": 47,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 32,
+          "median": 30,
+          "min": 29,
+          "n": 5
+        },
+        "switch_ms": {
+          "max": 992,
+          "median": 973,
+          "min": 962,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3206,
+          "median": 3205,
+          "min": 3203,
+          "n": 5
+        }
+      },
+      "export": {
+        "max_gap_ms": {
+          "max": 6,
+          "median": 6,
+          "min": 5,
+          "n": 5
+        },
+        "ms": {
+          "max": 512,
+          "median": 506,
+          "min": 505,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 6,
+          "median": 5,
+          "min": 5,
+          "n": 5
+        },
+        "rows": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "jump": {
+        "ms": {
+          "max": 230,
+          "median": 230,
+          "min": 228,
+          "n": 5
+        }
+      },
+      "ready": {
+        "ms": {
+          "max": 614,
+          "median": 608,
+          "min": 602,
+          "n": 5
+        }
+      },
+      "scroll": {
+        "max_gap_ms": {
+          "max": 97,
+          "median": 79,
+          "min": 78,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 75,
+          "median": 75,
+          "min": 74,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 155,
+          "median": 152,
+          "min": 152,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3316,
+          "median": 3311,
+          "min": 3297,
+          "n": 5
+        }
+      },
+      "search": {
+        "ms": {
+          "max": 190,
+          "median": 182,
+          "min": 179,
+          "n": 5
+        },
+        "total": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "sort": {
+        "ms": {
+          "max": 372,
+          "median": 360,
+          "min": 359,
+          "n": 5
+        }
+      }
+    }
+  },
+  "cgoprobe": {
+    "rc": 0,
+    "results": [
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "web"
+      },
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "desktop"
+      },
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "web-export-test"
+      }
+    ],
+    "secs": 5.06
+  },
+  "cold_build": {
+    "rc": 0,
+    "secs": 10.43
+  },
+  "cross": {
+    "cross-linux": {
+      "rc": 0,
+      "secs": 348.23,
+      "status": "PASS",
+      "tail": "== web server for linux/amd64 (plain go build)\nCROSS linux web PASS  14M\n== desktop shell for linux/amd64 (Docker golang:1.27.3-bookworm with a C toolchain)\nCROSS linux desktop PASS  14M\ndebconf: delaying package configuration, since apt-utils is not installed\ngo: downloading github.com/webview/webview_go v0.0.0-20240831120633-6173450d4dd6\ngo: downloading github.com/a-h/templ v0.3.1100\ngo: downloading github.com/Oudwins/tailwind-merge-go v0.2.2"
+    },
+    "cross-windows": {
+      "rc": 0,
+      "secs": 163.51,
+      "status": "PASS",
+      "tail": "== web server for windows/amd64 (plain go build)\nCROSS windows web PASS  14M\n== desktop shell for windows/amd64 (Docker golang:1.27.3-bookworm with a C toolchain)\nCROSS windows desktop PASS  20M\ndebconf: delaying package configuration, since apt-utils is not installed\ngo: downloading github.com/webview/webview_go v0.0.0-20240831120633-6173450d4dd6\ngo: downloading github.com/a-h/templ v0.3.1100\ngo: downloading github.com/Oudwins/tailwind-merge-go v0.2.2"
+    }
+  },
+  "idle_rss": {
+    "process_tree_mb": 126.3,
+    "total_mb": 263.9,
+    "webkit_mb": 137.6
+  },
+  "incremental_build": {
+    "BuildMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 1.91
+    },
+    "UIMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 1.73
+    }
+  },
+  "loc": {
+    "app": "gotth",
+    "build_tagged_files": 2,
+    "by_category": {
+      "bench": 234,
+      "desktop": 461,
+      "shared": 3331,
+      "test": 653,
+      "web": 149
+    },
+    "by_category_language": {
+      "bench": {
+        "go": 77,
+        "js": 157
+      },
+      "desktop": {
+        "go": 230,
+        "js": 57,
+        "make": 15,
+        "templ": 159
+      },
+      "shared": {
+        "css": 692,
+        "go": 978,
+        "js": 622,
+        "make": 57,
+        "templ": 982
+      },
+      "test": {
+        "go": 571,
+        "js": 82
+      },
+      "web": {
+        "go": 66,
+        "js": 70,
+        "make": 10,
+        "templ": 3
+      }
+    },
+    "by_language": {
+      "css": 692,
+      "go": 1922,
+      "js": 988,
+      "make": 82,
+      "templ": 1144
+    },
+    "custom_rendering_lines": 90,
+    "dual_target_overhead_lines": 610,
+    "dual_target_overhead_pct": 15.5,
+    "excluded_generated_lines": {
+      "go": 25989
+    },
+    "excluded_vendored_lines": {
+      "go": 8818,
+      "js": 12567,
+      "templ": 6082
+    },
+    "files": 36,
+    "inline_marker_blocks": 8,
+    "longest_go_func": "server.go:handleSave",
+    "longest_go_func_lines": 93
+  },
+  "plain_go_build_from_clean": {
+    "rc": 1,
+    "secs": 2.29,
+    "tail": "./server.go:479:9: undefined: views.ListResponse\n./server.go:480:9: undefined: views.DetailForm\n./server.go:510:21: undefined: views.PageFragment\n./server.go:524:21: undefined: views.DetailForm\n./server.go:534:21: undefined: views.DetailForm\n./server.go:534:21: too many errors"
+  },
+  "sizes": {
+    "app_bundle": "bin/GGUIX-gotth.app",
+    "app_bundle_kb": 13556,
+    "binary_bytes": 13873698,
+    "bundled_frameworks_kb": null,
+    "bundled_refs": [],
+    "external_dylibs": [],
+    "package": {
+      "rc": 0,
+      "secs": 0.34
+    }
+  },
+  "step_secs": {
+    "bench": 63.9,
+    "cgoprobe": 5.4,
+    "cold_build": 11.8,
+    "cross": 511.7,
+    "idle_rss": 7.1,
+    "incremental": 4.0,
+    "loc": 0.1,
+    "plain_build": 2.3,
+    "sizes": 0.4,
+    "tests": 7.3,
+    "toolchain": 3.2,
+    "web": 305.6
+  },
+  "tests": {
+    "line": {
+      "failed": 0,
+      "not_feasible": 0,
+      "passed": 12
+    },
+    "rc": 0,
+    "secs": 7.29
+  },
+  "toolchain": {
+    "make_deps_warm": {
+      "rc": 0,
+      "secs": 3.16
+    }
+  },
+  "warm_noop_build": {
+    "rc": 0,
+    "secs": 1.17
+  },
+  "web": {
+    "bench-web": {
+      "console_errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 94.1,
+          "p95_gap_ms": 38.2,
+          "placeholder_steps": 30,
+          "switch_ms": 1008.1,
+          "total_ms": 3203.1
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 20.2,
+          "ms": 510.9,
+          "p95_gap_ms": 2.3,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 244.1
+        },
+        "ready": {
+          "ms": 190.9
+        },
+        "scroll": {
+          "max_gap_ms": 156.7,
+          "p95_gap_ms": 112.6,
+          "placeholder_steps": 166,
+          "total_ms": 3273.6
+        },
+        "search": {
+          "ms": 176.9,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 338.2
+        }
+      },
+      "initial_transfer_kb": 1346,
+      "peak_dom_nodes": 110878,
+      "peak_js_heap_mb": 12.4,
+      "server_ready_secs": 0.51,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "wall_ms": 9779
+    }
+  }
+}

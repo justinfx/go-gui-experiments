@@ -1,0 +1,26 @@
+{
+	appname: 'io.gguix.fyne'
+	summary: 'Export complete'
+	body: '1,000,000 rows written'
+	icon: 'dialog-information'
+	raw_icon set: false
+	icon_id: '(null)'
+	desktop_entry: ''
+	category: 
+	timeout: 0
+	urgency: NORMAL
+	transient: 0
+	formatted: '<b>Export complete</b>
+1,000,000 rows written'
+	fg: #ffffff
+	bg: #285577
+	highlight: #1745d1
+	frame: #aaaaaa
+	fullscreen: show
+	format: <b>%s</b>\n%b
+	progress: -1
+	stack_tag: 
+	id: 2
+	actions: {}
+	script_count: 0
+}

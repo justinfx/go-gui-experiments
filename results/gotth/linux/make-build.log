@@ -1,0 +1,9 @@
+htmx.min.js
+sse.js
+Done in 92ms
+go build -o bin/gguix-gotth ./cmd/desktop
+total 12820
+drwxr-xr-x  3 root root     4096 Nov  8 22:22 .
+drwxr-xr-x 12 root root     4096 Nov  8 22:22 ..
+-rwxr-xr-x  1 root root 13113568 Nov  8 22:22 gguix-gotth
+drwxr-xr-x  2 root root     4096 Nov  8 22:22 tools

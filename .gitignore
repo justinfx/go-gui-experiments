@@ -1,0 +1,30 @@
+# Private: article drafts and notes live here; the article itself is published on justinfx.com
+/article/
+
+# Local tool settings
+/.claude/
+
+# Screenshots (show the build machine's host name)
+/results/**/*.png
+/results/**/*.jpg
+
+# Build output
+bin/
+dist/
+build/bin/
+*.app/
+fyne-cross/
+.task/
+/apps/cogent*/cogent
+/apps/cogent*/cogent-fit
+/apps/cogent*/cogent-fitcap
+
+# Dependencies
+node_modules/
+
+# OS and editor
+.DS_Store
+
+# Stray build outputs at app roots
+/apps/*/miqt.exe
+/apps/wails*/wails

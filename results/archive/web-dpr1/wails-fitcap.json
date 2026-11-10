@@ -1,0 +1,47 @@
+{
+ "bench-web": {
+  "console_errors": [],
+  "events": {
+   "cards_scroll": {
+    "max_gap_ms": 1.6,
+    "p95_gap_ms": 1.4,
+    "placeholder_steps": 0,
+    "switch_ms": 102.2,
+    "total_ms": 3342.8
+   },
+   "done": {},
+   "export": {
+    "max_gap_ms": 1.6,
+    "ms": 527.4,
+    "p95_gap_ms": 1.1,
+    "rows": 49898
+   },
+   "jump": {
+    "ms": 78.7
+   },
+   "ready": {
+    "ms": 167.8
+   },
+   "scroll": {
+    "max_gap_ms": 6.6,
+    "p95_gap_ms": 2,
+    "placeholder_steps": 0,
+    "total_ms": 3371.5
+   },
+   "search": {
+    "ms": 92.2,
+    "total": 49898
+   },
+   "sort": {
+    "ms": 268.8
+   }
+  },
+  "initial_transfer_kb": 794,
+  "peak_dom_nodes": 74623,
+  "peak_js_heap_mb": 50.6,
+  "server_ready_secs": 3.53,
+  "timed_out": false,
+  "url": "http://localhost:8097/?bench=1",
+  "wall_ms": 8002
+ }
+}

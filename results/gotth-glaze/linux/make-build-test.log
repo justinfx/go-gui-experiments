@@ -1,0 +1,12 @@
+Done in 79ms
+CGO_ENABLED=0 go build -o bin/gguix-gotth ./cmd/desktop
+total 13112
+drwxr-xr-x  3 root root     4096 Nov  8 22:25 .
+drwxr-xr-x 12 root root     4096 Nov  8 22:25 ..
+-rwxr-xr-x  1 root root 13414076 Nov  8 22:25 gguix-gotth
+drwxr-xr-x  2 root root     4096 Nov  8 22:25 tools
+bin/gguix-gotth: ELF 64-bit LSB executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, Go BuildID=93eR2LjCwI41OYVjZcNE/veyomlZ6b3DVedoFRUSQ/Umk1U62DfyxQ
+Done in 87ms
+--- SKIP: TestServeDesktopMode (0.00s)
+--- SKIP: TestT9Browser (0.00s)
+GGUIX_TESTS passed=11 failed=0 not_feasible=1

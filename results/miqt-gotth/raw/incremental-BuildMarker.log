@@ -1,0 +1,4 @@
+$ ['make', 'build']
+(rc=0, 3.94s)
+Done in 72ms
+go build -trimpath -ldflags '-s -w' -o bin/gguix-miqt ./cmd/desktop

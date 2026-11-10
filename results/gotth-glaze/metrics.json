@@ -1,0 +1,578 @@
+{
+  "app": "gotth-glaze",
+  "artifacts": {
+    "bench": {
+      "binary": {
+        "mtime": "2026-11-09T09:05:15.040357+00:00",
+        "path": "apps/gotth-glaze/bin/gguix-gotth",
+        "sha256": "45790cbd9254d9f5ec9ded549de325c5a77c797976a76e88468d04fa23e55547",
+        "size": 9962658
+      },
+      "build": {
+        "rc": 0,
+        "secs": 0.4
+      }
+    },
+    "cold_build": {
+      "binary": {
+        "mtime": "2026-11-09T09:05:05.386058+00:00",
+        "path": "apps/gotth-glaze/bin/gguix-gotth",
+        "sha256": "45790cbd9254d9f5ec9ded549de325c5a77c797976a76e88468d04fa23e55547",
+        "size": 9962658
+      }
+    },
+    "idle_rss": {
+      "binary": {
+        "mtime": "2026-11-09T09:05:07.455881+00:00",
+        "path": "apps/gotth-glaze/bin/gguix-gotth",
+        "sha256": "45790cbd9254d9f5ec9ded549de325c5a77c797976a76e88468d04fa23e55547",
+        "size": 9962658
+      }
+    },
+    "incremental": {
+      "binary": {
+        "mtime": "2026-11-09T09:05:07.082038+00:00",
+        "path": "apps/gotth-glaze/bin/gguix-gotth",
+        "sha256": "45790cbd9254d9f5ec9ded549de325c5a77c797976a76e88468d04fa23e55547",
+        "size": 9962658
+      }
+    },
+    "sizes": {
+      "app_bundle": {
+        "files": 2,
+        "mtime": "2026-11-09T09:05:07.460567+00:00",
+        "path": "apps/gotth-glaze/bin/GGUIX-gotth.app",
+        "size_kb": 9736,
+        "tree_sha256": "86f6321d089e23e614d73cb20a57def8fb606ba405c333b45fc7c78531c069db"
+      },
+      "binary": {
+        "mtime": "2026-11-09T09:05:07.082038+00:00",
+        "path": "apps/gotth-glaze/bin/gguix-gotth",
+        "sha256": "45790cbd9254d9f5ec9ded549de325c5a77c797976a76e88468d04fa23e55547",
+        "size": 9962658
+      }
+    }
+  },
+  "bench": {
+    "errors": [],
+    "events_seen": [
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ]
+    ],
+    "launch": "bin/gguix-gotth (direct, after one make build)",
+    "memory": {
+      "peak_process_tree_mb": {
+        "max": 181.0,
+        "median": 178.6
+      },
+      "peak_total_mb": {
+        "max": 772.0,
+        "median": 766.1
+      },
+      "peak_webkit_mb": {
+        "max": 592.3,
+        "median": 589.7
+      }
+    },
+    "runs": 5,
+    "summary": {
+      "cards_scroll": {
+        "max_gap_ms": {
+          "max": 87,
+          "median": 79,
+          "min": 72,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 58,
+          "median": 56,
+          "min": 53,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 33,
+          "median": 31,
+          "min": 29,
+          "n": 5
+        },
+        "switch_ms": {
+          "max": 975,
+          "median": 970,
+          "min": 961,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3208,
+          "median": 3203,
+          "min": 3203,
+          "n": 5
+        }
+      },
+      "export": {
+        "max_gap_ms": {
+          "max": 6,
+          "median": 6,
+          "min": 5,
+          "n": 5
+        },
+        "ms": {
+          "max": 506,
+          "median": 506,
+          "min": 504,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 5,
+          "median": 5,
+          "min": 5,
+          "n": 5
+        },
+        "rows": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "jump": {
+        "ms": {
+          "max": 233,
+          "median": 231,
+          "min": 230,
+          "n": 5
+        }
+      },
+      "ready": {
+        "ms": {
+          "max": 696,
+          "median": 657,
+          "min": 633,
+          "n": 5
+        }
+      },
+      "scroll": {
+        "max_gap_ms": {
+          "max": 89,
+          "median": 83,
+          "min": 79,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 76,
+          "median": 76,
+          "min": 74,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 156,
+          "median": 155,
+          "min": 154,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3372,
+          "median": 3342,
+          "min": 3301,
+          "n": 5
+        }
+      },
+      "search": {
+        "ms": {
+          "max": 193,
+          "median": 185,
+          "min": 181,
+          "n": 5
+        },
+        "total": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "sort": {
+        "ms": {
+          "max": 420,
+          "median": 365,
+          "min": 355,
+          "n": 5
+        }
+      }
+    }
+  },
+  "cgoprobe": {
+    "rc": 0,
+    "results": [
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "web"
+      },
+      {
+        "reason": "../../core/checksum_nocgo.go:8:9: undefined: cgoprobe_requires_cgo_but_cgo_is_unavailable_for_this_target",
+        "result": "FAIL",
+        "target": "desktop"
+      },
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "desktop-cgo"
+      },
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "web-export-test"
+      }
+    ],
+    "secs": 5.01
+  },
+  "cold_build": {
+    "rc": 0,
+    "secs": 8.07
+  },
+  "cross": {
+    "cross-linux": {
+      "rc": 0,
+      "secs": 1.61,
+      "status": "PASS",
+      "tail": "Done in 71ms\n== web for linux/amd64 (CGO_ENABLED=0 go build)\nCROSS linux web PASS  14M\n== desktop for linux/amd64 (CGO_ENABLED=0 go build)\nCROSS linux desktop PASS  14M"
+    },
+    "cross-windows": {
+      "rc": 0,
+      "secs": 1.65,
+      "status": "PASS",
+      "tail": "Done in 75ms\n== web for windows/amd64 (CGO_ENABLED=0 go build)\nCROSS windows web PASS  14M\n== desktop for windows/amd64 (CGO_ENABLED=0 go build)\nCROSS windows desktop PASS  14M"
+    }
+  },
+  "idle_rss": {
+    "process_tree_mb": 144.3,
+    "total_mb": 284.1,
+    "webkit_mb": 139.8
+  },
+  "incremental_build": {
+    "BuildMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 0.76
+    },
+    "UIMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 0.57
+    }
+  },
+  "loc": {
+    "app": "gotth-glaze",
+    "build_tagged_files": 2,
+    "by_category": {
+      "bench": 234,
+      "desktop": 610,
+      "shared": 3397,
+      "test": 678,
+      "web": 231
+    },
+    "by_category_language": {
+      "bench": {
+        "go": 77,
+        "js": 157
+      },
+      "desktop": {
+        "go": 361,
+        "js": 75,
+        "make": 15,
+        "templ": 159
+      },
+      "shared": {
+        "css": 692,
+        "go": 983,
+        "js": 668,
+        "make": 62,
+        "templ": 992
+      },
+      "test": {
+        "go": 596,
+        "js": 82
+      },
+      "web": {
+        "go": 148,
+        "js": 70,
+        "make": 10,
+        "templ": 3
+      }
+    },
+    "by_language": {
+      "css": 692,
+      "go": 2165,
+      "js": 1052,
+      "make": 87,
+      "templ": 1154
+    },
+    "custom_rendering_lines": 90,
+    "dual_target_overhead_lines": 841,
+    "dual_target_overhead_pct": 19.8,
+    "excluded_generated_lines": {
+      "go": 26860
+    },
+    "excluded_vendored_lines": {
+      "go": 8818,
+      "js": 13734,
+      "templ": 6307
+    },
+    "files": 39,
+    "inline_marker_blocks": 8,
+    "longest_go_func": "server.go:handleSave",
+    "longest_go_func_lines": 93
+  },
+  "plain_go_build_from_clean": {
+    "gen": {
+      "cmd": "make gen",
+      "rc": 0,
+      "secs": 0.24
+    },
+    "plain_build_note": "generated sources were present: `make gen` ran untimed after make clean, then go build ./... was timed",
+    "rc": 0,
+    "secs": 0.75,
+    "tail": ""
+  },
+  "provenance": {
+    "app_tree": {
+      "files": 154,
+      "sha256": "6d5e69e85e221e1094f4a665889bf9c01ed29662332bfd00c3121e2801a590ba"
+    },
+    "core_tree": {
+      "files": 42,
+      "sha256": "b476612a729e8e2c2c0aed249c21133264b798c4659b3cceb92c2ea637527b9b"
+    },
+    "gguix_env_inherited": {},
+    "gguix_env_passed": {
+      "GGUIX_DPR": "2"
+    },
+    "gguix_env_scrubbed": [],
+    "recorded_at": "2026-11-09T09:04:55.497057+00:00"
+  },
+  "sizes": {
+    "app_bundle": "bin/GGUIX-gotth.app",
+    "app_bundle_kb": 9736,
+    "binary_bytes": 9962658,
+    "bundled_frameworks_kb": null,
+    "bundled_refs": [],
+    "external_dylibs": [],
+    "package": {
+      "rc": 0,
+      "secs": 0.38
+    }
+  },
+  "step_secs": {
+    "bench": 58.5,
+    "cgoprobe": 5.4,
+    "cold_build": 8.7,
+    "cross": 3.3,
+    "idle_rss": 7.1,
+    "incremental": 1.7,
+    "loc": 0.1,
+    "plain_build": 1.0,
+    "sizes": 0.4,
+    "tests": 7.2,
+    "toolchain": 0.1,
+    "web": 306.9
+  },
+  "step_times": {
+    "bench": {
+      "end": "2026-11-09T09:06:13.160598+00:00",
+      "start": "2026-11-09T09:05:14.645954+00:00"
+    },
+    "cgoprobe": {
+      "end": "2026-11-09T09:06:25.782070+00:00",
+      "start": "2026-11-09T09:06:20.388093+00:00"
+    },
+    "cold_build": {
+      "end": "2026-11-09T09:05:05.394048+00:00",
+      "start": "2026-11-09T09:04:56.671655+00:00"
+    },
+    "cross": {
+      "end": "2026-11-09T09:06:29.035825+00:00",
+      "start": "2026-11-09T09:06:25.782526+00:00"
+    },
+    "idle_rss": {
+      "end": "2026-11-09T09:05:14.645461+00:00",
+      "start": "2026-11-09T09:05:07.504713+00:00"
+    },
+    "incremental": {
+      "end": "2026-11-09T09:05:07.089888+00:00",
+      "start": "2026-11-09T09:05:05.394632+00:00"
+    },
+    "loc": {
+      "end": "2026-11-09T09:11:36.080583+00:00",
+      "start": "2026-11-09T09:11:35.931528+00:00"
+    },
+    "plain_build": {
+      "end": "2026-11-09T09:04:56.671287+00:00",
+      "start": "2026-11-09T09:04:55.631375+00:00"
+    },
+    "sizes": {
+      "end": "2026-11-09T09:05:07.504249+00:00",
+      "start": "2026-11-09T09:05:07.090391+00:00"
+    },
+    "tests": {
+      "end": "2026-11-09T09:06:20.387702+00:00",
+      "start": "2026-11-09T09:06:13.162068+00:00"
+    },
+    "toolchain": {
+      "end": "2026-11-09T09:04:55.630807+00:00",
+      "start": "2026-11-09T09:04:55.513114+00:00"
+    },
+    "web": {
+      "end": "2026-11-09T09:11:35.930761+00:00",
+      "start": "2026-11-09T09:06:29.036320+00:00"
+    }
+  },
+  "tests": {
+    "line": {
+      "failed": 0,
+      "not_feasible": 0,
+      "passed": 12
+    },
+    "rc": 0,
+    "secs": 7.22
+  },
+  "toolchain": {
+    "make_deps_warm": {
+      "rc": 0,
+      "secs": 0.12
+    }
+  },
+  "warm_noop_build": {
+    "rc": 0,
+    "secs": 0.48
+  },
+  "web": {
+    "bench-web": {
+      "chrome_version": "156.0.8078.80",
+      "console_errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "dpr": 2,
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 109.1,
+          "p95_gap_ms": 47.1,
+          "placeholder_steps": 35,
+          "switch_ms": 1020.9,
+          "total_ms": 3203.2
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 38.8,
+          "ms": 507.3,
+          "p95_gap_ms": 4,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 256.4
+        },
+        "ready": {
+          "ms": 233.3
+        },
+        "scroll": {
+          "max_gap_ms": 171.7,
+          "p95_gap_ms": 131.9,
+          "placeholder_steps": 167,
+          "total_ms": 3387.2
+        },
+        "search": {
+          "ms": 185.8,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 349.2
+        }
+      },
+      "initial_transfer_kb": 156,
+      "memory_sampling_error": null,
+      "peak_dom_nodes": 127592,
+      "peak_gpu_rss_mb": 149.1,
+      "peak_js_heap_mb": 7.9,
+      "peak_renderer_rss_mb": 1037.6,
+      "provenance": {
+        "bundle_sha256": {
+          "app.js": "cb5a50bf7a01ba4b0f6a962a4132a67894a28de59cc60b384cad5cfe6d61beb1",
+          "bench/bench.js": "4fada766fa009eade906f6d7d13f087776350cb88d9b28774bcfd455af873287",
+          "desktop/desktop.js": "222a4a51edf582a24059c1d01144802e440d50abb558f8832061e6d578df523a",
+          "htmx/htmx.min.js": "d6fdc75f204e6bdefa99b69bf1e6d4ac69b8a364f77929f45c13476b4000f717",
+          "htmx/sse.js": "3b5992a541619babefc4c169505af474df5c3039da51e59b96ccf9241ecd61d2",
+          "web/web.js": "2df085467da49cb99e23a33c8375aad9f9a17e838ff99cd64e039d66c30816ad"
+        },
+        "ended": "2026-11-09T09:11:35.930705+00:00",
+        "served_dir": "apps/gotth-glaze/static",
+        "server_binary": {
+          "mtime": "2026-11-09T09:06:29.784842+00:00",
+          "path": "apps/gotth-glaze/bin/gguix-gotth-web",
+          "sha256": "365af0a2facdc0a2b1db4b6683546065e138f0e9a0b76efa4d1d04ffca2790c5",
+          "size": 9654450
+        },
+        "started": "2026-11-09T09:06:29.234608+00:00"
+      },
+      "renderer_pids": [
+        52903,
+        52904,
+        52902
+      ],
+      "server_ready_secs": 1.52,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "viewport": {
+        "height": 800,
+        "width": 1280
+      },
+      "wall_ms": 9992
+    }
+  }
+}

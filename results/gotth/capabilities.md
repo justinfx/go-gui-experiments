@@ -1,0 +1,121 @@
+# GoTTH capabilities
+
+Status values: native, framework-drawn, fallback, gap, not feasible.
+"Native" here means the browser or the webview provides it as a real control, not that the OS draws it.
+In this stack every visible control is HTML. Files named are relative to `apps/gotth/`.
+
+## Section 5 requirements
+
+| Requirement | Status | How it was done | Notes |
+|---|---|---|---|
+| Window title `GGUIX - GoTTH` | native | `w.SetTitle` in `cmd/desktop/main.go`; `<title>` in `views/page.templ` | |
+| Window 1280 x 800, min 1024 x 640, restore saved size | native (desktop) | `SetSize(w, h, HintNone)` from prefs, then `HintMin` 1024 x 640; `static/desktop/desktop.js` posts the window size to `/prefs/window` 500 ms after a resize | webview_go has no resize callback, so the page reports its own size |
+| Toolbar: search with 250 ms debounce | native | shadcn `input`; `static/app.js` debounces (0 ms in bench mode) and fires `filters-changed` on the form | placeholder `Search name or SKU`, 280 px |
+| Categories popup with 8 checkboxes, `Clear`, `Categories (n)` | framework-drawn | shadcn `popover` with `checkbox` items (`form="filters"` keeps them in the filters form after the popover moves to the body); label swapped out of band by the server | |
+| Status dropdown | native | shadcn `native-select` | the shadcn `select` popup was not used; the native select is far simpler to drive and test |
+| Go-to-row field and `Go` button | native | form posting to `/goto`; server clamps, loads the target page, selects the row | Enter submits; asks the dirty guard first |
+| View switcher Table / Cards | framework-drawn | two shadcn `button`s as a segmented control (`aria-pressed`) | |
+| Export CSV button, theme dropdown | native | shadcn `button`, `native-select` | |
+| Split view with draggable divider | framework-drawn | shadcn-templ `resizable` (`PanelGroup`, `Panel`, `Handle`) in `views/page.templ`, 65/35 default, min 25/20 | Default build, web and desktop. Drag verified in the browser pane. Fix pass 2026-11-09. |
+| Status bar (count, rows a-b, last fetch ms, export progress, identity, Host button) | framework-drawn | `views/page.templ` `StatusBar`; count and fetch time swapped out of band; rows range computed by `static/app.js` from the pages in the DOM; export area pushed over SSE | |
+| Table: columns, widths, alignment | framework-drawn | shadcn `table` Header/Row/Head/Cell parts inside my own `<table>` with `table-layout: fixed` | The `table.Table` wrapper has an `overflow-x-auto` container that breaks scrolling, so I do not use it |
+| Fixed header | fallback | the header is a separate table above the scroller, horizontal scroll synced by JS | A sticky `<thead>` made WebKit re-lay out 1,000 rows on every scroll step |
+| Column resize | framework-drawn | drag grip (`colGrip`) on each header cell, `<col>` widths of both tables set by `static/app.js` `applyColWidths`, kept across swaps | Not persisted. Verified in the browser pane. Fix pass 2026-11-09. |
+| Sort by header click, active header shows ▲ / ▼ | native | header cells post `/query` with the sort field; server toggles direction | |
+| Reset scroll, keep selection only if in first page | native | `handleQuery` | |
+| Windowed infinite scroll (200 per page, 5 pages in DOM, spacers) | fallback | server-rendered pages; sentinel and spacer elements load pages; the farthest page becomes a spacer of the same measured height (`static/app.js` `evict`, `toSpacer`). See friction.md for why `revealed` was replaced | The scrollbar represents only the loaded window (plus spacers). Recorded as required. |
+| `…` placeholder rows | native | sentinel row shows `…` in every cell; spacers show `…` | |
+| Single selection by click, Up/Down keys | native | delegated click and keydown on the scroller, `data-state="selected"` (the shadcn row style) | |
+| Zero results `No items match.` | native | | |
+| Custom cell: stock bar | framework-drawn (inline SVG) | `views/cells.templ` `StockBar`: 80 x 8 SVG, track and fill rects, fill width from `core.StockFraction`, low color class | colors come from `/palette.css`, generated from `core.Colors` |
+| Custom cell: status badge | framework-drawn | shadcn `badge` with a `status-<Name>` class that sets the 4.5.1 colors | |
+| Custom cell: stars | framework-drawn (inline SVG) | five 12 px SVG stars, half star is the filled path clipped with `clip-path: inset(0 50% 0 0)` | |
+| Cards view item | framework-drawn | `views/list.templ` `ItemCard`: shadcn `card` with overrides (96 px, 1 px border, 2 px primary border when `data-state=selected`), category tile div, three text lines, status badge and Featured chip, price, stars, stock bar | same windowing as the table, mechanism is the same server-rendered pages. No visual compromise known. |
+| Detail form: ID, SKU, Updated read-only text | native | `<span>` | |
+| Name, Price, Notes | native | shadcn `input`, `textarea` (4 rows) | |
+| Category dropdown | native | shadcn `native-select`, 8 options | |
+| Quantity spin box | native | `<input type="number" min=0 max=1000000 step=1>` | |
+| Status radio group, horizontal | framework-drawn | shadcn `radio-group` | hidden native radios carry the value |
+| Rating slider 0.0 to 5.0 step 0.1 with value label | framework-drawn | shadcn `slider` with one thumb (`DefaultValue: []float64{v}`); label updated on `slider-change` | |
+| Featured checkbox | framework-drawn | shadcn `checkbox` | |
+| Restock date picker and Clear | framework-drawn | `popover` with shadcn `calendar` (single mode), hidden input `restock`, label button, `Clear` button | |
+| Dirty state, `Unsaved changes`, Save and Revert enabled | fallback | `static/app.js` compares `FormData` snapshots (taken 30 ms after each form swap); after a failed save the server marks the form `data-force-dirty` | runs in the browser, as the brief allows |
+| Save, validation messages under fields in the error color | native | `/save` parses, runs `core.ValidateItem`, calls Update only if valid; messages rendered with `text-destructive` | |
+| Table row and card refresh after save | native | the response carries the row or card out of band (`RefreshedItem`) | |
+| Revert and select-while-dirty confirm dialog | framework-drawn | shadcn `alert-dialog` `Discard unsaved changes?` with Discard and Cancel, opened by clicking a hidden trigger | |
+| Copy Row | native / fallback | Clipboard API in the browser (`static/web/web.js`); in the desktop shell `pbcopy` through `/native/copy` (`handlers_desktop.go`) plus the Clipboard API | transient `Row copied` text in the status bar for 2 s |
+| Import Notes | native (web), fallback (desktop default), native (desktop `-tags native`) | web: `<input type="file">`; desktop default: osascript `choose file`; with `-tags native`: NSOpenPanel sheet via `cmd/desktop/native_shim.m` | Native variant compiled, not exercised interactively. |
+| Export in the background, progress, cancel, notification | native (web) / fallback (desktop default) / native (desktop `-tags native`) | `GET /export` stream, SSE progress, cancel; desktop default: osascript save dialog; `-tags native`: NSSavePanel sheet | Native variant compiled, not exercised interactively. |
+| OS notification `Export complete` | native (web), fallback (desktop default), native (desktop `-tags native`) | web: Notification API with toast fallback; desktop default: osascript; `-tags native`: `UNUserNotificationCenter` in a bundle (`make package-native`), `NSUserNotificationCenter` for a bare binary (UN raises without a bundle) | Delivery not verified. |
+| Menu bar, shortcuts | fallback (web, desktop default) / native (desktop `-tags native`) | web: no menu bar, shortcuts in `static/app.js`. Desktop default: in-page shadcn `menubar`. `-tags native`: NSMenu via `Window()` NSWindow and cgo (`cmd/desktop/native_shim.*`), items call the same `GGUIX.actions`, state synced via bound `gguixMenuState` | Native variant compiled, not exercised interactively (no accessibility access for System Events). |
+| About dialog | framework-drawn | shadcn `dialog`: title, framework versions, `runtime.Version()`, `BuildMarker 0`, `UIMarker 0` (`views/marker.templ`) | |
+| Theme System / Light / Dark, no restart | native | `dark` class on `<html>`, cookie `gguix-theme`, inline head script for `prefers-color-scheme` | dropdown and menu stay in sync (`G.setTheme`) |
+| Live switching of System with the OS | native | `matchMedia` change listener in the head script | |
+| Prefs saved 500 ms after last change and on quit | native | `Server.update` debounce; `Flush` on SIGINT (web) and when the window closes (desktop) | |
+| Prefs restored before the first query, `FindRow(..., 2000)` for the selection | native | `handleIndex` on the server | skipped in bench mode |
+| Threading mechanism | native | no UI thread to manage: every UI change is an htmx swap in the page. The desktop shell calls `w.Dispatch` only to terminate the window. | |
+| Native prefs facility (unused) | n/a | the browser equivalent is `localStorage`/cookies; the desktop shell has none. The core `PrefsStore` is used, stored server side. | |
+| Host panel | native (desktop), server-process (web) | `GET /host` renders `host.Current` (desktop) or `host.Server` (web) as the two-column list, Source row always shown, Notes below; status bar shows `<Username>@<Hostname>` | |
+| Reveal Config Folder, Reveal Last Export | native (desktop), disabled (web) | desktop: `host.RevealInFileManager` (the webview has no facility of its own); web: disabled with `Not available in the browser` | Reveal Last Export is disabled until an export finishes |
+
+## Section 6 (GoTTH specific)
+
+| Requirement | Status | How it was done | Notes |
+|---|---|---|---|
+| Go net/http server in `cmd/web`, core in process | native | `cmd/web/main.go` using `backend.Open` | |
+| shadcn-templ components via its CLI | native | components added with `shadcn-templ add`; two local edits recorded in friction.md (`components/baseui/lifecycle.js`) | npm was not needed |
+| Windowed table and cards | fallback | see above | |
+| Selection and form load/save through htmx fragments | native | | |
+| Export over SSE | native | | |
+| Browser features (Clipboard, Notification, file input, shortcuts) | native | `static/web/web.js`, `static/app.js` | no menu bar in the browser (recorded) |
+| Theme cookie, no flash | native | | |
+| Desktop: same server in the same process on a random 127.0.0.1 port, webview_go window | native | `cmd/desktop/main.go` listens on `127.0.0.1:0` only | Missing in this shell: native menus (fallback: in-page menubar), native file dialogs (fallback: osascript), notifications (fallback: osascript), clipboard (fallback: pbcopy), window resize events (fallback: page reports its size), downloads (fallback: server writes the file) |
+| `web` on port 8090 | native with a caveat | `make web` | Port 8090 on this Mac is held by a foreign process on 127.0.0.1; the server then binds `[::1]:8090` and `http://localhost:8090` works |
+| `package` builds the .app | fallback | `desktop/Info.plist` plus the binary, assembled by the Makefile | webview_go has no packaging tool |
+| Tests with httptest, optional browser | native | `server_test.go`, `tests/browser/t9.test.mjs` (Chrome through the DevTools protocol, Node built-ins only) | |
+
+## cgoprobe
+
+| Target | Result | Notes |
+|---|---|---|
+| web server | PASS | `go build -tags cgoprobe ./cmd/web` links the C checksum; the export test also passes with the tag |
+| desktop shell | PASS | already uses cgo (webview and the App Nap helper) |
+
+## Cross builds
+
+| Target | Route | Extra tools | Result | Size | Notes |
+|---|---|---|---|---|---|
+| linux/amd64 web server | `CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build ./cmd/web` | none | PASS | 14 MB | |
+| linux/amd64 desktop | Docker `golang:1.27.3-bookworm` (amd64 under emulation), `libgtk-3-dev`, `libwebkit2gtk-4.0-dev`, `go build ./cmd/desktop` | Docker | PASS | 14 MB | the default `golang:1.27.3` image failed: Debian trixie has no webkit2gtk-4.0 |
+| windows/amd64 web server | plain `go build` | none | PASS | 14 MB | |
+| windows/amd64 desktop | Docker, mingw-w64 (`CC=x86_64-w64-mingw32-gcc`), `-H=windowsgui` | Docker, mingw-w64 | PASS | 20 MB | attempt 1 failed in webview_go's bundled WebView2 header (`EventToken.h` is spelled `eventtoken.h` in mingw); attempt 2 added a case-insensitive symlink for the header and passed |
+
+## Tests
+
+| ID | Status | How |
+|---|---|---|
+| T1 starts and loads | native | httptest on `GET /`, first rows 1, 2, 3 with SKUs |
+| T2 sort | native | `POST /query sort=name`, first name equals the core's first row |
+| T3 search | native | count text in the response equals the core's Total |
+| T4 selection | native | `POST /select`, every field checked |
+| T5 validation | native | message shown, Update call counter stays 0 |
+| T6 save | native | the refreshed row and the next page show the new name |
+| T7 theme and prefs | native | cookie renders `class="dark"`, `prefs.json` contains `"theme":"dark"` |
+| T8 export cancel | native | file export (desktop mode with a fake native layer) and web stream; partial file removed, state `cancelled`, SSE snapshot no longer running so the button is enabled; a second export can start |
+| T9 dirty guard | native | real Chrome via the DevTools protocol (`tests/browser/t9.test.mjs`); skipped and counted as not feasible only when Node or Chrome is missing |
+| T10 custom cells | native | HTML attributes and the generated `palette.css` compared with `core.StockFraction`, `core.Stars` and `core.Colors` for both themes | the pixel colors are not rendered; CSS correctness is by inspection |
+| T11 cards | native | | |
+| T12 host info | native | web (server-process) and desktop mode (native) | |
+
+## Bench
+
+Web target, headless Chrome (`tests/browser/bench-web.bench.mjs`, same `bench.js`): ready 175 ms, jump 209 ms, scroll total 3293 ms (151 placeholder steps, max gap 77 ms, p95 63 ms), cards switch 970 ms, cards scroll total 3203 ms (35 placeholder steps, max gap 56 ms, p95 32 ms), sort 335 ms, search 172 ms (49,898 rows), export 513 ms (49,898 rows, max gap 3 ms).
+
+Desktop shell (`make bench`, webview_go on WKWebView), typical run: ready 553 ms, jump 222 ms, scroll total 6060 ms (185 placeholder steps), cards switch 2154 ms, cards scroll total 3713 ms (163 placeholder steps), sort 1083 ms, search 721 ms (49,898 rows), export 537 ms (49,898 rows, max gap 190 ms).
+- The max and p95 gaps of the scroll steps (2 to 4 s) and cards steps (1 to 2 s) are not reliable: the login session was locked during all runs, so the webview was occluded and WebKit throttled timers, leaving only a handful of probe ticks. Rerun on an unlocked screen.
+- Reliability: of 7 recent desktop runs, 6 produced all eight events. One run stalled after `cards_scroll` (the page stopped responding during the cards to table swap); the Go side then prints an `error` metric ("bench stalled") and `done` and quits, so `make bench` never hangs. Earlier stalls had real causes that were fixed (see friction.md); this one is not understood. It may be related to the locked screen.
+- The windowed design means a 25-row scroll step (about 1,000 px) usually lands on a page that is not loaded yet, which is why most scroll steps show placeholders.
+
+## Target notes
+
+The server, views, forms, export and tests are shared by both targets. The web target adds `cmd/web` and `static/web/web.js` (download by anchor, Clipboard API, Notification API, file input) and the web branch of the page head in `views/page.templ` (`gguix:target web`). The desktop target adds `cmd/desktop` (webview window, osascript dialogs and notifications, pbcopy, App Nap guard), `handlers_desktop.go` with the routes registered only when a `Native` is supplied (`gguix:target desktop` block in `server.go`), `views/desktop/menubar.templ`, `static/desktop/desktop.js` and `desktop/` (Info.plist, cross-build script). Everything differs for the same reason: the webview has no menu, dialog, notification, clipboard or download support, so Go does those jobs and the page asks the local server. Bench code is `static/bench/bench.js` and `metric_bench.go`; tests are `server_test.go`, `exec_test.go` and `tests/browser`.

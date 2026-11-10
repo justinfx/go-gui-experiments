@@ -1,0 +1,394 @@
+{
+  "app": "wails-fit",
+  "bench": {
+    "errors": [],
+    "events_seen": [
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ]
+    ],
+    "memory": {
+      "peak_process_tree_mb": {
+        "max": 215.4,
+        "median": 214.6
+      },
+      "peak_total_mb": {
+        "max": 877.8,
+        "median": 782.3
+      },
+      "peak_webkit_mb": {
+        "max": 663.6,
+        "median": 567.7
+      }
+    },
+    "runs": 5,
+    "summary": {
+      "cards_scroll": {
+        "max_gap_ms": {
+          "max": 6,
+          "median": 6,
+          "min": 5,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 6,
+          "median": 5,
+          "min": 5,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "switch_ms": {
+          "max": 104,
+          "median": 103,
+          "min": 103,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 4002,
+          "median": 3999,
+          "min": 3998,
+          "n": 5
+        }
+      },
+      "export": {
+        "max_gap_ms": {
+          "max": 6,
+          "median": 6,
+          "min": 5,
+          "n": 5
+        },
+        "ms": {
+          "max": 514,
+          "median": 514,
+          "min": 513,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 6,
+          "median": 6,
+          "min": 5,
+          "n": 5
+        },
+        "rows": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "jump": {
+        "ms": {
+          "max": 84,
+          "median": 80,
+          "min": 79,
+          "n": 5
+        }
+      },
+      "ready": {
+        "ms": {
+          "max": 638,
+          "median": 622,
+          "min": 594,
+          "n": 5
+        }
+      },
+      "scroll": {
+        "max_gap_ms": {
+          "max": 29,
+          "median": 17,
+          "min": 16,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 12,
+          "median": 9,
+          "min": 9,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 4148,
+          "median": 4126,
+          "min": 4119,
+          "n": 5
+        }
+      },
+      "search": {
+        "ms": {
+          "max": 110,
+          "median": 107,
+          "min": 105,
+          "n": 5
+        },
+        "total": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "sort": {
+        "ms": {
+          "max": 291,
+          "median": 286,
+          "min": 277,
+          "n": 5
+        }
+      }
+    }
+  },
+  "cgoprobe": {
+    "rc": 0,
+    "results": [
+      {
+        "reason": "builds and the export code runs with the C checksum",
+        "result": "PASS",
+        "target": "desktop"
+      },
+      {
+        "reason": "builds and serves",
+        "result": "PASS",
+        "target": "web"
+      }
+    ],
+    "secs": 7.91
+  },
+  "cold_build": {
+    "rc": 0,
+    "secs": 40.12
+  },
+  "idle_rss": {
+    "process_tree_mb": 126.6,
+    "total_mb": 301.1,
+    "webkit_mb": 174.5
+  },
+  "incremental_build": {
+    "BuildMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 2.36
+    }
+  },
+  "loc": {
+    "app": "wails-fit",
+    "build_tagged_files": 5,
+    "by_category": {
+      "bench": 143,
+      "desktop": 239,
+      "shared": 3175,
+      "test": 573,
+      "web": 128
+    },
+    "by_category_language": {
+      "bench": {
+        "go": 24,
+        "ts": 119
+      },
+      "desktop": {
+        "go": 228,
+        "make": 11
+      },
+      "shared": {
+        "css": 124,
+        "go": 970,
+        "html": 13,
+        "js": 6,
+        "make": 103,
+        "svelte": 743,
+        "ts": 1216
+      },
+      "test": {
+        "go": 264,
+        "ts": 309
+      },
+      "web": {
+        "go": 82,
+        "make": 10,
+        "svelte": 36
+      }
+    },
+    "by_language": {
+      "css": 124,
+      "go": 1568,
+      "html": 13,
+      "js": 6,
+      "make": 124,
+      "svelte": 779,
+      "ts": 1644
+    },
+    "custom_rendering_lines": 100,
+    "dual_target_overhead_lines": 367,
+    "dual_target_overhead_pct": 10.4,
+    "excluded_generated_lines": {
+      "ts": 685
+    },
+    "excluded_vendored_lines": {
+      "svelte": 2242,
+      "ts": 351
+    },
+    "files": 50,
+    "inline_marker_blocks": 4,
+    "longest_go_func": "menu_desktop.go:buildMenu",
+    "longest_go_func_lines": 51
+  },
+  "plain_go_build_from_clean": {
+    "rc": 1,
+    "secs": 0.14,
+    "tail": "main.go:18:12: pattern all:frontend/dist: no matching files found"
+  },
+  "sizes": {
+    "app_bundle": "bin/GGUIX-wails.app",
+    "app_bundle_kb": 11612,
+    "binary_bytes": 10194322,
+    "bundled_frameworks_kb": null,
+    "bundled_refs": [],
+    "external_dylibs": [],
+    "package": {
+      "rc": 0,
+      "secs": 1.88
+    }
+  },
+  "step_secs": {
+    "bench": 56.7,
+    "cgoprobe": 10.9,
+    "cold_build": 43.9,
+    "idle_rss": 7.1,
+    "incremental": 4.6,
+    "loc": 0.1,
+    "plain_build": 0.2,
+    "sizes": 1.9,
+    "tests": 15.1,
+    "toolchain": 5.7,
+    "web": 306.6
+  },
+  "tests": {
+    "line": {
+      "failed": 0,
+      "not_feasible": 0,
+      "passed": 36
+    },
+    "rc": 0,
+    "secs": 15.09
+  },
+  "toolchain": {
+    "frontend/package.json": {
+      "direct_deps": 5,
+      "direct_dev_deps": 19,
+      "installed_packages": 0,
+      "node_modules_kb": null,
+      "npm_audit": null
+    },
+    "make_deps_warm": {
+      "rc": 0,
+      "secs": 4.53
+    }
+  },
+  "warm_noop_build": {
+    "rc": 0,
+    "secs": 3.53
+  },
+  "web": {
+    "bench-web": {
+      "console_errors": [],
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 3.9,
+          "p95_gap_ms": 2.5,
+          "placeholder_steps": 0,
+          "switch_ms": 88,
+          "total_ms": 3431.5
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 18.8,
+          "ms": 526.1,
+          "p95_gap_ms": 2.3,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 79.4
+        },
+        "ready": {
+          "ms": 169.7
+        },
+        "scroll": {
+          "max_gap_ms": 5.7,
+          "p95_gap_ms": 2.8,
+          "placeholder_steps": 0,
+          "total_ms": 3426.5
+        },
+        "search": {
+          "ms": 97.5,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 265.9
+        }
+      },
+      "initial_transfer_kb": 794,
+      "peak_dom_nodes": 67949,
+      "peak_js_heap_mb": 41.3,
+      "server_ready_secs": 1.53,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "wall_ms": 8134
+    }
+  }
+}

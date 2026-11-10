@@ -1,0 +1,4 @@
+$ ['make', 'clean']
+(rc=0, 0.04s)
+rm -r -f bin
+rm -f miqt miqt.exe

@@ -1,0 +1,24 @@
+# cogentcore.org/core/system/driver/desktop
+dnd_linux.c: In function ‘eventLoop’:
+dnd_linux.c:595:25: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  595 |                         read(wakeFds[0], b, sizeof(b));
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+dnd_linux.c: In function ‘postCmd’:
+dnd_linux.c:100:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  100 |         write(wakeFds[1], "x", 1);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+--- PASS: TestT1Loads (0.21s)
+--- PASS: TestT2Sort (0.18s)
+--- PASS: TestT3Search (0.44s)
+--- PASS: TestT4Selection (0.19s)
+--- PASS: TestT5Validation (0.18s)
+--- PASS: TestT6Save (0.18s)
+--- PASS: TestT7ThemePrefs (1.07s)
+--- PASS: TestT8ExportCancel (0.41s)
+--- PASS: TestT9DirtyGuard (0.24s)
+--- PASS: TestT10CustomCells (0.17s)
+--- PASS: TestT11Cards (0.18s)
+--- PASS: TestT12Host (0.20s)
+    bench_offscreen_test.go:20: opt-in
+--- SKIP: TestBenchOffscreen (0.00s)
+GGUIX_TESTS passed=12 failed=0 not_feasible=0

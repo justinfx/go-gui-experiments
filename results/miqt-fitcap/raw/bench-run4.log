@@ -1,0 +1,13 @@
+2026-11-09 22:24:42.323 gguix-miqt[78320:28982601] NSKeyBindingManager: Bad key binding selector for '^/' = 'noop'
+2026-11-09 22:24:42.323 gguix-miqt[78320:28982601] NSKeyBindingManager: Bad key binding selector for '@' = 'noop'
+2026-11-09 22:24:42.323 gguix-miqt[78320:28982601] NSKeyBindingManager: Bad key binding selector for '@' = 'noop'
+2026-11-09 22:24:42.323 gguix-miqt[78320:28982601] NSKeyBindingManager: Bad key binding selector for '@' = 'noop'
+GGUIX_METRIC {"event":"ready","ms":682.2}
+GGUIX_METRIC {"event":"jump","ms":179.5}
+GGUIX_METRIC {"event":"scroll","max_gap_ms":15.3,"p95_gap_ms":0.8,"placeholder_steps":2,"total_ms":3201.4}
+GGUIX_METRIC {"event":"cards_scroll","max_gap_ms":5,"p95_gap_ms":0.1,"placeholder_steps":0,"switch_ms":966.8,"total_ms":3206.3}
+GGUIX_METRIC {"event":"sort","ms":504.9}
+GGUIX_METRIC {"event":"search","ms":69.2,"total":49898}
+GGUIX_METRIC {"event":"export","max_gap_ms":5,"ms":514,"p95_gap_ms":0.1,"rows":49898}
+GGUIX_METRIC {"event":"done"}
+GGUIX_DIAG service_page_calls=49 ui_refreshes=42

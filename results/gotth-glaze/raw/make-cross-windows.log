@@ -1,0 +1,7 @@
+$ ['make', 'cross-windows']
+(rc=0, 1.65s)
+Done in 75ms
+== web for windows/amd64 (CGO_ENABLED=0 go build)
+CROSS windows web PASS  14M
+== desktop for windows/amd64 (CGO_ENABLED=0 go build)
+CROSS windows desktop PASS  14M

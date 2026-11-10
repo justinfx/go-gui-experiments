@@ -1,0 +1,3 @@
+$ ['make', 'cgoprobe']
+(rc=0, 5.26s)
+CGOPROBE desktop PASS

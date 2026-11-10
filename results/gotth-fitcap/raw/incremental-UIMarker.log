@@ -1,0 +1,6 @@
+$ ['make', 'build']
+(rc=0, 0.81s)
+(✗) Error [ error=failed to generate code for "apps/gotth-fitcap/views/marker.templ": apps/gotth-fitcap/views/marker.templ parsing error: <span>: close tag not found: line 6, col 0 ]
+(✗) Command failed: generation completed with 1 errors
+Done in 72ms
+go build -trimpath -ldflags "-s -w" -o bin/gguix-gotth ./cmd/desktop

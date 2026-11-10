@@ -1,0 +1,6 @@
+$ ['make', 'cross-linux']
+(rc=0, 25.68s)
+DOCKER_DEFAULT_PLATFORM=linux/amd64 DOCKER=apps/miqt-fit/desktop/docker-notty.sh MIQTDOCKER_FLAGS="-v core:/core:ro" \
+	  ~/go/bin/miqt-docker linux64-go1.27-qt6.12 go build -ldflags '-s -w' -o bin/gguix-miqt-linux-amd64 .
+2026/11/09 22:21:05 Selecting dockerfile: linux64-go1.27-qt6.12-dynamic.Dockerfile
+2026/11/09 22:21:07 Skipping user isolation because: OS is "darwin"

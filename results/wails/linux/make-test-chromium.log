@@ -1,0 +1,15 @@
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 123.9 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 123.9 MiB
+Chrome Headless Shell 158.0.8127.18 (playwright chromium-headless-shell v1254) downloaded to /root/.cache/ms-playwright/chromium_headless_shell-1254
+  ✓   6 e2e/gguix.spec.ts:61:1 › T6 save updates the row (287ms)
+  ✓   7 e2e/gguix.spec.ts:69:1 › T7 theme and prefs (1.3s)
+  ✓   8 e2e/gguix.spec.ts:76:1 › T8 export cancel (887ms)
+  ✓   9 e2e/gguix.spec.ts:88:1 › T9 dirty guard (467ms)
+  ✓  10 e2e/gguix.spec.ts:99:3 › T10 custom cells (light) (277ms)
+  ✓  11 e2e/gguix.spec.ts:99:3 › T10 custom cells (dark) (267ms)
+  ✓  12 e2e/gguix.spec.ts:121:1 › T11 cards view (261ms)
+  ✓  13 e2e/gguix.spec.ts:132:1 › T12 host info (265ms)
+  ✓  14 e2e/gguix.spec.ts:141:1 › T13 split divider drags (361ms)
+
+  14 passed (6.6s)
+GGUIX_TESTS passed=34 failed=0 not_feasible=0

@@ -1,0 +1,4 @@
+$ ['make', 'deps']
+(rc=0, 2.24s)
+go install fyne.io/tools/cmd/fyne@v1.7.4
+go mod download

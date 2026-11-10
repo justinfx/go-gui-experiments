@@ -1,0 +1,5 @@
+$ ['make', 'test']
+(rc=0, 7.94s)
+Done in 73ms
+--- SKIP: TestServeDesktopMode (0.00s)
+GGUIX_TESTS passed=12 failed=0 not_feasible=0

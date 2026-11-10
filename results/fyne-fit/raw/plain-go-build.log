@@ -1,0 +1,4 @@
+$ go build ./...
+(rc=0, 2.25s)
+# gguix/apps/fyne
+ld: warning: ignoring duplicate libraries: '-lobjc'

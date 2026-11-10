@@ -1,0 +1,15 @@
+$ ['make', 'cross-windows']
+(rc=0, 25.86s)
+go install github.com/fyne-io/fyne-cross@latest
+go mod vendor
+~/go/bin/fyne-cross windows -arch=amd64 -app-id io.gguix.fyne -name gguix-fyne -env GOTOOLCHAIN=auto -env GOFLAGS=-mod=vendor ; st=$?; rm -r vendor; exit $st
+  adding: gguix-fyne.exe (deflated 52%)
+[i] Target: windows/amd64
+[i] Cleaning target directories...
+[✓] "bin" dir cleaned: /app/fyne-cross/bin/windows-amd64
+[✓] "dist" dir cleaned: /app/fyne-cross/dist/windows-amd64
+[✓] "temp" dir cleaned: /app/fyne-cross/tmp/windows-amd64
+[i] Checking for go.mod: apps/fyne/go.mod
+[✓] go.mod found
+[i] Packaging app...
+[✓] Package: "apps/fyne/fyne-cross/dist/windows-amd64/gguix-fyne.zip"

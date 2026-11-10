@@ -1,0 +1,1 @@
+{"vendor": "frontend/src/lib/components/ui/**", "custom": "frontend/src/lib/components/cells/Stars.svelte,frontend/src/lib/components/cells/StatusBadge.svelte,frontend/src/lib/components/cells/StockBar.svelte,frontend/src/lib/components/Card.svelte"}

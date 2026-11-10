@@ -1,0 +1,349 @@
+[  62892.323]  -> wl_display@1.get_registry(new id wl_registry@2)
+[  62892.454]  -> wl_display@1.sync(new id wl_callback@3)
+[  62892.559] wl_display@1.delete_id(3)
+[  62892.609] wl_registry@2.global(1, "wl_compositor", 5)
+[  62892.626]  -> wl_registry@2.bind(1, "wl_compositor", 3, new id [unknown]@4)
+[  62892.650] wl_registry@2.global(2, "wl_subcompositor", 1)
+[  62892.670]  -> wl_registry@2.bind(2, "wl_subcompositor", 1, new id [unknown]@5)
+[  62892.683] wl_registry@2.global(3, "wp_viewporter", 1)
+[  62892.693]  -> wl_registry@2.bind(3, "wp_viewporter", 1, new id [unknown]@6)
+[  62892.706] wl_registry@2.global(4, "zxdg_output_manager_v1", 2)
+[  62892.716] wl_registry@2.global(5, "wp_presentation", 1)
+[  62892.726] wl_registry@2.global(6, "wp_single_pixel_buffer_manager_v1", 1)
+[  62892.741] wl_registry@2.global(7, "wp_tearing_control_manager_v1", 1)
+[  62892.759] wl_registry@2.global(8, "zwp_relative_pointer_manager_v1", 1)
+[  62892.769]  -> wl_registry@2.bind(8, "zwp_relative_pointer_manager_v1", 1, new id [unknown]@7)
+[  62892.779] wl_registry@2.global(9, "zwp_pointer_constraints_v1", 1)
+[  62892.789]  -> wl_registry@2.bind(9, "zwp_pointer_constraints_v1", 1, new id [unknown]@8)
+[  62892.799] wl_registry@2.global(10, "zwp_input_timestamps_manager_v1", 1)
+[  62892.827] wl_registry@2.global(11, "weston_capture_v1", 1)
+[  62892.857] wl_registry@2.global(12, "wl_data_device_manager", 3)
+[  62892.883]  -> wl_registry@2.bind(12, "wl_data_device_manager", 1, new id [unknown]@9)
+[  62892.905] wl_registry@2.global(13, "wl_shm", 1)
+[  62892.918]  -> wl_registry@2.bind(13, "wl_shm", 1, new id [unknown]@10)
+[  62892.929] wl_registry@2.global(14, "zwp_linux_explicit_synchronization_v1", 2)
+[  62892.940] wl_registry@2.global(15, "wl_output", 4)
+[  62892.953]  -> wl_registry@2.bind(15, "wl_output", 4, new id [unknown]@11)
+[  62892.979] wl_registry@2.global(16, "zwp_input_panel_v1", 1)
+[  62892.992] wl_registry@2.global(17, "zwp_text_input_manager_v1", 1)
+[  62893.017] wl_registry@2.global(18, "xdg_wm_base", 5)
+[  62893.032]  -> wl_registry@2.bind(18, "xdg_wm_base", 1, new id [unknown]@12)
+[  62893.044] wl_registry@2.global(19, "weston_desktop_shell", 1)
+[  62893.077] wl_callback@3.done(0)
+[  62893.109]  -> wl_display@1.sync(new id wl_callback@3)
+[  62893.165] wl_display@1.delete_id(3)
+[  62893.181] wl_output@11.geometry(0, 0, 1600, 1000, 0, "weston", "headless", 0)
+[  62893.194] wl_output@11.scale(1)
+[  62893.207] wl_output@11.mode(3, 1600, 1000, 60000)
+[  62893.218] wl_output@11.name("headless")
+[  62893.228] wl_output@11.description("headless")
+[  62893.237] wl_output@11.done()
+[  62893.248] wl_callback@3.done(0)
+SIGSEGV: segmentation violation
+PC=0xffff918b6c04 m=0 sigcode=1 addr=0x40
+signal arrived during cgo execution
+
+goroutine 1 gp=0x673af82183c0 m=0 mp=0x1acc840 [syscall, locked to thread]:
+runtime.cgocall(0xaba4e0, 0x673af9d41b98)
+	/usr/local/go/src/runtime/cgocall.go:167 +0x44 fp=0x673af9d41b60 sp=0x673af9d41b20 pc=0x485be4
+github.com/go-gl/glfw/v3.4/glfw._Cfunc_glfwInit()
+	_cgo_gotypes.go:1709 +0x30 fp=0x673af9d41b90 sp=0x673af9d41b60 pc=0x99bce0
+github.com/go-gl/glfw/v3.4/glfw.Init()
+	/gomod/github.com/go-gl/glfw/v3.4/glfw@v0.1.0-pre.2/glfw.go:45 +0x1c fp=0x673af9d41bd0 sp=0x673af9d41b90 pc=0x99e94c
+fyne.io/fyne/v2/internal/driver/glfw.(*gLDriver).initGLFW(0xac70e3?)
+	/gomod/fyne.io/fyne/v2@v2.8.2/internal/driver/glfw/loop_desktop.go:27 +0xb4 fp=0x673af9d41c00 sp=0x673af9d41bd0 pc=0x9e3c14
+fyne.io/fyne/v2/internal/driver/glfw.(*gLDriver).init(...)
+	/gomod/fyne.io/fyne/v2@v2.8.2/internal/driver/glfw/driver.go:48
+fyne.io/fyne/v2/internal/driver/glfw.(*gLDriver).createWindow(0x673af85d62c0, {0xacf6a1?, 0x673af9d41cb8?}, 0x1)
+	/gomod/fyne.io/fyne/v2@v2.8.2/internal/driver/glfw/window.go:1029 +0x58 fp=0x673af9d41c80 sp=0x673af9d41c00 pc=0x9e9c68
+fyne.io/fyne/v2/internal/driver/glfw.(*gLDriver).CreateWindow.func1()
+	/gomod/fyne.io/fyne/v2@v2.8.2/internal/driver/glfw/window.go:990 +0x2c fp=0x673af9d41cc0 sp=0x673af9d41c80 pc=0x9ed47c
+fyne.io/fyne/v2/internal/async.EnsureMain(0x673af82c5590)
+	/gomod/fyne.io/fyne/v2@v2.8.2/internal/async/goroutine.go:53 +0x48 fp=0x673af9d41d40 sp=0x673af9d41cc0 pc=0x770298
+fyne.io/fyne/v2/internal/driver/glfw.(*gLDriver).CreateWindow(0x673af85d62c0, {0xacf6a1, 0xc})
+	/gomod/fyne.io/fyne/v2@v2.8.2/internal/driver/glfw/window.go:989 +0xa0 fp=0x673af9d41d80 sp=0x673af9d41d40 pc=0x9e9be0
+fyne.io/fyne/v2/app.(*fyneApp).NewWindow(0xad08b9?, {0xacf6a1?, 0x673af853fe38?})
+	/gomod/fyne.io/fyne/v2@v2.8.2/app/app.go:73 +0x28 fp=0x673af9d41db0 sp=0x673af9d41d80 pc=0xa14478
+main.main()
+	/work/apps/fyne/main.go:19 +0x94 fp=0x673af9d41ea0 sp=0x673af9d41db0 pc=0xa34ee4
+runtime.main()
+	/usr/local/go/src/runtime/proc.go:302 +0x380 fp=0x673af9d41fd0 sp=0x673af9d41ea0 pc=0x4529f0
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x673af9d41fd0 sp=0x673af9d41fd0 pc=0x48fbc4
+
+goroutine 2 gp=0x673af8218f00 m=nil [force gc (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x673af8284f90 sp=0x673af8284f70 pc=0x488b38
+runtime.goparkunlock(...)
+	/usr/local/go/src/runtime/proc.go:480
+runtime.forcegchelper()
+	/usr/local/go/src/runtime/proc.go:387 +0xb4 fp=0x673af8284fd0 sp=0x673af8284f90 pc=0x452cd4
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x673af8284fd0 sp=0x673af8284fd0 pc=0x48fbc4
+created by runtime.init.7 in goroutine 1
+	/usr/local/go/src/runtime/proc.go:375 +0x24
+
+goroutine 3 gp=0x673af82194a0 m=nil [GC sweep wait]:
+runtime.gopark(0x1?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x673af8285770 sp=0x673af8285750 pc=0x488b38
+runtime.goparkunlock(...)
+	/usr/local/go/src/runtime/proc.go:480
+runtime.bgsweep(0x673af8252080)
+	/usr/local/go/src/runtime/mgcsweep.go:324 +0x178 fp=0x673af82857b0 sp=0x673af8285770 pc=0x43df88
+runtime.gcenable.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:214 +0x20 fp=0x673af82857d0 sp=0x673af82857b0 pc=0x47f540
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x673af82857d0 sp=0x673af82857d0 pc=0x48fbc4
+created by runtime.gcenable in goroutine 1
+	/usr/local/go/src/runtime/mgc.go:214 +0x6c
+
+goroutine 4 gp=0x673af8219680 m=nil [GC scavenge wait]:
+runtime.gopark(0x10000?, 0xb14378?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x673af8285f60 sp=0x673af8285f40 pc=0x488b38
+runtime.goparkunlock(...)
+	/usr/local/go/src/runtime/proc.go:480
+runtime.(*scavengerState).park(0x1acb320)
+	/usr/local/go/src/runtime/mgcscavenge.go:425 +0x5c fp=0x673af8285f90 sp=0x673af8285f60 pc=0x43bb1c
+runtime.bgscavenge(0x673af8252080)
+	/usr/local/go/src/runtime/mgcscavenge.go:658 +0xac fp=0x673af8285fb0 sp=0x673af8285f90 pc=0x43c08c
+runtime.gcenable.gowrap2()
+	/usr/local/go/src/runtime/mgc.go:215 +0x20 fp=0x673af8285fd0 sp=0x673af8285fb0 pc=0x47f500
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x673af8285fd0 sp=0x673af8285fd0 pc=0x48fbc4
+created by runtime.gcenable in goroutine 1
+	/usr/local/go/src/runtime/mgc.go:215 +0xac
+
+goroutine 5 gp=0x673af8219c20 m=nil [GOMAXPROCS updater (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x673af8284770 sp=0x673af8284750 pc=0x488b38
+runtime.goparkunlock(...)
+	/usr/local/go/src/runtime/proc.go:480
+runtime.updateMaxProcsGoroutine()
+	/usr/local/go/src/runtime/proc.go:7146 +0xf4 fp=0x673af82847d0 sp=0x673af8284770 pc=0x4606b4
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x673af82847d0 sp=0x673af82847d0 pc=0x48fbc4
+created by runtime.defaultGOMAXPROCSUpdateEnable in goroutine 1
+	/usr/local/go/src/runtime/proc.go:7134 +0x48
+
+goroutine 6 gp=0x673af82ba5a0 m=nil [finalizer wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x673af8286580 sp=0x673af8286560 pc=0x488b38
+runtime.runFinalizers()
+	/usr/local/go/src/runtime/mfinal.go:210 +0x100 fp=0x673af82867d0 sp=0x673af8286580 pc=0x42f0b0
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x673af82867d0 sp=0x673af82867d0 pc=0x48fbc4
+created by runtime.createfing in goroutine 1
+	/usr/local/go/src/runtime/mfinal.go:172 +0x78
+
+goroutine 7 gp=0x673af82ba780 m=nil [cleanup wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x673af8286f50 sp=0x673af8286f30 pc=0x488b38
+runtime.goparkunlock(...)
+	/usr/local/go/src/runtime/proc.go:480
+runtime.(*cleanupQueue).dequeue(0x1acba60)
+	/usr/local/go/src/runtime/mcleanup.go:522 +0x160 fp=0x673af8286f90 sp=0x673af8286f50 pc=0x42bc10
+runtime.runCleanups()
+	/usr/local/go/src/runtime/mcleanup.go:718 +0x40 fp=0x673af8286fd0 sp=0x673af8286f90 pc=0x42c360
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x673af8286fd0 sp=0x673af8286fd0 pc=0x48fbc4
+created by runtime.(*cleanupQueue).createGs in goroutine 1
+	/usr/local/go/src/runtime/mcleanup.go:672 +0x108
+
+goroutine 8 gp=0x673af82bab40 m=nil [select]:
+runtime.gopark(0x673af8290f58?, 0x2?, 0x40?, 0xab?, 0x673af8290edc?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x673af8290d30 sp=0x673af8290d10 pc=0x488b38
+runtime.selectgo(0x673af8290f58, 0x673af8290ed8, 0x0?, 0x0, 0x0?, 0x1)
+	/usr/local/go/src/runtime/select.go:351 +0x838 fp=0x673af8290e70 sp=0x673af8290d30 pc=0x465118
+fyne.io/fyne/v2/internal/async.(*UnboundedChan[...]).processing(0xb207a0)
+	/gomod/fyne.io/fyne/v2@v2.8.2/internal/async/chan.go:43 +0xa8 fp=0x673af8290fb0 sp=0x673af8290e70 pc=0x9ef3c8
+fyne.io/fyne/v2/internal/async.NewUnboundedChan[...].gowrap1()
+	/gomod/fyne.io/fyne/v2@v2.8.2/internal/async/chan.go:20 +0x20 fp=0x673af8290fd0 sp=0x673af8290fb0 pc=0x9ef0d0
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x673af8290fd0 sp=0x673af8290fd0 pc=0x48fbc4
+created by fyne.io/fyne/v2/internal/async.NewUnboundedChan[...] in goroutine 1
+	/gomod/fyne.io/fyne/v2@v2.8.2/internal/async/chan.go:20 +0x104
+
+goroutine 9 gp=0x673af82bad20 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x673af8287f20 sp=0x673af8287f00 pc=0x488b38
+runtime.gcBgMarkWorker(0x673af82b6230)
+	/usr/local/go/src/runtime/mgc.go:1807 +0xe0 fp=0x673af8287fb0 sp=0x673af8287f20 pc=0x432390
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1711 +0x20 fp=0x673af8287fd0 sp=0x673af8287fb0 pc=0x47fa70
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x673af8287fd0 sp=0x673af8287fd0 pc=0x48fbc4
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/usr/local/go/src/runtime/mgc.go:1711 +0x130
+
+goroutine 10 gp=0x673af82baf00 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x673af8280720 sp=0x673af8280700 pc=0x488b38
+runtime.gcBgMarkWorker(0x673af82b6230)
+	/usr/local/go/src/runtime/mgc.go:1807 +0xe0 fp=0x673af82807b0 sp=0x673af8280720 pc=0x432390
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1711 +0x20 fp=0x673af82807d0 sp=0x673af82807b0 pc=0x47fa70
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x673af82807d0 sp=0x673af82807d0 pc=0x48fbc4
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/usr/local/go/src/runtime/mgc.go:1711 +0x130
+
+goroutine 11 gp=0x673af82bb0e0 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x673af8280f20 sp=0x673af8280f00 pc=0x488b38
+runtime.gcBgMarkWorker(0x673af82b6230)
+	/usr/local/go/src/runtime/mgc.go:1807 +0xe0 fp=0x673af8280fb0 sp=0x673af8280f20 pc=0x432390
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1711 +0x20 fp=0x673af8280fd0 sp=0x673af8280fb0 pc=0x47fa70
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x673af8280fd0 sp=0x673af8280fd0 pc=0x48fbc4
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/usr/local/go/src/runtime/mgc.go:1711 +0x130
+
+goroutine 12 gp=0x673af82bb2c0 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x673af8281720 sp=0x673af8281700 pc=0x488b38
+runtime.gcBgMarkWorker(0x673af82b6230)
+	/usr/local/go/src/runtime/mgc.go:1807 +0xe0 fp=0x673af82817b0 sp=0x673af8281720 pc=0x432390
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1711 +0x20 fp=0x673af82817d0 sp=0x673af82817b0 pc=0x47fa70
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x673af82817d0 sp=0x673af82817d0 pc=0x48fbc4
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/usr/local/go/src/runtime/mgc.go:1711 +0x130
+
+goroutine 13 gp=0x673af82bb4a0 m=nil [GC worker (idle)]:
+runtime.gopark(0x66faa2746a?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x673af8281f20 sp=0x673af8281f00 pc=0x488b38
+runtime.gcBgMarkWorker(0x673af82b6230)
+	/usr/local/go/src/runtime/mgc.go:1807 +0xe0 fp=0x673af8281fb0 sp=0x673af8281f20 pc=0x432390
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1711 +0x20 fp=0x673af8281fd0 sp=0x673af8281fb0 pc=0x47fa70
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x673af8281fd0 sp=0x673af8281fd0 pc=0x48fbc4
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/usr/local/go/src/runtime/mgc.go:1711 +0x130
+
+goroutine 14 gp=0x673af82bb680 m=nil [GC worker (idle)]:
+runtime.gopark(0x66faa32c02?, 0x3?, 0xc4?, 0xfd?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x673af8282720 sp=0x673af8282700 pc=0x488b38
+runtime.gcBgMarkWorker(0x673af82b6230)
+	/usr/local/go/src/runtime/mgc.go:1807 +0xe0 fp=0x673af82827b0 sp=0x673af8282720 pc=0x432390
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1711 +0x20 fp=0x673af82827d0 sp=0x673af82827b0 pc=0x47fa70
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x673af82827d0 sp=0x673af82827d0 pc=0x48fbc4
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/usr/local/go/src/runtime/mgc.go:1711 +0x130
+
+goroutine 15 gp=0x673af82bb860 m=nil [GC worker (idle)]:
+runtime.gopark(0x66faa4911b?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x673af8282f20 sp=0x673af8282f00 pc=0x488b38
+runtime.gcBgMarkWorker(0x673af82b6230)
+	/usr/local/go/src/runtime/mgc.go:1807 +0xe0 fp=0x673af8282fb0 sp=0x673af8282f20 pc=0x432390
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1711 +0x20 fp=0x673af8282fd0 sp=0x673af8282fb0 pc=0x47fa70
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x673af8282fd0 sp=0x673af8282fd0 pc=0x48fbc4
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/usr/local/go/src/runtime/mgc.go:1711 +0x130
+
+goroutine 16 gp=0x673af82bba40 m=nil [GC worker (idle)]:
+runtime.gopark(0x66faa48a98?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x673af8283720 sp=0x673af8283700 pc=0x488b38
+runtime.gcBgMarkWorker(0x673af82b6230)
+	/usr/local/go/src/runtime/mgc.go:1807 +0xe0 fp=0x673af82837b0 sp=0x673af8283720 pc=0x432390
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:1711 +0x20 fp=0x673af82837d0 sp=0x673af82837b0 pc=0x47fa70
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x673af82837d0 sp=0x673af82837d0 pc=0x48fbc4
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/usr/local/go/src/runtime/mgc.go:1711 +0x130
+
+goroutine 18 gp=0x673af89dc1e0 m=nil [IO wait]:
+runtime.gopark(0x673af84cfd08?, 0x4a3e30?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x673af84cfca0 sp=0x673af84cfc80 pc=0x488b38
+runtime.netpollblock(0x0?, 0xb?, 0x0?)
+	/usr/local/go/src/runtime/netpoll.go:575 +0x150 fp=0x673af84cfce0 sp=0x673af84cfca0 pc=0x44bf60
+internal/poll.runtime_pollWait(0xffff48bfca00, 0x72)
+	/usr/local/go/src/runtime/netpoll.go:351 +0xa0 fp=0x673af84cfd10 sp=0x673af84cfce0 pc=0x487d30
+internal/poll.(*pollDesc).wait(0x673af85ca840?, 0x673af84cfe6b?, 0x1)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:84 +0x28 fp=0x673af84cfd50 sp=0x673af84cfd10 pc=0x4f80e8
+internal/poll.(*pollDesc).waitRead(...)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0x673af85ca840, {0x673af84cfe6b, 0x10000, 0x10000})
+	/usr/local/go/src/internal/poll/fd_unix.go:170 +0x22c fp=0x673af84cfdf0 sp=0x673af84cfd50 pc=0x4f90cc
+os.(*File).read(...)
+	/usr/local/go/src/os/file_posix.go:30
+os.(*File).Read(0x673af85ea008, {0x673af84cfe6b?, 0x0?, 0x0?})
+	/usr/local/go/src/os/file.go:144 +0x68 fp=0x673af84cfe30 sp=0x673af84cfdf0 pc=0x5032c8
+github.com/fsnotify/fsnotify.(*inotify).readEvents(0x673af848e000)
+	/gomod/github.com/fsnotify/fsnotify@v1.9.0/backend_inotify.go:357 +0xe0 fp=0x673af84dffb0 sp=0x673af84cfe30 pc=0xa11310
+github.com/fsnotify/fsnotify.newBackend.gowrap1()
+	/gomod/github.com/fsnotify/fsnotify@v1.9.0/backend_inotify.go:155 +0x20 fp=0x673af84dffd0 sp=0x673af84dffb0 pc=0xa133f0
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x673af84dffd0 sp=0x673af84dffd0 pc=0x48fbc4
+created by github.com/fsnotify/fsnotify.newBackend in goroutine 1
+	/gomod/github.com/fsnotify/fsnotify@v1.9.0/backend_inotify.go:155 +0x1d8
+
+goroutine 19 gp=0x673af89dc3c0 m=nil [chan receive]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x673af833be70 sp=0x673af833be50 pc=0x488b38
+runtime.chanrecv(0x673af82b62a0, 0x673af833bf98, 0x1)
+	/usr/local/go/src/runtime/chan.go:667 +0x470 fp=0x673af833bef0 sp=0x673af833be70 pc=0x41c3a0
+runtime.chanrecv2(0x0?, 0x0?)
+	/usr/local/go/src/runtime/chan.go:514 +0x14 fp=0x673af833bf20 sp=0x673af833bef0 pc=0x41bf14
+fyne.io/fyne/v2/app.watchFile.func1()
+	/gomod/fyne.io/fyne/v2@v2.8.2/app/settings_desktop.go:43 +0x64 fp=0x673af833bfd0 sp=0x673af833bf20 pc=0xa19074
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x673af833bfd0 sp=0x673af833bfd0 pc=0x48fbc4
+created by fyne.io/fyne/v2/app.watchFile in goroutine 1
+	/gomod/fyne.io/fyne/v2@v2.8.2/app/settings_desktop.go:42 +0xdc
+
+goroutine 20 gp=0x673af89dc5a0 m=nil [select]:
+runtime.gopark(0x673af833c770?, 0x2?, 0xa8?, 0xc5?, 0x673af833c6f4?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x673af8293d50 sp=0x673af8293d30 pc=0x488b38
+runtime.selectgo(0x673af8293f70, 0x673af833c6f0, 0x0?, 0x0, 0x0?, 0x1)
+	/usr/local/go/src/runtime/select.go:351 +0x838 fp=0x673af8293e90 sp=0x673af8293d50 pc=0x465118
+fyne.io/fyne/v2/internal/async.(*UnboundedChan[...]).processing(0xb20700)
+	/gomod/fyne.io/fyne/v2@v2.8.2/internal/async/chan.go:43 +0xa8 fp=0x673af8293fb0 sp=0x673af8293e90 pc=0x77e0c8
+fyne.io/fyne/v2/internal/async.NewUnboundedChan[...].gowrap1()
+	/gomod/fyne.io/fyne/v2@v2.8.2/internal/async/chan.go:20 +0x20 fp=0x673af8293fd0 sp=0x673af8293fb0 pc=0x77e000
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x673af8293fd0 sp=0x673af8293fd0 pc=0x48fbc4
+created by fyne.io/fyne/v2/internal/async.NewUnboundedChan[...] in goroutine 1
+	/gomod/fyne.io/fyne/v2@v2.8.2/internal/async/chan.go:20 +0x104
+
+r0      0x0
+r1      0xffff918b6bf0
+r2      0x0
+r3      0x0
+r4      0x0
+r5      0x39bbd648
+r6      0x6bd6a67cc3c8c489
+r7      0xffff918cfa70
+r8      0xffffffff
+r9      0xffffdf466f10
+r10     0x39bc79f8
+r11     0x4
+r12     0x108
+r13     0x0
+r14     0x18
+r15     0x0
+r16     0x1
+r17     0xffff915ca5c4
+r18     0x0
+r19     0x1b13750
+r20     0x1af3750
+r21     0x132d000
+r22     0x132d7e0
+r23     0x39bbd520
+r24     0xffff918b9ca0
+r25     0x0
+r26     0x673af9d41b70
+r27     0x10
+r28     0x1acbc20
+r29     0xffffdf4673b0
+lr      0xab02f8
+sp      0xffffdf4673b0
+pc      0xffff918b6c04
+fault   0x40

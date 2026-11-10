@@ -1,0 +1,102 @@
+package views
+
+import (
+	"fmt"
+	"strconv"
+
+	"gguix/apps/gotth/components/badge"
+	"gguix/core"
+)
+
+const starPath = "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+
+func fraction(q int32) string { return strconv.FormatFloat(core.StockFraction(q), 'f', 4, 64) }
+
+func barWidth(q int32) string {
+	return strconv.FormatFloat(core.StockFraction(q)*80, 'f', 2, 64)
+}
+
+func fillClass(q int32) string {
+	if core.StockLow(q) {
+		return "stock-fill-low"
+	}
+	return "stock-fill"
+}
+
+// StockBar is the custom stock bar: an 80 x 8 inline SVG, colors via palette.css.
+templ StockBar(q int32) {
+	<svg
+		data-slot="stock-bar"
+		data-fraction={ fraction(q) }
+		width="80"
+		height="8"
+		viewBox="0 0 80 8"
+		class="shrink-0"
+		aria-hidden="true"
+	>
+		<rect class="stock-track" x="0" y="0" width="80" height="8" rx="4"></rect>
+		if core.StockFraction(q) > 0 {
+			<rect class={ fillClass(q) } x="0" y="0" width={ barWidth(q) } height="8" rx="4"></rect>
+		}
+	</svg>
+}
+
+// StatusBadge is the custom status pill.
+templ StatusBadge(s core.Status) {
+	@badge.Badge(badge.Props{
+		Class:      "status-badge status-" + s.String() + " rounded-full px-2",
+		Attributes: templ.Attributes{"data-slot": "status-badge", "data-status": s.String()},
+	}) {
+		{ s.String() }
+	}
+}
+
+// FeaturedChip is the custom Featured chip of the cards view.
+templ FeaturedChip() {
+	@badge.Badge(badge.Props{
+		Class:      "featured-chip rounded-full px-2",
+		Attributes: templ.Attributes{"data-slot": "featured-chip"},
+	}) {
+		Featured
+	}
+}
+
+templ star(kind string) {
+	<svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true" class="shrink-0">
+		switch kind {
+			case "full":
+				<path class="star-on" d={ starPath }></path>
+			case "half":
+				<path class="star-off" d={ starPath }></path>
+				<path class="star-on" d={ starPath } style="clip-path: inset(0 50% 0 0)"></path>
+			default:
+				<path class="star-off" d={ starPath }></path>
+		}
+	</svg>
+}
+
+// Stars draws five stars followed by the rating text.
+templ Stars(r float32) {
+	{{ full, half, empty := core.Stars(r) }}
+	<span
+		data-slot="stars"
+		data-full={ strconv.Itoa(full) }
+		data-half={ strconv.Itoa(half) }
+		data-empty={ strconv.Itoa(empty) }
+		class="inline-flex items-center gap-0.5"
+	>
+		for i := 0; i < full; i++ {
+			@star("full")
+		}
+		if half > 0 {
+			@star("half")
+		}
+		for i := 0; i < empty; i++ {
+			@star("empty")
+		}
+		<span class="ml-1">{ core.FormatRating(r) }</span>
+	</span>
+}
+
+func rowID(id int64) string  { return fmt.Sprintf("row-%d", id) }
+func cardID(id int64) string { return fmt.Sprintf("card-%d", id) }

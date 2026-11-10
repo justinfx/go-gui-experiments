@@ -1,0 +1,9 @@
+$ ['make', 'package']
+(rc=2, 1.26s)
+rm -rf GGUIX-cogent.app
+~/go/bin/core pack -o .
+pip install dmgbuild
+core pack failed: pip: command not found
+# gguix/apps/cogent
+ld: warning: ignoring duplicate libraries: '-lobjc'
+make: *** [package] Error 1

@@ -1,0 +1,368 @@
+package views
+
+import (
+	"strconv"
+
+	"gguix/apps/gotth/components"
+	"gguix/apps/gotth/components/alertdialog"
+	"gguix/apps/gotth/components/button"
+	"gguix/apps/gotth/components/checkbox"
+	"gguix/apps/gotth/components/dialog"
+	"gguix/apps/gotth/components/input"
+	"gguix/apps/gotth/components/label"
+	"gguix/apps/gotth/components/nativeselect"
+	"gguix/apps/gotth/components/popover"
+	"gguix/apps/gotth/components/progress"
+	"gguix/apps/gotth/components/toast"
+	"gguix/apps/gotth/views/desktop"
+	"gguix/core"
+	"gguix/core/host"
+)
+
+func themeClass(theme string) string {
+	if theme == core.ThemeDark {
+		return "dark"
+	}
+	return ""
+}
+
+// htmx 2.0.11 scans every swapped fragment with an XPath query for hx-on:*
+// attributes. WebKit evaluates it very slowly on 200-row pages, and this app
+// never uses hx-on, so the query is replaced by one that matches nothing.
+const noHxOnScript = `(function(){var P=XPathEvaluator.prototype,c=P.createExpression;P.createExpression=function(x){if(String(x).indexOf('hx-on')>=0){return{evaluate:function(){return{iterateNext:function(){return null;}};}};}return c.apply(this,arguments);};})();`
+
+const themeScript = `(function(){var h=document.documentElement;function a(){var t=h.dataset.theme;var d=t==='dark'||(t==='system'&&window.matchMedia('(prefers-color-scheme: dark)').matches);h.classList.toggle('dark',d);}window.__applyTheme=a;a();var m=window.matchMedia('(prefers-color-scheme: dark)');if(m.addEventListener)m.addEventListener('change',a);})();`
+
+// Page is the full HTML document.
+templ Page(vm PageVM) {
+	<!DOCTYPE html>
+	<html lang="en" class={ themeClass(vm.Theme) } data-theme={ vm.Theme }>
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<title>GGUIX - GoTTH</title>
+			<link rel="stylesheet" href="/assets/css/output.css"/>
+			<link rel="stylesheet" href="/palette.css"/>
+			@templ.Raw("<script>" + themeScript + "</script>")
+			@templ.Raw("<script>" + noHxOnScript + "</script>")
+			<script src="/static/htmx/htmx.min.js"></script>
+			<script src="/static/htmx/sse.js"></script>
+			@components.Scripts()
+			<script src="/static/app.js" defer></script>
+			<!-- gguix:target web -->
+			if !vm.Desktop {
+				<script src="/static/web/web.js" defer></script>
+			}
+			<!-- gguix:end -->
+			<!-- gguix:target desktop -->
+			if vm.Desktop {
+				<script src="/static/desktop/desktop.js" defer></script>
+			}
+			<!-- gguix:end -->
+			if vm.Bench {
+				@templ.Raw("<script>" + benchBoot(vm) + "</script>")
+				<script src="/static/bench/bench.js" defer></script>
+			}
+		</head>
+		<body
+			class="flex h-screen flex-col overflow-hidden bg-background text-foreground"
+			data-desktop={ boolStr(vm.Desktop) }
+			data-view={ vm.View }
+			hx-ext="sse"
+		>
+			if vm.Desktop {
+				@desktop.Menubar(vm.View, vm.Theme)
+			}
+			@Toolbar(vm.Filters)
+			<div id="main" class="flex min-h-0 flex-1">
+				<div id="list-pane" class="min-w-0" style="flex: 65 1 0">
+					<div id="list-region" class="h-full">
+						@ListRegion(vm.List)
+					</div>
+				</div>
+				<div id="divider" class="w-px shrink-0 bg-border"></div>
+				<div id="detail-pane" class="min-w-0" style="flex: 35 1 0">
+					@DetailForm(vm.Form, false)
+				</div>
+			</div>
+			@StatusBar(vm)
+			@dialogs(vm)
+			@toast.Toaster()
+		</body>
+	</html>
+}
+
+func benchBoot(vm PageVM) string {
+	return "window.GGUIX_BENCH=true;window.GGUIX_PROCESS_START=" + strconv.FormatInt(vm.ProcessStartMs, 10) + ";"
+}
+
+// Toolbar is the row of search, filters, go-to-row, view switcher and export.
+templ Toolbar(f FilterVM) {
+	<div class="flex flex-wrap items-center gap-2 border-b p-2" id="toolbar">
+		<form
+			id="filters"
+			class="contents"
+			hx-post="/query"
+			hx-target="#list-region"
+			hx-swap="innerHTML"
+			hx-trigger="filters-changed"
+			hx-sync="this:replace"
+			onsubmit="return false"
+		>
+			@input.Input(input.Props{ID: "search", Name: "search", Type: "search", Placeholder: "Search name or SKU", Value: f.Search, Class: "w-70", Attributes: templ.Attributes{"autocomplete": "off"}})
+			@popover.Popover(popover.Props{ID: "cat-popover"}) {
+				@button.Button(button.Props{Variant: button.VariantOutline, Attributes: popover.Trigger(ctx)}) {
+					@CategoryLabel(f, false)
+				}
+				@popover.Content(popover.ContentProps{Align: popover.AlignStart, Class: "w-56"}) {
+					<div class="flex flex-col gap-2" id="cat-list">
+						for _, c := range core.AllCategories {
+							<div class="flex items-center gap-2">
+								@checkbox.Checkbox(checkbox.Props{ID: "cat-" + c.String(), Name: "cat", Value: c.String(), Form: "filters", DefaultChecked: f.HasCategory(c)})
+								@label.Label(label.Props{For: "cat-" + c.String()}) {
+									{ c.String() }
+								}
+							</div>
+						}
+						@button.Button(button.Props{Variant: button.VariantOutline, Size: button.SizeSm, Attributes: templ.Attributes{"data-action": "clear-categories", "id": "cat-clear"}}) {
+							Clear
+						}
+					</div>
+				}
+			}
+			@nativeselect.NativeSelect(nativeselect.Props{ID: "status", Name: "status"}) {
+				@nativeselect.Option(nativeselect.OptionProps{Value: "", Selected: f.Status == ""}) {
+					All statuses
+				}
+				for _, s := range core.AllStatuses {
+					@nativeselect.Option(nativeselect.OptionProps{Value: s.String(), Selected: f.Status == s.String()}) {
+						{ s.String() }
+					}
+				}
+			}
+		</form>
+		<form
+			id="goto"
+			class="flex items-center gap-1"
+		>
+			@input.Input(input.Props{ID: "goto-row", Name: "row", Type: "number", Placeholder: "Go to row", Class: "w-32", Attributes: templ.Attributes{"min": "1", "step": "1"}})
+			@button.Button(button.Props{Type: button.TypeSubmit, Variant: button.VariantOutline, Attributes: templ.Attributes{"id": "goto-btn"}}) {
+				Go
+			}
+		</form>
+		@ViewSwitch(f.View, false)
+		<div class="flex-1"></div>
+		@button.Button(button.Props{Variant: button.VariantOutline, Attributes: templ.Attributes{"id": "export-btn", "data-action": "export"}}) {
+			Export CSV
+		}
+		@nativeselect.NativeSelect(nativeselect.Props{ID: "theme", Name: "theme"}) {
+			@nativeselect.Option(nativeselect.OptionProps{Value: "system", Selected: f.Theme == "system"}) {
+				System
+			}
+			@nativeselect.Option(nativeselect.OptionProps{Value: "light", Selected: f.Theme == "light"}) {
+				Light
+			}
+			@nativeselect.Option(nativeselect.OptionProps{Value: "dark", Selected: f.Theme == "dark"}) {
+				Dark
+			}
+		}
+	</div>
+}
+
+// CategoryLabel is the text inside the Categories button.
+templ CategoryLabel(f FilterVM, oob bool) {
+	<span id="cat-label" if oob {
+			hx-swap-oob="true"
+		}>{ f.CategoryLabel() }</span>
+}
+
+// ViewSwitch is the Table | Cards segmented control.
+templ ViewSwitch(view string, oob bool) {
+	<div id="view-switch" class="inline-flex" role="group" if oob {
+			hx-swap-oob="true"
+		}>
+		@button.Button(button.Props{Variant: viewVariant(view == "table"), Class: "rounded-r-none", Attributes: viewAttrs("table", view == "table")}) {
+			Table
+		}
+		@button.Button(button.Props{Variant: viewVariant(view == "cards"), Class: "rounded-l-none", Attributes: viewAttrs("cards", view == "cards")}) {
+			Cards
+		}
+	</div>
+}
+
+func viewVariant(active bool) button.Variant {
+	if active {
+		return button.VariantDefault
+	}
+	return button.VariantOutline
+}
+
+func viewAttrs(v string, active bool) templ.Attributes {
+	return templ.Attributes{
+		"data-action": "view",
+		"data-view":   v,
+		"id":          "view-" + v,
+		"aria-pressed": boolStr(active),
+	}
+}
+
+// Count is the "<n> items" text of the status bar.
+templ Count(total int, oob bool) {
+	<span id="sb-count" if oob {
+			hx-swap-oob="true"
+		}>{ core.FormatCount(total) + " items" }</span>
+}
+
+// StatusBar is the single line at the bottom.
+templ StatusBar(vm PageVM) {
+	<div id="statusbar" class="flex items-center gap-3 border-t px-3 py-1 text-xs">
+		<div class="min-w-0 flex-1 truncate" id="sb-left">
+			@Count(vm.List.Page.Total, false)
+			<span id="sb-rows"></span>
+			<span id="sb-fetch">{ " · last fetch " + strconv.FormatFloat(vm.List.FetchMs, 'f', 0, 64) + " ms" }</span>
+			<span id="sb-msg" class="ml-2 text-muted-foreground"></span>
+		</div>
+		<div id="export-status" hx-ext="sse" sse-connect="/export/progress" sse-swap="export" hx-swap="innerHTML">
+			@ExportStatus(ExportVM{State: "idle"})
+		</div>
+		<span id="sb-identity" data-slot="identity">{ vm.Host.Identity() }</span>
+		@button.Button(button.Props{Variant: button.VariantOutline, Size: button.SizeXs, Attributes: hostButtonAttrs()}) {
+			Host
+		}
+	</div>
+}
+
+func hostButtonAttrs() templ.Attributes {
+	a := dialog.TriggerFor("host-dialog")
+	a["id"] = "host-btn"
+	a["hx-get"] = "/host"
+	a["hx-target"] = "#host-body-wrap"
+	a["hx-swap"] = "innerHTML"
+	return a
+}
+
+// ExportStatus is the export area of the status bar, pushed over SSE.
+templ ExportStatus(e ExportVM) {
+	<div
+		id="export-marker"
+		class="flex items-center gap-2"
+		data-state={ e.State }
+		data-job={ strconv.Itoa(e.ID) }
+		data-rows={ strconv.Itoa(e.Rows) }
+		data-err={ e.Err }
+	>
+		if e.State == "running" {
+			@progress.Progress(progress.Props{Value: e.Percent(), Class: "w-[200px]", Attributes: templ.Attributes{"id": "export-progress"}})
+			<span id="export-pct" class="w-9 text-right">{ strconv.Itoa(e.Percent()) + "%" }</span>
+			@button.Button(button.Props{Variant: button.VariantOutline, Size: button.SizeXs, Attributes: templ.Attributes{"id": "export-cancel", "data-action": "export-cancel"}}) {
+				Cancel
+			}
+		}
+	</div>
+}
+
+// HostBody is the content of the host dialog.
+templ HostBody(i host.Info, hasExport bool) {
+	<div id="host-body" class="flex flex-col gap-3" data-source={ string(i.Source) }>
+		<dl class="grid grid-cols-[9rem_1fr] gap-x-3 gap-y-1 text-sm">
+			for _, r := range i.Rows() {
+				<dt class="text-muted-foreground">{ r.Label }</dt>
+				<dd class="break-all" data-label={ r.Label }>{ r.Value }</dd>
+			}
+		</dl>
+		for _, n := range i.Notes {
+			<p class="text-sm text-muted-foreground" data-slot="host-note">{ n }</p>
+		}
+		<div class="flex flex-wrap gap-2">
+			if i.Available() {
+				@button.Button(button.Props{Variant: button.VariantOutline, Attributes: templ.Attributes{"data-action": "reveal-config", "id": "host-reveal-config"}}) {
+					Reveal Config Folder
+				}
+				@button.Button(button.Props{Variant: button.VariantOutline, Disabled: !hasExport, Attributes: templ.Attributes{"data-action": "reveal-export", "id": "host-reveal-export"}}) {
+					Reveal Last Export
+				}
+			} else {
+				@button.Button(button.Props{Variant: button.VariantOutline, Disabled: true, Attributes: templ.Attributes{"title": "Not available in the browser", "id": "host-reveal-config"}}) {
+					Reveal Config Folder
+				}
+				@button.Button(button.Props{Variant: button.VariantOutline, Disabled: true, Attributes: templ.Attributes{"title": "Not available in the browser", "id": "host-reveal-export"}}) {
+					Reveal Last Export
+				}
+				<span class="self-center text-sm text-muted-foreground">Not available in the browser</span>
+			}
+		</div>
+	</div>
+}
+
+templ dialogs(vm PageVM) {
+	@alertdialog.AlertDialog(alertdialog.Props{ID: "confirm-dialog"}) {
+		<button class="hidden" id="confirm-trigger" { alertdialog.Trigger(ctx)... }></button>
+		@alertdialog.Content() {
+			@alertdialog.Header() {
+				@alertdialog.Title() {
+					Discard unsaved changes?
+				}
+			}
+			@alertdialog.Footer() {
+				@alertdialog.Cancel(alertdialog.CancelProps{Attributes: templ.Attributes{"id": "confirm-cancel"}}) {
+					Cancel
+				}
+				@alertdialog.Action(alertdialog.ActionProps{Attributes: closeAttrs("confirm-dialog", "confirm-discard")}) {
+					Discard
+				}
+			}
+		}
+	}
+	@alertdialog.AlertDialog(alertdialog.Props{ID: "error-dialog"}) {
+		<button class="hidden" id="error-trigger" { alertdialog.Trigger(ctx)... }></button>
+		@alertdialog.Content() {
+			@alertdialog.Header() {
+				@alertdialog.Title() {
+					Error
+				}
+				@alertdialog.Description(alertdialog.DescriptionProps{Attributes: templ.Attributes{"id": "error-text"}})
+			}
+			@alertdialog.Footer() {
+				@alertdialog.Cancel(alertdialog.CancelProps{Attributes: templ.Attributes{"id": "error-ok"}}) {
+					OK
+				}
+			}
+		}
+	}
+	@dialog.Dialog(dialog.Props{ID: "host-dialog"}) {
+		@dialog.Content(dialog.ContentProps{Class: "sm:max-w-xl"}) {
+			@dialog.Header() {
+				@dialog.Title() {
+					Host Info
+				}
+			}
+			<div id="host-body-wrap">
+				@HostBody(vm.Host, false)
+			</div>
+		}
+	}
+	@dialog.Dialog(dialog.Props{ID: "about-dialog"}) {
+		<button class="hidden" id="about-trigger" { dialog.Trigger(ctx)... }></button>
+		@dialog.Content() {
+			@dialog.Header() {
+				@dialog.Title() {
+					About GGUIX
+				}
+			}
+			<div class="flex flex-col text-sm" id="about-body">
+				<div>GGUIX - GoTTH</div>
+				<div>{ vm.UIVersion }</div>
+				<div>{ vm.GoVersion }</div>
+				<div>BuildMarker { vm.BuildMarker }</div>
+				<div>@Marker()</div>
+			</div>
+		}
+	}
+	<button class="hidden" id="host-trigger" { dialog.TriggerFor("host-dialog")... }></button>
+}
+
+func closeAttrs(dialogID, id string) templ.Attributes {
+	a := alertdialog.CloseFor(dialogID)
+	a["id"] = id
+	return a
+}

@@ -1,0 +1,4 @@
+WARNING: compositor doesn't support zwlr_layer_shell_v1
+WARNING: Couldn't initialize wayland output. Falling back to X11 output.
+WARNING: Cannot open X11 display.
+ERROR: [  get_x11_output:0065] Couldn't initialize X11 output. Aborting...

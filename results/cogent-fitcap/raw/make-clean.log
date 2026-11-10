@@ -1,0 +1,6 @@
+$ ['make', 'clean']
+(rc=0, 0.03s)
+rm -rf bin
+rm -rf web/shimbin
+rm -rf GGUIX-cogent.app
+rm -f cogent cogent-fitcap

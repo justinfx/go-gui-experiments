@@ -1,0 +1,6 @@
+$ ['make', 'build']
+(rc=0, 0.97s)
+mkdir -p bin
+go build -tags release -trimpath -ldflags "-s -w" -o bin/gguix-fyne .
+# gguix/apps/fyne
+ld: warning: ignoring duplicate libraries: '-lobjc'

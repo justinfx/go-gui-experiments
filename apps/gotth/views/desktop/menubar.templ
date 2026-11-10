@@ -1,0 +1,160 @@
+package desktop
+
+import (
+	"gguix/apps/gotth/components/icon"
+	"gguix/apps/gotth/components/menubar"
+)
+
+func act(a string) templ.Attributes { return templ.Attributes{"data-menu-action": a} }
+
+// Menubar is the in-page menu bar used by the desktop shell. The webview
+// library has no native menu API, so the menus are drawn in the page.
+templ Menubar(view, theme string) {
+	@menubar.Menubar(menubar.Props{ID: "app-menubar", Class: "rounded-none border-0 border-b"}) {
+		@menubar.Menu() {
+			@menubar.Trigger() {
+				GGUIX
+			}
+			@menubar.Content() {
+				@menubar.Item(menubar.ItemProps{Attributes: act("about")}) {
+					About GGUIX
+				}
+				@menubar.Separator()
+				@menubar.Item(menubar.ItemProps{Attributes: act("quit")}) {
+					Quit
+					@menubar.Shortcut() {
+						⌘Q
+					}
+				}
+			}
+		}
+		@menubar.Menu() {
+			@menubar.Trigger() {
+				File
+			}
+			@menubar.Content() {
+				@menubar.Item(menubar.ItemProps{Attributes: act("export")}) {
+					Export CSV…
+					@menubar.Shortcut() {
+						⌘E
+					}
+				}
+				@menubar.Item(menubar.ItemProps{Attributes: act("import-notes")}) {
+					Import Notes…
+					@menubar.Shortcut() {
+						⌘O
+					}
+				}
+				@menubar.Item(menubar.ItemProps{Attributes: act("reveal-export")}) {
+					Reveal Last Export
+				}
+			}
+		}
+		@menubar.Menu() {
+			@menubar.Trigger() {
+				Edit
+			}
+			@menubar.Content() {
+				@menubar.Item(menubar.ItemProps{Attributes: act("cut")}) {
+					Cut
+					@menubar.Shortcut() {
+						⌘X
+					}
+				}
+				@menubar.Item(menubar.ItemProps{Attributes: act("copy")}) {
+					Copy
+					@menubar.Shortcut() {
+						⌘C
+					}
+				}
+				@menubar.Item(menubar.ItemProps{Attributes: act("paste")}) {
+					Paste
+					@menubar.Shortcut() {
+						⌘V
+					}
+				}
+				@menubar.Item(menubar.ItemProps{Attributes: act("select-all")}) {
+					Select All
+					@menubar.Shortcut() {
+						⌘A
+					}
+				}
+				@menubar.Separator()
+				@menubar.Item(menubar.ItemProps{Attributes: act("copy-row")}) {
+					Copy Row
+					@menubar.Shortcut() {
+						⇧⌘C
+					}
+				}
+			}
+		}
+		@menubar.Menu() {
+			@menubar.Trigger() {
+				View
+			}
+			@menubar.Content() {
+				@menubar.RadioGroup(menubar.RadioGroupProps{DefaultValue: view, Attributes: templ.Attributes{"data-menu-group": "view"}}) {
+					@menubar.RadioItem(menubar.RadioItemProps{Value: "table", Attributes: act("view-table")}) {
+						Table
+						@menubar.Shortcut() {
+							⌘1
+						}
+					}
+					@menubar.RadioItem(menubar.RadioItemProps{Value: "cards", Attributes: act("view-cards")}) {
+						Cards
+						@menubar.Shortcut() {
+							⌘2
+						}
+					}
+				}
+				@menubar.Separator()
+				@menubar.Sub() {
+					@menubar.SubTrigger() {
+						Theme
+					}
+					@menubar.SubContent() {
+						@menubar.RadioGroup(menubar.RadioGroupProps{DefaultValue: theme, Attributes: templ.Attributes{"data-menu-group": "theme"}}) {
+							@menubar.RadioItem(menubar.RadioItemProps{Value: "system", Attributes: act("theme-system")}) {
+								System
+							}
+							@menubar.RadioItem(menubar.RadioItemProps{Value: "light", Attributes: act("theme-light")}) {
+								Light
+							}
+							@menubar.RadioItem(menubar.RadioItemProps{Value: "dark", Attributes: act("theme-dark")}) {
+								Dark
+							}
+						}
+					}
+				}
+				@menubar.Separator()
+				@menubar.Item(menubar.ItemProps{Attributes: act("reload")}) {
+					Reload
+					@menubar.Shortcut() {
+						⌘R
+					}
+				}
+				@menubar.Item(menubar.ItemProps{Attributes: act("focus-search")}) {
+					Focus Search
+					@menubar.Shortcut() {
+						⌘F
+					}
+				}
+			}
+		}
+		@menubar.Menu() {
+			@menubar.Trigger() {
+				Help
+			}
+			@menubar.Content() {
+				@menubar.Item(menubar.ItemProps{Attributes: act("host")}) {
+					Host Info…
+					@menubar.Shortcut() {
+						⌘I
+					}
+				}
+			}
+		}
+	}
+}
+
+var _ = icon.Check

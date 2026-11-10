@@ -1,0 +1,6 @@
+$ ['make', 'package']
+(rc=0, 14.57s)
+mkdir -p bin
+~/go/bin/fyne package --release --target darwin --name GGUIX-fyne --app-id io.gguix.fyne --icon Icon.png --source-dir .
+rm -r -f bin/GGUIX-fyne.app
+mv GGUIX-fyne.app bin/GGUIX-fyne.app

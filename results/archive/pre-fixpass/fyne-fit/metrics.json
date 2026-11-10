@@ -1,0 +1,385 @@
+{
+  "app": "fyne-fit",
+  "bench": {
+    "errors": [],
+    "events_seen": [
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ]
+    ],
+    "memory": {
+      "peak_process_tree_mb": {
+        "max": 1267.5,
+        "median": 1245.6
+      },
+      "peak_total_mb": {
+        "max": 1267.5,
+        "median": 1245.6
+      },
+      "peak_webkit_mb": {
+        "max": 0.0,
+        "median": 0.0
+      }
+    },
+    "runs": 5,
+    "summary": {
+      "cards_scroll": {
+        "max_gap_ms": {
+          "max": 28,
+          "median": 21.5,
+          "min": 12.1,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 19.3,
+          "median": 11.8,
+          "min": 7.6,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "switch_ms": {
+          "max": 73.3,
+          "median": 63.2,
+          "min": 62.7,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3213.9,
+          "median": 3212.8,
+          "min": 3207.7,
+          "n": 5
+        }
+      },
+      "export": {
+        "max_gap_ms": {
+          "max": 11.6,
+          "median": 3.3,
+          "min": 1,
+          "n": 5
+        },
+        "ms": {
+          "max": 513.6,
+          "median": 501.6,
+          "min": 501.4,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 2.8,
+          "median": 0.6,
+          "min": 0,
+          "n": 5
+        },
+        "rows": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "jump": {
+        "ms": {
+          "max": 140.2,
+          "median": 114.8,
+          "min": 104.1,
+          "n": 5
+        }
+      },
+      "ready": {
+        "ms": {
+          "max": 583.4,
+          "median": 564.5,
+          "min": 557,
+          "n": 5
+        }
+      },
+      "scroll": {
+        "max_gap_ms": {
+          "max": 25.9,
+          "median": 24.8,
+          "min": 24,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 21.3,
+          "median": 21.1,
+          "min": 20,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 4370.7,
+          "median": 4335.3,
+          "min": 4232.8,
+          "n": 5
+        }
+      },
+      "search": {
+        "ms": {
+          "max": 74.8,
+          "median": 60.1,
+          "min": 58.1,
+          "n": 5
+        },
+        "total": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "sort": {
+        "ms": {
+          "max": 294.3,
+          "median": 261,
+          "min": 252.3,
+          "n": 5
+        }
+      }
+    }
+  },
+  "cgoprobe": {
+    "rc": 0,
+    "results": [
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "desktop"
+      },
+      {
+        "reason": "../../core/checksum_nocgo.go:8:9: undefined: cgoprobe_requires_cgo_but_cgo_is_unavailable_for_this_target",
+        "result": "FAIL",
+        "target": "web"
+      },
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "web-remote-client"
+      },
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "web-remote-server"
+      }
+    ],
+    "secs": 3.01
+  },
+  "cold_build": {
+    "rc": 0,
+    "secs": 20.31
+  },
+  "idle_rss": {
+    "process_tree_mb": 214.2,
+    "total_mb": 214.2,
+    "webkit_mb": 0.0
+  },
+  "incremental_build": {
+    "BuildMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 2.17
+    }
+  },
+  "loc": {
+    "app": "fyne-fit",
+    "build_tagged_files": 5,
+    "by_category": {
+      "bench": 43,
+      "desktop": 250,
+      "shared": 2870,
+      "test": 659,
+      "web": 130
+    },
+    "by_category_language": {
+      "bench": {
+        "go": 43
+      },
+      "desktop": {
+        "go": 250
+      },
+      "shared": {
+        "go": 2817,
+        "make": 53
+      },
+      "test": {
+        "go": 659
+      },
+      "web": {
+        "go": 113,
+        "make": 17
+      }
+    },
+    "by_language": {
+      "go": 3882,
+      "make": 70
+    },
+    "custom_rendering_lines": 581,
+    "dual_target_overhead_lines": 380,
+    "dual_target_overhead_pct": 11.7,
+    "excluded_generated_lines": {},
+    "excluded_vendored_lines": {},
+    "files": 20,
+    "inline_marker_blocks": 1,
+    "longest_go_func": "form.go:newDetailForm",
+    "longest_go_func_lines": 95
+  },
+  "plain_go_build_from_clean": {
+    "rc": 0,
+    "secs": 2.3,
+    "tail": "# gguix/apps/fyne\nld: warning: ignoring duplicate libraries: '-lobjc'"
+  },
+  "sizes": {
+    "app_bundle": "bin/GGUIX-fyne.app",
+    "app_bundle_kb": 33392,
+    "binary_bytes": 33995746,
+    "bundled_frameworks_kb": null,
+    "bundled_refs": [],
+    "external_dylibs": [],
+    "package": {
+      "rc": 0,
+      "secs": 2.75
+    }
+  },
+  "step_secs": {
+    "bench": 60.0,
+    "cgoprobe": 3.2,
+    "cold_build": 20.7,
+    "idle_rss": 7.2,
+    "incremental": 4.2,
+    "loc": 0.1,
+    "plain_build": 2.3,
+    "sizes": 2.8,
+    "tests": 4.0,
+    "toolchain": 3.5,
+    "web": 307.1
+  },
+  "tests": {
+    "line": {
+      "failed": 0,
+      "not_feasible": 0,
+      "passed": 12
+    },
+    "rc": 0,
+    "secs": 4.04
+  },
+  "toolchain": {
+    "make_deps_warm": {
+      "rc": 0,
+      "secs": 3.48
+    }
+  },
+  "warm_noop_build": {
+    "rc": 0,
+    "secs": 0.18
+  },
+  "web": {
+    "bench-web": {
+      "console_errors": [],
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 186.5,
+          "p95_gap_ms": 134.7,
+          "placeholder_steps": 0,
+          "switch_ms": 436,
+          "total_ms": 28777
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 310.9,
+          "ms": 858.7,
+          "p95_gap_ms": 310.9,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 509.9
+        },
+        "ready": {
+          "ms": 915.1
+        },
+        "scroll": {
+          "max_gap_ms": 211.3,
+          "p95_gap_ms": 172.7,
+          "placeholder_steps": 0,
+          "total_ms": 43900
+        },
+        "search": {
+          "ms": 457.9,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 1347.2
+        }
+      },
+      "initial_transfer_kb": 39663,
+      "peak_dom_nodes": 104,
+      "peak_js_heap_mb": 22.4,
+      "server_ready_secs": 1.03,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "wall_ms": 77928
+    },
+    "bundle_dir_kb": 39952,
+    "wasm_files": {
+      "gguix-fyne.wasm": {
+        "gzip_kb": 12069,
+        "raw_kb": 39390
+      }
+    }
+  }
+}

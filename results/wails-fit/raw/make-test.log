@@ -1,0 +1,75 @@
+$ ['make', 'test']
+(rc=0, 17.47s)
+rm -f bin/test-go.log bin/test-vitest.json frontend/e2e/results.json
+wails3 task build:server >/dev/null
+go test -v -count=1 ./... 2>&1 | grep -v '^ld:' | tee bin/test-go.log | grep -E '^(--- |FAIL|ok|panic)' || true
+--- PASS: TestPageBatchRangesInOrderAndLimits (0.00s)
+--- PASS: TestPageMatchesCore (0.00s)
+--- PASS: TestUpdateValidationDoesNotCallService (0.00s)
+--- PASS: TestExportCancelRemovesFile (0.33s)
+--- PASS: TestHostInfoDesktop (0.00s)
+--- PASS: TestNotesTooLarge (0.00s)
+--- PASS: TestPrefsRoundTripAndWindowSize (0.00s)
+--- PASS: TestFindRow (0.00s)
+--- PASS: TestExportStreamWriter (0.00s)
+--- PASS: TestWriteOracle (0.00s)
+ok  	gguix/apps/wails	0.892s
+cd frontend && npx vitest run --reporter=json --outputFile=../bin/test-vitest.json >/dev/null 2>&1 || true
+cd frontend && npx playwright test || true
+
+Running 13 tests using 1 worker
+
+  ✓   1 e2e/gguix.spec.ts:17:1 › T1 app starts and loads (358ms)
+  ✓   2 e2e/gguix.spec.ts:24:1 › T2 sort by name (395ms)
+  ✓   3 e2e/gguix.spec.ts:30:1 › T3 search updates the count (573ms)
+  ✓   4 e2e/gguix.spec.ts:35:1 › T4 selection fills the form (366ms)
+  ✓   5 e2e/gguix.spec.ts:52:1 › T5 validation blocks save (431ms)
+  ✓   6 e2e/gguix.spec.ts:61:1 › T6 save updates the row (404ms)
+  ✓   7 e2e/gguix.spec.ts:69:1 › T7 theme and prefs (1.4s)
+  ✓   8 e2e/gguix.spec.ts:76:1 › T8 export cancel (978ms)
+  ✓   9 e2e/gguix.spec.ts:88:1 › T9 dirty guard (495ms)
+  ✓  10 e2e/gguix.spec.ts:99:3 › T10 custom cells (light) (380ms)
+  ✓  11 e2e/gguix.spec.ts:99:3 › T10 custom cells (dark) (367ms)
+  ✓  12 e2e/gguix.spec.ts:121:1 › T11 cards view (374ms)
+  ✓  13 e2e/gguix.spec.ts:132:1 › T12 host info (402ms)
+
+  13 passed (8.6s)
+GGUIX_TESTS passed=36 failed=0 not_feasible=0
+task: [common:go:mod:tidy] go mod tidy
+task: [common:install:frontend:deps:npm] npm install
+npm warn Unknown project config "minimum-release-age". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+task: [common:generate:bindings] wails3 generate bindings -f '-tags server,production -trimpath -buildvcs=false -ldflags="-w -s"' -clean=true -ts -i
+npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+npm warn install-scripts   fsevents@2.3.3 (install: (install scripts present))
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+task: [common:frontend:run:npm] npm run build -q
+npm warn Unknown project config "minimum-release-age". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - `__dirname` (vite.config.ts:15:33). Use `import.meta.dirname` instead
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+task: [common:build:server] go build -tags server,production -trimpath -buildvcs=false -ldflags="-w -s" -o "bin/gguix-wails-server"
+# gguix/apps/wails
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-1338973630/go.o) was built for newer 'macOS' version (13.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-1338973630/000000.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-1338973630/000001.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-1338973630/000002.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-1338973630/000003.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-1338973630/000004.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-1338973630/000005.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-1338973630/000006.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-1338973630/000007.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-1338973630/000008.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-1338973630/000009.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-1338973630/000010.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-1338973630/000011.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-1338973630/000012.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-1338973630/000013.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-1338973630/000014.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-1338973630/000015.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+npm warn Unknown project config "minimum-release-age". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.

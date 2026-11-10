@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=GGUIX - Wails
+Comment=GGUIX reference application
+# The Exec line includes %u to pass the URL to the application
+Exec=/usr/local/bin/gguix-wails %u
+Terminal=false
+Type=Application
+Icon=gguix-wails
+Categories=Utility;
+StartupWMClass=gguix-wails
+
+ 

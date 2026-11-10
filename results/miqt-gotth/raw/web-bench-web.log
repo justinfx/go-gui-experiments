@@ -1,0 +1,71 @@
+$ ['node', 'bench/web.mjs', 'http://localhost:8097/?bench=1', '300000']
+(rc=0, 301.17s)
+{
+  "url": "http://localhost:8097/?bench=1",
+  "wall_ms": 9960,
+  "timed_out": false,
+  "initial_transfer_kb": 156,
+  "chrome_version": "156.0.8078.80",
+  "dpr": 2,
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "peak_js_heap_mb": 7.8,
+  "peak_renderer_rss_mb": 1031.4,
+  "renderer_pids": [
+    89382,
+    89383,
+    89381
+  ],
+  "peak_gpu_rss_mb": 146.9,
+  "memory_sampling_error": null,
+  "peak_dom_nodes": 127053,
+  "metrics": [
+    {
+      "event": "ready",
+      "ms": 209.1
+    },
+    {
+      "event": "jump",
+      "ms": 257
+    },
+    {
+      "event": "scroll",
+      "total_ms": 3395,
+      "placeholder_steps": 163,
+      "max_gap_ms": 177.2,
+      "p95_gap_ms": 123.5
+    },
+    {
+      "event": "cards_scroll",
+      "switch_ms": 1010.2,
+      "total_ms": 3203.1,
+      "placeholder_steps": 27,
+      "max_gap_ms": 112.2,
+      "p95_gap_ms": 48.8
+    },
+    {
+      "event": "sort",
+      "ms": 357.2
+    },
+    {
+      "event": "search",
+      "ms": 187.9,
+      "total": 49898
+    },
+    {
+      "event": "export",
+      "rows": 49898,
+      "ms": 509.8,
+      "max_gap_ms": 23.6,
+      "p95_gap_ms": 3.4
+    },
+    {
+      "event": "done"
+    }
+  ],
+  "console_errors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+}

@@ -1,0 +1,6 @@
+$ ['make', 'cross-windows']
+(rc=0, 27.63s)
+DOCKER_DEFAULT_PLATFORM=linux/amd64 DOCKER=apps/miqt-fit/desktop/docker-notty.sh MIQTDOCKER_FLAGS="-v core:/core:ro -v $GOMODCACHE:/gomod -e GOMODCACHE=/gomod -e GOTOOLCHAIN=go1.27.3 -e GOPROXY=off -e GOFLAGS=-mod=mod" \
+	  ~/go/bin/miqt-docker win64-qt6-static -windows-build --tags=windowsqtstatic
+2026/11/09 22:20:37 Selecting dockerfile: win64-cross-go1.26-qt6.5-static.Dockerfile
+2026/11/09 22:20:40 Skipping user isolation because: OS is "darwin"

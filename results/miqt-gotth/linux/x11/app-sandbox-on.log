@@ -1,0 +1,24 @@
+qt.webenginecontext: 
+
+GL Type: desktop
+Surface Type: OpenGL
+Surface Profile: CompatibilityProfile
+Surface Version: 4.5
+QSG RHI Backend: OpenGL
+Using Supported QSG Backend: yes
+Using Software Dynamic GL: no
+Using Multithreaded OpenGL: yes
+
+Init Parameters:
+  *  application-name GGUIX 
+  *  browser-subprocess-path /usr/lib/qt6/libexec/QtWebEngineProcess 
+  *  create-default-gl-context  
+  *  disable-features ConsolidatedMovementXY,InstalledApp,BackgroundFetch,WebOTP,WebPayments,WebUSB,PictureInPicture 
+  *  disable-setuid-sandbox  
+  *  disable-speech-api  
+  *  enable-features NetworkServiceInProcess,TracingServiceInProcess 
+  *  enable-threaded-compositing  
+  *  in-process-gpu  
+  *  use-gl desktop 
+
+[34704:34704:1108/225329.716010:ERROR:zygote_host_impl_linux.cc(90)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.

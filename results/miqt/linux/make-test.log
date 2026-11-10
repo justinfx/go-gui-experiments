@@ -1,0 +1,25 @@
+=== RUN   TestT9DirtyGuard
+--- PASS: TestT9DirtyGuard (0.05s)
+=== RUN   TestT10CustomCells
+--- PASS: TestT10CustomCells (0.04s)
+=== RUN   TestT11Cards
+--- PASS: TestT11Cards (0.03s)
+=== RUN   TestT12HostInfo
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+--- PASS: TestT12HostInfo (0.02s)
+=== RUN   TestGoToRowAndViewSwitch
+--- PASS: TestGoToRowAndViewSwitch (0.05s)
+=== RUN   TestFilters
+--- PASS: TestFilters (0.29s)
+=== RUN   TestExportCompletes
+--- PASS: TestExportCompletes (0.07s)
+=== RUN   TestImportNotes
+--- PASS: TestImportNotes (0.07s)
+=== RUN   TestPrefsRestore
+--- PASS: TestPrefsRestore (0.33s)
+=== RUN   TestAboutLines
+--- PASS: TestAboutLines (0.00s)
+PASS
+ok  	gguix/apps/miqt	2.145s
+GGUIX_TESTS passed=18 failed=0 not_feasible=0

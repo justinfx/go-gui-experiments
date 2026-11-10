@@ -1,0 +1,20 @@
+$ ['make', 'cross-linux']
+(rc=0, 269.72s)
+~/go/bin/core build -t linux/amd64 -o bin/linux
+core build failed: build: error building for platform linux/amd64: "go build -trimpath -ldflags  -s -w -X 'cogentcore.org/core/system.AppID=com.gguix.cogent' -X 'cogentcore.org/core/core.AppIcon=<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 1 1\"><path d=\"M.833.675a.35.35 0 1 1 0-.35\" style=\"stroke:#005bc0;stroke-width:.27;fill:none\"/><circle cx=\".53\" cy=\".5\" r=\".23\" style=\"fill:#fbbd0e;stroke:none\"/></svg>' -X cogentcore.org/core/system.CoreVersion=v0.5.27 -o apps/cogent-fitcap/bin/linux/linux": exit status 1
+core CLI route failed, trying Docker (about 7 minutes)
+-rwxr-xr-x@ 1 justin  staff  41581072 Nov  9 20:26 bin/linux/gguix-cogent
+go build -trimpath -ldflags  -s -w -X 'cogentcore.org/core/system.AppID=com.gguix.cogent' -X 'cogentcore.org/core/core.AppIcon=<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 1 1"><path d="M.833.675a.35.35 0 1 1 0-.35" style="stroke:#005bc0;stroke-width:.27;fill:none"/><circle cx=".53" cy=".5" r=".23" style="fill:#fbbd0e;stroke:none"/></svg>' -X cogentcore.org/core/system.CoreVersion=v0.5.27 -o apps/cogent-fitcap/bin/linux/linux
+# github.com/oliverbestmann/webgpu/wgpu
+../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:96:12: undefined: Texture
+../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:127:24: undefined: Surface
+../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:201:29: undefined: QuerySet
+../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:219:21: undefined: TextureView
+../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:233:17: undefined: TextureView
+../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:234:17: undefined: TextureView
+../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:244:16: undefined: PipelineLayout
+../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:245:15: undefined: VertexState
+../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:246:15: undefined: PrimitiveState
+../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:247:16: undefined: DepthStencilState
+../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:247:16: too many errors
+make: [cross-linux] Error 1 (ignored)

@@ -1,0 +1,1 @@
+{"vendor": "components/**,utils/**,static/htmx/**", "custom": "views/cells.templ"}

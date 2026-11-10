@@ -1,0 +1,44 @@
+$ ['make', 'test']
+(rc=0, 4.79s)
+=== RUN   TestT1StartsAndLoads
+qt.qpa.fonts: Populating font family aliases took 67 ms. Replace uses of missing font family "Sans Serif" with one that exists to avoid this cost. 
+--- PASS: TestT1StartsAndLoads (0.19s)
+=== RUN   TestT2Sort
+--- PASS: TestT2Sort (0.04s)
+=== RUN   TestT3Search
+--- PASS: TestT3Search (0.29s)
+=== RUN   TestT4Selection
+--- PASS: TestT4Selection (0.03s)
+=== RUN   TestT5Validation
+--- PASS: TestT5Validation (0.13s)
+=== RUN   TestT6Save
+--- PASS: TestT6Save (0.05s)
+=== RUN   TestT7ThemeAndPrefs
+--- PASS: TestT7ThemeAndPrefs (0.50s)
+=== RUN   TestT8ExportCancel
+--- PASS: TestT8ExportCancel (0.06s)
+=== RUN   TestT9DirtyGuard
+--- PASS: TestT9DirtyGuard (0.03s)
+=== RUN   TestT10CustomCells
+--- PASS: TestT10CustomCells (0.04s)
+=== RUN   TestT11Cards
+--- PASS: TestT11Cards (0.03s)
+=== RUN   TestT12HostInfo
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+--- PASS: TestT12HostInfo (0.03s)
+=== RUN   TestGoToRowAndViewSwitch
+--- PASS: TestGoToRowAndViewSwitch (0.04s)
+=== RUN   TestFilters
+--- PASS: TestFilters (0.30s)
+=== RUN   TestExportCompletes
+--- PASS: TestExportCompletes (0.05s)
+=== RUN   TestImportNotes
+--- PASS: TestImportNotes (0.03s)
+=== RUN   TestPrefsRestore
+--- PASS: TestPrefsRestore (0.30s)
+=== RUN   TestAboutLines
+--- PASS: TestAboutLines (0.00s)
+PASS
+ok  	gguix/apps/miqt	2.919s
+GGUIX_TESTS passed=18 failed=0 not_feasible=0

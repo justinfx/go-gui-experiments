@@ -1,0 +1,577 @@
+{
+  "app": "gotth-fit",
+  "artifacts": {
+    "bench": {
+      "binary": {
+        "mtime": "2026-11-09T08:34:37.242308+00:00",
+        "path": "apps/gotth-fit/bin/gguix-gotth",
+        "sha256": "761fcda9cdf55be1888e4ebf462177ca959001b7b7aa54121e24630c221bb512",
+        "size": 11614850
+      },
+      "build": {
+        "rc": 0,
+        "secs": 0.5
+      }
+    },
+    "cold_build": {
+      "binary": {
+        "mtime": "2026-11-09T08:34:26.196095+00:00",
+        "path": "apps/gotth-fit/bin/gguix-gotth",
+        "sha256": "761fcda9cdf55be1888e4ebf462177ca959001b7b7aa54121e24630c221bb512",
+        "size": 11614850
+      }
+    },
+    "idle_rss": {
+      "binary": {
+        "mtime": "2026-11-09T08:34:29.554837+00:00",
+        "path": "apps/gotth-fit/bin/gguix-gotth",
+        "sha256": "761fcda9cdf55be1888e4ebf462177ca959001b7b7aa54121e24630c221bb512",
+        "size": 11614850
+      }
+    },
+    "incremental": {
+      "binary": {
+        "mtime": "2026-11-09T08:34:29.164120+00:00",
+        "path": "apps/gotth-fit/bin/gguix-gotth",
+        "sha256": "761fcda9cdf55be1888e4ebf462177ca959001b7b7aa54121e24630c221bb512",
+        "size": 11614850
+      }
+    },
+    "sizes": {
+      "app_bundle": {
+        "files": 2,
+        "mtime": "2026-11-09T08:34:29.558474+00:00",
+        "path": "apps/gotth-fit/bin/GGUIX-gotth.app",
+        "size_kb": 11348,
+        "tree_sha256": "f98ace0490346f7ec28f550a0cca59c2aab6840b4dfe850ce6be7f72ffc26b29"
+      },
+      "binary": {
+        "mtime": "2026-11-09T08:34:29.164120+00:00",
+        "path": "apps/gotth-fit/bin/gguix-gotth",
+        "sha256": "761fcda9cdf55be1888e4ebf462177ca959001b7b7aa54121e24630c221bb512",
+        "size": 11614850
+      }
+    }
+  },
+  "bench": {
+    "errors": [],
+    "events_seen": [
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ]
+    ],
+    "launch": "bin/gguix-gotth (direct, after one make build)",
+    "memory": {
+      "peak_process_tree_mb": {
+        "max": 162.9,
+        "median": 162.4
+      },
+      "peak_total_mb": {
+        "max": 733.0,
+        "median": 693.4
+      },
+      "peak_webkit_mb": {
+        "max": 574.3,
+        "median": 530.5
+      }
+    },
+    "runs": 5,
+    "summary": {
+      "cards_scroll": {
+        "max_gap_ms": {
+          "max": 110,
+          "median": 93,
+          "min": 77,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 75,
+          "median": 64,
+          "min": 61,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "switch_ms": {
+          "max": 466,
+          "median": 460,
+          "min": 454,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3206,
+          "median": 3203,
+          "min": 3199,
+          "n": 5
+        }
+      },
+      "export": {
+        "max_gap_ms": {
+          "max": 49,
+          "median": 42,
+          "min": 35,
+          "n": 5
+        },
+        "ms": {
+          "max": 507,
+          "median": 506,
+          "min": 505,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 16,
+          "median": 7,
+          "min": 6,
+          "n": 5
+        },
+        "rows": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "jump": {
+        "ms": {
+          "max": 260,
+          "median": 226,
+          "min": 217,
+          "n": 5
+        }
+      },
+      "ready": {
+        "ms": {
+          "max": 684,
+          "median": 666,
+          "min": 604,
+          "n": 5
+        }
+      },
+      "scroll": {
+        "max_gap_ms": {
+          "max": 350,
+          "median": 335,
+          "min": 268,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 350,
+          "median": 335,
+          "min": 268,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 1,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3317,
+          "median": 3299,
+          "min": 3264,
+          "n": 5
+        }
+      },
+      "search": {
+        "ms": {
+          "max": 208,
+          "median": 201,
+          "min": 186,
+          "n": 5
+        },
+        "total": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "sort": {
+        "ms": {
+          "max": 404,
+          "median": 394,
+          "min": 391,
+          "n": 5
+        }
+      }
+    }
+  },
+  "cgoprobe": {
+    "rc": 0,
+    "results": [
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "web"
+      },
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "desktop"
+      },
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "web-export-test"
+      }
+    ],
+    "secs": 5.4
+  },
+  "cold_build": {
+    "rc": 0,
+    "secs": 8.9
+  },
+  "cross": {
+    "cross-linux": {
+      "rc": 0,
+      "secs": 357.93,
+      "status": "PASS",
+      "tail": "go: downloading github.com/atotto/clipboard v0.1.4\ngo: downloading github.com/gen2brain/beeep v0.11.3\ngo: downloading github.com/webview/webview_go v0.0.0-20240831120633-6173450d4dd6\ngo: downloading github.com/a-h/templ v0.3.1100\ngo: downloading github.com/Oudwins/tailwind-merge-go v0.2.2\ngo: downloading github.com/esiqveland/notify v0.13.3\ngo: downloading github.com/godbus/dbus/v5 v5.1.0\ngo: downloading golang.org/x/image v0.44.0"
+    },
+    "cross-windows": {
+      "rc": 0,
+      "secs": 166.19,
+      "status": "PASS",
+      "tail": "go: downloading github.com/Oudwins/tailwind-merge-go v0.2.2\ngo: downloading github.com/tadvi/systray v0.0.0-20190226123456-11a2b8fa57af\ngo: downloading git.sr.ht/~jackmordaunt/go-toast v1.1.2\ngo: downloading github.com/sergeymakinen/go-ico v1.0.0-beta.0\ngo: downloading golang.org/x/sys v0.48.0\ngo: downloading golang.org/x/image v0.44.0\ngo: downloading github.com/go-ole/go-ole v1.3.0\ngo: downloading github.com/sergeymakinen/go-bmp v1.0.0"
+    }
+  },
+  "idle_rss": {
+    "process_tree_mb": 126.6,
+    "total_mb": 284.2,
+    "webkit_mb": 157.6
+  },
+  "incremental_build": {
+    "BuildMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 1.35
+    },
+    "UIMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 1.23
+    }
+  },
+  "loc": {
+    "app": "gotth-fit",
+    "build_tagged_files": 2,
+    "by_category": {
+      "bench": 234,
+      "desktop": 457,
+      "shared": 3599,
+      "test": 795,
+      "web": 231
+    },
+    "by_category_language": {
+      "bench": {
+        "go": 77,
+        "js": 157
+      },
+      "desktop": {
+        "go": 226,
+        "js": 57,
+        "make": 15,
+        "templ": 159
+      },
+      "shared": {
+        "css": 699,
+        "go": 1179,
+        "js": 703,
+        "make": 57,
+        "templ": 961
+      },
+      "test": {
+        "go": 713,
+        "js": 82
+      },
+      "web": {
+        "go": 148,
+        "js": 70,
+        "make": 10,
+        "templ": 3
+      }
+    },
+    "by_language": {
+      "css": 699,
+      "go": 2343,
+      "js": 1069,
+      "make": 82,
+      "templ": 1123
+    },
+    "custom_rendering_lines": 90,
+    "dual_target_overhead_lines": 688,
+    "dual_target_overhead_pct": 16,
+    "excluded_generated_lines": {
+      "go": 25866
+    },
+    "excluded_vendored_lines": {
+      "go": 8818,
+      "js": 12567,
+      "templ": 6082
+    },
+    "files": 39,
+    "inline_marker_blocks": 8,
+    "longest_go_func": "server.go:handleSave",
+    "longest_go_func_lines": 93
+  },
+  "plain_go_build_from_clean": {
+    "gen": {
+      "cmd": "make gen",
+      "rc": 0,
+      "secs": 0.25
+    },
+    "plain_build_note": "generated sources were present: `make gen` ran untimed after make clean, then go build ./... was timed",
+    "rc": 0,
+    "secs": 1.93,
+    "tail": ""
+  },
+  "provenance": {
+    "app_tree": {
+      "files": 152,
+      "sha256": "e7a2442b18ce1784826ee75c3bb9d83ee6d3647e129a28a64f06cf2f5ecb5255"
+    },
+    "core_tree": {
+      "files": 42,
+      "sha256": "b476612a729e8e2c2c0aed249c21133264b798c4659b3cceb92c2ea637527b9b"
+    },
+    "gguix_env_inherited": {},
+    "gguix_env_passed": {
+      "GGUIX_DPR": "2"
+    },
+    "gguix_env_scrubbed": [],
+    "recorded_at": "2026-11-09T08:34:13.796713+00:00"
+  },
+  "sizes": {
+    "app_bundle": "bin/GGUIX-gotth.app",
+    "app_bundle_kb": 11348,
+    "binary_bytes": 11614850,
+    "bundled_frameworks_kb": null,
+    "bundled_refs": [],
+    "external_dylibs": [],
+    "package": {
+      "rc": 0,
+      "secs": 0.39
+    }
+  },
+  "step_secs": {
+    "bench": 49.5,
+    "cgoprobe": 5.8,
+    "cold_build": 10.0,
+    "cross": 524.1,
+    "idle_rss": 7.1,
+    "incremental": 3.0,
+    "loc": 0.2,
+    "plain_build": 2.2,
+    "sizes": 0.4,
+    "tests": 7.4,
+    "toolchain": 0.1,
+    "web": 307.0
+  },
+  "step_times": {
+    "bench": {
+      "end": "2026-11-09T08:35:26.285821+00:00",
+      "start": "2026-11-09T08:34:36.739609+00:00"
+    },
+    "cgoprobe": {
+      "end": "2026-11-09T08:35:39.430561+00:00",
+      "start": "2026-11-09T08:35:33.637992+00:00"
+    },
+    "cold_build": {
+      "end": "2026-11-09T08:34:26.206369+00:00",
+      "start": "2026-11-09T08:34:16.175319+00:00"
+    },
+    "cross": {
+      "end": "2026-11-09T08:44:23.556580+00:00",
+      "start": "2026-11-09T08:35:39.430896+00:00"
+    },
+    "idle_rss": {
+      "end": "2026-11-09T08:34:36.739049+00:00",
+      "start": "2026-11-09T08:34:29.601650+00:00"
+    },
+    "incremental": {
+      "end": "2026-11-09T08:34:29.173417+00:00",
+      "start": "2026-11-09T08:34:26.207099+00:00"
+    },
+    "loc": {
+      "end": "2026-11-09T08:49:30.756078+00:00",
+      "start": "2026-11-09T08:49:30.590408+00:00"
+    },
+    "plain_build": {
+      "end": "2026-11-09T08:34:16.174933+00:00",
+      "start": "2026-11-09T08:34:13.942060+00:00"
+    },
+    "sizes": {
+      "end": "2026-11-09T08:34:29.601124+00:00",
+      "start": "2026-11-09T08:34:29.173968+00:00"
+    },
+    "tests": {
+      "end": "2026-11-09T08:35:33.637538+00:00",
+      "start": "2026-11-09T08:35:26.286344+00:00"
+    },
+    "toolchain": {
+      "end": "2026-11-09T08:34:13.941697+00:00",
+      "start": "2026-11-09T08:34:13.811633+00:00"
+    },
+    "web": {
+      "end": "2026-11-09T08:49:30.588980+00:00",
+      "start": "2026-11-09T08:44:23.557182+00:00"
+    }
+  },
+  "tests": {
+    "line": {
+      "failed": 0,
+      "not_feasible": 0,
+      "passed": 12
+    },
+    "rc": 0,
+    "secs": 7.35
+  },
+  "toolchain": {
+    "make_deps_warm": {
+      "rc": 0,
+      "secs": 0.13
+    }
+  },
+  "warm_noop_build": {
+    "rc": 0,
+    "secs": 0.94
+  },
+  "web": {
+    "bench-web": {
+      "chrome_version": "156.0.8078.80",
+      "console_errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "htmx:afterRequest, [object HTMLDivElement]",
+        "htmx:sendAbort, [object HTMLDivElement]",
+        "htmx:afterRequest, [object HTMLDivElement]",
+        "htmx:sendAbort, [object HTMLDivElement]"
+      ],
+      "dpr": 2,
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 24.6,
+          "p95_gap_ms": 14.9,
+          "placeholder_steps": 0,
+          "switch_ms": 378.6,
+          "total_ms": 3200.7
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 6.7,
+          "ms": 506.8,
+          "p95_gap_ms": 6.1,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 163.2
+        },
+        "ready": {
+          "ms": 182.3
+        },
+        "scroll": {
+          "max_gap_ms": 76.5,
+          "p95_gap_ms": 40.8,
+          "placeholder_steps": 0,
+          "total_ms": 3201.4
+        },
+        "search": {
+          "ms": 184.7,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 369.3
+        }
+      },
+      "initial_transfer_kb": 174,
+      "memory_sampling_error": null,
+      "peak_dom_nodes": 136364,
+      "peak_gpu_rss_mb": 152.6,
+      "peak_js_heap_mb": 7.5,
+      "peak_renderer_rss_mb": 1029.1,
+      "provenance": {
+        "bundle_sha256": {
+          "app.js": "4ec5032629ac262702920b4f9074f5d25f315b4cbae098c3e7ce9e1eb7696ce6",
+          "bench/bench.js": "4fada766fa009eade906f6d7d13f087776350cb88d9b28774bcfd455af873287",
+          "desktop/desktop.js": "20483409db0d7faf0bf6bb0627e3c9c04bd00dc90c21bc70e0f5db4b03328502",
+          "htmx/htmx.min.js": "d6fdc75f204e6bdefa99b69bf1e6d4ac69b8a364f77929f45c13476b4000f717",
+          "htmx/sse.js": "3b5992a541619babefc4c169505af474df5c3039da51e59b96ccf9241ecd61d2",
+          "web/web.js": "2df085467da49cb99e23a33c8375aad9f9a17e838ff99cd64e039d66c30816ad"
+        },
+        "ended": "2026-11-09T08:49:30.588825+00:00",
+        "served_dir": "apps/gotth-fit/static",
+        "server_binary": {
+          "mtime": "2026-11-09T08:44:24.352012+00:00",
+          "path": "apps/gotth-fit/bin/gguix-gotth-web",
+          "sha256": "984b7dab5c3e609ce224fcf30a32bf764d2cc3d6946fee71e18807c896ddb23c",
+          "size": 9604482
+        },
+        "started": "2026-11-09T08:44:23.768460+00:00"
+      },
+      "renderer_pids": [
+        45464,
+        45465,
+        45462
+      ],
+      "server_ready_secs": 1.51,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "viewport": {
+        "height": 800,
+        "width": 1280
+      },
+      "wall_ms": 8367
+    }
+  }
+}

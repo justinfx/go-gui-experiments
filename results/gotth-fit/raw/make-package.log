@@ -1,0 +1,5 @@
+$ ['make', 'package']
+(rc=0, 0.39s)
+Done in 70ms
+go build -trimpath -ldflags "-s -w" -o bin/gguix-gotth ./cmd/desktop
+packaged bin/GGUIX-gotth.app

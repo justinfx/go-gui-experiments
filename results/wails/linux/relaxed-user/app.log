@@ -1,0 +1,233 @@
+dbus-daemon[62]: [session uid=1001 pid=62] Activating service name='org.freedesktop.Notifications' requested by ':1.0' (uid=1001 pid=63 comm="/work/apps/wails/bin/gguix-wails")
+dbus-daemon[62]: [session uid=1001 pid=62] Successfully activated service 'org.freedesktop.Notifications'
+dbus-daemon[62]: [session uid=1001 pid=62] Activating service name='org.freedesktop.portal.Desktop' requested by ':1.4' (uid=1001 pid=63 comm="/work/apps/wails/bin/gguix-wails")
+dbus-daemon[62]: [session uid=1001 pid=62] Activating service name='org.freedesktop.portal.Documents' requested by ':1.5' (uid=1001 pid=83 comm="/usr/libexec/xdg-desktop-portal")
+dbus-daemon[62]: [session uid=1001 pid=62] Activating service name='org.freedesktop.impl.portal.PermissionStore' requested by ':1.6' (uid=1001 pid=89 comm="/usr/libexec/xdg-document-portal")
+dbus-daemon[62]: [session uid=1001 pid=62] Successfully activated service 'org.freedesktop.impl.portal.PermissionStore'
+dbus-daemon[62]: [session uid=1001 pid=62] Successfully activated service 'org.freedesktop.portal.Documents'
+fusermount3: fuse device not found, try 'modprobe fuse' first
+error: fuse init failed: Can't mount path /run/user/1001/doc
+
+(/usr/libexec/xdg-desktop-portal:83): xdg-desktop-portal-WARNING **: 02:17:10.364: Choosing gtk.portal for org.freedesktop.impl.portal.Lockdown as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:83): xdg-desktop-portal-WARNING **: 02:17:10.364: The preferred method to match portal implementations to desktop environments is to use the portals.conf(5) configuration file
+dbus-daemon[62]: [session uid=1001 pid=62] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.5' (uid=1001 pid=83 comm="/usr/libexec/xdg-desktop-portal")
+dbus-daemon[62]: [session uid=1001 pid=62] Activating service name='org.a11y.Bus' requested by ':1.8' (uid=1001 pid=104 comm="/usr/libexec/xdg-desktop-portal-gtk")
+dbus-daemon[62]: [session uid=1001 pid=62] Successfully activated service 'org.a11y.Bus'
+dbus-daemon[131]: Activating service name='org.a11y.atspi.Registry' requested by ':1.0' (uid=1001 pid=104 comm="/usr/libexec/xdg-desktop-portal-gtk")
+
+(xdg-desktop-portal-gtk:104): xdg-desktop-portal-gtk-WARNING **: 02:17:10.410: error: Could not connect: No such file or directory
+
+dbus-daemon[131]: Successfully activated service 'org.a11y.atspi.Registry'
+SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry
+dbus-daemon[62]: [session uid=1001 pid=62] Successfully activated service 'org.freedesktop.impl.portal.desktop.gtk'
+
+(/usr/libexec/xdg-desktop-portal:83): xdg-desktop-portal-WARNING **: 02:17:10.436: Failed to create RealtimeKit proxy: Could not connect: No such file or directory
+
+(/usr/libexec/xdg-desktop-portal:83): xdg-desktop-portal-WARNING **: 02:17:10.436: No skeleton to export
+
+(/usr/libexec/xdg-desktop-portal:83): xdg-desktop-portal-WARNING **: 02:17:10.436: Choosing gtk.portal for org.freedesktop.impl.portal.FileChooser as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:83): xdg-desktop-portal-WARNING **: 02:17:10.437: Choosing gtk.portal for org.freedesktop.impl.portal.AppChooser as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:83): xdg-desktop-portal-WARNING **: 02:17:10.438: Choosing gtk.portal for org.freedesktop.impl.portal.Print as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:83): xdg-desktop-portal-WARNING **: 02:17:10.438: Choosing gtk.portal for org.freedesktop.impl.portal.Notification as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:83): xdg-desktop-portal-WARNING **: 02:17:10.439: Choosing gtk.portal for org.freedesktop.impl.portal.Inhibit as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:83): xdg-desktop-portal-WARNING **: 02:17:10.440: Choosing gtk.portal for org.freedesktop.impl.portal.Access as a last-resort fallback
+[W][00003.226650] pw.conf      | [          conf.c: 1031 try_load_conf()] can't load config client.conf: No such file or directory
+[E][00003.226688] pw.conf      | [          conf.c: 1060 pw_conf_load_conf_for_context()] can't load config client.conf: No such file or directory
+
+(/usr/libexec/xdg-desktop-portal:83): xdg-desktop-portal-WARNING **: 02:17:10.442: Failed connect to PipeWire: Couldn't create PipeWire context
+
+(/usr/libexec/xdg-desktop-portal:83): xdg-desktop-portal-WARNING **: 02:17:10.443: Choosing gtk.portal for org.freedesktop.impl.portal.Account as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:83): xdg-desktop-portal-WARNING **: 02:17:10.443: Choosing gtk.portal for org.freedesktop.impl.portal.Email as a last-resort fallback
+
+(/usr/libexec/xdg-desktop-portal:83): xdg-desktop-portal-WARNING **: 02:17:10.444: Choosing gtk.portal for org.freedesktop.impl.portal.DynamicLauncher as a last-resort fallback
+dbus-daemon[62]: [session uid=1001 pid=62] Successfully activated service 'org.freedesktop.portal.Desktop'
+Overriding existing handler for signal 10. Set JSC_SIGNAL_FOR_GC if you want WebKit to use a different signal
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+MESA: error: Failed to attach to x11 shm
+
+Session terminated, killing shell...X connection to :160 broken (explicit kill or server shutdown).
+X connection to :160 broken (explicit kill or server shutdown).
+ ...killed.

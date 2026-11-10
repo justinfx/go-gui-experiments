@@ -1,0 +1,450 @@
+{
+  "app": "cogent",
+  "bench": {
+    "errors": [],
+    "events_seen": [
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ]
+    ],
+    "memory": {
+      "peak_process_tree_mb": {
+        "max": 684.2,
+        "median": 661.2
+      },
+      "peak_total_mb": {
+        "max": 684.2,
+        "median": 661.2
+      },
+      "peak_webkit_mb": {
+        "max": 0.0,
+        "median": 0.0
+      }
+    },
+    "runs": 5,
+    "summary": {
+      "cards_scroll": {
+        "max_gap_ms": {
+          "max": 3.5,
+          "median": 2.8,
+          "min": 2.7,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 2.2,
+          "median": 1.8,
+          "min": 1,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "switch_ms": {
+          "max": 112.8,
+          "median": 111.2,
+          "min": 108.5,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3203.2,
+          "median": 3201.6,
+          "min": 3200.9,
+          "n": 5
+        }
+      },
+      "export": {
+        "max_gap_ms": {
+          "max": 2.8,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "ms": {
+          "max": 509.2,
+          "median": 509.1,
+          "min": 500.7,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "rows": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "jump": {
+        "ms": {
+          "max": 131.8,
+          "median": 62.3,
+          "min": 59.8,
+          "n": 5
+        }
+      },
+      "ready": {
+        "ms": {
+          "max": 659.6,
+          "median": 637.7,
+          "min": 537.3,
+          "n": 5
+        }
+      },
+      "scroll": {
+        "max_gap_ms": {
+          "max": 21.1,
+          "median": 19.6,
+          "min": 17.2,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 4.2,
+          "median": 3.9,
+          "min": 2.7,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 25,
+          "median": 25,
+          "min": 24,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3232.1,
+          "median": 3230.1,
+          "min": 3227.7,
+          "n": 5
+        }
+      },
+      "search": {
+        "ms": {
+          "max": 72,
+          "median": 65.3,
+          "min": 64.2,
+          "n": 5
+        },
+        "total": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "sort": {
+        "ms": {
+          "max": 263.9,
+          "median": 261.2,
+          "min": 253.1,
+          "n": 5
+        }
+      }
+    }
+  },
+  "cgoprobe": {
+    "rc": 0,
+    "results": [
+      {
+        "reason": "builds and T1 runs",
+        "result": "PASS",
+        "target": "desktop"
+      },
+      {
+        "reason": "../../core/checksum_nocgo.go:8:9: undefined: cgoprobe_requires_cgo_but_cgo_is_unavailable_for_this_target",
+        "result": "FAIL",
+        "target": "web"
+      },
+      {
+        "reason": "(built without cgoprobe)",
+        "result": "PASS",
+        "target": "web-remote-client"
+      },
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "web-remote-server"
+      }
+    ],
+    "secs": 10.25
+  },
+  "cold_build": {
+    "rc": 0,
+    "secs": 22.4
+  },
+  "cross": {
+    "cross-linux": {
+      "rc": 2,
+      "secs": 75.05,
+      "status": "FAIL",
+      "tail": "../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:244:16: undefined: PipelineLayout\n../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:245:15: undefined: VertexState\n../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:246:15: undefined: PrimitiveState\n../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:247:16: undefined: DepthStencilState\n../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:247:16: too many errors\nmake: [cross-linux] Error 1 (ignored)\n/gomod/cogentcore.org/core@v0.5.27/math32/box2.go:14:2: package image is not in std (/gomod/golang.org/toolchain@v0.0.1-go1.27.3.linux-amd64/src/image)\nmake: *** [cross-linux] Error 1"
+    },
+    "cross-windows": {
+      "rc": 2,
+      "secs": 0.13,
+      "status": "FAIL",
+      "tail": "go build -trimpath -ldflags  -H=windowsgui -s -w -X 'cogentcore.org/core/system.AppID=com.gguix.cogent' -X 'cogentcore.org/core/core.AppIcon=<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 1 1\"><path d=\"M.833.675a.35.35 0 1 1 0-.35\" style=\"stroke:#005bc0;stroke-width:.27;fill:none\"/><circle cx=\".53\" cy=\".5\" r=\".23\" style=\"fill:#fbbd0e;stroke:none\"/></svg>' -X cogentcore.org/core/system.CoreVersion=v0.5.27 -o apps/cogent/bin/windows/windows.exe\npackage gguix/apps/cogent\n\timports cogentcore.org/core/core\n\timports cogentcore.org/core/keymap\n\timports cogentcore.org/core/system/driver\n\timports cogentcore.org/core/system/driver/desktop\n\timports github.com/oliverbestmann/webgpu/wgpuglfw: build constraints exclude all Go files in $GOMODCACHE/github.com/oliverbestmann/webgpu@v1.37.0/wgpuglfw\nmake: *** [cross-windows] Error 1"
+    }
+  },
+  "idle_rss": {
+    "process_tree_mb": 324.9,
+    "total_mb": 324.9,
+    "webkit_mb": 0.0
+  },
+  "incremental_build": {
+    "BuildMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 2.15
+    }
+  },
+  "loc": {
+    "app": "cogent",
+    "build_tagged_files": 8,
+    "by_category": {
+      "bench": 45,
+      "desktop": 238,
+      "shared": 2555,
+      "test": 369,
+      "web": 100
+    },
+    "by_category_language": {
+      "bench": {
+        "go": 45
+      },
+      "desktop": {
+        "go": 223,
+        "make": 15
+      },
+      "shared": {
+        "go": 2509,
+        "make": 46
+      },
+      "test": {
+        "go": 369
+      },
+      "web": {
+        "go": 90,
+        "make": 10
+      }
+    },
+    "by_language": {
+      "go": 3236,
+      "make": 71
+    },
+    "custom_rendering_lines": 550,
+    "dual_target_overhead_lines": 338,
+    "dual_target_overhead_pct": 11.7,
+    "excluded_generated_lines": {},
+    "excluded_vendored_lines": {},
+    "files": 22,
+    "inline_marker_blocks": 2,
+    "longest_go_func": "form.go:newDetailForm",
+    "longest_go_func_lines": 181,
+    "marker_errors": [
+      "Makefile:57 end without start",
+      "Makefile:67 end without start"
+    ]
+  },
+  "plain_go_build_from_clean": {
+    "rc": 0,
+    "secs": 3.96,
+    "tail": "# gguix/apps/cogent\nld: warning: ignoring duplicate libraries: '-lobjc'"
+  },
+  "sizes": {
+    "app_bundle": "bin/GGUIX-cogent.app",
+    "app_bundle_kb": 27112,
+    "binary_bytes": 27602418,
+    "bundled_frameworks_kb": null,
+    "bundled_refs": [],
+    "external_dylibs": [],
+    "package": {
+      "rc": 0,
+      "secs": 1.25
+    }
+  },
+  "step_secs": {
+    "bench": 59.5,
+    "cgoprobe": 11.3,
+    "cold_build": 25.4,
+    "cross": 75.2,
+    "idle_rss": 7.1,
+    "incremental": 3.2,
+    "loc": 0.1,
+    "plain_build": 4.0,
+    "sizes": 1.3,
+    "tests": 6.3,
+    "toolchain": 3.4,
+    "web": 618.3
+  },
+  "tests": {
+    "line": {
+      "failed": 0,
+      "not_feasible": 0,
+      "passed": 12
+    },
+    "rc": 0,
+    "secs": 6.34
+  },
+  "toolchain": {
+    "make_deps_warm": {
+      "rc": 0,
+      "secs": 3.43
+    }
+  },
+  "warm_noop_build": {
+    "rc": 0,
+    "secs": 2.78
+  },
+  "web": {
+    "bench-web": {
+      "console_errors": [],
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 7.8,
+          "p95_gap_ms": 1.1,
+          "placeholder_steps": 5,
+          "switch_ms": 197.5,
+          "total_ms": 3216.6
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 4.3,
+          "ms": 513.4,
+          "p95_gap_ms": 4.1,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 253.9
+        },
+        "ready": {
+          "ms": 703.1
+        },
+        "scroll": {
+          "max_gap_ms": 12.4,
+          "p95_gap_ms": 3.9,
+          "placeholder_steps": 58,
+          "total_ms": 3278.1
+        },
+        "search": {
+          "ms": 253.2,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 930.2
+        }
+      },
+      "initial_transfer_kb": 6942,
+      "peak_dom_nodes": 1439,
+      "peak_js_heap_mb": 9.3,
+      "server_ready_secs": 3.05,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "wall_ms": 11050
+    },
+    "bundle_dir_kb": 37480,
+    "wasm_files": {
+      "app.wasm": {
+        "gzip_kb": 8190,
+        "raw_kb": 37260
+      }
+    },
+    "web-remote": {
+      "console_errors": [],
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 7.6,
+          "p95_gap_ms": 0.1,
+          "placeholder_steps": 6,
+          "switch_ms": 211.3,
+          "total_ms": 3226.3
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 0.1,
+          "ms": 564.8,
+          "p95_gap_ms": 0.1,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 115.3
+        },
+        "ready": {
+          "ms": 650.2
+        },
+        "scroll": {
+          "max_gap_ms": 10.6,
+          "p95_gap_ms": 3.7,
+          "placeholder_steps": 144,
+          "total_ms": 3337.1
+        },
+        "search": {
+          "ms": 282.8,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 411.6
+        }
+      },
+      "initial_transfer_kb": 8552,
+      "peak_dom_nodes": 1634,
+      "peak_js_heap_mb": 7.9,
+      "server_ready_secs": 3.05,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "wall_ms": 10016
+    }
+  }
+}

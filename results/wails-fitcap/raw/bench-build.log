@@ -1,0 +1,33 @@
+$ ['make', 'build']
+(rc=0, 1.4s)
+wails3 task build
+
+up to date, audited 155 packages in 444ms
+
+36 packages are looking for funding
+  run `npm fund` for details
+
+2 low severity vulnerabilities
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+[92m[0m
+[92mNeed documentation? Run: [0m[94m]8;;https://v3.wails.io/getting-started/your-first-app/\[4mwails3 docs[0m[94m]8;;\[0m
+[31;107m[31;107m ♥  [0m[0m [92m[92mIf Wails is useful to you or your company, please consider sponsoring the project: [94m]8;;https://github.com/sponsors/leaanthony\[4mwails3 sponsor[0m[92m[94m]8;;\[0m[92m[0m[0m
+task: [darwin:common:go:mod:tidy] go mod tidy
+task: Task "darwin:common:generate:icons" is up to date
+task: [darwin:common:install:frontend:deps:npm] npm install
+npm warn Unknown project config "minimum-release-age". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+npm warn install-scripts   fsevents@2.3.3 (install: (install scripts present))
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+task: Task "darwin:common:generate:bindings" is up to date
+task: Task "build:frontend (DEV= RUNNER=npm)" is up to date
+task: [darwin:build:native] wails3 tool prepare-macos-output --dir "bin"
+task: [darwin:build:native] go build -tags production -trimpath -buildvcs=false -ldflags="-w -s" -o "bin/gguix-wails"
+# gguix/apps/wails
+ld: warning: ignoring duplicate libraries: '-lobjc'
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-616325002/go.o) was built for newer 'macOS' version (13.0) than being linked (12.0)

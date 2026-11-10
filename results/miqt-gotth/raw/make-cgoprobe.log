@@ -1,0 +1,6 @@
+$ ['make', 'cgoprobe']
+(rc=0, 18.5s)
+Done in 71ms
+CGOPROBE web PASS
+CGOPROBE desktop PASS
+CGOPROBE web-export-test PASS

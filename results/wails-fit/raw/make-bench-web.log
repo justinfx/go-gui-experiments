@@ -1,0 +1,46 @@
+wails3 task build:server
+task: [common:go:mod:tidy] go mod tidy
+task: [common:install:frontend:deps:npm] npm install
+npm warn Unknown project config "minimum-release-age". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+task: Task "common:generate:bindings" is up to date
+
+up to date, audited 155 packages in 626ms
+
+36 packages are looking for funding
+  run `npm fund` for details
+
+2 low severity vulnerabilities
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+npm warn install-scripts   fsevents@2.3.3 (install: (install scripts present))
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+task: Task "build:frontend (DEV= RUNNER=npm)" is up to date
+task: [common:build:server] go build -tags server,production -trimpath -buildvcs=false -ldflags="-w -s" -o "bin/gguix-wails-server"
+# gguix/apps/wails
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-2994518698/go.o) was built for newer 'macOS' version (13.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-2994518698/000000.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-2994518698/000001.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-2994518698/000002.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-2994518698/000003.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-2994518698/000004.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-2994518698/000005.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-2994518698/000006.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-2994518698/000007.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-2994518698/000008.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-2994518698/000009.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-2994518698/000010.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-2994518698/000011.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-2994518698/000012.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-2994518698/000013.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-2994518698/000014.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+ld: warning: object file (/private/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/go-link-2994518698/000015.o) was built for newer 'macOS' version (26.0) than being linked (11.0)
+[92m[0m
+[92mNeed documentation? Run: [0m[94m]8;;https://v3.wails.io/getting-started/your-first-app/\[4mwails3 docs[0m[94m]8;;\[0m
+[31;107m[31;107m ♥  [0m[0m [92m[92mIf Wails is useful to you or your company, please consider sponsoring the project: [94m]8;;https://github.com/sponsors/leaanthony\[4mwails3 sponsor[0m[92m[94m]8;;\[0m[92m[0m[0m
+Open http://localhost:8097/?bench=1 in a browser; metrics print to the browser console.
+WAILS_SERVER_PORT=8097 GGUIX_PREFS_DIR=$(mktemp -d) ./bin/gguix-wails-server

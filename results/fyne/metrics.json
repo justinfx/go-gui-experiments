@@ -1,0 +1,620 @@
+{
+  "app": "fyne",
+  "artifacts": {
+    "bench": {
+      "binary": {
+        "mtime": "2026-11-09T07:37:17.523171+00:00",
+        "path": "apps/fyne/bin/gguix-fyne",
+        "sha256": "d1acb76cebadba3b3115657c8011d5a6884ff3a192a4c9266d821ec62d617ea4",
+        "size": 23902386
+      },
+      "build": {
+        "rc": 0,
+        "secs": 0.19
+      }
+    },
+    "cold_build": {
+      "binary": {
+        "mtime": "2026-11-09T07:36:53.173130+00:00",
+        "path": "apps/fyne/bin/gguix-fyne",
+        "sha256": "d1acb76cebadba3b3115657c8011d5a6884ff3a192a4c9266d821ec62d617ea4",
+        "size": 23902386
+      }
+    },
+    "idle_rss": {
+      "binary": {
+        "mtime": "2026-11-09T07:36:55.510885+00:00",
+        "path": "apps/fyne/bin/gguix-fyne",
+        "sha256": "d1acb76cebadba3b3115657c8011d5a6884ff3a192a4c9266d821ec62d617ea4",
+        "size": 23902386
+      }
+    },
+    "incremental": {
+      "binary": {
+        "mtime": "2026-11-09T07:36:55.510885+00:00",
+        "path": "apps/fyne/bin/gguix-fyne",
+        "sha256": "d1acb76cebadba3b3115657c8011d5a6884ff3a192a4c9266d821ec62d617ea4",
+        "size": 23902386
+      }
+    },
+    "sizes": {
+      "app_bundle": {
+        "files": 3,
+        "mtime": "2026-11-09T07:37:09.970436+00:00",
+        "path": "apps/fyne/bin/GGUIX-fyne.app",
+        "size_kb": 23580,
+        "tree_sha256": "a646b3a9df445b36a6451636aa8d01d1e45fba1b200fab1fe797eb156d2a5077"
+      },
+      "binary": {
+        "mtime": "2026-11-09T07:36:55.510885+00:00",
+        "path": "apps/fyne/bin/gguix-fyne",
+        "sha256": "d1acb76cebadba3b3115657c8011d5a6884ff3a192a4c9266d821ec62d617ea4",
+        "size": 23902386
+      }
+    }
+  },
+  "bench": {
+    "errors": [],
+    "events_seen": [
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ]
+    ],
+    "launch": "bin/gguix-fyne (direct, after one make build)",
+    "memory": {
+      "peak_process_tree_mb": {
+        "max": 1433.7,
+        "median": 1412.3
+      },
+      "peak_total_mb": {
+        "max": 1433.7,
+        "median": 1412.3
+      },
+      "peak_webkit_mb": {
+        "max": 0.0,
+        "median": 0.0
+      }
+    },
+    "runs": 5,
+    "summary": {
+      "cards_scroll": {
+        "max_gap_ms": {
+          "max": 27.2,
+          "median": 24.8,
+          "min": 9.2,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 20.9,
+          "median": 8.8,
+          "min": 8.2,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "switch_ms": {
+          "max": 105,
+          "median": 104.2,
+          "min": 103.4,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3209.5,
+          "median": 3207.7,
+          "min": 3203,
+          "n": 5
+        }
+      },
+      "export": {
+        "max_gap_ms": {
+          "max": 41.8,
+          "median": 6.1,
+          "min": 4,
+          "n": 5
+        },
+        "ms": {
+          "max": 515.1,
+          "median": 514,
+          "min": 501.5,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 25.9,
+          "median": 4,
+          "min": 3.2,
+          "n": 5
+        },
+        "rows": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "jump": {
+        "ms": {
+          "max": 157.6,
+          "median": 145.9,
+          "min": 111.8,
+          "n": 5
+        }
+      },
+      "ready": {
+        "ms": {
+          "max": 588.3,
+          "median": 571.8,
+          "min": 561.8,
+          "n": 5
+        }
+      },
+      "scroll": {
+        "max_gap_ms": {
+          "max": 40.9,
+          "median": 39.9,
+          "min": 36.8,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 30.8,
+          "median": 29.6,
+          "min": 28,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 1,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 6735.7,
+          "median": 6668,
+          "min": 6516.4,
+          "n": 5
+        }
+      },
+      "search": {
+        "ms": {
+          "max": 77.2,
+          "median": 66.3,
+          "min": 60.1,
+          "n": 5
+        },
+        "total": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "sort": {
+        "ms": {
+          "max": 267.5,
+          "median": 254.3,
+          "min": 249.7,
+          "n": 5
+        }
+      }
+    }
+  },
+  "cgoprobe": {
+    "rc": 0,
+    "results": [
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "desktop"
+      },
+      {
+        "reason": "../../core/checksum_nocgo.go:8:9: undefined: cgoprobe_requires_cgo_but_cgo_is_unavailable_for_this_target",
+        "result": "FAIL",
+        "target": "web"
+      },
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "web-remote-client"
+      },
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "web-remote-server"
+      }
+    ],
+    "secs": 4.26
+  },
+  "cold_build": {
+    "rc": 0,
+    "secs": 19.07
+  },
+  "cross": {
+    "cross-linux": {
+      "rc": 0,
+      "secs": 15.05,
+      "status": "PASS",
+      "tail": "[i] Cleaning target directories...\n[\u2713] \"dist\" dir cleaned: /app/fyne-cross/dist/linux-amd64\n[\u2713] \"temp\" dir cleaned: /app/fyne-cross/tmp/linux-amd64\n[\u2713] \"bin\" dir cleaned: /app/fyne-cross/bin/linux-amd64\n[i] Checking for go.mod: apps/fyne/go.mod\n[\u2713] go.mod found\n[i] Packaging app...\n[\u2713] Package: \"apps/fyne/fyne-cross/dist/linux-amd64/gguix-fyne.tar.xz\""
+    },
+    "cross-windows": {
+      "rc": 0,
+      "secs": 25.86,
+      "status": "PASS",
+      "tail": "[i] Cleaning target directories...\n[\u2713] \"bin\" dir cleaned: /app/fyne-cross/bin/windows-amd64\n[\u2713] \"dist\" dir cleaned: /app/fyne-cross/dist/windows-amd64\n[\u2713] \"temp\" dir cleaned: /app/fyne-cross/tmp/windows-amd64\n[i] Checking for go.mod: apps/fyne/go.mod\n[\u2713] go.mod found\n[i] Packaging app...\n[\u2713] Package: \"apps/fyne/fyne-cross/dist/windows-amd64/gguix-fyne.zip\""
+    }
+  },
+  "idle_rss": {
+    "process_tree_mb": 212.9,
+    "total_mb": 212.9,
+    "webkit_mb": 0.0
+  },
+  "incremental_build": {
+    "BuildMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 1.5
+    }
+  },
+  "loc": {
+    "app": "fyne",
+    "build_tagged_files": 5,
+    "by_category": {
+      "bench": 43,
+      "desktop": 250,
+      "shared": 2401,
+      "test": 659,
+      "web": 130
+    },
+    "by_category_language": {
+      "bench": {
+        "go": 43
+      },
+      "desktop": {
+        "go": 250
+      },
+      "shared": {
+        "go": 2348,
+        "make": 53
+      },
+      "test": {
+        "go": 659
+      },
+      "web": {
+        "go": 113,
+        "make": 17
+      }
+    },
+    "by_language": {
+      "go": 3413,
+      "make": 70
+    },
+    "custom_rendering_lines": 581,
+    "dual_target_overhead_lines": 380,
+    "dual_target_overhead_pct": 13.7,
+    "excluded_generated_lines": {},
+    "excluded_vendored_lines": {},
+    "files": 19,
+    "inline_marker_blocks": 1,
+    "longest_go_func": "form.go:newDetailForm",
+    "longest_go_func_lines": 95
+  },
+  "plain_go_build_from_clean": {
+    "rc": 0,
+    "secs": 2.65,
+    "tail": "# gguix/apps/fyne\nld: warning: ignoring duplicate libraries: '-lobjc'"
+  },
+  "provenance": {
+    "app_tree": {
+      "files": 26,
+      "sha256": "0bb178126819351726be92b51fbb41b98de8bc9a798430e4dde1a417a171b0f5"
+    },
+    "core_tree": {
+      "files": 42,
+      "sha256": "b476612a729e8e2c2c0aed249c21133264b798c4659b3cceb92c2ea637527b9b"
+    },
+    "gguix_env_inherited": {},
+    "gguix_env_passed": {
+      "GGUIX_DPR": "2"
+    },
+    "gguix_env_scrubbed": [],
+    "recorded_at": "2026-11-09T07:36:28.652753+00:00"
+  },
+  "sizes": {
+    "app_bundle": "bin/GGUIX-fyne.app",
+    "app_bundle_kb": 23580,
+    "binary_bytes": 23902386,
+    "bundled_frameworks_kb": null,
+    "bundled_refs": [],
+    "external_dylibs": [],
+    "package": {
+      "rc": 0,
+      "secs": 14.57
+    }
+  },
+  "step_secs": {
+    "bench": 69.4,
+    "cgoprobe": 4.5,
+    "cold_build": 19.5,
+    "cross": 40.9,
+    "idle_rss": 7.2,
+    "incremental": 2.3,
+    "loc": 0.1,
+    "plain_build": 2.7,
+    "sizes": 14.6,
+    "tests": 3.9,
+    "toolchain": 2.3,
+    "web": 615.5
+  },
+  "step_times": {
+    "bench": {
+      "end": "2026-11-09T07:38:26.683189+00:00",
+      "start": "2026-11-09T07:37:17.330931+00:00"
+    },
+    "cgoprobe": {
+      "end": "2026-11-09T07:38:35.084806+00:00",
+      "start": "2026-11-09T07:38:30.601100+00:00"
+    },
+    "cold_build": {
+      "end": "2026-11-09T07:36:53.187497+00:00",
+      "start": "2026-11-09T07:36:33.679617+00:00"
+    },
+    "cross": {
+      "end": "2026-11-09T07:39:15.995901+00:00",
+      "start": "2026-11-09T07:38:35.085327+00:00"
+    },
+    "idle_rss": {
+      "end": "2026-11-09T07:37:17.329839+00:00",
+      "start": "2026-11-09T07:37:10.141661+00:00"
+    },
+    "incremental": {
+      "end": "2026-11-09T07:36:55.526862+00:00",
+      "start": "2026-11-09T07:36:53.188078+00:00"
+    },
+    "loc": {
+      "end": "2026-11-09T07:49:31.604093+00:00",
+      "start": "2026-11-09T07:49:31.507205+00:00"
+    },
+    "plain_build": {
+      "end": "2026-11-09T07:36:33.679229+00:00",
+      "start": "2026-11-09T07:36:30.995440+00:00"
+    },
+    "sizes": {
+      "end": "2026-11-09T07:37:10.141123+00:00",
+      "start": "2026-11-09T07:36:55.527430+00:00"
+    },
+    "tests": {
+      "end": "2026-11-09T07:38:30.600694+00:00",
+      "start": "2026-11-09T07:38:26.684923+00:00"
+    },
+    "toolchain": {
+      "end": "2026-11-09T07:36:30.995019+00:00",
+      "start": "2026-11-09T07:36:28.657806+00:00"
+    },
+    "web": {
+      "end": "2026-11-09T07:49:31.504451+00:00",
+      "start": "2026-11-09T07:39:15.996358+00:00"
+    }
+  },
+  "tests": {
+    "line": {
+      "failed": 0,
+      "not_feasible": 0,
+      "passed": 12
+    },
+    "rc": 0,
+    "secs": 3.91
+  },
+  "toolchain": {
+    "make_deps_warm": {
+      "rc": 0,
+      "secs": 2.34
+    }
+  },
+  "warm_noop_build": {
+    "rc": 0,
+    "secs": 0.19
+  },
+  "web": {
+    "bench-web": {
+      "bundle_dir_kb": 38332,
+      "chrome_version": "156.0.8078.80",
+      "console_errors": [],
+      "dpr": 2,
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 52.3,
+          "p95_gap_ms": 28.7,
+          "placeholder_steps": 2,
+          "switch_ms": 170.5,
+          "total_ms": 3220.7
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 166.1,
+          "ms": 502,
+          "p95_gap_ms": 166.1,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 186.8
+        },
+        "ready": {
+          "ms": 830.3
+        },
+        "scroll": {
+          "max_gap_ms": 126.1,
+          "p95_gap_ms": 73.8,
+          "placeholder_steps": 0,
+          "total_ms": 22284.8
+        },
+        "search": {
+          "ms": 157.1,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 825.3
+        }
+      },
+      "initial_transfer_kb": 12390,
+      "memory_sampling_error": null,
+      "peak_dom_nodes": 102,
+      "peak_gpu_rss_mb": 246,
+      "peak_js_heap_mb": 13.2,
+      "peak_renderer_rss_mb": 901.7,
+      "provenance": {
+        "bundle_sha256": {
+          "gguix-fyne.wasm": "7f59cc9e2d9f2f87826a3c468fabb64cca27ffc4389dfbad3bf40cd3a2ca26bf",
+          "wasm_exec.js": "0c949f4996f9a89698e4b5c586de32249c3b69b7baadb64d220073cc04acba14"
+        },
+        "ended": "2026-11-09T07:44:24.042130+00:00",
+        "index_html_sha256": "4035165ba1086fe4fa4bfa0bb271b533fcd870b40167af79975f49f445517cb5",
+        "served_dir": "apps/fyne/bin/web",
+        "started": "2026-11-09T07:39:16.193267+00:00"
+      },
+      "renderer_pids": [
+        2652,
+        2653,
+        2651
+      ],
+      "server_ready_secs": 1.52,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "viewport": {
+        "height": 800,
+        "width": 1280
+      },
+      "wall_ms": 28598,
+      "wasm_files": {
+        "gguix-fyne.wasm": {
+          "gzip_kb": 11769,
+          "raw_kb": 37807
+        }
+      }
+    },
+    "web-remote": {
+      "bundle_dir_kb": 38268,
+      "chrome_version": "156.0.8078.80",
+      "console_errors": [],
+      "dpr": 2,
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 26.6,
+          "p95_gap_ms": 19.2,
+          "placeholder_steps": 11,
+          "switch_ms": 195,
+          "total_ms": 3216.1
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 12,
+          "ms": 559.5,
+          "p95_gap_ms": 0.1,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 182.5
+        },
+        "ready": {
+          "ms": 821.8
+        },
+        "scroll": {
+          "max_gap_ms": 116.8,
+          "p95_gap_ms": 97.4,
+          "placeholder_steps": 21,
+          "total_ms": 23115.1
+        },
+        "search": {
+          "ms": 175.4,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 360.2
+        }
+      },
+      "initial_transfer_kb": 12367,
+      "memory_sampling_error": null,
+      "peak_dom_nodes": 102,
+      "peak_gpu_rss_mb": 245.9,
+      "peak_js_heap_mb": 11.6,
+      "peak_renderer_rss_mb": 807.9,
+      "provenance": {
+        "bundle_sha256": {
+          "gguix-fyne.wasm": "dc584ec715b60e50602dc19728f0d8b47e02fbeb04bdc44050a7bc74901c7293",
+          "wasm_exec.js": "0c949f4996f9a89698e4b5c586de32249c3b69b7baadb64d220073cc04acba14"
+        },
+        "ended": "2026-11-09T07:49:31.504172+00:00",
+        "index_html_sha256": "4035165ba1086fe4fa4bfa0bb271b533fcd870b40167af79975f49f445517cb5",
+        "served_dir": "apps/fyne/bin/web",
+        "started": "2026-11-09T07:44:24.248876+00:00"
+      },
+      "renderer_pids": [
+        5072,
+        5073,
+        5071
+      ],
+      "server_ready_secs": 1.01,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "viewport": {
+        "height": 800,
+        "width": 1280
+      },
+      "wall_ms": 28940,
+      "wasm_files": {
+        "gguix-fyne.wasm": {
+          "gzip_kb": 11750,
+          "raw_kb": 37742
+        }
+      }
+    }
+  }
+}

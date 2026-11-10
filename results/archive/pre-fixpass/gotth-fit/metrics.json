@@ -1,0 +1,398 @@
+{
+  "app": "gotth-fit",
+  "bench": {
+    "errors": [],
+    "events_seen": [
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ]
+    ],
+    "memory": {
+      "peak_process_tree_mb": {
+        "max": 166.2,
+        "median": 165.5
+      },
+      "peak_total_mb": {
+        "max": 746.8,
+        "median": 698.7
+      },
+      "peak_webkit_mb": {
+        "max": 582.8,
+        "median": 532.5
+      }
+    },
+    "runs": 5,
+    "summary": {
+      "cards_scroll": {
+        "max_gap_ms": {
+          "max": 109,
+          "median": 81,
+          "min": 77,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 77,
+          "median": 61,
+          "min": 60,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "switch_ms": {
+          "max": 469,
+          "median": 458,
+          "min": 451,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3206,
+          "median": 3203,
+          "min": 3201,
+          "n": 5
+        }
+      },
+      "export": {
+        "max_gap_ms": {
+          "max": 43,
+          "median": 39,
+          "min": 38,
+          "n": 5
+        },
+        "ms": {
+          "max": 507,
+          "median": 506,
+          "min": 506,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 6,
+          "median": 6,
+          "min": 5,
+          "n": 5
+        },
+        "rows": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "jump": {
+        "ms": {
+          "max": 226,
+          "median": 222,
+          "min": 219,
+          "n": 5
+        }
+      },
+      "ready": {
+        "ms": {
+          "max": 668,
+          "median": 662,
+          "min": 657,
+          "n": 5
+        }
+      },
+      "scroll": {
+        "max_gap_ms": {
+          "max": 352,
+          "median": 317,
+          "min": 262,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 352,
+          "median": 317,
+          "min": 262,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 1,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3328,
+          "median": 3284,
+          "min": 3284,
+          "n": 5
+        }
+      },
+      "search": {
+        "ms": {
+          "max": 201,
+          "median": 183,
+          "min": 181,
+          "n": 5
+        },
+        "total": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "sort": {
+        "ms": {
+          "max": 404,
+          "median": 392,
+          "min": 391,
+          "n": 5
+        }
+      }
+    }
+  },
+  "cgoprobe": {
+    "rc": 0,
+    "results": [
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "web"
+      },
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "desktop"
+      },
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "web-export-test"
+      }
+    ],
+    "secs": 4.17
+  },
+  "cold_build": {
+    "rc": 0,
+    "secs": 9.14
+  },
+  "idle_rss": {
+    "process_tree_mb": 125.9,
+    "total_mb": 283.3,
+    "webkit_mb": 157.5
+  },
+  "incremental_build": {
+    "BuildMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 1.4
+    }
+  },
+  "loc": {
+    "app": "gotth-fit",
+    "build_tagged_files": 2,
+    "by_category": {
+      "bench": 234,
+      "desktop": 461,
+      "shared": 3599,
+      "test": 795,
+      "web": 149
+    },
+    "by_category_language": {
+      "bench": {
+        "go": 77,
+        "js": 157
+      },
+      "desktop": {
+        "go": 230,
+        "js": 57,
+        "make": 15,
+        "templ": 159
+      },
+      "shared": {
+        "css": 699,
+        "go": 1179,
+        "js": 703,
+        "make": 57,
+        "templ": 961
+      },
+      "test": {
+        "go": 713,
+        "js": 82
+      },
+      "web": {
+        "go": 66,
+        "js": 70,
+        "make": 10,
+        "templ": 3
+      }
+    },
+    "by_language": {
+      "css": 699,
+      "go": 2265,
+      "js": 1069,
+      "make": 82,
+      "templ": 1123
+    },
+    "custom_rendering_lines": 90,
+    "dual_target_overhead_lines": 610,
+    "dual_target_overhead_pct": 14.5,
+    "excluded_generated_lines": {
+      "go": 25866
+    },
+    "excluded_vendored_lines": {
+      "go": 8818,
+      "js": 12567,
+      "templ": 6082
+    },
+    "files": 38,
+    "inline_marker_blocks": 8,
+    "longest_go_func": "server.go:handleSave",
+    "longest_go_func_lines": 93
+  },
+  "plain_go_build_from_clean": {
+    "rc": 1,
+    "secs": 0.14,
+    "tail": "./server.go:478:21: undefined: views.DetailForm\n./server.go:506:21: undefined: views.PageFragment\n./server.go:520:21: undefined: views.DetailForm\n./server.go:530:21: undefined: views.DetailForm\n./server.go:600:22: undefined: views.DetailForm\n./server.go:600:22: too many errors"
+  },
+  "sizes": {
+    "app_bundle": "bin/GGUIX-gotth.app",
+    "app_bundle_kb": 13572,
+    "binary_bytes": 13890306,
+    "bundled_frameworks_kb": null,
+    "bundled_refs": [],
+    "external_dylibs": [],
+    "package": {
+      "rc": 0,
+      "secs": 0.35
+    }
+  },
+  "step_secs": {
+    "bench": 55.3,
+    "cgoprobe": 4.5,
+    "cold_build": 9.7,
+    "idle_rss": 7.1,
+    "incremental": 2.7,
+    "loc": 0.2,
+    "plain_build": 0.2,
+    "sizes": 0.4,
+    "tests": 7.4,
+    "toolchain": 0.1,
+    "web": 306.5
+  },
+  "tests": {
+    "line": {
+      "failed": 0,
+      "not_feasible": 0,
+      "passed": 12
+    },
+    "rc": 0,
+    "secs": 7.39
+  },
+  "toolchain": {
+    "make_deps_warm": {
+      "rc": 0,
+      "secs": 0.11
+    }
+  },
+  "warm_noop_build": {
+    "rc": 0,
+    "secs": 0.44
+  },
+  "web": {
+    "bench-web": {
+      "console_errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "htmx:afterRequest, [object HTMLDivElement]",
+        "htmx:sendAbort, [object HTMLDivElement]",
+        "htmx:afterRequest, [object HTMLDivElement]",
+        "htmx:sendAbort, [object HTMLDivElement]"
+      ],
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 22.4,
+          "p95_gap_ms": 12.9,
+          "placeholder_steps": 0,
+          "switch_ms": 355.9,
+          "total_ms": 3201
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 9.1,
+          "ms": 507.4,
+          "p95_gap_ms": 2.5,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 172.8
+        },
+        "ready": {
+          "ms": 157.4
+        },
+        "scroll": {
+          "max_gap_ms": 59.4,
+          "p95_gap_ms": 53.8,
+          "placeholder_steps": 0,
+          "total_ms": 3218.6
+        },
+        "search": {
+          "ms": 191.1,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 370.2
+        }
+      },
+      "initial_transfer_kb": 2260,
+      "peak_dom_nodes": 174683,
+      "peak_js_heap_mb": 15.4,
+      "server_ready_secs": 1.53,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "wall_ms": 8371
+    }
+  }
+}

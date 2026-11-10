@@ -1,0 +1,11 @@
+mkdir -p apps/cogent-fit/web/shimbin
+cp apps/cogent-fit/web/gotags-shim.sh apps/cogent-fit/web/shimbin/go
+GGUIX_REAL_GO=/usr/local/go/bin/go GGUIX_EXTRA_TAGS=remote PATH=apps/cogent-fit/web/shimbin:$PATH ~/go/bin/core build wasm -o bin/web
+# gguix/apps/cogent
+ld: warning: ignoring duplicate libraries: '-lobjc'
+bundle app.wasm: 36.4 MB (gzip 8.3 MB, brotli 6.7 MB)
+core build succeeded
+Serving http://localhost:8097 (core server, remote data)
+cd ../../core && go run ./cmd/server -static ../apps/cogent-fit/bin/web -addr :8097
+2026/11/09 20:09:28 gguix server on :8097 (rows=1000000 latency=50ms cgoprobe=false static="../apps/cogent-fit/bin/web")
+make: *** [web-remote] Terminated: 15

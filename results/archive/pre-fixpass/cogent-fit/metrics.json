@@ -1,0 +1,390 @@
+{
+  "app": "cogent-fit",
+  "bench": {
+    "errors": [],
+    "events_seen": [
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ]
+    ],
+    "memory": {
+      "peak_process_tree_mb": {
+        "max": 683.3,
+        "median": 661.2
+      },
+      "peak_total_mb": {
+        "max": 683.3,
+        "median": 661.2
+      },
+      "peak_webkit_mb": {
+        "max": 0.0,
+        "median": 0.0
+      }
+    },
+    "runs": 5,
+    "summary": {
+      "cards_scroll": {
+        "max_gap_ms": {
+          "max": 3.2,
+          "median": 2.6,
+          "min": 2.5,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 2.2,
+          "median": 2.2,
+          "min": 2,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "switch_ms": {
+          "max": 81.2,
+          "median": 78.9,
+          "min": 56.2,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3201.6,
+          "median": 3201.1,
+          "min": 3200.9,
+          "n": 5
+        }
+      },
+      "export": {
+        "max_gap_ms": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "ms": {
+          "max": 508.1,
+          "median": 507,
+          "min": 500.7,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "rows": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "jump": {
+        "ms": {
+          "max": 101.1,
+          "median": 82,
+          "min": 52.9,
+          "n": 5
+        }
+      },
+      "ready": {
+        "ms": {
+          "max": 836.5,
+          "median": 586.3,
+          "min": 565.3,
+          "n": 5
+        }
+      },
+      "scroll": {
+        "max_gap_ms": {
+          "max": 20.8,
+          "median": 20,
+          "min": 19.1,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 5.3,
+          "median": 4.3,
+          "min": 3.8,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3202.7,
+          "median": 3202.5,
+          "min": 3201.9,
+          "n": 5
+        }
+      },
+      "search": {
+        "ms": {
+          "max": 65.5,
+          "median": 58.9,
+          "min": 57.9,
+          "n": 5
+        },
+        "total": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "sort": {
+        "ms": {
+          "max": 266,
+          "median": 250.8,
+          "min": 244.1,
+          "n": 5
+        }
+      }
+    }
+  },
+  "cgoprobe": {
+    "rc": 0,
+    "results": [
+      {
+        "reason": "builds and T1 runs",
+        "result": "PASS",
+        "target": "desktop"
+      },
+      {
+        "reason": "../../core/checksum_nocgo.go:8:9: undefined: cgoprobe_requires_cgo_but_cgo_is_unavailable_for_this_target",
+        "result": "FAIL",
+        "target": "web"
+      },
+      {
+        "reason": "(built without cgoprobe)",
+        "result": "PASS",
+        "target": "web-remote-client"
+      },
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "web-remote-server"
+      }
+    ],
+    "secs": 8.88
+  },
+  "cold_build": {
+    "rc": 0,
+    "secs": 22.22
+  },
+  "idle_rss": {
+    "process_tree_mb": 277.3,
+    "total_mb": 277.3,
+    "webkit_mb": 0.0
+  },
+  "incremental_build": {
+    "BuildMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 2.14
+    }
+  },
+  "loc": {
+    "app": "cogent-fit",
+    "build_tagged_files": 8,
+    "by_category": {
+      "bench": 53,
+      "desktop": 238,
+      "shared": 3094,
+      "test": 413,
+      "web": 100
+    },
+    "by_category_language": {
+      "bench": {
+        "go": 53
+      },
+      "desktop": {
+        "go": 223,
+        "make": 15
+      },
+      "shared": {
+        "go": 3048,
+        "make": 46
+      },
+      "test": {
+        "go": 413
+      },
+      "web": {
+        "go": 90,
+        "make": 10
+      }
+    },
+    "by_language": {
+      "go": 3827,
+      "make": 71
+    },
+    "custom_rendering_lines": 569,
+    "dual_target_overhead_lines": 338,
+    "dual_target_overhead_pct": 9.8,
+    "excluded_generated_lines": {},
+    "excluded_vendored_lines": {},
+    "files": 25,
+    "inline_marker_blocks": 2,
+    "longest_go_func": "form.go:newDetailForm",
+    "longest_go_func_lines": 181,
+    "marker_errors": [
+      "Makefile:57 end without start",
+      "Makefile:67 end without start"
+    ]
+  },
+  "plain_go_build_from_clean": {
+    "rc": 0,
+    "secs": 3.4,
+    "tail": "# gguix/apps/cogent\nld: warning: ignoring duplicate libraries: '-lobjc'"
+  },
+  "sizes": {
+    "app_bundle": "bin/GGUIX-cogent.app",
+    "app_bundle_kb": 27112,
+    "binary_bytes": 27602434,
+    "bundled_frameworks_kb": null,
+    "bundled_refs": [],
+    "external_dylibs": [],
+    "package": {
+      "rc": 0,
+      "secs": 0.51
+    }
+  },
+  "step_secs": {
+    "bench": 59.6,
+    "cgoprobe": 9.9,
+    "cold_build": 23.6,
+    "idle_rss": 7.1,
+    "incremental": 3.2,
+    "loc": 0.1,
+    "plain_build": 3.4,
+    "sizes": 0.5,
+    "tests": 7.1,
+    "toolchain": 3.1,
+    "web": 311.6
+  },
+  "tests": {
+    "line": {
+      "failed": 0,
+      "not_feasible": 0,
+      "passed": 13
+    },
+    "rc": 0,
+    "secs": 7.09
+  },
+  "toolchain": {
+    "make_deps_warm": {
+      "rc": 0,
+      "secs": 3.06
+    }
+  },
+  "warm_noop_build": {
+    "rc": 0,
+    "secs": 1.23
+  },
+  "web": {
+    "bench-web": {
+      "console_errors": [],
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 4.1,
+          "p95_gap_ms": 0.1,
+          "placeholder_steps": 7,
+          "switch_ms": 204.4,
+          "total_ms": 3211.8
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 104.5,
+          "ms": 519.8,
+          "p95_gap_ms": 104.5,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 250
+        },
+        "ready": {
+          "ms": 679.6
+        },
+        "scroll": {
+          "max_gap_ms": 17,
+          "p95_gap_ms": 3.4,
+          "placeholder_steps": 54,
+          "total_ms": 3229
+        },
+        "search": {
+          "ms": 223.6,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 1077.4
+        }
+      },
+      "initial_transfer_kb": 6942,
+      "peak_dom_nodes": 1453,
+      "peak_js_heap_mb": 10.2,
+      "server_ready_secs": 5.06,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "wall_ms": 10495
+    },
+    "bundle_dir_kb": 31048,
+    "wasm_files": {
+      "app.wasm": {
+        "gzip_kb": 6683,
+        "raw_kb": 30828
+      }
+    }
+  }
+}

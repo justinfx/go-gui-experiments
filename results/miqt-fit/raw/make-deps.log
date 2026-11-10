@@ -1,0 +1,4 @@
+$ ['make', 'deps']
+(rc=0, 2.18s)
+go install github.com/mappu/miqt/cmd/miqt-docker@v0.15.0
+go mod download

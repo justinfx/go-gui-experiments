@@ -1,0 +1,14 @@
+$ ['make', 'cross-linux']
+(rc=0, 14.54s)
+go install github.com/fyne-io/fyne-cross@latest
+go mod vendor
+~/go/bin/fyne-cross linux -arch=amd64 -app-id io.gguix.fyne -name gguix-fyne -env GOTOOLCHAIN=auto -env GOFLAGS=-mod=vendor ; st=$?; rm -r vendor; exit $st
+[i] Target: linux/amd64
+[i] Cleaning target directories...
+[✓] "bin" dir cleaned: /app/fyne-cross/bin/linux-amd64
+[✓] "dist" dir cleaned: /app/fyne-cross/dist/linux-amd64
+[✓] "temp" dir cleaned: /app/fyne-cross/tmp/linux-amd64
+[i] Checking for go.mod: apps/fyne-fitcap/go.mod
+[✓] go.mod found
+[i] Packaging app...
+[✓] Package: "apps/fyne-fitcap/fyne-cross/dist/linux-amd64/gguix-fyne.tar.xz"

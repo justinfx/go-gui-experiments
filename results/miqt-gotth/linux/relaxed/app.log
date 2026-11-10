@@ -1,0 +1,101 @@
+QStandardPaths: runtime directory '/run/user/0' is not owned by UID 1001, but a directory permissions 0700 owned by UID 0 GID 0
+qt.webenginecontext: 
+
+GL Type: desktop
+Surface Type: OpenGL
+Surface Profile: CompatibilityProfile
+Surface Version: 4.5
+QSG RHI Backend: OpenGL
+Using Supported QSG Backend: yes
+Using Software Dynamic GL: no
+Using Multithreaded OpenGL: yes
+
+Init Parameters:
+  *  application-name GGUIX 
+  *  browser-subprocess-path /usr/lib/qt6/libexec/QtWebEngineProcess 
+  *  create-default-gl-context  
+  *  disable-features ConsolidatedMovementXY,InstalledApp,BackgroundFetch,WebOTP,WebPayments,WebUSB,PictureInPicture 
+  *  disable-setuid-sandbox  
+  *  disable-speech-api  
+  *  enable-features NetworkServiceInProcess,TracingServiceInProcess 
+  *  enable-threaded-compositing  
+  *  in-process-gpu  
+  *  use-gl desktop 
+
+[1209:7:1109/015832.270617:ERROR:command_buffer_proxy_impl.cc(126)] ContextResult::kTransientFailure: Failed to send GpuControl.CreateCommandBuffer.
+Property 'modal'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'windowModality'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'enabled'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'geometry'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'frameGeometry'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'normalGeometry'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'x'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'y'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'pos'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'frameSize'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'size'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'width'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'height'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'rect'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'childrenRect'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'childrenRegion'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'sizePolicy'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'minimumSize'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'maximumSize'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'minimumWidth'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'minimumHeight'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'maximumWidth'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'maximumHeight'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'sizeIncrement'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'baseSize'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'palette'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'font'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'cursor'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'mouseTracking'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'tabletTracking'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'isActiveWindow'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'focusPolicy'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'focus'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'contextMenuPolicy'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'updatesEnabled'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'visible'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'minimized'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'maximized'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'fullScreen'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'sizeHint'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'minimumSizeHint'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'acceptDrops'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'windowOpacity'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'windowModified'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'toolTip'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'toolTipDuration'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'statusTip'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'whatsThis'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'accessibleName'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'accessibleDescription'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'layoutDirection'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'autoFillBackground'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'styleSheet'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'locale'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'windowFilePath'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'inputMethodHints'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'inputMask'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'maxLength'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'frame'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'echoMode'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'displayText'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'cursorPosition'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'alignment'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'modified'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'hasSelectedText'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'selectedText'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'dragEnabled'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'readOnly'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'undoAvailable'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'redoAvailable'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'acceptableInput'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'placeholderText'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'cursorMoveStyle'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+Property 'clearButtonEnabled'' of object 'QLineEdit' has no notify signal, is not bindable and is not constant, value updates in HTML will be broken!
+
+Session terminated, killing shell...

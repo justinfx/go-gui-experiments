@@ -1,0 +1,455 @@
+{
+  "app": "miqt",
+  "artifacts": {
+    "bench": {
+      "binary": {
+        "mtime": "2026-11-09T09:14:15.444844+00:00",
+        "path": "apps/miqt/bin/gguix-miqt",
+        "sha256": "2191cd7bb2e9aaf424370dba74f74a31d89c91a762394330e1b4d0eddccaa1a1",
+        "size": 31378482
+      },
+      "build": {
+        "rc": 0,
+        "secs": 0.27
+      }
+    },
+    "cold_build": {
+      "binary": {
+        "mtime": "2026-11-09T09:13:45.418864+00:00",
+        "path": "apps/miqt/bin/gguix-miqt",
+        "sha256": "2191cd7bb2e9aaf424370dba74f74a31d89c91a762394330e1b4d0eddccaa1a1",
+        "size": 31378482
+      }
+    },
+    "idle_rss": {
+      "binary": {
+        "mtime": "2026-11-09T09:13:50.612314+00:00",
+        "path": "apps/miqt/bin/gguix-miqt",
+        "sha256": "2191cd7bb2e9aaf424370dba74f74a31d89c91a762394330e1b4d0eddccaa1a1",
+        "size": 31378482
+      }
+    },
+    "incremental": {
+      "binary": {
+        "mtime": "2026-11-09T09:13:50.354096+00:00",
+        "path": "apps/miqt/bin/gguix-miqt",
+        "sha256": "2191cd7bb2e9aaf424370dba74f74a31d89c91a762394330e1b4d0eddccaa1a1",
+        "size": 31378482
+      }
+    },
+    "sizes": {
+      "app_bundle": {
+        "files": 90,
+        "mtime": "2026-11-09T09:13:50.622023+00:00",
+        "path": "apps/miqt/bin/GGUIX-miqt.app",
+        "size_kb": 113168,
+        "tree_sha256": "f61946186b0e932606f90895c7da27725a392b2c21942629d1193d13da7c24d3"
+      },
+      "binary": {
+        "mtime": "2026-11-09T09:13:50.354096+00:00",
+        "path": "apps/miqt/bin/gguix-miqt",
+        "sha256": "2191cd7bb2e9aaf424370dba74f74a31d89c91a762394330e1b4d0eddccaa1a1",
+        "size": 31378482
+      }
+    }
+  },
+  "bench": {
+    "errors": [],
+    "events_seen": [
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ]
+    ],
+    "launch": "bin/gguix-miqt (direct, after one make build)",
+    "memory": {
+      "peak_process_tree_mb": {
+        "max": 711.3,
+        "median": 702.2
+      },
+      "peak_total_mb": {
+        "max": 711.3,
+        "median": 702.2
+      },
+      "peak_webkit_mb": {
+        "max": 0.0,
+        "median": 0.0
+      }
+    },
+    "runs": 5,
+    "summary": {
+      "cards_scroll": {
+        "max_gap_ms": {
+          "max": 444.5,
+          "median": 428.4,
+          "min": 424.8,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 378.2,
+          "median": 312.2,
+          "min": 233.8,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 61,
+          "median": 59,
+          "min": 54,
+          "n": 5
+        },
+        "switch_ms": {
+          "max": 1053.9,
+          "median": 928.5,
+          "min": 903.6,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 5726.4,
+          "median": 5597.9,
+          "min": 5545.7,
+          "n": 5
+        }
+      },
+      "export": {
+        "max_gap_ms": {
+          "max": 5.5,
+          "median": 4.6,
+          "min": 3.4,
+          "n": 5
+        },
+        "ms": {
+          "max": 522.1,
+          "median": 513.7,
+          "min": 512.4,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 1.7,
+          "median": 1.2,
+          "min": 0.5,
+          "n": 5
+        },
+        "rows": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "jump": {
+        "ms": {
+          "max": 680.5,
+          "median": 665.8,
+          "min": 625,
+          "n": 5
+        }
+      },
+      "ready": {
+        "ms": {
+          "max": 831,
+          "median": 443.4,
+          "min": 425.5,
+          "n": 5
+        }
+      },
+      "scroll": {
+        "max_gap_ms": {
+          "max": 259.2,
+          "median": 251.4,
+          "min": 244.8,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 236.8,
+          "median": 229.1,
+          "min": 225.8,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 119,
+          "median": 115,
+          "min": 113,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 8204.7,
+          "median": 7878.6,
+          "min": 7851.4,
+          "n": 5
+        }
+      },
+      "search": {
+        "ms": {
+          "max": 145,
+          "median": 69.5,
+          "min": 65.3,
+          "n": 5
+        },
+        "total": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "sort": {
+        "ms": {
+          "max": 630.1,
+          "median": 622.2,
+          "min": 444.1,
+          "n": 5
+        }
+      }
+    }
+  },
+  "cgoprobe": {
+    "rc": 0,
+    "results": [
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "desktop"
+      }
+    ],
+    "secs": 5.26
+  },
+  "cold_build": {
+    "rc": 0,
+    "secs": 112.58
+  },
+  "cross": {
+    "cross-linux": {
+      "rc": 0,
+      "secs": 25.82,
+      "status": "PASS",
+      "tail": "DOCKER_DEFAULT_PLATFORM=linux/amd64 DOCKER=apps/miqt/desktop/docker-notty.sh MIQTDOCKER_FLAGS=\"-v core:/core:ro\" \\\n\t  ~/go/bin/miqt-docker linux64-go1.27-qt6.12 go build -ldflags '-s -w' -o bin/gguix-miqt-linux-amd64 .\n2026/11/09 22:16:25 Selecting dockerfile: linux64-go1.27-qt6.12-dynamic.Dockerfile\n2026/11/09 22:16:28 Skipping user isolation because: OS is \"darwin\""
+    },
+    "cross-windows": {
+      "rc": 0,
+      "secs": 27.8,
+      "status": "PASS",
+      "tail": "DOCKER_DEFAULT_PLATFORM=linux/amd64 DOCKER=apps/miqt/desktop/docker-notty.sh MIQTDOCKER_FLAGS=\"-v core:/core:ro -v $GOMODCACHE:/gomod -e GOMODCACHE=/gomod -e GOTOOLCHAIN=go1.27.3 -e GOPROXY=off -e GOFLAGS=-mod=mod\" \\\n\t  ~/go/bin/miqt-docker win64-qt6-static -windows-build --tags=windowsqtstatic\n2026/11/09 22:15:57 Selecting dockerfile: win64-cross-go1.26-qt6.5-static.Dockerfile\n2026/11/09 22:15:57 Skipping user isolation because: OS is \"darwin\""
+    }
+  },
+  "idle_rss": {
+    "process_tree_mb": 196.0,
+    "total_mb": 196.0,
+    "webkit_mb": 0.0
+  },
+  "incremental_build": {
+    "BuildMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 2.91
+    }
+  },
+  "loc": {
+    "app": "miqt",
+    "build_tagged_files": 9,
+    "by_category": {
+      "bench": 28,
+      "desktop": 2305,
+      "shared": 22,
+      "test": 603,
+      "web": 2
+    },
+    "by_category_language": {
+      "bench": {
+        "go": 28
+      },
+      "desktop": {
+        "go": 2264,
+        "make": 41
+      },
+      "shared": {
+        "go": 3,
+        "make": 19
+      },
+      "test": {
+        "go": 603
+      },
+      "web": {
+        "make": 2
+      }
+    },
+    "by_language": {
+      "go": 2898,
+      "make": 62
+    },
+    "custom_rendering_lines": 300,
+    "dual_target_overhead_lines": 2307,
+    "dual_target_overhead_pct": 99.1,
+    "excluded_generated_lines": {},
+    "excluded_vendored_lines": {},
+    "files": 11,
+    "inline_marker_blocks": 2,
+    "longest_go_func": "form_desktop.go:newDetailForm",
+    "longest_go_func_lines": 138,
+    "marker_errors": [
+      "Makefile:76 end without start",
+      "Makefile:81 end without start",
+      "main_desktop.go:32 end without start"
+    ]
+  },
+  "plain_go_build_from_clean": {
+    "rc": 0,
+    "secs": 12.32,
+    "tail": ""
+  },
+  "provenance": {
+    "app_tree": {
+      "files": 18,
+      "sha256": "b9823bceb30e063bb2fb0b7729503f1369063ea3312c6ad4e1e8c84e1b8cbd09"
+    },
+    "core_tree": {
+      "files": 42,
+      "sha256": "b476612a729e8e2c2c0aed249c21133264b798c4659b3cceb92c2ea637527b9b"
+    },
+    "gguix_env_inherited": {},
+    "gguix_env_passed": {
+      "GGUIX_DPR": "2"
+    },
+    "gguix_env_scrubbed": [],
+    "recorded_at": "2026-11-09T09:11:36.162454+00:00"
+  },
+  "sizes": {
+    "app_bundle": "bin/GGUIX-miqt.app",
+    "app_bundle_kb": 113168,
+    "binary_bytes": 31378482,
+    "bundled_frameworks_kb": 80228,
+    "bundled_refs": [
+      "@executable_path/../Frameworks/QtWidgets.framework/Versions/A/QtWidgets",
+      "@executable_path/../Frameworks/QtGui.framework/Versions/A/QtGui",
+      "@executable_path/../Frameworks/QtCore.framework/Versions/A/QtCore"
+    ],
+    "external_dylibs": [],
+    "package": {
+      "rc": 0,
+      "secs": 17.54
+    }
+  },
+  "step_secs": {
+    "bench": 92.2,
+    "cgoprobe": 5.5,
+    "cold_build": 113.0,
+    "cross": 53.6,
+    "idle_rss": 7.1,
+    "incremental": 4.9,
+    "loc": 0.1,
+    "plain_build": 12.4,
+    "sizes": 17.7,
+    "tests": 4.8,
+    "toolchain": 3.8
+  },
+  "step_times": {
+    "bench": {
+      "end": "2026-11-09T09:15:47.362489+00:00",
+      "start": "2026-11-09T09:14:15.179151+00:00"
+    },
+    "cgoprobe": {
+      "end": "2026-11-09T09:15:57.654295+00:00",
+      "start": "2026-11-09T09:15:52.157520+00:00"
+    },
+    "cold_build": {
+      "end": "2026-11-09T09:13:45.436789+00:00",
+      "start": "2026-11-09T09:11:52.401017+00:00"
+    },
+    "cross": {
+      "end": "2026-11-09T09:16:51.283405+00:00",
+      "start": "2026-11-09T09:15:57.654715+00:00"
+    },
+    "idle_rss": {
+      "end": "2026-11-09T09:14:15.178656+00:00",
+      "start": "2026-11-09T09:14:08.031861+00:00"
+    },
+    "incremental": {
+      "end": "2026-11-09T09:13:50.373343+00:00",
+      "start": "2026-11-09T09:13:45.437342+00:00"
+    },
+    "loc": {
+      "end": "2026-11-09T09:16:51.369631+00:00",
+      "start": "2026-11-09T09:16:51.283858+00:00"
+    },
+    "plain_build": {
+      "end": "2026-11-09T09:11:52.400713+00:00",
+      "start": "2026-11-09T09:11:40.003488+00:00"
+    },
+    "sizes": {
+      "end": "2026-11-09T09:14:08.031280+00:00",
+      "start": "2026-11-09T09:13:50.374036+00:00"
+    },
+    "tests": {
+      "end": "2026-11-09T09:15:52.157001+00:00",
+      "start": "2026-11-09T09:15:47.363524+00:00"
+    },
+    "toolchain": {
+      "end": "2026-11-09T09:11:40.003166+00:00",
+      "start": "2026-11-09T09:11:36.165879+00:00"
+    }
+  },
+  "tests": {
+    "line": {
+      "failed": 0,
+      "not_feasible": 0,
+      "passed": 18
+    },
+    "rc": 0,
+    "secs": 4.79
+  },
+  "toolchain": {
+    "make_deps_warm": {
+      "rc": 0,
+      "secs": 3.84
+    }
+  },
+  "warm_noop_build": {
+    "rc": 0,
+    "secs": 0.25
+  }
+}

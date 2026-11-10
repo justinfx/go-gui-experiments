@@ -1,0 +1,12 @@
+GGUIX_METRIC {"event":"ready","ms":571.8}
+2026-11-09 20:37:32.013 gguix-fyne[1488:28683492] NSKeyBindingManager: Bad key binding selector for '^/' = 'noop'
+2026-11-09 20:37:32.013 gguix-fyne[1488:28683492] NSKeyBindingManager: Bad key binding selector for '@' = 'noop'
+2026-11-09 20:37:32.013 gguix-fyne[1488:28683492] NSKeyBindingManager: Bad key binding selector for '@' = 'noop'
+2026-11-09 20:37:32.013 gguix-fyne[1488:28683492] NSKeyBindingManager: Bad key binding selector for '@' = 'noop'
+GGUIX_METRIC {"event":"jump","ms":157.6}
+GGUIX_METRIC {"event":"scroll","max_gap_ms":39.9,"p95_gap_ms":29.6,"placeholder_steps":0,"total_ms":6735.7}
+GGUIX_METRIC {"event":"cards_scroll","max_gap_ms":27.2,"p95_gap_ms":16.2,"placeholder_steps":0,"switch_ms":104.5,"total_ms":3209.5}
+GGUIX_METRIC {"event":"sort","ms":249.7}
+GGUIX_METRIC {"event":"search","ms":66.3,"total":49898}
+GGUIX_METRIC {"event":"export","max_gap_ms":41.8,"ms":515.1,"p95_gap_ms":25.9,"rows":49898}
+GGUIX_METRIC {"event":"done"}

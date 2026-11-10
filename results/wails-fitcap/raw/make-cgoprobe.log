@@ -1,0 +1,4 @@
+$ ['make', 'cgoprobe']
+(rc=0, 7.99s)
+CGOPROBE desktop PASS builds and the export code runs with the C checksum
+CGOPROBE web PASS builds and serves

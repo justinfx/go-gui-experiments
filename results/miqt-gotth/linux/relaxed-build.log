@@ -1,0 +1,2 @@
+Done in 91ms
+go build -ldflags '-s -w' -o bin/gguix-miqt ./cmd/desktop

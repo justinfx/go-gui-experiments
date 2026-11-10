@@ -1,0 +1,11 @@
+Done in 93ms
+go build -ldflags '-s -w' -o bin/gguix-miqt ./cmd/desktop
+
+real	0m25.171s
+user	2m0.972s
+sys	0m12.089s
+total 38308
+drwxr-xr-x  3 root root     4096 Nov  8 22:41 .
+drwxr-xr-x 12 root root     4096 Nov  8 22:41 ..
+-rwxr-xr-x  1 root root 39212248 Nov  8 22:41 gguix-miqt
+drwxr-xr-x  2 root root     4096 Nov  8 22:41 tools

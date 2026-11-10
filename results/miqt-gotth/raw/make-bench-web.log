@@ -1,0 +1,6 @@
+Open http://localhost:8090/?bench=1 in a browser; the metrics print to the browser console.
+Done in 73ms
+go build -trimpath -ldflags "-s -w" -o bin/gguix-gotth-web ./cmd/web
+bin/gguix-gotth-web
+GoTTH web target listening on http://localhost:8097
+make: *** [bench-web] Terminated: 15

@@ -1,0 +1,617 @@
+{
+  "app": "cogent",
+  "artifacts": {
+    "bench": {
+      "binary": {
+        "mtime": "2026-11-09T06:31:11.714862+00:00",
+        "path": "apps/cogent/bin/gguix-cogent",
+        "sha256": "883e75b801a0e01e158c195e2297c9901499d3f4d5094e381677eba4ce901f5f",
+        "size": 27602434
+      },
+      "build": {
+        "rc": 0,
+        "secs": 1.13
+      }
+    },
+    "cold_build": {
+      "binary": {
+        "mtime": "2026-11-09T06:30:58.788934+00:00",
+        "path": "apps/cogent/bin/gguix-cogent",
+        "sha256": "0f0d9628a8552b371e8c5c670c6c94bc4b01dfefeec196b451f9e23845a3b70b",
+        "size": 27602434
+      }
+    },
+    "idle_rss": {
+      "binary": {
+        "mtime": "2026-11-09T06:31:02.159662+00:00",
+        "path": "apps/cogent/bin/gguix-cogent",
+        "sha256": "0f0d9628a8552b371e8c5c670c6c94bc4b01dfefeec196b451f9e23845a3b70b",
+        "size": 27602434
+      }
+    },
+    "incremental": {
+      "binary": {
+        "mtime": "2026-11-09T06:31:02.159662+00:00",
+        "path": "apps/cogent/bin/gguix-cogent",
+        "sha256": "0f0d9628a8552b371e8c5c670c6c94bc4b01dfefeec196b451f9e23845a3b70b",
+        "size": 27602434
+      }
+    },
+    "sizes": {
+      "binary": {
+        "mtime": "2026-11-09T06:31:02.159662+00:00",
+        "path": "apps/cogent/bin/gguix-cogent",
+        "sha256": "0f0d9628a8552b371e8c5c670c6c94bc4b01dfefeec196b451f9e23845a3b70b",
+        "size": 27602434
+      }
+    }
+  },
+  "bench": {
+    "errors": [],
+    "events_seen": [
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ]
+    ],
+    "launch": "bin/gguix-cogent (direct, after one make build)",
+    "memory": {
+      "peak_process_tree_mb": {
+        "max": 519.3,
+        "median": 512.8
+      },
+      "peak_total_mb": {
+        "max": 519.3,
+        "median": 512.8
+      },
+      "peak_webkit_mb": {
+        "max": 0.0,
+        "median": 0.0
+      }
+    },
+    "runs": 5,
+    "summary": {
+      "cards_scroll": {
+        "max_gap_ms": {
+          "max": 2.7,
+          "median": 2.5,
+          "min": 2.4,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 2.2,
+          "median": 2.2,
+          "min": 1.4,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 1,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "switch_ms": {
+          "max": 114.7,
+          "median": 111.7,
+          "min": 109.7,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3204.7,
+          "median": 3201.5,
+          "min": 3200.6,
+          "n": 5
+        }
+      },
+      "export": {
+        "max_gap_ms": {
+          "max": 0.1,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "ms": {
+          "max": 508.6,
+          "median": 508.2,
+          "min": 500.6,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "rows": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "jump": {
+        "ms": {
+          "max": 134.8,
+          "median": 113.4,
+          "min": 59.9,
+          "n": 5
+        }
+      },
+      "ready": {
+        "ms": {
+          "max": 645.4,
+          "median": 554.9,
+          "min": 547.6,
+          "n": 5
+        }
+      },
+      "scroll": {
+        "max_gap_ms": {
+          "max": 21.1,
+          "median": 18.6,
+          "min": 11.9,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 4.1,
+          "median": 3.3,
+          "min": 2.7,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 25,
+          "median": 24,
+          "min": 24,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3230.7,
+          "median": 3230.2,
+          "min": 3228,
+          "n": 5
+        }
+      },
+      "search": {
+        "ms": {
+          "max": 73.6,
+          "median": 65.6,
+          "min": 64.8,
+          "n": 5
+        },
+        "total": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "sort": {
+        "ms": {
+          "max": 275.8,
+          "median": 261.7,
+          "min": 255.9,
+          "n": 5
+        }
+      }
+    }
+  },
+  "cgoprobe": {
+    "rc": 0,
+    "results": [
+      {
+        "reason": "builds and T1 runs",
+        "result": "PASS",
+        "target": "desktop"
+      },
+      {
+        "reason": "../../core/checksum_nocgo.go:8:9: undefined: cgoprobe_requires_cgo_but_cgo_is_unavailable_for_this_target",
+        "result": "FAIL",
+        "target": "web"
+      },
+      {
+        "reason": "(built without cgoprobe)",
+        "result": "PASS",
+        "target": "web-remote-client"
+      },
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "web-remote-server"
+      }
+    ],
+    "secs": 10.96
+  },
+  "cold_build": {
+    "rc": 0,
+    "secs": 23.52
+  },
+  "cross": {
+    "cross-linux": {
+      "rc": 0,
+      "secs": 270.78,
+      "status": "PASS",
+      "tail": "../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:233:17: undefined: TextureView\n../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:234:17: undefined: TextureView\n../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:244:16: undefined: PipelineLayout\n../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:245:15: undefined: VertexState\n../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:246:15: undefined: PrimitiveState\n../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:247:16: undefined: DepthStencilState\n../../../../go/pkg/mod/github.com/oliverbestmann/webgpu@v1.37.0/wgpu/common.go:247:16: too many errors\nmake: [cross-linux] Error 1 (ignored)"
+    },
+    "cross-windows": {
+      "rc": 0,
+      "secs": 305.59,
+      "status": "PASS",
+      "tail": "go build -trimpath -ldflags  -H=windowsgui -s -w -X 'cogentcore.org/core/system.AppID=com.gguix.cogent' -X 'cogentcore.org/core/core.AppIcon=<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 1 1\"><path d=\"M.833.675a.35.35 0 1 1 0-.35\" style=\"stroke:#005bc0;stroke-width:.27;fill:none\"/><circle cx=\".53\" cy=\".5\" r=\".23\" style=\"fill:#fbbd0e;stroke:none\"/></svg>' -X cogentcore.org/core/system.CoreVersion=v0.5.27 -o apps/cogent/bin/windows/windows.exe\npackage gguix/apps/cogent\n\timports cogentcore.org/core/core\n\timports cogentcore.org/core/keymap\n\timports cogentcore.org/core/system/driver\n\timports cogentcore.org/core/system/driver/desktop\n\timports github.com/oliverbestmann/webgpu/wgpuglfw: build constraints exclude all Go files in $GOMODCACHE/github.com/oliverbestmann/webgpu@v1.37.0/wgpuglfw\nmake: [cross-windows] Error 1 (ignored)"
+    }
+  },
+  "idle_rss": {
+    "process_tree_mb": 293.6,
+    "total_mb": 293.6,
+    "webkit_mb": 0.0
+  },
+  "incremental_build": {
+    "BuildMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 2.24
+    }
+  },
+  "loc": {
+    "app": "cogent",
+    "build_tagged_files": 8,
+    "by_category": {
+      "bench": 45,
+      "desktop": 258,
+      "shared": 2561,
+      "test": 369,
+      "web": 100
+    },
+    "by_category_language": {
+      "bench": {
+        "go": 45
+      },
+      "desktop": {
+        "go": 240,
+        "make": 18
+      },
+      "shared": {
+        "go": 2509,
+        "make": 52
+      },
+      "test": {
+        "go": 369
+      },
+      "web": {
+        "go": 90,
+        "make": 10
+      }
+    },
+    "by_language": {
+      "go": 3253,
+      "make": 80
+    },
+    "custom_rendering_lines": 550,
+    "dual_target_overhead_lines": 358,
+    "dual_target_overhead_pct": 12.3,
+    "excluded_generated_lines": {},
+    "excluded_vendored_lines": {},
+    "files": 22,
+    "inline_marker_blocks": 2,
+    "longest_go_func": "form.go:newDetailForm",
+    "longest_go_func_lines": 181,
+    "marker_errors": [
+      "Makefile:60 end without start",
+      "Makefile:70 end without start"
+    ]
+  },
+  "plain_go_build_from_clean": {
+    "rc": 0,
+    "secs": 3.57,
+    "tail": "# gguix/apps/cogent\nld: warning: ignoring duplicate libraries: '-lobjc'"
+  },
+  "provenance": {
+    "app_tree": {
+      "files": 29,
+      "sha256": "b978f8700d6115b66503539a06ffdda94061c700690afac67ad12b4bef17764c"
+    },
+    "core_tree": {
+      "files": 42,
+      "sha256": "b476612a729e8e2c2c0aed249c21133264b798c4659b3cceb92c2ea637527b9b"
+    },
+    "gguix_env_inherited": {},
+    "gguix_env_passed": {
+      "GGUIX_DPR": "2"
+    },
+    "gguix_env_scrubbed": [],
+    "recorded_at": "2026-11-09T06:30:26.386074+00:00"
+  },
+  "sizes": {
+    "binary_bytes": 27602434,
+    "package": {
+      "rc": 2,
+      "secs": 1.26
+    }
+  },
+  "step_secs": {
+    "bench": 53.3,
+    "cgoprobe": 12.1,
+    "cold_build": 24.9,
+    "cross": 576.4,
+    "idle_rss": 7.1,
+    "incremental": 3.4,
+    "loc": 0.6,
+    "plain_build": 3.6,
+    "sizes": 1.3,
+    "tests": 5.4,
+    "toolchain": 4.0,
+    "web": 628.7
+  },
+  "step_times": {
+    "bench": {
+      "end": "2026-11-09T06:32:03.945801+00:00",
+      "start": "2026-11-09T06:31:10.598155+00:00"
+    },
+    "cgoprobe": {
+      "end": "2026-11-09T06:32:21.362053+00:00",
+      "start": "2026-11-09T06:32:09.298008+00:00"
+    },
+    "cold_build": {
+      "end": "2026-11-09T06:30:58.812510+00:00",
+      "start": "2026-11-09T06:30:33.960259+00:00"
+    },
+    "cross": {
+      "end": "2026-11-09T06:41:57.741377+00:00",
+      "start": "2026-11-09T06:32:21.362465+00:00"
+    },
+    "idle_rss": {
+      "end": "2026-11-09T06:31:10.597645+00:00",
+      "start": "2026-11-09T06:31:03.458542+00:00"
+    },
+    "incremental": {
+      "end": "2026-11-09T06:31:02.183119+00:00",
+      "start": "2026-11-09T06:30:58.813130+00:00"
+    },
+    "loc": {
+      "end": "2026-11-09T06:52:27.106460+00:00",
+      "start": "2026-11-09T06:52:26.463798+00:00"
+    },
+    "plain_build": {
+      "end": "2026-11-09T06:30:33.959837+00:00",
+      "start": "2026-11-09T06:30:30.355389+00:00"
+    },
+    "sizes": {
+      "end": "2026-11-09T06:31:03.458197+00:00",
+      "start": "2026-11-09T06:31:02.183752+00:00"
+    },
+    "tests": {
+      "end": "2026-11-09T06:32:09.297583+00:00",
+      "start": "2026-11-09T06:32:03.946290+00:00"
+    },
+    "toolchain": {
+      "end": "2026-11-09T06:30:30.354797+00:00",
+      "start": "2026-11-09T06:30:26.390694+00:00"
+    },
+    "web": {
+      "end": "2026-11-09T06:52:26.461960+00:00",
+      "start": "2026-11-09T06:41:57.742199+00:00"
+    }
+  },
+  "tests": {
+    "line": {
+      "failed": 0,
+      "not_feasible": 0,
+      "passed": 12
+    },
+    "rc": 0,
+    "secs": 5.35
+  },
+  "toolchain": {
+    "make_deps_warm": {
+      "rc": 0,
+      "secs": 3.96
+    }
+  },
+  "warm_noop_build": {
+    "rc": 0,
+    "secs": 1.13
+  },
+  "web": {
+    "bench-web": {
+      "bundle_dir_kb": 31028,
+      "chrome_version": "156.0.8078.80",
+      "console_errors": [],
+      "dpr": 2,
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 7.9,
+          "p95_gap_ms": 3.6,
+          "placeholder_steps": 18,
+          "switch_ms": 190.9,
+          "total_ms": 3207.9
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 4.7,
+          "ms": 515.5,
+          "p95_gap_ms": 4.7,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 138.2
+        },
+        "ready": {
+          "ms": 1453.3
+        },
+        "scroll": {
+          "max_gap_ms": 14.7,
+          "p95_gap_ms": 6.2,
+          "placeholder_steps": 68,
+          "total_ms": 3244.4
+        },
+        "search": {
+          "ms": 200,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 993.6
+        }
+      },
+      "initial_transfer_kb": 6941,
+      "memory_sampling_error": null,
+      "peak_dom_nodes": 1437,
+      "peak_gpu_rss_mb": 150.4,
+      "peak_js_heap_mb": 11.1,
+      "peak_renderer_rss_mb": 1116.3,
+      "provenance": {
+        "bundle_sha256": {
+          "app-worker.js": "18716d93fd6cd422c65bf60e691a64da5e9297eed5f700324d4c92992b5ce5b3",
+          "app.js": "af8d86ca9e10eff88479886d148fe24405b6d816c4c70aa4519efedb69a9a474",
+          "app.wasm": "aac8d8d50d38e7a2a2c7bc03f15fe24a6be5f4bf2e9df44b8832639b1db7ef83",
+          "wasm_exec.js": "dd60c87977a16e0d81f3a145318a23566e8615fe4025a548d41d74f8481a6242"
+        },
+        "ended": "2026-11-09T06:47:13.268905+00:00",
+        "index_html_sha256": "194ebf9995a9d807f7f670e4fd8013cd91fe2b574ebdf655300a579ba8bf8232",
+        "served_dir": "apps/cogent/bin/web",
+        "started": "2026-11-09T06:41:57.957993+00:00"
+      },
+      "renderer_pids": [
+        83169,
+        83170,
+        83168
+      ],
+      "server_ready_secs": 8.12,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "viewport": {
+        "height": 800,
+        "width": 1280
+      },
+      "wall_ms": 10483,
+      "wasm_files": {
+        "app.wasm": {
+          "gzip_kb": 6681,
+          "raw_kb": 30809
+        }
+      }
+    },
+    "web-remote": {
+      "bundle_dir_kb": 37480,
+      "chrome_version": "156.0.8078.80",
+      "console_errors": [],
+      "dpr": 2,
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 4.1,
+          "p95_gap_ms": 2,
+          "placeholder_steps": 5,
+          "switch_ms": 326.1,
+          "total_ms": 3221.7
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 0.2,
+          "ms": 564.5,
+          "p95_gap_ms": 0.1,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 113.4
+        },
+        "ready": {
+          "ms": 1436.9
+        },
+        "scroll": {
+          "max_gap_ms": 22.1,
+          "p95_gap_ms": 9.2,
+          "placeholder_steps": 145,
+          "total_ms": 3260.6
+        },
+        "search": {
+          "ms": 215.3,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 389.5
+        }
+      },
+      "initial_transfer_kb": 8544,
+      "memory_sampling_error": null,
+      "peak_dom_nodes": 1609,
+      "peak_gpu_rss_mb": 154.9,
+      "peak_js_heap_mb": 6.9,
+      "peak_renderer_rss_mb": 1036,
+      "provenance": {
+        "bundle_sha256": {
+          "app-worker.js": "a92d9d04295cccd4ff76f94c8d152610646e31e911619a3f49bb7a2eb36db92e",
+          "app.js": "af8d86ca9e10eff88479886d148fe24405b6d816c4c70aa4519efedb69a9a474",
+          "app.wasm": "53cb6985748786a66ee42ccb4ba5fbe1b28388577b9525af945157266db9f487",
+          "wasm_exec.js": "dd60c87977a16e0d81f3a145318a23566e8615fe4025a548d41d74f8481a6242"
+        },
+        "ended": "2026-11-09T06:52:26.461685+00:00",
+        "index_html_sha256": "194ebf9995a9d807f7f670e4fd8013cd91fe2b574ebdf655300a579ba8bf8232",
+        "served_dir": "apps/cogent/bin/web",
+        "started": "2026-11-09T06:47:13.490516+00:00"
+      },
+      "renderer_pids": [
+        84595,
+        84596,
+        84590
+      ],
+      "server_ready_secs": 6.1,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "viewport": {
+        "height": 800,
+        "width": 1280
+      },
+      "wall_ms": 9993,
+      "wasm_files": {
+        "app.wasm": {
+          "gzip_kb": 8190,
+          "raw_kb": 37260
+        }
+      }
+    }
+  }
+}

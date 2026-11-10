@@ -1,0 +1,358 @@
+package views
+
+import (
+	"strconv"
+
+	"gguix/apps/gotth/components/card"
+	"gguix/apps/gotth/components/table"
+	"gguix/core"
+)
+
+type column struct {
+	Header string
+	Sort   core.SortField
+	Width  int
+	Align  string // left | right | center
+}
+
+var columns = []column{
+	{"ID", core.SortID, 80, "right"},
+	{"SKU", core.SortSKU, 110, "left"},
+	{"Name", core.SortName, 260, "left"},
+	{"Category", core.SortCategory, 110, "left"},
+	{"Price", core.SortPrice, 100, "right"},
+	{"Qty", core.SortQuantity, 80, "right"},
+	{"Stock", "", 120, "left"},
+	{"Status", core.SortStatus, 120, "left"},
+	{"Rating", core.SortRating, 110, "left"},
+	{"Updated", core.SortUpdated, 150, "left"},
+	{"Featured", core.SortFeatured, 80, "center"},
+}
+
+func tableWidth() string {
+	w := 0
+	for _, c := range columns {
+		w += c.Width
+	}
+	return strconv.Itoa(w) + "px"
+}
+
+func alignClass(a string) string {
+	switch a {
+	case "right":
+		return "text-right"
+	case "center":
+		return "text-center"
+	}
+	return "text-left"
+}
+
+func headerLabel(c column, l ListVM) string {
+	if c.Sort == l.Sort && c.Sort != "" {
+		if l.Desc {
+			return c.Header + " ▼"
+		}
+		return c.Header + " ▲"
+	}
+	return c.Header
+}
+
+// ListRegion is the content of #list-region: the scroller with the first page
+// of the window, the sentinels and, for the table, the fixed header.
+templ ListRegion(l ListVM) {
+	<div class="flex h-full flex-col" id="list-frame">
+		if l.View != "cards" {
+			<div id="thead-wrap" class="shrink-0 overflow-hidden" style="scrollbar-gutter: stable">
+				<table data-slot="table" class="caption-bottom border-separate border-spacing-0 text-sm" style={ "table-layout: fixed; width: " + tableWidth() }>
+					@tableCols()
+					@tableHead(l)
+				</table>
+			</div>
+		}
+		<div
+			id="scroller"
+			tabindex="0"
+			data-view={ l.View }
+			data-total={ strconv.Itoa(l.Page.Total) }
+			data-scroll-row={ strconv.Itoa(l.ScrollRow) }
+			data-first-page={ strconv.Itoa(l.PageIdx) }
+			class="min-h-0 flex-1 overflow-auto relative outline-none"
+			style="overflow-anchor: none; scrollbar-gutter: stable"
+		>
+			if l.View == "cards" {
+				@cardsWindow(l)
+			} else {
+				@tableWindow(l)
+			}
+		</div>
+	</div>
+}
+
+templ tableCols() {
+	<colgroup>
+		for _, c := range columns {
+			<col style={ "width: " + strconv.Itoa(c.Width) + "px" }/>
+		}
+	</colgroup>
+}
+
+// ListResponse is the response of /query, /view and /goto: the region plus the
+// out-of-band status bar and toolbar updates.
+templ ListResponse(l ListVM, f FilterVM) {
+	@ListRegion(l)
+	@FetchOOB(l.FetchMs)
+	@Count(l.Page.Total, true)
+	@CategoryLabel(f, true)
+	@ViewSwitch(l.View, true)
+}
+
+// FetchOOB updates the "last fetch" text of the status bar.
+templ FetchOOB(ms float64) {
+	<span id="sb-fetch" hx-swap-oob="true" data-ms={ strconv.FormatFloat(ms, 'f', 1, 64) }>{ " · last fetch " + strconv.FormatFloat(ms, 'f', 0, 64) + " ms" }</span>
+}
+
+templ tableHead(l ListVM) {
+	@table.Header(table.HeaderProps{Class: "bg-background [&_th]:border-b"}) {
+		@table.Row() {
+			for i, c := range columns {
+				if c.Sort != "" {
+					@table.Head(table.HeadProps{
+						Class: "relative cursor-pointer select-none " + alignClass(c.Align),
+						Attributes: templ.Attributes{
+							"hx-post":    "/query",
+							"hx-include": "#filters",
+							"hx-vals":    `{"sort":"` + string(c.Sort) + `"}`,
+							"hx-target":  "#list-region",
+							"hx-swap":    "innerHTML",
+							"data-sort":  string(c.Sort),
+						},
+					}) {
+						{ headerLabel(c, l) }
+						@colGrip(i)
+					}
+				} else {
+					@table.Head(table.HeadProps{Class: "relative " + alignClass(c.Align)}) {
+						{ headerLabel(c, l) }
+						@colGrip(i)
+					}
+				}
+			}
+		}
+	}
+}
+
+// colGrip is the drag handle on the right edge of a header cell.
+templ colGrip(i int) {
+	<span data-col-resize={ strconv.Itoa(i) } role="separator" aria-orientation="vertical" class="absolute inset-y-0 right-0 z-10 w-1.5 cursor-col-resize select-none touch-none hover:bg-border data-[dragging]:bg-ring"></span>
+}
+
+templ tableWindow(l ListVM) {
+	<table data-slot="table" class="caption-bottom border-separate border-spacing-0 text-sm" style={ "table-layout: fixed; width: " + tableWidth() }>
+		@tableCols()
+		if l.Page.Total == 0 {
+			<tbody>
+				<tr>
+					<td colspan="11" class="py-10 text-center text-muted-foreground" data-slot="empty">No items match.</td>
+				</tr>
+			</tbody>
+		} else {
+			if l.PageIdx > 0 {
+				@TableSentinel("up", l.PageURL(l.PageIdx-1, "up"))
+			}
+			@TablePage(l, l.PageIdx, l.Page.Items)
+			if l.PageIdx < l.LastPage {
+				@TableSentinel("down", l.PageURL(l.PageIdx+1, "down"))
+			}
+		}
+	</table>
+}
+
+func sentinelAttrs(url string) templ.Attributes {
+	return templ.Attributes{
+		"hx-get":     url,
+		"hx-trigger": "gguix-visible once",
+		"hx-swap":    "outerHTML",
+		"hx-sync":    "this:drop",
+	}
+}
+
+// TableSentinel is the loading row at the top or bottom of the window.
+templ TableSentinel(dir, url string) {
+	<tbody class="sentinel" data-dir={ dir } data-slot="placeholder" { sentinelAttrs(url)... }>
+		<tr class="[&>td]:border-b">
+			for _, c := range columns {
+				<td class={ "p-2 text-muted-foreground " + alignClass(c.Align) }>…</td>
+			}
+		</tr>
+	</tbody>
+}
+
+// TablePage is one page of rows.
+templ TablePage(l ListVM, p int, items []core.Item) {
+	<tbody class="pg" data-page={ strconv.Itoa(p) } data-src={ l.PageURL(p, "fill") }>
+		for i, it := range items {
+			@TableRow(it, p*PageSize+i, it.ID == l.SelectedID, false)
+		}
+	</tbody>
+}
+
+func rowAttrs(id int64, idx int, selected, oob bool) templ.Attributes {
+	a := templ.Attributes{
+		"data-id":  strconv.FormatInt(id, 10),
+		"data-row": strconv.Itoa(idx),
+	}
+	if oob {
+		a["hx-swap-oob"] = "true"
+	}
+	if selected {
+		a["data-state"] = "selected"
+		a["aria-selected"] = "true"
+	}
+	return a
+}
+
+// TableRow is one data row.
+templ TableRow(it core.Item, idx int, selected, oob bool) {
+	@table.Row(table.RowProps{ID: rowID(it.ID), Class: "cursor-default [&>td]:border-b", Attributes: rowAttrs(it.ID, idx, selected, oob)}) {
+		@table.Cell(table.CellProps{Class: "text-right", Attributes: templ.Attributes{"data-col": "id"}}) {
+			{ strconv.FormatInt(it.ID, 10) }
+		}
+		@table.Cell(table.CellProps{Class: "truncate", Attributes: templ.Attributes{"data-col": "sku"}}) {
+			{ it.SKU }
+		}
+		@table.Cell(table.CellProps{Class: "truncate", Attributes: templ.Attributes{"data-col": "name"}}) {
+			{ it.Name }
+		}
+		@table.Cell(table.CellProps{Class: "truncate", Attributes: templ.Attributes{"data-col": "category"}}) {
+			{ it.Category.String() }
+		}
+		@table.Cell(table.CellProps{Class: "text-right", Attributes: templ.Attributes{"data-col": "price"}}) {
+			{ core.FormatPrice(it.PriceCents) }
+		}
+		@table.Cell(table.CellProps{Class: "text-right", Attributes: templ.Attributes{"data-col": "qty"}}) {
+			{ strconv.Itoa(int(it.Quantity)) }
+		}
+		@table.Cell(table.CellProps{Attributes: templ.Attributes{"data-col": "stock"}}) {
+			@StockBar(it.Quantity)
+		}
+		@table.Cell(table.CellProps{Attributes: templ.Attributes{"data-col": "status"}}) {
+			@StatusBadge(it.Status)
+		}
+		@table.Cell(table.CellProps{Attributes: templ.Attributes{"data-col": "rating"}}) {
+			@Stars(it.Rating)
+		}
+		@table.Cell(table.CellProps{Attributes: templ.Attributes{"data-col": "updated"}}) {
+			{ core.FormatUpdated(it.UpdatedAt) }
+		}
+		@table.Cell(table.CellProps{Class: "text-center", Attributes: templ.Attributes{"data-col": "featured"}}) {
+			if it.Featured {
+				✓
+			}
+		}
+	}
+}
+
+// ---------------------------------------------------------------- cards
+
+templ cardsWindow(l ListVM) {
+	<div class="p-2" data-slot="cards">
+		if l.Page.Total == 0 {
+			<div class="py-10 text-center text-muted-foreground" data-slot="empty">No items match.</div>
+		} else {
+			if l.PageIdx > 0 {
+				@CardSentinel("up", l.PageURL(l.PageIdx-1, "up"))
+			}
+			@CardPage(l, l.PageIdx, l.Page.Items)
+			if l.PageIdx < l.LastPage {
+				@CardSentinel("down", l.PageURL(l.PageIdx+1, "down"))
+			}
+		}
+	</div>
+}
+
+// CardSentinel is a placeholder card at the top or bottom of the window.
+templ CardSentinel(dir, url string) {
+	<div class="sentinel mb-2" data-dir={ dir } data-slot="placeholder" { sentinelAttrs(url)... }>
+		@card.Card(card.Props{Class: "h-24 flex-row items-center gap-3 p-3 py-3 ring-0 border"}) {
+			<div class="font-bold">Loading…</div>
+		}
+	</div>
+}
+
+// CardPage is one page of cards.
+templ CardPage(l ListVM, p int, items []core.Item) {
+	<div class="pg" data-page={ strconv.Itoa(p) } data-src={ l.PageURL(p, "fill") }>
+		for i, it := range items {
+			@ItemCard(it, p*PageSize+i, it.ID == l.SelectedID, false)
+		}
+	</div>
+}
+
+func cardClass(selected bool) string {
+	base := "item-card mb-2 h-24 box-border flex-row items-center gap-3 p-3 py-3 ring-0 cursor-default overflow-hidden border border-border data-[state=selected]:border-2 data-[state=selected]:border-primary"
+	_ = selected
+	return base
+}
+
+// ItemCard is one custom card.
+templ ItemCard(it core.Item, idx int, selected, oob bool) {
+	@card.Card(card.Props{ID: cardID(it.ID), Class: cardClass(selected), Attributes: rowAttrs(it.ID, idx, selected, oob)}) {
+		<div
+			class={ "category-tile tile-" + it.Category.String() + " flex size-12 shrink-0 items-center justify-center rounded-lg font-bold text-white" }
+			data-slot="category-tile"
+			data-category={ it.Category.String() }
+		>{ core.CategoryInitial(it.Category) }</div>
+		<div class="min-w-0 flex-1">
+			<div class="truncate text-sm leading-5 font-bold" data-slot="card-name">{ it.Name }</div>
+			<div class="truncate text-xs leading-4 text-muted-foreground">{ it.SKU + " · " + it.Category.String() }</div>
+			<div class="truncate text-xs leading-4 text-muted-foreground">{ core.NotesPreview(it.Notes) }</div>
+			<div class="mt-0.5 flex items-center gap-1 leading-none">
+				@StatusBadge(it.Status)
+				if it.Featured {
+					@FeaturedChip()
+				}
+			</div>
+		</div>
+		<div class="flex w-40 shrink-0 flex-col items-end justify-center gap-0.5 text-xs">
+			<div class="text-lg leading-6 font-bold" data-slot="card-price">{ core.FormatPrice(it.PriceCents) }</div>
+			@Stars(it.Rating)
+			<div class="flex items-center gap-1">
+				<span>{ core.StockLabel(it.Quantity) }</span>
+				@StockBar(it.Quantity)
+			</div>
+		</div>
+	}
+}
+
+// CardPageFragment is the response for /page in the cards view.
+templ PageFragment(l ListVM, p int, dir string, items []core.Item) {
+	if l.View == "cards" {
+		if dir == "up" && p > 0 {
+			@CardSentinel("up", l.PageURL(p-1, "up"))
+		}
+		@CardPage(l, p, items)
+		if dir == "down" && p < l.LastPage {
+			@CardSentinel("down", l.PageURL(p+1, "down"))
+		}
+	} else {
+		if dir == "up" && p > 0 {
+			@TableSentinel("up", l.PageURL(p-1, "up"))
+		}
+		@TablePage(l, p, items)
+		if dir == "down" && p < l.LastPage {
+			@TableSentinel("down", l.PageURL(p+1, "down"))
+		}
+	}
+	@FetchOOB(l.FetchMs)
+}
+
+// RefreshedItem re-renders one saved item out of band in the current view.
+templ RefreshedItem(view string, it core.Item, idx int) {
+	if view == "cards" {
+		@ItemCard(it, idx, true, true)
+	} else {
+		<template>
+			@TableRow(it, idx, true, true)
+		</template>
+	}
+}

@@ -1,0 +1,99 @@
+{
+ "bench-web": {
+  "console_errors": [],
+  "events": {
+   "cards_scroll": {
+    "max_gap_ms": 251.7,
+    "p95_gap_ms": 134.6,
+    "placeholder_steps": 0,
+    "switch_ms": 441.9,
+    "total_ms": 29984.5
+   },
+   "done": {},
+   "export": {
+    "max_gap_ms": 293.8,
+    "ms": 690.3,
+    "p95_gap_ms": 293.8,
+    "rows": 49898
+   },
+   "jump": {
+    "ms": 686.7
+   },
+   "ready": {
+    "ms": 912.3
+   },
+   "scroll": {
+    "max_gap_ms": 516.7,
+    "p95_gap_ms": 340,
+    "placeholder_steps": 0,
+    "total_ms": 70319.2
+   },
+   "search": {
+    "ms": 514.3,
+    "total": 49898
+   },
+   "sort": {
+    "ms": 1294.3
+   }
+  },
+  "initial_transfer_kb": 39663,
+  "peak_dom_nodes": 104,
+  "peak_js_heap_mb": 38.2,
+  "server_ready_secs": 1.01,
+  "timed_out": false,
+  "url": "http://localhost:8097/?bench=1",
+  "wall_ms": 105606
+ },
+ "bundle_dir_kb": 39884,
+ "wasm_files": {
+  "gguix-fyne.wasm": {
+   "gzip_kb": 12048,
+   "raw_kb": 39323
+  }
+ },
+ "web-remote": {
+  "console_errors": [],
+  "events": {
+   "cards_scroll": {
+    "max_gap_ms": 193.9,
+    "p95_gap_ms": 147.4,
+    "placeholder_steps": 0,
+    "switch_ms": 743.1,
+    "total_ms": 12492.1
+   },
+   "done": {},
+   "export": {
+    "max_gap_ms": 435,
+    "ms": 952.6,
+    "p95_gap_ms": 435,
+    "rows": 49898
+   },
+   "jump": {
+    "ms": 671.2
+   },
+   "ready": {
+    "ms": 834.4
+   },
+   "scroll": {
+    "max_gap_ms": 320.2,
+    "p95_gap_ms": 215.5,
+    "placeholder_steps": 0,
+    "total_ms": 57260.6
+   },
+   "search": {
+    "ms": 670.4,
+    "total": 49898
+   },
+   "sort": {
+    "ms": 1467.6
+   }
+  },
+  "initial_transfer_kb": 12690,
+  "peak_dom_nodes": 104,
+  "peak_js_heap_mb": 22.4,
+  "server_ready_secs": 1.01,
+  "timed_out": false,
+  "url": "http://localhost:8097/?bench=1",
+  "wall_ms": 76331
+ }
+}

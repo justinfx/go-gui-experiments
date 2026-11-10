@@ -1,0 +1,211 @@
+package views
+
+import (
+	"strconv"
+	"time"
+
+	"gguix/apps/gotth/components/button"
+	"gguix/apps/gotth/components/calendar"
+	"gguix/apps/gotth/components/checkbox"
+	"gguix/apps/gotth/components/input"
+	"gguix/apps/gotth/components/label"
+	"gguix/apps/gotth/components/nativeselect"
+	"gguix/apps/gotth/components/popover"
+	"gguix/apps/gotth/components/radiogroup"
+	"gguix/apps/gotth/components/slider"
+	"gguix/apps/gotth/components/textarea"
+	"gguix/core"
+)
+
+func (f FormVM) none() bool { return f.Item == nil }
+
+func (f FormVM) id() string {
+	if f.Item == nil {
+		return "0"
+	}
+	return strconv.FormatInt(f.Item.ID, 10)
+}
+
+func (f FormVM) idText() string {
+	if f.Item == nil {
+		return ""
+	}
+	return strconv.FormatInt(f.Item.ID, 10)
+}
+
+func (f FormVM) sku() string {
+	if f.Item == nil {
+		return ""
+	}
+	return f.Item.SKU
+}
+
+func (f FormVM) updated() string {
+	if f.Item == nil {
+		return ""
+	}
+	return core.FormatUpdated(f.Item.UpdatedAt)
+}
+
+func (f FormVM) ratingValue() float64 {
+	r, err := strconv.ParseFloat(f.Values.Rating, 64)
+	if err != nil {
+		return 0
+	}
+	return r
+}
+
+func (f FormVM) restockTime() time.Time {
+	if f.Values.Restock == "" {
+		return time.Time{}
+	}
+	d, err := core.ParseDate(f.Values.Restock)
+	if err != nil {
+		return time.Time{}
+	}
+	return d.Time()
+}
+
+func (f FormVM) restockLabel() string {
+	if f.Values.Restock == "" {
+		return "Pick a date"
+	}
+	return f.Values.Restock
+}
+
+func boolStr(b bool) string { return strconv.FormatBool(b) }
+
+templ fieldError(f FormVM, field string) {
+	if msg := f.Errors[field]; msg != "" {
+		<p class="text-sm text-destructive" data-error={ field } role="alert">{ msg }</p>
+	}
+}
+
+templ row(lbl, forID string) {
+	<div class="grid grid-cols-[6.5rem_1fr] items-start gap-x-2 gap-y-1">
+		@label.Label(label.Props{For: forID, Class: "pt-1.5"}) {
+			{ lbl }
+		}
+		<div class="min-w-0 flex flex-col gap-1">
+			{ children... }
+		</div>
+	</div>
+}
+
+// DetailForm is the detail form for the selected item.
+templ DetailForm(f FormVM, oob bool) {
+	<form
+		id="detail"
+		if oob {
+			hx-swap-oob="true"
+		}
+		class="flex h-full min-h-0 flex-col gap-3 overflow-auto p-3"
+		hx-post="/save"
+		hx-target="#detail"
+		hx-swap="outerHTML"
+		hx-sync="this:drop"
+		data-item-id={ f.id() }
+		data-force-dirty={ boolStr(f.ForceDirty) }
+		data-csv={ f.CSV }
+		autocomplete="off"
+		onsubmit="return false"
+	>
+		<input type="hidden" name="id" value={ f.id() }/>
+		if f.none() {
+			<p class="text-sm text-muted-foreground" data-slot="no-selection">Select an item to edit.</p>
+		}
+		@row("ID", "f-id") {
+			<span id="f-id" class="py-1.5 text-sm" data-field="id">{ f.idText() }</span>
+		}
+		@row("SKU", "f-sku") {
+			<span id="f-sku" class="py-1.5 text-sm" data-field="sku">{ f.sku() }</span>
+		}
+		@row("Name", "f-name") {
+			@input.Input(input.Props{ID: "f-name", Name: "name", Value: f.Values.Name, Disabled: f.none(), Attributes: templ.Attributes{"aria-invalid": boolStr(f.Errors["name"] != "")}})
+			@fieldError(f, "name")
+		}
+		@row("Category", "f-category") {
+			@nativeselect.NativeSelect(nativeselect.Props{ID: "f-category", Name: "category", Disabled: f.none()}) {
+				for _, c := range core.AllCategories {
+					@nativeselect.Option(nativeselect.OptionProps{Value: c.String(), Selected: f.Values.Category == c.String()}) {
+						{ c.String() }
+					}
+				}
+			}
+			@fieldError(f, "category")
+		}
+		@row("Price", "f-price") {
+			@input.Input(input.Props{ID: "f-price", Name: "price", Value: f.Values.Price, Disabled: f.none(), Attributes: templ.Attributes{"inputmode": "decimal"}})
+			@fieldError(f, "priceCents")
+		}
+		@row("Quantity", "f-quantity") {
+			@input.Input(input.Props{ID: "f-quantity", Name: "quantity", Type: "number", Value: f.Values.Quantity, Disabled: f.none(), Attributes: templ.Attributes{"min": "0", "max": "1000000", "step": "1"}})
+			@fieldError(f, "quantity")
+		}
+		@row("Status", "") {
+			@radiogroup.RadioGroup(radiogroup.Props{Name: "status", DefaultValue: f.Values.Status, Disabled: f.none(), Class: "flex w-auto flex-row flex-wrap gap-4", Attributes: templ.Attributes{"data-slot-name": "status"}}) {
+				for _, s := range core.AllStatuses {
+					<div class="flex items-center gap-2">
+						@radiogroup.Item(radiogroup.ItemProps{ID: "f-status-" + s.String(), Value: s.String()})
+						@label.Label(label.Props{For: "f-status-" + s.String()}) {
+							{ s.String() }
+						}
+					</div>
+				}
+			}
+			@fieldError(f, "status")
+		}
+		@row("Rating", "") {
+			<div class="flex items-center gap-3">
+				@slider.Slider(slider.Props{ID: "f-rating", Name: "rating", Min: 0, Max: 5, Step: 0.1, DefaultValue: []float64{f.ratingValue()}, Disabled: f.none(), Class: "flex-1"})
+				<span class="w-8 text-right text-sm" data-slot="rating-label">{ f.Values.Rating }</span>
+			</div>
+			@fieldError(f, "rating")
+		}
+		@row("Featured", "f-featured") {
+			<div class="py-1.5">
+				@checkbox.Checkbox(checkbox.Props{ID: "f-featured", Name: "featured", Value: "true", DefaultChecked: f.Values.Featured, Disabled: f.none()})
+			</div>
+		}
+		@row("Restock date", "") {
+			<div class="flex items-center gap-2">
+				<input type="hidden" id="f-restock" name="restock" value={ f.Values.Restock } disabled?={ f.none() }/>
+				@popover.Popover(popover.Props{ID: "restock-popover"}) {
+					@button.Button(button.Props{Variant: button.VariantOutline, Disabled: f.none(), Class: "justify-start font-normal", Attributes: popover.Trigger(ctx)}) {
+						<span data-slot="restock-label">{ f.restockLabel() }</span>
+					}
+					@popover.Content(popover.ContentProps{Class: "w-auto p-0", Align: popover.AlignStart}) {
+						@calendar.Calendar(calendar.Props{ID: "restock-calendar", Mode: calendar.ModeSingle, Selected: f.restockTime(), Attributes: templ.Attributes{"data-restock-calendar": ""}})
+					}
+				}
+				@button.Button(button.Props{Variant: button.VariantOutline, Disabled: f.none(), Attributes: templ.Attributes{"data-action": "restock-clear", "id": "restock-clear"}}) {
+					Clear
+				}
+			</div>
+			@fieldError(f, "restockDate")
+		}
+		@row("Updated", "f-updated") {
+			<span id="f-updated" class="py-1.5 text-sm" data-field="updated">{ f.updated() }</span>
+		}
+		@row("Notes", "f-notes") {
+			@textarea.Textarea(textarea.Props{ID: "f-notes", Name: "notes", Value: f.Values.Notes, Rows: 4, Disabled: f.none()})
+			@fieldError(f, "notes")
+		}
+		<div class="flex flex-wrap items-center gap-2 pt-1">
+			@button.Button(button.Props{Type: button.TypeButton, Disabled: true, Attributes: templ.Attributes{"id": "btn-save", "data-action": "save"}}) {
+				Save
+			}
+			@button.Button(button.Props{Type: button.TypeButton, Variant: button.VariantOutline, Disabled: true, Attributes: templ.Attributes{"id": "btn-revert", "data-action": "revert"}}) {
+				Revert
+			}
+			@button.Button(button.Props{Type: button.TypeButton, Variant: button.VariantOutline, Disabled: f.none(), Attributes: templ.Attributes{"id": "btn-copy", "data-action": "copy-row"}}) {
+				Copy Row
+			}
+			@button.Button(button.Props{Type: button.TypeButton, Variant: button.VariantOutline, Disabled: f.none(), Attributes: templ.Attributes{"id": "btn-import", "data-action": "import-notes"}}) {
+				Import Notes…
+			}
+			<span id="dirty-msg" class="hidden text-sm text-muted-foreground" data-slot="unsaved">Unsaved changes</span>
+		</div>
+	</form>
+}
+

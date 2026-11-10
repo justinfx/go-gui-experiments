@@ -1,0 +1,20 @@
+$ ['make', 'test']
+(rc=0, 7.12s)
+# gguix/apps/cogent.test
+ld: warning: ignoring duplicate libraries: '-lobjc'
+--- PASS: TestModelLimits (0.75s)
+--- PASS: TestT1Loads (0.26s)
+--- PASS: TestT2Sort (0.17s)
+--- PASS: TestT3Search (0.42s)
+--- PASS: TestT4Selection (0.16s)
+--- PASS: TestT5Validation (0.16s)
+--- PASS: TestT6Save (0.15s)
+--- PASS: TestT7ThemePrefs (1.05s)
+--- PASS: TestT8ExportCancel (0.41s)
+--- PASS: TestT9DirtyGuard (0.20s)
+--- PASS: TestT10CustomCells (0.13s)
+--- PASS: TestT11Cards (0.16s)
+--- PASS: TestT12Host (0.13s)
+    bench_offscreen_test.go:20: opt-in
+--- SKIP: TestBenchOffscreen (0.00s)
+GGUIX_TESTS passed=13 failed=0 not_feasible=0

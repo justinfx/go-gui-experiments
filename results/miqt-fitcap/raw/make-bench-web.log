@@ -1,0 +1,2 @@
+UNSUPPORTED: MIQT (Qt Widgets via cgo) has no web target
+make: *** [bench-web] Error 3

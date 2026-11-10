@@ -1,0 +1,4 @@
+#!/bin/sh
+# Harness shim: records what an app asks xdg-open to open (the container has no file manager).
+echo "$(date +%T) xdg-open $*" >> "${GGUIX_LOG:-/tmp}/xdg-open.log"
+exit 0

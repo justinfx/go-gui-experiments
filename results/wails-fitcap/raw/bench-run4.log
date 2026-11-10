@@ -1,0 +1,9 @@
+GGUIX_METRIC {"event":"ready","ms":599}
+GGUIX_METRIC {"event":"jump","ms":95}
+GGUIX_METRIC {"event":"scroll","max_gap_ms":183,"p95_gap_ms":82,"placeholder_steps":0,"total_ms":3215}
+GGUIX_METRIC {"event":"cards_scroll","max_gap_ms":9,"p95_gap_ms":7,"placeholder_steps":0,"switch_ms":103,"total_ms":3201}
+GGUIX_METRIC {"event":"sort","ms":284}
+GGUIX_METRIC {"event":"search","ms":111,"total":49898}
+GGUIX_METRIC {"event":"export","max_gap_ms":9,"ms":513,"p95_gap_ms":5,"rows":49898}
+2026/11/09 22:59:38 GGUIX_INFO service_page_calls=46 batch_ipc_calls=46
+GGUIX_METRIC {"event":"done"}

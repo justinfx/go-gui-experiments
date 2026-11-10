@@ -1,0 +1,5 @@
+--- a/apps/cogent/menus_desktop.go
++++ b/apps/cogent/menus_desktop.go
+@@ -45 +45 @@
+-		item(m, "Quit", "Command+Q", func() { system.TheApp.QuitReq() })
++		item(m, "Quit", "Command+Q", func() { go system.TheApp.QuitReq() })

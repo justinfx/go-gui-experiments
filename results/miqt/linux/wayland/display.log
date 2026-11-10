@@ -1,0 +1,38 @@
+Date: 2026-11-08 UTC
+[22:52:30.144] weston 13.0.0
+               https://wayland.freedesktop.org
+               Bug reports to: https://gitlab.freedesktop.org/wayland/weston/issues/
+               Build: 13.0.0
+[22:52:30.144] Command line: weston --backend=headless --renderer=pixman --socket=wl-gguix --width=1600 --height=1000
+[22:52:30.144] OS: Linux, 7.0.14-linuxkit, #1 SMP PREEMPT Fri Oct 30 13:45:20 UTC 2026, aarch64
+[22:52:30.144] Flight recorder: enabled
+[22:52:30.144] Starting with no config file.
+[22:52:30.144] Output repaint window is 7 ms maximum.
+[22:52:30.144] Loading module '/usr/lib/aarch64-linux-gnu/libweston-13/headless-backend.so'
+[22:52:30.147] Using Pixman renderer
+[22:52:30.147] Registered plugin API 'weston_windowed_output_api_v2' of size 16
+[22:52:30.147] Color manager: no-op
+[22:52:30.147] Output 'headless' attempts EOTF mode: SDR
+[22:52:30.147] Output 'headless' using color profile: stock sRGB color profile
+[22:52:30.147] Output 'headless' enabled with head(s) headless
+[22:52:30.147] Compositor capabilities:
+               arbitrary surface rotation: yes
+               screen capture uses y-flip: no
+               cursor planes: no
+               arbitrary resolutions: no
+               view mask clipping: yes
+               explicit sync: no
+               color operations: no
+               presentation clock: CLOCK_MONOTONIC_RAW, id 4
+               presentation clock resolution: 0.000000001 s
+[22:52:30.147] Loading module '/usr/lib/aarch64-linux-gnu/weston/desktop-shell.so'
+[22:52:30.147] launching '/usr/libexec/weston-keyboard'
+[22:52:30.148] launching '/usr/libexec/weston-desktop-shell'
+could not load cursor 'dnd-move'
+could not load cursor 'dnd-copy'
+could not load cursor 'dnd-none'
+could not load cursor 'dnd-move'
+could not load cursor 'dnd-copy'
+could not load cursor 'dnd-none'
+[22:52:46.307] caught signal 15
+[22:52:46.307] BUG: finalizing a layer with views still on it.

@@ -1,0 +1,49 @@
+{
+ "bench-web": {
+  "console_errors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "events": {
+   "cards_scroll": {
+    "max_gap_ms": 94.1,
+    "p95_gap_ms": 38.2,
+    "placeholder_steps": 30,
+    "switch_ms": 1008.1,
+    "total_ms": 3203.1
+   },
+   "done": {},
+   "export": {
+    "max_gap_ms": 20.2,
+    "ms": 510.9,
+    "p95_gap_ms": 2.3,
+    "rows": 49898
+   },
+   "jump": {
+    "ms": 244.1
+   },
+   "ready": {
+    "ms": 190.9
+   },
+   "scroll": {
+    "max_gap_ms": 156.7,
+    "p95_gap_ms": 112.6,
+    "placeholder_steps": 166,
+    "total_ms": 3273.6
+   },
+   "search": {
+    "ms": 176.9,
+    "total": 49898
+   },
+   "sort": {
+    "ms": 338.2
+   }
+  },
+  "initial_transfer_kb": 1346,
+  "peak_dom_nodes": 110878,
+  "peak_js_heap_mb": 12.4,
+  "server_ready_secs": 0.51,
+  "timed_out": false,
+  "url": "http://localhost:8097/?bench=1",
+  "wall_ms": 9779
+ }
+}

@@ -1,0 +1,2 @@
+Done in 84ms
+CGO_ENABLED=0 go build -o bin/gguix-gotth ./cmd/desktop

@@ -1,0 +1,18 @@
+mkdir -p bin/_b
+/root/go/bin/core build -o bin/_b/gguix-cogent
+# cogentcore.org/core/system/driver/desktop
+dnd_linux.c: In function ‘eventLoop’:
+dnd_linux.c:595:25: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  595 |                         read(wakeFds[0], b, sizeof(b));
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+dnd_linux.c: In function ‘postCmd’:
+dnd_linux.c:100:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  100 |         write(wakeFds[1], "x", 1);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+core build succeeded
+mv bin/_b/gguix-cogent/gguix-cogent bin/gguix-cogent
+rmdir bin/_b/gguix-cogent bin/_b
+total 27320
+drwxr-xr-x 2 root root     4096 Nov  8 22:08 .
+drwxr-xr-x 4 root root     4096 Nov  8 22:08 ..
+-rwxr-xr-x 1 root root 27964288 Nov  8 22:08 gguix-cogent

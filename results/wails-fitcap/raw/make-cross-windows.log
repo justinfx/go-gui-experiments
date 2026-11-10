@@ -1,0 +1,163 @@
+$ ['make', 'cross-windows']
+(rc=0, 8.23s)
+wails3 task setup:docker
+[92m[0m
+[92mNeed documentation? Run: [0m[94m]8;;https://v3.wails.io/getting-started/your-first-app/\[4mwails3 docs[0m[94m]8;;\[0m
+[31;107m[31;107m ♥  [0m[0m [92m[92mIf Wails is useful to you or your company, please consider sponsoring the project: [94m]8;;https://github.com/sponsors/leaanthony\[4mwails3 sponsor[0m[92m[94m]8;;\[0m[92m[0m[0m
+wails3 task build GOOS=windows ARCH=amd64
+Wails v3.1.0 › Generate Bindings
+
+up to date, audited 155 packages in 478ms
+
+36 packages are looking for funding
+  run `npm fund` for details
+
+2 low severity vulnerabilities
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+[30;46m[30;46m INFO [0m[0m [96m[96mProcessed: 246 Packages, 2 Services, 33 Methods, 0 Enums, 30 Models, 6 Events in 565.562042ms.[0m[0m
+[30;46m[30;46m INFO [0m[0m [96m[96mOutput directory: apps/wails-fitcap/frontend/bindings[0m[0m
+
+> frontend@0.0.0 build
+> vite build --mode production
+
+vite v8.3.6 building client environment for production...
+transforming...
+✓ 1039 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                              0.49 kB │ gzip:   0.31 kB
+dist/assets/inter-vietnamese-wght-normal-CBcvBZtf.woff2     10.25 kB
+dist/assets/inter-greek-ext-wght-normal-DlzME5K_.woff2      11.23 kB
+dist/assets/inter-cyrillic-wght-normal-DqGufNeO.woff2       18.74 kB
+dist/assets/inter-greek-wght-normal-CkhJZR-_.woff2          18.99 kB
+dist/assets/inter-cyrillic-ext-wght-normal-BOeWTOD4.woff2   25.96 kB
+dist/assets/inter-latin-wght-normal-Dx4kXJAl.woff2          48.25 kB
+dist/assets/inter-latin-ext-wght-normal-DO1Apj_S.woff2      85.06 kB
+dist/assets/index-DUdOxNiA.css                              72.09 kB │ gzip:  13.44 kB
+dist/assets/index-O7Im8kAD.js                              577.34 kB │ gzip: 167.03 kB
+
+✓ built in 1.23s
+[92m[0m
+[92mNeed documentation? Run: [0m[94m]8;;https://v3.wails.io/getting-started/your-first-app/\[4mwails3 docs[0m[94m]8;;\[0m
+[31;107m[31;107m ♥  [0m[0m [92m[92mIf Wails is useful to you or your company, please consider sponsoring the project: [94m]8;;https://github.com/sponsors/leaanthony\[4mwails3 sponsor[0m[92m[94m]8;;\[0m[92m[0m[0m
+task: [common:setup:docker] docker build -t wails-cross -f build/docker/Dockerfile.cross build/docker/
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.cross
+#1 transferring dockerfile: 6.78kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/golang:1.27-trixie
+#2 ...
+
+#3 [auth] library/golang:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/golang:1.27-trixie
+#2 DONE 1.3s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [internal] preparing inline document
+#5 DONE 0.0s
+
+#6 [internal] preparing inline document
+#6 DONE 0.0s
+
+#7 [internal] preparing inline document
+#7 DONE 0.0s
+
+#8 [internal] preparing inline document
+#8 DONE 0.0s
+
+#9 [internal] preparing inline document
+#9 DONE 0.0s
+
+#10 [ 1/16] FROM docker.io/library/golang:1.27-trixie@sha256:af1bfc2614ebb1dbd31af514b78740fd678850e76498762b425ecee4c5c6ea80
+#10 resolve docker.io/library/golang:1.27-trixie@sha256:af1bfc2614ebb1dbd31af514b78740fd678850e76498762b425ecee4c5c6ea80 done
+#10 DONE 0.0s
+
+#11 [12/16] COPY <<ZIGWRAP /usr/local/bin/zcc-windows-arm64
+#11 CACHED
+
+#12 [ 2/16] RUN apt-get update && apt-get install -y --no-install-recommends     curl xz-utils python3 nodejs npm pkg-config gcc libc6-dev     libgtk-3-dev libwebkit2gtk-4.1-dev     libgtk-4-dev libwebkitgtk-6.0-dev libx11-dev     && pkg-config --atleast-version=4.14 gtk4     && pkg-config --exists webkitgtk-6.0     && pkg-config --exists gtk+-3.0     && pkg-config --exists webkit2gtk-4.1     && rm -rf /var/lib/apt/lists/*
+#12 CACHED
+
+#13 [ 3/16] RUN go install mvdan.cc/garble@v0.16.0
+#13 CACHED
+
+#14 [10/16] COPY <<ZIGWRAP /usr/local/bin/zcc-windows-amd64
+#14 CACHED
+
+#15 [ 8/16] COPY <<ZIGWRAP /usr/local/bin/zcc-darwin-amd64
+#15 CACHED
+
+#16 [15/16] RUN chmod +x /usr/local/bin/build.sh
+#16 CACHED
+
+#17 [11/16] RUN chmod +x /usr/local/bin/zcc-windows-amd64
+#17 CACHED
+
+#18 [ 7/16] RUN chmod +x /usr/local/bin/zcc-darwin-arm64
+#18 CACHED
+
+#19 [ 6/16] COPY <<ZIGWRAP /usr/local/bin/zcc-darwin-arm64
+#19 CACHED
+
+#20 [ 5/16] RUN curl -L "https://github.com/joseluisq/macosx-sdks/releases/download/14.5/MacOSX14.5.sdk.tar.xz"     | tar -xJ -C /opt     && mv /opt/MacOSX14.5.sdk /opt/macos-sdk
+#20 CACHED
+
+#21 [ 4/16] RUN ZIG_ARCH=$(case "arm64" in arm64) echo "aarch64" ;; *) echo "x86_64" ;; esac) &&     ZIG_FILE="zig-linux-${ZIG_ARCH}-0.14.0.tar.xz" &&     curl -fSL "https://ziglang.org/download/0.14.0/${ZIG_FILE}" -o "/tmp/${ZIG_FILE}" &&     EXPECTED=$(curl -fsSL "https://ziglang.org/download/index.json" |         python3 -c "import json,sys; d=json.load(sys.stdin); print(d[sys.argv[1]][sys.argv[2]+'-linux']['shasum'])"         "0.14.0" "${ZIG_ARCH}") &&     echo "${EXPECTED}  /tmp/${ZIG_FILE}" | sha256sum -c - &&     tar -xJ -f "/tmp/${ZIG_FILE}" -C /opt &&     rm "/tmp/${ZIG_FILE}" &&     ln -s /opt/zig-linux-${ZIG_ARCH}-0.14.0/zig /usr/local/bin/zig
+#21 CACHED
+
+#22 [14/16] COPY <<SCRIPT /usr/local/bin/build.sh
+#22 CACHED
+
+#23 [13/16] RUN chmod +x /usr/local/bin/zcc-windows-arm64
+#23 CACHED
+
+#24 [ 9/16] RUN chmod +x /usr/local/bin/zcc-darwin-amd64
+#24 CACHED
+
+#25 [16/16] WORKDIR /app
+#25 CACHED
+
+#26 exporting to image
+#26 exporting layers done
+#26 exporting manifest sha256:81c3f7fd098c419ca854721d863879abdf90f4bab0ea84f9c0918c8b251efbfb done
+#26 exporting config sha256:9e915082fb490f2b19436d85eb07593523550231ef1b045824586dc1e54fd8d6 done
+#26 exporting attestation manifest sha256:326a2c8df096f2c1a1e71b36d6d365fa50b8945234ea5f7c0adf76c664f31474 done
+#26 exporting manifest list sha256:009a2e7867083eab0e300882417d9d5d79c946aa1556701cf0581dcb8f071ea5 done
+#26 naming to docker.io/library/wails-cross:latest done
+#26 unpacking to docker.io/library/wails-cross:latest done
+#26 DONE 0.0s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/ikla3k61rx88hzsqy5e2xb4gg
+task: [windows:common:go:mod:tidy] go mod tidy
+task: Task "windows:common:generate:icons" is up to date
+task: [windows:common:install:frontend:deps:npm] npm install
+npm warn Unknown project config "minimum-release-age". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+task: [windows:common:generate:bindings] wails3 generate bindings -f '-tags production -trimpath -buildvcs=false -ldflags="-w -s -H windowsgui"' -clean=true -ts -i
+npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+npm warn install-scripts   fsevents@2.3.3 (install: (install scripts present))
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+task: [windows:common:frontend:run:npm] npm run build -q
+npm warn Unknown project config "minimum-release-age". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - `__dirname` (vite.config.ts:15:33). Use `import.meta.dirname` instead
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+task: [windows:generate:syso] wails3 generate syso -arch amd64 -icon windows/icon.ico -manifest windows/wails.exe.manifest -info windows/info.json -out ../wails_windows_amd64.syso
+task: [windows:build:native] go build -tags production -trimpath -buildvcs=false -ldflags="-w -s -H windowsgui" -o "bin/gguix-wails.exe"
+task: [windows:build:native] rm -f *.syso

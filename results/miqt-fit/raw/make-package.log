@@ -1,0 +1,41 @@
+$ ['make', 'package']
+(rc=0, 17.66s)
+go build -trimpath -ldflags '-s -w' -o bin/gguix-miqt .
+mkdir -p bin/GGUIX-miqt.app/Contents/MacOS
+cp bin/gguix-miqt bin/GGUIX-miqt.app/Contents/MacOS/gguix-miqt
+cp desktop/Info.plist bin/GGUIX-miqt.app/Contents/Info.plist
+size before macdeployqt:  30M
+/opt/homebrew/opt/qt/bin/macdeployqt bin/GGUIX-miqt.app
+size after macdeployqt: 111M
+ERROR: Cannot resolve rpath "@rpath/QtPdf.framework/Versions/A/QtPdf"
+ERROR:  using QList("/opt/homebrew/opt/qtbase/lib", "/opt/homebrew/opt/md4c/lib", "/opt/homebrew/opt/zstd/lib", "/opt/homebrew/Cellar/dbus/1.16.2_1/lib", "/opt/homebrew/opt/graphite2/lib", "/opt/homebrew/opt/brotli/lib", "apps/miqt-fit/bin/lib")
+ERROR: Cannot resolve rpath "@rpath/QtSvg.framework/Versions/A/QtSvg"
+ERROR:  using QList("/opt/homebrew/opt/qtbase/lib", "/opt/homebrew/opt/md4c/lib", "/opt/homebrew/opt/zstd/lib", "/opt/homebrew/Cellar/dbus/1.16.2_1/lib", "/opt/homebrew/opt/graphite2/lib", "/opt/homebrew/opt/brotli/lib", "apps/miqt-fit/bin/lib")
+ERROR: Cannot resolve rpath "@rpath/QtVirtualKeyboardQml.framework/Versions/A/QtVirtualKeyboardQml"
+ERROR:  using QList("/opt/homebrew/opt/qtbase/lib", "/opt/homebrew/opt/md4c/lib", "/opt/homebrew/opt/zstd/lib", "/opt/homebrew/Cellar/dbus/1.16.2_1/lib", "/opt/homebrew/opt/graphite2/lib", "/opt/homebrew/opt/brotli/lib", "apps/miqt-fit/bin/lib")
+ERROR: Cannot resolve rpath "@rpath/QtVirtualKeyboard.framework/Versions/A/QtVirtualKeyboard"
+ERROR:  using QList("/opt/homebrew/opt/qtbase/lib", "/opt/homebrew/opt/md4c/lib", "/opt/homebrew/opt/zstd/lib", "/opt/homebrew/Cellar/dbus/1.16.2_1/lib", "/opt/homebrew/opt/graphite2/lib", "/opt/homebrew/opt/brotli/lib", "apps/miqt-fit/bin/lib")
+ERROR: Cannot resolve rpath "@rpath/libbrotlicommon.1.dylib"
+ERROR:  using QList("apps/miqt-fit/bin/GGUIX-miqt.app/Contents/lib")
+ERROR: Cannot resolve rpath "@rpath/QtPdf.framework/Versions/A/QtPdf"
+ERROR:  using QList("apps/miqt-fit/bin/lib")
+ERROR: Cannot resolve rpath "@rpath/libsharpyuv.0.dylib"
+ERROR:  using QList("apps/miqt-fit/bin/GGUIX-miqt.app/Contents/lib")
+ERROR: Cannot resolve rpath "@rpath/libwebp.7.dylib"
+ERROR:  using QList("apps/miqt-fit/bin/GGUIX-miqt.app/Contents/lib")
+ERROR: Cannot resolve rpath "@rpath/libsharpyuv.0.dylib"
+ERROR:  using QList("apps/miqt-fit/bin/GGUIX-miqt.app/Contents/lib")
+ERROR: Cannot resolve rpath "@rpath/libwebp.7.dylib"
+ERROR:  using QList("apps/miqt-fit/bin/GGUIX-miqt.app/Contents/lib")
+ERROR: Cannot resolve rpath "@rpath/libsharpyuv.0.dylib"
+ERROR:  using QList("apps/miqt-fit/bin/GGUIX-miqt.app/Contents/lib")
+ERROR: Cannot resolve rpath "@rpath/QtSvg.framework/Versions/A/QtSvg"
+ERROR:  using QList("apps/miqt-fit/bin/lib")
+ERROR: Cannot resolve rpath "@rpath/QtVirtualKeyboardQml.framework/Versions/A/QtVirtualKeyboardQml"
+ERROR:  using QList("apps/miqt-fit/bin/lib")
+ERROR: Cannot resolve rpath "@rpath/QtVirtualKeyboard.framework/Versions/A/QtVirtualKeyboard"
+ERROR:  using QList("apps/miqt-fit/bin/lib")
+ERROR: Cannot resolve rpath "@rpath/QtVirtualKeyboardQml.framework/Versions/A/QtVirtualKeyboardQml"
+ERROR:  using QList("apps/miqt-fit/bin/lib")
+ERROR: Cannot resolve rpath "@rpath/QtVirtualKeyboard.framework/Versions/A/QtVirtualKeyboard"
+ERROR:  using QList("apps/miqt-fit/bin/lib")

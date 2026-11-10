@@ -1,0 +1,5 @@
+--- a/apps/miqt/ui_desktop.go
++++ b/apps/miqt/ui_desktop.go
+@@ -351 +351 @@
+-	a.tray.ShowMessage3(title, body, nil, 5000)
++	a.tray.ShowMessage3(title, body, qt.NewQIcon(), 5000)

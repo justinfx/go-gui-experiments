@@ -1,0 +1,6 @@
+$ ['make', 'cgoprobe']
+(rc=0, 3.94s)
+CGOPROBE desktop PASS
+CGOPROBE web FAIL ../../core/checksum_nocgo.go:8:9: undefined: cgoprobe_requires_cgo_but_cgo_is_unavailable_for_this_target
+CGOPROBE web-remote-client PASS
+CGOPROBE web-remote-server PASS
