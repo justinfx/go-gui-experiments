@@ -74,8 +74,8 @@ Unchanged: wails 4 (34 checks incl. Playwright; 34/34 on Linux with Chromium), f
 
 ### 9 Performance with large data (desktop, macOS medians)
 - cogent 5: jump 60 ms, scroll p95 4 ms/max 19 ms, cards switch 111 ms, sort 262 ms. All instant or responsive, no stutter.
-- wails 5 (was 4): jump 87 ms, scroll max 22 ms, cards switch 190 ms, sort 285 ms. Same bands as cogent; the 901 MB peak memory is not user-visible on a normal machine.
-- fyne 4 (was 3): jump 138 ms, scroll max 42 ms, cards switch 104 ms, sort 281 ms, no placeholders. Responsive and smooth; 1.4 GB peak memory is the one real cost.
+- wails 5: superseded numbers removed. Final: scroll max 91 ms after the harness pacing fix, restored to 5 by the hands-on check. See "Clean re-run re-check" and "Hands-on calibration" below.
+- fyne 5: superseded numbers removed. Final: jump 146 ms, scroll max 40 ms, no placeholders. See "Clean re-run re-check" below.
 - gotth 3 (was 2): no visible stutter (scroll max 86 ms, cards max 76 ms), jump 231 ms, but 155 placeholder steps while scrolling and a cards switch of 978 ms, right at the edge of a noticeable wait.
 - miqt 2: scroll max 254 ms and cards max 436 ms are visible stutter, jump 652 ms, cards switch 908 ms. This is our adapter, not Qt: the same toolkit with a different data layer (miqt-fitcap) has scroll max 16 ms (see variants). Kept at 2 because it is the shipped base app.
 
