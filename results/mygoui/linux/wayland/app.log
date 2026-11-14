@@ -1,0 +1,35 @@
+
+(gguix-mygoui:5999): Gdk-CRITICAL **: 00:32:25.270: gdk_seat_get_keyboard: assertion 'GDK_IS_SEAT (seat)' failed
+2026/11/14 00:32:25 mygo: native UI draws without the GPU: there is none
+
+(gguix-mygoui:5999): Gdk-CRITICAL **: 00:32:25.345: gdk_seat_get_keyboard: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygoui:5999): Gdk-CRITICAL **: 00:32:25.345: gdk_seat_get_keyboard: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygoui:5999): Gdk-CRITICAL **: 00:32:25.357: gdk_seat_get_pointer: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygoui:5999): Gdk-CRITICAL **: 00:32:25.357: gdk_device_get_position_double: assertion 'GDK_IS_DEVICE (device)' failed
+
+(gguix-mygoui:5999): Gdk-CRITICAL **: 00:32:25.374: gdk_seat_get_pointer: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygoui:5999): Gdk-CRITICAL **: 00:32:25.374: gdk_device_get_position_double: assertion 'GDK_IS_DEVICE (device)' failed
+
+(gguix-mygoui:5999): Gdk-CRITICAL **: 00:32:25.374: gdk_seat_get_pointer: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygoui:5999): Gdk-CRITICAL **: 00:32:25.374: gdk_device_get_position_double: assertion 'GDK_IS_DEVICE (device)' failed
+
+(gguix-mygoui:5999): Gdk-CRITICAL **: 00:32:25.375: gdk_seat_get_pointer: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygoui:5999): Gdk-CRITICAL **: 00:32:25.375: gdk_device_get_position_double: assertion 'GDK_IS_DEVICE (device)' failed
+
+(gguix-mygoui:5999): Gdk-CRITICAL **: 00:32:25.377: gdk_seat_get_keyboard: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygoui:5999): Gdk-CRITICAL **: 00:32:25.377: gdk_seat_get_keyboard: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygoui:5999): Gdk-CRITICAL **: 00:32:25.377: gdk_seat_get_keyboard: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygoui:5999): Gdk-CRITICAL **: 00:32:25.377: gdk_seat_get_keyboard: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygoui:5999): Gdk-CRITICAL **: 00:32:25.377: gdk_seat_get_keyboard: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygoui:5999): Gdk-CRITICAL **: 00:32:25.377: gdk_seat_get_keyboard: assertion 'GDK_IS_SEAT (seat)' failed

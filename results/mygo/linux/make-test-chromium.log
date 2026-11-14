@@ -1,0 +1,30 @@
+--- PASS: TestHostInfoDesktop (0.00s)
+--- PASS: TestNotesTooLarge (0.00s)
+--- PASS: TestPrefsRoundTripAndWindowSize (0.00s)
+--- PASS: TestFindRow (0.00s)
+--- PASS: TestExportStreamWriter (0.00s)
+--- PASS: TestWriteOracle (0.00s)
+ok  	gguix/apps/mygo	0.339s
+cd frontend && npx vitest run --reporter=json --outputFile=../bin/test-vitest.json >/dev/null 2>&1 || true
+cd frontend && npx playwright test || true
+npm warn Unknown project config "minimum-release-age". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+Running 14 tests using 1 worker
+
+  ✓   1 e2e/gguix.spec.ts:18:1 › T1 app starts and loads (207ms)
+  ✓   2 e2e/gguix.spec.ts:25:1 › T2 sort by name (229ms)
+  ✓   3 e2e/gguix.spec.ts:31:1 › T3 search updates the count (479ms)
+  ✓   4 e2e/gguix.spec.ts:36:1 › T4 selection fills the form (236ms)
+  ✓   5 e2e/gguix.spec.ts:53:1 › T5 validation blocks save (326ms)
+  ✓   6 e2e/gguix.spec.ts:62:1 › T6 save updates the row (290ms)
+  ✓   7 e2e/gguix.spec.ts:70:1 › T7 theme and prefs (1.3s)
+  ✓   8 e2e/gguix.spec.ts:77:1 › T8 export cancel (877ms)
+  ✓   9 e2e/gguix.spec.ts:89:1 › T9 dirty guard (481ms)
+  ✓  10 e2e/gguix.spec.ts:100:3 › T10 custom cells (light) (267ms)
+  ✓  11 e2e/gguix.spec.ts:100:3 › T10 custom cells (dark) (245ms)
+  ✓  12 e2e/gguix.spec.ts:122:1 › T11 cards view (248ms)
+  ✓  13 e2e/gguix.spec.ts:133:1 › T12 host info (287ms)
+  ✓  14 e2e/gguix.spec.ts:142:1 › T13 split divider drags (352ms)
+
+  14 passed (6.6s)
+GGUIX_TESTS passed=34 failed=0 not_feasible=0

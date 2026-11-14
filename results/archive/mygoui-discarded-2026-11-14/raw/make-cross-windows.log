@@ -1,0 +1,16 @@
+$ ['make', 'cross-windows']
+(rc=0, 3.19s)
+go tool mygo build -skip-dmg -platform windows/amd64
+
+  MyGo!!!!! v0.9.0  build
+
+  ○ Compiling windows/amd64
+  ✓ Compiled windows/amd64  2.8s
+  ▲ Skipping the Windows installer: install NSIS (makensis), or build with -skip-installer
+  • Copied 1 resources next to the executable
+
+  ✓ Built GGUIX-mygoui 0.1.0 in 3.0s
+
+    build/windows-amd64/
+      GGUIX-mygoui.exe    11.4 MB
+

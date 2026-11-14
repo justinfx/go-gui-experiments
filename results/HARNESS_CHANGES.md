@@ -77,3 +77,13 @@ Every change made for the harness audit, with the files touched and the audit it
 ## D3. Core change (harness, not app)
 
 `core/metrics_js.go`, `core/metrics_native.go` (new) and the `ready` line in `core/bench/bench.go` (B3) are bench timing only. No change to data, latency, the pager or any other core behaviour. They count as a harness change, not an app change.
+
+## E. Addenda
+
+**E1. MyGo** (`bench/measure.py`, 2026-11-14): id prefix `mygo` gets the Wails treatment where the structure is the same: the shadcn-svelte vendor dir is excluded from LOC, `frontend/src/lib/marker.ts` is timed as the UI marker, and before the plain `go build` the generated client and `frontend/dist` are produced untimed (`mygo generate`, then `npm run build`). Web measurement is skipped, since MyGo has no browser or server target.
+
+**E2. MyGo native UI** (id `mygoui`, `bench/measure.py`): measured like the Fyne and Cogent apps (Go marker only; web from `bin/web`), and like them it also gets the `web-remote` web target.
+
+**E3. Browser frame probe** (`bench/web.mjs`, new `bench/web_frames.py`, 2026-11-14): MyGo's browser build reported a 0.2 ms worst scroll gap from the in-app probe, shorter than one frame, so that probe does not see its drawing. `web.mjs` now also records `requestAnimationFrame` timestamps and stamps every `GGUIX_METRIC` line with `performance.now()`, and reports `browser_frames` (frame count, max and p95 gap) for the `scroll` and `cards_scroll` windows. `web_frames.py` runs only this, for the Go WASM apps (mygoui, fyne, cogent; `bench-web` and `web-remote`), and writes `results/<id>/web_frames.json`; `metrics.json` and the article's published web numbers are untouched. Single run, Chrome, DPR 2, like the article's web runs.
+
+**E4. Custom-rendering line counts** (`results/mygo/loc_args.json`, `results/mygoui/loc_args.json`): added so `tools/loc` counts these apps' custom-rendering files like the others (mygo: the same four Svelte files as Wails; mygoui: `cells.go`). mygoui's card layout is inside `view.go` (`card`, about 38 lines) and is not in the count. Only the `loc` step was re-run.

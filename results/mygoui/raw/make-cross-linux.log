@@ -1,0 +1,24 @@
+$ ['make', 'cross-linux']
+(rc=0, 4.17s)
+go tool mygo build -skip-dmg -platform linux/amd64
+
+  MyGo!!!!! v0.9.0  build
+
+  ○ Compiling linux/amd64
+  ✓ Compiled linux/amd64  391ms
+  • Copied 1 resources next to the executable
+
+  ✓ Built GGUIX-mygoui 0.1.0 in 4.0s
+
+    build/linux-amd64/
+      gguix-mygoui                             10.6 MB
+      gguix-mygoui.png                           86 KB
+      gguix-mygoui.desktop                        1 KB
+      gguix-mygoui_0.1.0_amd64.deb              4.7 MB
+      gguix-mygoui-0.1.0-1.x86_64.rpm           4.7 MB
+      gguix-mygoui-0.1.0-linux-amd64.tar.gz     4.7 MB
+      gguix-mygoui-256x256.png                   15 KB
+      gguix-mygoui-512x512.png                   33 KB
+      PKGBUILD                                    2 KB
+      install.sh                                  8 KB
+

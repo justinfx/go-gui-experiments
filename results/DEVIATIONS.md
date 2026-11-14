@@ -105,3 +105,12 @@ GoTTH: inconclusive, not used. Every GoTTH session in both engines logged "searc
 ## Screenshot identity override (2026-11-10)
 
 `core/host/native.go` reads `GGUIX_SHOT_IDENTITY=user@host` and, when set, shows that instead of the real username and hostname. Used only for the article screenshots (`demo@workstation`), so they don't show the author's machine. Unset, behavior is unchanged; no timing or function result depends on it. The five desktop binaries were rebuilt with `make build` after the change.
+
+## MyGo addendum: discarded first runs (2026-11-14)
+
+The first harness runs of `mygo` and `mygoui` were discarded and kept in `results/archive/mygo-discarded-2026-11-14/` and `results/archive/mygoui-discarded-2026-11-14/`. Do not cite them.
+
+- `mygo`: the bench recorded no events. `bin/gguix-mygo` was a copy of the bundled executable, and a web-frontend MyGo app on macOS opens no window outside its `.app` bundle. Fixed in the Makefile (symlink into the bundle, see `results/mygo/fixpass.md`). No app code changed.
+- `mygoui`: the run itself completed, but while its cold-build, sizes and idle-memory steps ran, the evaluator was launching `gguix-mygo` by hand to debug the issue above. Those steps may be skewed, so the whole run was repeated rather than patched.
+
+Both apps were then measured in full, one after the other, with nothing else running.

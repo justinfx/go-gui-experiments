@@ -1,0 +1,8 @@
+GGUIX_METRIC {"event":"ready","ms":647}
+GGUIX_METRIC {"event":"jump","ms":86}
+GGUIX_METRIC {"event":"scroll","max_gap_ms":71,"p95_gap_ms":50,"placeholder_steps":54,"total_ms":3215}
+GGUIX_METRIC {"event":"cards_scroll","max_gap_ms":8,"p95_gap_ms":6,"placeholder_steps":0,"switch_ms":189,"total_ms":3204}
+GGUIX_METRIC {"event":"sort","ms":280}
+GGUIX_METRIC {"event":"search","ms":98,"total":49898}
+GGUIX_METRIC {"event":"export","max_gap_ms":6,"ms":511,"p95_gap_ms":5,"rows":49898}
+GGUIX_METRIC {"event":"done"}

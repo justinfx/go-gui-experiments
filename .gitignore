@@ -28,3 +28,6 @@ node_modules/
 # Stray build outputs at app roots
 /apps/*/miqt.exe
 /apps/wails*/wails
+/apps/mygo*/mygo
+/apps/mygo*/mygoui
+__pycache__/

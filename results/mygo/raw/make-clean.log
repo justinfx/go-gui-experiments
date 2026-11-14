@@ -1,0 +1,4 @@
+$ ['make', 'clean']
+(rc=0, 0.02s)
+rm -rf bin build frontend/dist .mygo
+rm -f frontend/e2e/results.json frontend/e2e/oracle.json

@@ -1,0 +1,47 @@
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.037: gdk_seat_get_keyboard: assertion 'GDK_IS_SEAT (seat)' failed
+Overriding existing handler for signal 10. Set JSC_SIGNAL_FOR_GC if you want WebKit to use a different signal
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.129: gdk_seat_get_keyboard: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.130: gdk_seat_get_pointer: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.130: gdk_device_get_position_double: assertion 'GDK_IS_DEVICE (device)' failed
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.130: gdk_seat_get_pointer: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.130: gdk_device_get_position_double: assertion 'GDK_IS_DEVICE (device)' failed
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.169: gdk_seat_get_pointer: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.170: gdk_device_get_position_double: assertion 'GDK_IS_DEVICE (device)' failed
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.170: gdk_seat_get_pointer: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.170: gdk_device_get_position_double: assertion 'GDK_IS_DEVICE (device)' failed
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.177: gdk_seat_get_pointer: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.177: gdk_device_get_position_double: assertion 'GDK_IS_DEVICE (device)' failed
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.177: gdk_seat_get_pointer: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.177: gdk_device_get_position_double: assertion 'GDK_IS_DEVICE (device)' failed
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.178: gdk_seat_get_keyboard: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.178: gdk_seat_get_keyboard: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.183: gdk_seat_get_keyboard: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.183: gdk_seat_get_keyboard: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.183: gdk_seat_get_keyboard: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.183: gdk_seat_get_keyboard: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.183: gdk_seat_get_keyboard: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.183: gdk_seat_get_keyboard: assertion 'GDK_IS_SEAT (seat)' failed
+
+(gguix-mygo:7309): Gdk-CRITICAL **: 00:36:32.184: gdk_seat_get_keyboard: assertion 'GDK_IS_SEAT (seat)' failed

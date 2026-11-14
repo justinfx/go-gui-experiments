@@ -32,6 +32,7 @@ WEBKIT = "com.apple.WebKit"
 
 VENDOR = {  # library sources copied into apps by component CLIs (excluded from LOC, reported separately)
     "wails": "frontend/src/lib/components/ui/**",
+    "mygo": "frontend/src/lib/components/ui/**",
     "gotth": "components/**,static/js/**",
 }
 
@@ -276,6 +277,8 @@ class Measure:
         gen = None
         if self.base == "wails":
             gen = "wails3 task common:build:frontend"
+        elif self.base == "mygo":
+            gen = "frontend/node_modules/.bin/mygo generate && cd frontend && npm run build"
         elif self.base == "gotth" or self.id == "miqt-gotth":
             gen = "make gen"
         rec = {}
@@ -304,7 +307,7 @@ class Measure:
     def incremental(self):
         inc = {}
         markers = [(self.app / "marker.go", "BuildMarker")]
-        if self.base == "wails":
+        if self.base in ("wails", "mygo"):
             markers.append((self.app / "frontend/src/lib/marker.ts", "UIMarker"))
         if self.base == "gotth" or self.id == "miqt-gotth":
             markers.append((self.app / "views/marker.templ", "UIMarker"))
@@ -453,7 +456,7 @@ class Measure:
 
     def web(self):
         w = {}
-        targets = ["bench-web"] + (["web-remote"] if self.base in ("fyne", "cogent") else [])
+        targets = ["bench-web"] + (["web-remote"] if self.base in ("fyne", "cogent", "mygoui") else [])
         for t in targets:
             busy = listeners(WEBPORT)
             if busy:
@@ -528,7 +531,7 @@ def main():
     if a.skip_cross:
         steps = [s for s in steps if s != "cross"]
     # miqt-gotth has a web target (the GoTTH server); the other MIQT apps do not (audit B8).
-    if a.skip_web or (a.id.split("-")[0] == "miqt" and a.id != "miqt-gotth"):
+    if a.skip_web or (a.id.split("-")[0] == "miqt" and a.id != "miqt-gotth") or a.id.split("-")[0] == "mygo":
         steps = [s for s in steps if s != "web"]
     m.provenance()
     for s in steps:

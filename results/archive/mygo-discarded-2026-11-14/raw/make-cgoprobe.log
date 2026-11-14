@@ -1,0 +1,4 @@
+$ ['make', 'cgoprobe']
+(rc=0, 6.26s)
+CGOPROBE desktop PASS builds with CGO_ENABLED=1 and the export code runs with the C checksum
+CGOPROBE web UNSUPPORTED no web target

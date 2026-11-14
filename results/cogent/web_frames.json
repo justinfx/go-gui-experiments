@@ -1,0 +1,42 @@
+{
+ "bench-web": {
+  "browser_frames": {
+   "scroll": {
+    "frames": 48,
+    "window_ms": 3245.2,
+    "max_gap_ms": 317.3,
+    "p95_gap_ms": 266.6
+   },
+   "cards_scroll": {
+    "frames": 123,
+    "window_ms": 3206.3,
+    "max_gap_ms": 716.7,
+    "p95_gap_ms": 33.4
+   }
+  },
+  "timed_out": false,
+  "chrome_version": "157.0.8103.51",
+  "dpr": 2,
+  "console_errors": []
+ },
+ "web-remote": {
+  "browser_frames": {
+   "scroll": {
+    "frames": 64,
+    "window_ms": 3255.9,
+    "max_gap_ms": 200,
+    "p95_gap_ms": 166.6
+   },
+   "cards_scroll": {
+    "frames": 143,
+    "window_ms": 3223.3,
+    "max_gap_ms": 266.7,
+    "p95_gap_ms": 50
+   }
+  },
+  "timed_out": false,
+  "chrome_version": "157.0.8103.51",
+  "dpr": 2,
+  "console_errors": []
+ }
+}

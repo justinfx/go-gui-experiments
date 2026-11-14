@@ -1,0 +1,483 @@
+{
+  "app": "mygo",
+  "artifacts": {
+    "bench": {
+      "binary": {
+        "mtime": "2026-11-13T23:41:57.929270+00:00",
+        "path": "apps/mygo/bin/gguix-mygo",
+        "sha256": "a416350c0d7ef379ab90df308cfc555bb37d7bfbd50872ad519f9b0e02a3fcba",
+        "size": 10901696
+      },
+      "build": {
+        "rc": 0,
+        "secs": 3.71
+      }
+    },
+    "cold_build": {
+      "binary": {
+        "mtime": "2026-11-13T23:41:32.331546+00:00",
+        "path": "apps/mygo/bin/gguix-mygo",
+        "sha256": "a416350c0d7ef379ab90df308cfc555bb37d7bfbd50872ad519f9b0e02a3fcba",
+        "size": 10901696
+      }
+    },
+    "idle_rss": {
+      "binary": {
+        "mtime": "2026-11-13T23:41:47.028893+00:00",
+        "path": "apps/mygo/bin/gguix-mygo",
+        "sha256": "a416350c0d7ef379ab90df308cfc555bb37d7bfbd50872ad519f9b0e02a3fcba",
+        "size": 10901696
+      }
+    },
+    "incremental": {
+      "binary": {
+        "mtime": "2026-11-13T23:41:43.379407+00:00",
+        "path": "apps/mygo/bin/gguix-mygo",
+        "sha256": "a416350c0d7ef379ab90df308cfc555bb37d7bfbd50872ad519f9b0e02a3fcba",
+        "size": 10901696
+      }
+    },
+    "sizes": {
+      "app_bundle": {
+        "files": 6,
+        "mtime": "2026-11-13T23:41:47.052781+00:00",
+        "path": "apps/mygo/bin/GGUIX-mygo.app",
+        "size_kb": 10780,
+        "tree_sha256": "a6eac3ec01d2ea250d1790bedd4da797daa2b6b97cebe6a420c672517c79fe14"
+      },
+      "binary": {
+        "mtime": "2026-11-13T23:41:43.379407+00:00",
+        "path": "apps/mygo/bin/gguix-mygo",
+        "sha256": "a416350c0d7ef379ab90df308cfc555bb37d7bfbd50872ad519f9b0e02a3fcba",
+        "size": 10901696
+      }
+    }
+  },
+  "bench": {
+    "errors": [],
+    "events_seen": [
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ]
+    ],
+    "launch": "bin/gguix-mygo (direct, after one make build)",
+    "memory": {
+      "peak_process_tree_mb": {
+        "max": 177.9,
+        "median": 177.9
+      },
+      "peak_total_mb": {
+        "max": 663.6,
+        "median": 640.7
+      },
+      "peak_webkit_mb": {
+        "max": 486.3,
+        "median": 462.8
+      }
+    },
+    "runs": 5,
+    "summary": {
+      "cards_scroll": {
+        "max_gap_ms": {
+          "max": 17,
+          "median": 9,
+          "min": 8,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 7,
+          "median": 7,
+          "min": 6,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "switch_ms": {
+          "max": 192,
+          "median": 191,
+          "min": 189,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3204,
+          "median": 3203,
+          "min": 3201,
+          "n": 5
+        }
+      },
+      "export": {
+        "max_gap_ms": {
+          "max": 6,
+          "median": 6,
+          "min": 5,
+          "n": 5
+        },
+        "ms": {
+          "max": 516,
+          "median": 514,
+          "min": 511,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 6,
+          "median": 5,
+          "min": 5,
+          "n": 5
+        },
+        "rows": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "jump": {
+        "ms": {
+          "max": 86,
+          "median": 84,
+          "min": 83,
+          "n": 5
+        }
+      },
+      "ready": {
+        "ms": {
+          "max": 647,
+          "median": 628,
+          "min": 606,
+          "n": 5
+        }
+      },
+      "scroll": {
+        "max_gap_ms": {
+          "max": 76,
+          "median": 71,
+          "min": 60,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 52,
+          "median": 48,
+          "min": 44,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 55,
+          "median": 54,
+          "min": 52,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3222,
+          "median": 3215,
+          "min": 3214,
+          "n": 5
+        }
+      },
+      "search": {
+        "ms": {
+          "max": 110,
+          "median": 97,
+          "min": 94,
+          "n": 5
+        },
+        "total": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "sort": {
+        "ms": {
+          "max": 289,
+          "median": 280,
+          "min": 277,
+          "n": 5
+        }
+      }
+    }
+  },
+  "cgoprobe": {
+    "rc": 0,
+    "results": [
+      {
+        "reason": "builds with CGO_ENABLED=1 and the export code runs with the C checksum",
+        "result": "PASS",
+        "target": "desktop"
+      }
+    ],
+    "secs": 6.11
+  },
+  "cold_build": {
+    "rc": 0,
+    "secs": 15.13
+  },
+  "cross": {
+    "cross-linux": {
+      "rc": 0,
+      "secs": 6.57,
+      "status": "PASS",
+      "tail": "      gguix-mygo.desktop                        1 KB\n      gguix-mygo_0.0.0_amd64.deb              4.5 MB\n      gguix-mygo-0.0.0-1.x86_64.rpm           4.5 MB\n      gguix-mygo-0.0.0-linux-amd64.tar.gz     4.5 MB\n      gguix-mygo-256x256.png                    5 KB\n      gguix-mygo-512x512.png                   15 KB\n      PKGBUILD                                  2 KB\n      install.sh                                8 KB"
+    },
+    "cross-windows": {
+      "rc": 0,
+      "secs": 3.57,
+      "status": "PASS",
+      "tail": "  \u2713 Compiled windows/amd64  557ms\n  \u25b2 Skipping the Windows installer: install NSIS (makensis), or build with -skip-installer\n  \u2022 Copied 1 resources next to the executable\n\n  \u2713 Built gguix-mygo 0.0.0 in 3.3s\n\n    build/out/windows-amd64/\n      gguix-mygo.exe    11.2 MB"
+    }
+  },
+  "idle_rss": {
+    "process_tree_mb": 139.8,
+    "total_mb": 313.4,
+    "webkit_mb": 173.6
+  },
+  "incremental_build": {
+    "BuildMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 3.78
+    },
+    "UIMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 3.63
+    }
+  },
+  "loc": {
+    "app": "mygo",
+    "build_tagged_files": 5,
+    "by_category": {
+      "bench": 148,
+      "desktop": 233,
+      "shared": 3049,
+      "test": 565,
+      "web": 40
+    },
+    "by_category_language": {
+      "bench": {
+        "go": 24,
+        "ts": 124
+      },
+      "desktop": {
+        "go": 214,
+        "make": 19
+      },
+      "shared": {
+        "css": 124,
+        "go": 1003,
+        "html": 12,
+        "js": 6,
+        "make": 44,
+        "svelte": 728,
+        "ts": 1132
+      },
+      "test": {
+        "go": 235,
+        "js": 39,
+        "ts": 291
+      },
+      "web": {
+        "make": 4,
+        "svelte": 36
+      }
+    },
+    "by_language": {
+      "css": 124,
+      "go": 1476,
+      "html": 12,
+      "js": 45,
+      "make": 67,
+      "svelte": 764,
+      "ts": 1547
+    },
+    "custom_rendering_lines": 100,
+    "dual_target_overhead_lines": 273,
+    "dual_target_overhead_pct": 8.2,
+    "excluded_generated_lines": {
+      "ts": 334
+    },
+    "excluded_vendored_lines": {
+      "svelte": 2289,
+      "ts": 363
+    },
+    "files": 49,
+    "inline_marker_blocks": 4,
+    "longest_go_func": "main_e2e.go:main",
+    "longest_go_func_lines": 72
+  },
+  "plain_go_build_from_clean": {
+    "gen": {
+      "cmd": "frontend/node_modules/.bin/mygo generate && cd frontend && npm run build",
+      "rc": 0,
+      "secs": 5.02
+    },
+    "plain_build_note": "generated sources were present: `frontend/node_modules/.bin/mygo generate && cd frontend && npm run build` ran untimed after make clean, then go build ./... was timed",
+    "rc": 0,
+    "secs": 0.34,
+    "tail": ""
+  },
+  "provenance": {
+    "app_tree": {
+      "files": 213,
+      "sha256": "1952d42574b364d5c8cd3e063b98c5cd6a1f9535efd1b6de8002a5b27b398e5c"
+    },
+    "core_tree": {
+      "files": 42,
+      "sha256": "2ba727b6247232f7349411b19114e763b40f5a8fa888d2155c35810e731a6e8a"
+    },
+    "gguix_env_inherited": {},
+    "gguix_env_passed": {
+      "GGUIX_DPR": "2"
+    },
+    "gguix_env_scrubbed": [],
+    "recorded_at": "2026-11-14T00:59:54.218920+00:00"
+  },
+  "sizes": {
+    "app_bundle": "bin/GGUIX-mygo.app",
+    "app_bundle_kb": 10780,
+    "binary_bytes": 10901696,
+    "bundled_frameworks_kb": null,
+    "bundled_refs": [],
+    "external_dylibs": [],
+    "package": {
+      "rc": 0,
+      "secs": 3.64
+    }
+  },
+  "step_secs": {
+    "bench": 52.0,
+    "cgoprobe": 9.8,
+    "cold_build": 18.9,
+    "cross": 10.1,
+    "idle_rss": 7.2,
+    "incremental": 11.1,
+    "loc": 0.1,
+    "plain_build": 5.4,
+    "sizes": 3.7,
+    "tests": 16.1,
+    "toolchain": 4.5
+  },
+  "step_times": {
+    "bench": {
+      "end": "2026-11-13T23:42:46.217751+00:00",
+      "start": "2026-11-13T23:41:54.251291+00:00"
+    },
+    "cgoprobe": {
+      "end": "2026-11-13T23:43:12.054473+00:00",
+      "start": "2026-11-13T23:43:02.296262+00:00"
+    },
+    "cold_build": {
+      "end": "2026-11-13T23:41:32.365204+00:00",
+      "start": "2026-11-13T23:41:13.429071+00:00"
+    },
+    "cross": {
+      "end": "2026-11-13T23:43:22.194225+00:00",
+      "start": "2026-11-13T23:43:12.054981+00:00"
+    },
+    "idle_rss": {
+      "end": "2026-11-13T23:41:54.250815+00:00",
+      "start": "2026-11-13T23:41:47.092044+00:00"
+    },
+    "incremental": {
+      "end": "2026-11-13T23:41:43.416480+00:00",
+      "start": "2026-11-13T23:41:32.365563+00:00"
+    },
+    "loc": {
+      "end": "2026-11-14T00:59:54.367377+00:00",
+      "start": "2026-11-14T00:59:54.264941+00:00"
+    },
+    "plain_build": {
+      "end": "2026-11-13T23:41:13.428766+00:00",
+      "start": "2026-11-13T23:41:08.040641+00:00"
+    },
+    "sizes": {
+      "end": "2026-11-13T23:41:47.091625+00:00",
+      "start": "2026-11-13T23:41:43.416879+00:00"
+    },
+    "tests": {
+      "end": "2026-11-13T23:43:02.295854+00:00",
+      "start": "2026-11-13T23:42:46.218607+00:00"
+    },
+    "toolchain": {
+      "end": "2026-11-13T23:41:08.040194+00:00",
+      "start": "2026-11-13T23:41:03.538357+00:00"
+    }
+  },
+  "tests": {
+    "line": {
+      "failed": 0,
+      "not_feasible": 0,
+      "passed": 34
+    },
+    "rc": 0,
+    "secs": 16.08
+  },
+  "toolchain": {
+    "frontend/package.json": {
+      "direct_deps": 5,
+      "direct_dev_deps": 21,
+      "installed_packages": 160,
+      "node_modules_kb": 214200,
+      "npm_audit": null
+    },
+    "make_deps_warm": {
+      "rc": 0,
+      "secs": 3.04
+    }
+  },
+  "warm_noop_build": {
+    "rc": 0,
+    "secs": 3.59
+  }
+}

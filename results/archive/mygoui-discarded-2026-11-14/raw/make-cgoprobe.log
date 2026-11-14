@@ -1,0 +1,5 @@
+$ ['make', 'cgoprobe']
+(rc=0, 3.27s)
+CGOPROBE desktop PASS builds with CGO_ENABLED=1 and -tags cgoprobe
+CGOPROBE web FAIL    MyGo!!!!! v0.9.0  build    ○ Compiling js/wasm   ✗ Compiling js/wasm  133ms    error: go build failed:     # gguix/core     ../../core/checksum_nocgo.go:8:9: undefined: cgoprobe_requires_cgo_but_cgo_is_unavailable_for_this_target 
+CGOPROBE web-remote PASS wasm client built without cgoprobe, server built with cgoprobe

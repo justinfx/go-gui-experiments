@@ -33,6 +33,7 @@ Variants, used for follow-up questions:
 | `linux/` | Docker harness for the Linux function checks (Ubuntu 24.04, X11 and Wayland) |
 | `tools/` | `mkbrief` and `loc` |
 | `results/` | Raw metrics, notes and reports, see below |
+| `addenda/` | Options suggested after the article, tested the same way (also on the [wiki](https://github.com/justinfx/go-gui-experiments/wiki/Addenda)) |
 
 ## How the apps were built
 

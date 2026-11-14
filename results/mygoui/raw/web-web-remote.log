@@ -1,0 +1,70 @@
+$ ['node', '~/src/go_gui_experiments/bench/web.mjs', 'http://localhost:8097/?bench=1', '300000']
+(rc=0, 8.81s)
+{
+  "url": "http://localhost:8097/?bench=1",
+  "wall_ms": 7981,
+  "timed_out": false,
+  "initial_transfer_kb": 5553,
+  "engine": "chrome",
+  "chrome_version": "157.0.8103.51",
+  "dpr": 2,
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "peak_js_heap_mb": 13.8,
+  "peak_renderer_rss_mb": 583.1,
+  "renderer_pids": [
+    29505,
+    29506,
+    29504
+  ],
+  "peak_gpu_rss_mb": 107.2,
+  "memory_sampling_error": null,
+  "peak_dom_nodes": 79,
+  "metrics": [
+    {
+      "event": "ready",
+      "ms": 436.9
+    },
+    {
+      "event": "jump",
+      "ms": 68.1
+    },
+    {
+      "event": "scroll",
+      "max_gap_ms": 0.3,
+      "p95_gap_ms": 0.1,
+      "placeholder_steps": 59,
+      "total_ms": 3234.7
+    },
+    {
+      "event": "cards_scroll",
+      "max_gap_ms": 0.2,
+      "p95_gap_ms": 0.2,
+      "placeholder_steps": 0,
+      "switch_ms": 57.8,
+      "total_ms": 3206.3
+    },
+    {
+      "event": "sort",
+      "ms": 246.4
+    },
+    {
+      "event": "search",
+      "ms": 76.2,
+      "total": 49898
+    },
+    {
+      "event": "export",
+      "max_gap_ms": 0.2,
+      "ms": 556.8,
+      "p95_gap_ms": 0.1,
+      "rows": 49898
+    },
+    {
+      "event": "done"
+    }
+  ],
+  "console_errors": []
+}

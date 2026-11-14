@@ -18,9 +18,22 @@ No file under `apps/` or `core/` was changed. Where a change was tried it was in
 | miqt (Qt Widgets) | Y (2.5 min) | Y (18/18) | Y | Y | native QMenuBar in window | Y | Qt `QFileDialog` (not GTK/portal) | **N by default**; **app bug** (nil icon) even with a tray watcher | Y | `xdg-open file://<dir>` (Qt) and `xdg-open <parent dir>` (core), no select |
 | gotth-glaze (CGO_ENABLED=0) | Y | Y (11/11, 1 not feasible) | Y (GTK3 path only) | Y (GTK3 path only) | in-page (lib has no Linux menu) | Y | **real GTK3 `GtkFileChooserNative`** | **N** (lib returns `ErrUnsupported`) | P: native path unsupported, works through the page Clipboard API | `xdg-open <parent dir>`, also for the config folder (opens its parent); no select |
 | miqt-gotth (Qt WebEngine) | Y (25 s warm) | Y (11/11, 1 not feasible) | Y, **only with Chromium sandbox disabled** | Y, same | native QMenuBar | Y | Qt `QFileDialog` | P: only with a tray watcher (KDE), none on stock GNOME | Y | `xdg-open <dir>` and `<parent dir>`, no select |
+| mygo (MyGo v0.9.0, web frontend, CGO_ENABLED=0) | Y (GTK3 + WebKitGTK 4.1 loaded at run time) | Y as 34/34 with Chromium; 20/34 with the configured Chrome (no arm64 Chrome) | Y | Y | **native GtkMenuBar** | Y (Ctrl+Q too) | **native GTK3 `GtkFileChooserNative`** (no portal call) | **Y** (D-Bus from the library) | Y | `FileManager1.ShowItems` with the file (selects on a real file manager); no FileManager1 here, parent-folder fallback via GIO |
+| mygoui (MyGo v0.9.0, native UI, no webview) | **P: `make build` exits 1 on Linux (app Makefile glob `GGUIX-mygoui` vs `gguix-mygoui`)**; Y with a one-word fix in the scratch copy | Y (12/12) | Y | Y | **native GtkMenuBar** | P: all fire except **Ctrl+Q on Wayland (sway)**, which does nothing (X11 fine, File > Quit works) | **native GTK3 `GtkFileChooserNative`** | **Y** (D-Bus from the library) | Y | `FileManager1.ShowItems` with the file; same fallback |
 
 weston headless column (all apps): Fyne and Cogent crash in `glfwInit` with SIGSEGV; GTK apps (gotth, wails GTK3) and Qt apps stay alive but print seat assertions or cannot be inspected. weston headless advertises no `wl_seat`; GLFW dereferences it at
 `github.com/go-gl/glfw/v3.4/glfw@v0.1.0-pre.2/glfw/src/wl_init.c:856`. This is a container limit, not an app failure.
+
+## Update: MyGo addendum (2026-11-14)
+
+Two apps added: `mygo` (web frontend, Svelte in WebKitGTK 4.1) and `mygoui` (native UI, GPU-drawn, no webview), both MyGo v0.9.0. Details: `results/mygo/linux.md`, `results/mygoui/linux.md`. Same method as above; no file under `apps/` or `core/` changed (scratch patches only: `results/mygo/linux/playwright-no-chrome-channel.patch`, `results/mygoui/linux/makefile-linux-exe-name.patch`). No sandbox or seccomp relaxation and no opt-in switch was used; timings not measured.
+
+- Both build with `CGO_ENABLED=0` and dlopen GTK 3 (and WebKitGTK 4.1 for `mygo`) at run time, so there is no build-time library dependency but the packages must exist on the user's machine. `mygo` uses the 4.1 stack, so the WebKitGTK 6.0 sandbox problem that blocks the Wails GTK4 build here did not occur.
+- Native menu bar, GTK file chooser (not portal), D-Bus notification and clipboard all work on X11 and sway with no app code. Reveal calls `org.freedesktop.FileManager1.ShowItems` with the file (the only app here that can select it), falling back to the parent folder.
+- `mygoui` app bug: `make build` fails on Linux because `apps/mygoui/Makefile:26` looks for `GGUIX-mygoui`, while MyGo writes `gguix-mygoui` on Linux.
+- `mygoui` framework gap (cause not isolated): Ctrl+Q does not quit under sway while the other accelerators work; File > Quit and X11 are fine. `mygo` Ctrl+Q works on both.
+- Container notes: the image on this machine lacked `xkbcli` (`libxkbcommon-tools`, listed in the Dockerfile), which `wlinput.py` needs for sway input; it was installed into the running container only. weston headless: both apps stay alive and print GDK seat assertions (no `wl_seat`), as for the GTK apps above.
+- Not verified: real GNOME/KDE (portal chooser, Ctrl+Q on a real Wayland compositor), a real file manager's reaction to `ShowItems`, the GPU drawing path of `mygoui`, HiDPI.
 
 ## Update: three fixes re-checked on Linux (X11 and sway)
 

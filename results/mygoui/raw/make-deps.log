@@ -1,0 +1,4 @@
+$ ['make', 'deps']
+(rc=0, 0.56s)
+go mod download
+go build -o /dev/null github.com/egoist/mygo/cmd/mygo

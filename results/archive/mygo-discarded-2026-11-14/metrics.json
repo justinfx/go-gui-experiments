@@ -1,0 +1,315 @@
+{
+  "app": "mygo",
+  "artifacts": {
+    "bench": {
+      "binary": {
+        "mtime": "2026-11-13T23:21:20.830243+00:00",
+        "path": "apps/mygo/bin/gguix-mygo",
+        "sha256": "a416350c0d7ef379ab90df308cfc555bb37d7bfbd50872ad519f9b0e02a3fcba",
+        "size": 10901696
+      },
+      "build": {
+        "rc": 0,
+        "secs": 3.97
+      }
+    },
+    "cold_build": {
+      "binary": {
+        "mtime": "2026-11-13T23:20:54.297889+00:00",
+        "path": "apps/mygo/bin/gguix-mygo",
+        "sha256": "a416350c0d7ef379ab90df308cfc555bb37d7bfbd50872ad519f9b0e02a3fcba",
+        "size": 10901696
+      }
+    },
+    "idle_rss": {
+      "binary": {
+        "mtime": "2026-11-13T23:21:05.976736+00:00",
+        "path": "apps/mygo/bin/gguix-mygo",
+        "sha256": "a416350c0d7ef379ab90df308cfc555bb37d7bfbd50872ad519f9b0e02a3fcba",
+        "size": 10901696
+      }
+    },
+    "incremental": {
+      "binary": {
+        "mtime": "2026-11-13T23:21:05.976736+00:00",
+        "path": "apps/mygo/bin/gguix-mygo",
+        "sha256": "a416350c0d7ef379ab90df308cfc555bb37d7bfbd50872ad519f9b0e02a3fcba",
+        "size": 10901696
+      }
+    },
+    "sizes": {
+      "app_bundle": {
+        "files": 6,
+        "mtime": "2026-11-13T23:21:09.664282+00:00",
+        "path": "apps/mygo/bin/GGUIX-mygo.app",
+        "size_kb": 10780,
+        "tree_sha256": "a6eac3ec01d2ea250d1790bedd4da797daa2b6b97cebe6a420c672517c79fe14"
+      },
+      "binary": {
+        "mtime": "2026-11-13T23:21:05.976736+00:00",
+        "path": "apps/mygo/bin/gguix-mygo",
+        "sha256": "a416350c0d7ef379ab90df308cfc555bb37d7bfbd50872ad519f9b0e02a3fcba",
+        "size": 10901696
+      }
+    }
+  },
+  "bench": {
+    "errors": [],
+    "events_seen": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "launch": "bin/gguix-mygo (direct, after one make build)",
+    "memory": {
+      "peak_process_tree_mb": {
+        "max": 0.0,
+        "median": 0.0
+      },
+      "peak_total_mb": {
+        "max": 0.0,
+        "median": 0.0
+      },
+      "peak_webkit_mb": {
+        "max": 0.0,
+        "median": 0.0
+      }
+    },
+    "runs": 5,
+    "summary": {}
+  },
+  "cgoprobe": {
+    "rc": 0,
+    "results": [
+      {
+        "reason": "builds with CGO_ENABLED=1 and the export code runs with the C checksum",
+        "result": "PASS",
+        "target": "desktop"
+      }
+    ],
+    "secs": 6.26
+  },
+  "cold_build": {
+    "rc": 0,
+    "secs": 15.8
+  },
+  "cross": {
+    "cross-linux": {
+      "rc": 0,
+      "secs": 9.93,
+      "status": "PASS",
+      "tail": "      gguix-mygo.desktop                        1 KB\n      gguix-mygo_0.0.0_amd64.deb              4.5 MB\n      gguix-mygo-0.0.0-1.x86_64.rpm           4.5 MB\n      gguix-mygo-0.0.0-linux-amd64.tar.gz     4.5 MB\n      gguix-mygo-256x256.png                    5 KB\n      gguix-mygo-512x512.png                   15 KB\n      PKGBUILD                                  2 KB\n      install.sh                                8 KB"
+    },
+    "cross-windows": {
+      "rc": 0,
+      "secs": 5.36,
+      "status": "PASS",
+      "tail": "  \u2713 Compiled windows/amd64  2.3s\n  \u25b2 Skipping the Windows installer: install NSIS (makensis), or build with -skip-installer\n  \u2022 Copied 1 resources next to the executable\n\n  \u2713 Built gguix-mygo 0.0.0 in 5.1s\n\n    build/out/windows-amd64/\n      gguix-mygo.exe    11.2 MB"
+    }
+  },
+  "idle_rss": {
+    "process_tree_mb": 139.9,
+    "total_mb": 314.1,
+    "webkit_mb": 174.2
+  },
+  "incremental_build": {
+    "BuildMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 4.13
+    },
+    "UIMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 3.85
+    }
+  },
+  "loc": {
+    "app": "mygo",
+    "build_tagged_files": 5,
+    "by_category": {
+      "bench": 148,
+      "desktop": 232,
+      "shared": 3049,
+      "test": 565,
+      "web": 40
+    },
+    "by_category_language": {
+      "bench": {
+        "go": 24,
+        "ts": 124
+      },
+      "desktop": {
+        "go": 214,
+        "make": 18
+      },
+      "shared": {
+        "css": 124,
+        "go": 1003,
+        "html": 12,
+        "js": 6,
+        "make": 44,
+        "svelte": 728,
+        "ts": 1132
+      },
+      "test": {
+        "go": 235,
+        "js": 39,
+        "ts": 291
+      },
+      "web": {
+        "make": 4,
+        "svelte": 36
+      }
+    },
+    "by_language": {
+      "css": 124,
+      "go": 1476,
+      "html": 12,
+      "js": 45,
+      "make": 66,
+      "svelte": 764,
+      "ts": 1547
+    },
+    "custom_rendering_lines": 0,
+    "dual_target_overhead_lines": 272,
+    "dual_target_overhead_pct": 8.2,
+    "excluded_generated_lines": {
+      "ts": 334
+    },
+    "excluded_vendored_lines": {
+      "svelte": 2289,
+      "ts": 363
+    },
+    "files": 49,
+    "inline_marker_blocks": 4,
+    "longest_go_func": "main_e2e.go:main",
+    "longest_go_func_lines": 72
+  },
+  "plain_go_build_from_clean": {
+    "gen": {
+      "cmd": "frontend/node_modules/.bin/mygo generate && cd frontend && npm run build",
+      "rc": 0,
+      "secs": 5.45
+    },
+    "plain_build_note": "generated sources were present: `frontend/node_modules/.bin/mygo generate && cd frontend && npm run build` ran untimed after make clean, then go build ./... was timed",
+    "rc": 0,
+    "secs": 0.7,
+    "tail": ""
+  },
+  "provenance": {
+    "app_tree": {
+      "files": 197,
+      "sha256": "cd49f276a0fc38ace9f47d92a84c459025e2a8709015b6d72321a028ba672c48"
+    },
+    "core_tree": {
+      "files": 42,
+      "sha256": "2ba727b6247232f7349411b19114e763b40f5a8fa888d2155c35810e731a6e8a"
+    },
+    "gguix_env_inherited": {},
+    "gguix_env_passed": {
+      "GGUIX_DPR": "2"
+    },
+    "gguix_env_scrubbed": [],
+    "recorded_at": "2026-11-13T23:20:23.789547+00:00"
+  },
+  "sizes": {
+    "app_bundle": "bin/GGUIX-mygo.app",
+    "app_bundle_kb": 10780,
+    "binary_bytes": 10901696,
+    "bundled_frameworks_kb": null,
+    "bundled_refs": [],
+    "external_dylibs": [],
+    "package": {
+      "rc": 0,
+      "secs": 3.68
+    }
+  },
+  "step_secs": {
+    "bench": 4.2,
+    "cgoprobe": 10.0,
+    "cold_build": 19.7,
+    "cross": 15.3,
+    "idle_rss": 7.2,
+    "incremental": 11.7,
+    "loc": 0.1,
+    "plain_build": 6.2,
+    "sizes": 3.7,
+    "tests": 16.4,
+    "toolchain": 4.6
+  },
+  "step_times": {
+    "bench": {
+      "end": "2026-11-13T23:21:21.090812+00:00",
+      "start": "2026-11-13T23:21:16.862670+00:00"
+    },
+    "cgoprobe": {
+      "end": "2026-11-13T23:21:47.522905+00:00",
+      "start": "2026-11-13T23:21:37.541362+00:00"
+    },
+    "cold_build": {
+      "end": "2026-11-13T23:20:54.307369+00:00",
+      "start": "2026-11-13T23:20:34.582496+00:00"
+    },
+    "cross": {
+      "end": "2026-11-13T23:22:02.811695+00:00",
+      "start": "2026-11-13T23:21:47.523325+00:00"
+    },
+    "idle_rss": {
+      "end": "2026-11-13T23:21:16.862310+00:00",
+      "start": "2026-11-13T23:21:09.708790+00:00"
+    },
+    "incremental": {
+      "end": "2026-11-13T23:21:05.985712+00:00",
+      "start": "2026-11-13T23:20:54.307674+00:00"
+    },
+    "loc": {
+      "end": "2026-11-13T23:22:02.957993+00:00",
+      "start": "2026-11-13T23:22:02.812115+00:00"
+    },
+    "plain_build": {
+      "end": "2026-11-13T23:20:34.582306+00:00",
+      "start": "2026-11-13T23:20:28.413511+00:00"
+    },
+    "sizes": {
+      "end": "2026-11-13T23:21:09.708466+00:00",
+      "start": "2026-11-13T23:21:05.986004+00:00"
+    },
+    "tests": {
+      "end": "2026-11-13T23:21:37.540952+00:00",
+      "start": "2026-11-13T23:21:21.091211+00:00"
+    },
+    "toolchain": {
+      "end": "2026-11-13T23:20:28.413340+00:00",
+      "start": "2026-11-13T23:20:23.809639+00:00"
+    }
+  },
+  "tests": {
+    "line": {
+      "failed": 0,
+      "not_feasible": 0,
+      "passed": 34
+    },
+    "rc": 0,
+    "secs": 16.45
+  },
+  "toolchain": {
+    "frontend/package.json": {
+      "direct_deps": 5,
+      "direct_dev_deps": 21,
+      "installed_packages": 160,
+      "node_modules_kb": 214200,
+      "npm_audit": null
+    },
+    "make_deps_warm": {
+      "rc": 0,
+      "secs": 3.23
+    }
+  },
+  "warm_noop_build": {
+    "rc": 0,
+    "secs": 3.72
+  }
+}

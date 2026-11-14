@@ -1,0 +1,42 @@
+$ ['make', 'test']
+(rc=0, 16.45s)
+rm -f bin/test-go.log bin/test-vitest.json frontend/e2e/results.json
+frontend/node_modules/.bin/mygo generate >/dev/null
+cd frontend && npm run build -s >/dev/null 2>&1
+go build -tags e2e -o bin/gguix-mygo-e2e .
+go test -v -count=1 ./... 2>&1 | grep -v '^ld:' | tee bin/test-go.log | grep -E '^(--- |FAIL|ok|panic)' || true
+--- PASS: TestPageMatchesCore (0.00s)
+--- PASS: TestUpdateValidationDoesNotCallService (0.00s)
+--- PASS: TestExportCancelRemovesFile (0.32s)
+--- PASS: TestHostInfoDesktop (0.00s)
+--- PASS: TestNotesTooLarge (0.00s)
+--- PASS: TestPrefsRoundTripAndWindowSize (0.00s)
+--- PASS: TestFindRow (0.00s)
+--- PASS: TestExportStreamWriter (0.00s)
+--- PASS: TestWriteOracle (0.00s)
+ok  	gguix/apps/mygo	0.814s
+cd frontend && npx vitest run --reporter=json --outputFile=../bin/test-vitest.json >/dev/null 2>&1 || true
+cd frontend && npx playwright test || true
+
+Running 14 tests using 1 worker
+
+  ✓   1 e2e/gguix.spec.ts:18:1 › T1 app starts and loads (364ms)
+  ✓   2 e2e/gguix.spec.ts:25:1 › T2 sort by name (392ms)
+  ✓   3 e2e/gguix.spec.ts:31:1 › T3 search updates the count (560ms)
+  ✓   4 e2e/gguix.spec.ts:36:1 › T4 selection fills the form (351ms)
+  ✓   5 e2e/gguix.spec.ts:53:1 › T5 validation blocks save (475ms)
+  ✓   6 e2e/gguix.spec.ts:62:1 › T6 save updates the row (401ms)
+  ✓   7 e2e/gguix.spec.ts:70:1 › T7 theme and prefs (1.4s)
+  ✓   8 e2e/gguix.spec.ts:77:1 › T8 export cancel (985ms)
+  ✓   9 e2e/gguix.spec.ts:89:1 › T9 dirty guard (514ms)
+  ✓  10 e2e/gguix.spec.ts:100:3 › T10 custom cells (light) (353ms)
+  ✓  11 e2e/gguix.spec.ts:100:3 › T10 custom cells (dark) (357ms)
+  ✓  12 e2e/gguix.spec.ts:122:1 › T11 cards view (410ms)
+  ✓  13 e2e/gguix.spec.ts:133:1 › T12 host info (410ms)
+  ✓  14 e2e/gguix.spec.ts:142:1 › T13 split divider drags (475ms)
+
+  14 passed (9.1s)
+GGUIX_TESTS passed=34 failed=0 not_feasible=0
+  ○ Generating the TypeScript client
+  ✓ frontend/src/mygo.ts is up to date  835ms
+npm warn Unknown project config "minimum-release-age". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.

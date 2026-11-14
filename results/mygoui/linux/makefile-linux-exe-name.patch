@@ -1,0 +1,11 @@
+--- Makefile.orig	2026-11-14 00:24:14.340363010 +0000
++++ Makefile	2026-11-14 00:24:24.549372876 +0000
+@@ -23,7 +23,7 @@
+ build:
+ 	@mkdir -p bin
+ 	$(MYGO) build -skip-dmg
+-	@exe=$$(ls -d $(OUT)/darwin-*/$(BUNDLE)/Contents/MacOS/* $(OUT)/linux-*/GGUIX-mygoui 2>/dev/null | head -1); \
++	@exe=$$(ls -d $(OUT)/darwin-*/$(BUNDLE)/Contents/MacOS/* $(OUT)/linux-*/gguix-mygoui 2>/dev/null | head -1); \
+ 	test -n "$$exe" || { echo "mygo build produced no executable"; exit 1; }; \
+ 	rm -f bin/$(APP); cp "$$exe" bin/$(APP); echo "built bin/$(APP)"
+ 

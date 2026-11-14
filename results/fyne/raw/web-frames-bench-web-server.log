@@ -1,0 +1,8 @@
+rm -r -f wasm bin/web
+~/go/bin/fyne package --release --target wasm --name gguix-fyne --icon Icon.png --source-dir . 
+mkdir -p bin
+mv wasm bin/web
+Open http://localhost:8097/?bench=1 and watch the browser console
+cd ../../core && go run ./cmd/server -static ../apps/fyne/bin/web -addr :8097
+2026/11/14 14:01:48 gguix server on :8097 (rows=1000000 latency=50ms cgoprobe=false static="../apps/fyne/bin/web")
+make: *** [bench-web] Terminated: 15

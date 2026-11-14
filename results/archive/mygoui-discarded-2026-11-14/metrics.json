@@ -1,0 +1,468 @@
+{
+  "app": "mygoui",
+  "artifacts": {
+    "bench": {
+      "binary": {
+        "mtime": "2026-11-13T23:22:46.358936+00:00",
+        "path": "apps/mygoui/bin/gguix-mygoui",
+        "sha256": "aafe2339e59d6530d932921b12cbf6b8f86bd22c5adc0ddf43d461d3cc0e0eee",
+        "size": 10634640
+      },
+      "build": {
+        "rc": 0,
+        "secs": 1.03
+      }
+    },
+    "cold_build": {
+      "binary": {
+        "mtime": "2026-11-13T23:22:34.940625+00:00",
+        "path": "apps/mygoui/bin/gguix-mygoui",
+        "sha256": "aafe2339e59d6530d932921b12cbf6b8f86bd22c5adc0ddf43d461d3cc0e0eee",
+        "size": 10634640
+      }
+    },
+    "idle_rss": {
+      "binary": {
+        "mtime": "2026-11-13T23:22:37.085979+00:00",
+        "path": "apps/mygoui/bin/gguix-mygoui",
+        "sha256": "aafe2339e59d6530d932921b12cbf6b8f86bd22c5adc0ddf43d461d3cc0e0eee",
+        "size": 10634640
+      }
+    },
+    "incremental": {
+      "binary": {
+        "mtime": "2026-11-13T23:22:37.085979+00:00",
+        "path": "apps/mygoui/bin/gguix-mygoui",
+        "sha256": "aafe2339e59d6530d932921b12cbf6b8f86bd22c5adc0ddf43d461d3cc0e0eee",
+        "size": 10634640
+      }
+    },
+    "sizes": {
+      "app_bundle": {
+        "files": 6,
+        "mtime": "2026-11-13T23:22:38.125315+00:00",
+        "path": "apps/mygoui/bin/GGUIX-mygoui.app",
+        "size_kb": 10676,
+        "tree_sha256": "396396f92a5388718455eb2075c42ac9c48f0b92f07e6a25bf0133d1b6a777a3"
+      },
+      "binary": {
+        "mtime": "2026-11-13T23:22:37.085979+00:00",
+        "path": "apps/mygoui/bin/gguix-mygoui",
+        "sha256": "aafe2339e59d6530d932921b12cbf6b8f86bd22c5adc0ddf43d461d3cc0e0eee",
+        "size": 10634640
+      }
+    }
+  },
+  "bench": {
+    "errors": [],
+    "events_seen": [
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ]
+    ],
+    "launch": "bin/gguix-mygoui (direct, after one make build)",
+    "memory": {
+      "peak_process_tree_mb": {
+        "max": 223.4,
+        "median": 222.3
+      },
+      "peak_total_mb": {
+        "max": 223.4,
+        "median": 222.3
+      },
+      "peak_webkit_mb": {
+        "max": 0.0,
+        "median": 0.0
+      }
+    },
+    "runs": 5,
+    "summary": {
+      "cards_scroll": {
+        "max_gap_ms": {
+          "max": 4.4,
+          "median": 4.2,
+          "min": 4.1,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 3.8,
+          "median": 3.6,
+          "min": 3.4,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "switch_ms": {
+          "max": 59.2,
+          "median": 51.6,
+          "min": 50.8,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3204.4,
+          "median": 3200.8,
+          "min": 3200.5,
+          "n": 5
+        }
+      },
+      "export": {
+        "max_gap_ms": {
+          "max": 6.1,
+          "median": 0.1,
+          "min": 0.1,
+          "n": 5
+        },
+        "ms": {
+          "max": 500.1,
+          "median": 499.9,
+          "min": 499.9,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 0.5,
+          "median": 0.1,
+          "min": 0.1,
+          "n": 5
+        },
+        "rows": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "jump": {
+        "ms": {
+          "max": 64,
+          "median": 61,
+          "min": 54.4,
+          "n": 5
+        }
+      },
+      "ready": {
+        "ms": {
+          "max": 259.6,
+          "median": 250.8,
+          "min": 241.1,
+          "n": 5
+        }
+      },
+      "scroll": {
+        "max_gap_ms": {
+          "max": 20.4,
+          "median": 12.9,
+          "min": 12.9,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 11.9,
+          "median": 11.3,
+          "min": 11.2,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 25,
+          "median": 22,
+          "min": 21,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3216.6,
+          "median": 3212.1,
+          "min": 3205.6,
+          "n": 5
+        }
+      },
+      "search": {
+        "ms": {
+          "max": 61.4,
+          "median": 52.5,
+          "min": 51.6,
+          "n": 5
+        },
+        "total": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "sort": {
+        "ms": {
+          "max": 264.5,
+          "median": 253.9,
+          "min": 243.8,
+          "n": 5
+        }
+      }
+    }
+  },
+  "cgoprobe": {
+    "rc": 0,
+    "results": [
+      {
+        "reason": "builds with CGO_ENABLED=1 and -tags cgoprobe",
+        "result": "PASS",
+        "target": "desktop"
+      },
+      {
+        "reason": "MyGo!!!!! v0.9.0  build    \u25cb Compiling js/wasm   \u2717 Compiling js/wasm  133ms    error: go build failed:     # gguix/core     ../../core/checksum_nocgo.go:8:9: undefined: cgoprobe_requires_cgo_but_cgo_is_unavailable_for_this_target",
+        "result": "FAIL",
+        "target": "web"
+      },
+      {
+        "reason": "wasm client built without cgoprobe, server built with cgoprobe",
+        "result": "PASS",
+        "target": "web-remote"
+      }
+    ],
+    "secs": 3.27
+  },
+  "cold_build": {
+    "rc": 0,
+    "secs": 14.64
+  },
+  "cross": {
+    "cross-linux": {
+      "rc": 0,
+      "secs": 5.98,
+      "status": "PASS",
+      "tail": "      gguix-mygoui.desktop                        1 KB\n      gguix-mygoui_0.1.0_amd64.deb              4.7 MB\n      gguix-mygoui-0.1.0-1.x86_64.rpm           4.7 MB\n      gguix-mygoui-0.1.0-linux-amd64.tar.gz     4.7 MB\n      gguix-mygoui-256x256.png                   15 KB\n      gguix-mygoui-512x512.png                   33 KB\n      PKGBUILD                                    2 KB\n      install.sh                                  8 KB"
+    },
+    "cross-windows": {
+      "rc": 0,
+      "secs": 3.19,
+      "status": "PASS",
+      "tail": "  \u2713 Compiled windows/amd64  2.8s\n  \u25b2 Skipping the Windows installer: install NSIS (makensis), or build with -skip-installer\n  \u2022 Copied 1 resources next to the executable\n\n  \u2713 Built GGUIX-mygoui 0.1.0 in 3.0s\n\n    build/windows-amd64/\n      GGUIX-mygoui.exe    11.4 MB"
+    }
+  },
+  "idle_rss": {
+    "process_tree_mb": 142.5,
+    "total_mb": 142.5,
+    "webkit_mb": 0.0
+  },
+  "incremental_build": {
+    "BuildMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 1.12
+    }
+  },
+  "loc": {
+    "app": "mygoui",
+    "build_tagged_files": 6,
+    "by_category": {
+      "bench": 66,
+      "desktop": 217,
+      "shared": 1417,
+      "test": 301,
+      "web": 154
+    },
+    "by_category_language": {
+      "bench": {
+        "go": 66
+      },
+      "desktop": {
+        "go": 196,
+        "make": 21
+      },
+      "shared": {
+        "go": 1385,
+        "make": 32
+      },
+      "test": {
+        "go": 301
+      },
+      "web": {
+        "go": 137,
+        "make": 17
+      }
+    },
+    "by_language": {
+      "go": 2085,
+      "make": 70
+    },
+    "custom_rendering_lines": 0,
+    "dual_target_overhead_lines": 371,
+    "dual_target_overhead_pct": 20.7,
+    "excluded_generated_lines": {},
+    "excluded_vendored_lines": {},
+    "files": 14,
+    "inline_marker_blocks": 2,
+    "longest_go_func": "menu_desktop.go:buildMenu",
+    "longest_go_func_lines": 79
+  },
+  "plain_go_build_from_clean": {
+    "rc": 0,
+    "secs": 0.18,
+    "tail": ""
+  },
+  "provenance": {
+    "app_tree": {
+      "files": 22,
+      "sha256": "f051634ce4443473460a688d1369b7b4ff3f4187d33a48e118ffcbb033682461"
+    },
+    "core_tree": {
+      "files": 42,
+      "sha256": "2ba727b6247232f7349411b19114e763b40f5a8fa888d2155c35810e731a6e8a"
+    },
+    "gguix_env_inherited": {},
+    "gguix_env_passed": {
+      "GGUIX_DPR": "2"
+    },
+    "gguix_env_scrubbed": [],
+    "recorded_at": "2026-11-13T23:22:18.316986+00:00"
+  },
+  "sizes": {
+    "app_bundle": "bin/GGUIX-mygoui.app",
+    "app_bundle_kb": 10676,
+    "binary_bytes": 10634640,
+    "bundled_frameworks_kb": null,
+    "bundled_refs": [],
+    "external_dylibs": [],
+    "package": {
+      "rc": 0,
+      "secs": 1.03
+    }
+  },
+  "step_secs": {
+    "bench": 44.3,
+    "cgoprobe": 4.3,
+    "cold_build": 15.9,
+    "cross": 9.2,
+    "idle_rss": 7.2,
+    "incremental": 2.1,
+    "loc": 0.1,
+    "plain_build": 0.2,
+    "sizes": 1.1,
+    "tests": 1.8,
+    "toolchain": 0.5,
+    "web": 900.3
+  },
+  "step_times": {
+    "bench": {
+      "end": "2026-11-13T23:23:29.663989+00:00",
+      "start": "2026-11-13T23:22:45.330032+00:00"
+    },
+    "cgoprobe": {
+      "end": "2026-11-13T23:23:35.700097+00:00",
+      "start": "2026-11-13T23:23:31.442954+00:00"
+    },
+    "cold_build": {
+      "end": "2026-11-13T23:22:34.949938+00:00",
+      "start": "2026-11-13T23:22:19.075162+00:00"
+    },
+    "cross": {
+      "end": "2026-11-13T23:23:44.870358+00:00",
+      "start": "2026-11-13T23:23:35.700623+00:00"
+    },
+    "idle_rss": {
+      "end": "2026-11-13T23:22:45.329666+00:00",
+      "start": "2026-11-13T23:22:38.167953+00:00"
+    },
+    "incremental": {
+      "end": "2026-11-13T23:22:37.095129+00:00",
+      "start": "2026-11-13T23:22:34.950222+00:00"
+    },
+    "loc": {
+      "end": "2026-11-13T23:38:45.215979+00:00",
+      "start": "2026-11-13T23:38:45.126642+00:00"
+    },
+    "plain_build": {
+      "end": "2026-11-13T23:22:19.074993+00:00",
+      "start": "2026-11-13T23:22:18.873866+00:00"
+    },
+    "sizes": {
+      "end": "2026-11-13T23:22:38.167662+00:00",
+      "start": "2026-11-13T23:22:37.095452+00:00"
+    },
+    "tests": {
+      "end": "2026-11-13T23:23:31.442587+00:00",
+      "start": "2026-11-13T23:23:29.665034+00:00"
+    },
+    "toolchain": {
+      "end": "2026-11-13T23:22:18.873672+00:00",
+      "start": "2026-11-13T23:22:18.328498+00:00"
+    },
+    "web": {
+      "end": "2026-11-13T23:38:45.124844+00:00",
+      "start": "2026-11-13T23:23:44.870746+00:00"
+    }
+  },
+  "tests": {
+    "line": {
+      "failed": 0,
+      "not_feasible": 0,
+      "passed": 12
+    },
+    "rc": 0,
+    "secs": 1.78
+  },
+  "toolchain": {
+    "make_deps_warm": {
+      "rc": 0,
+      "secs": 0.54
+    }
+  },
+  "warm_noop_build": {
+    "rc": 0,
+    "secs": 1.0
+  },
+  "web": {
+    "bench-web": {
+      "error": "port 8097 never opened",
+      "rc": -15
+    }
+  }
+}

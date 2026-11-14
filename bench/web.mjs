@@ -22,6 +22,23 @@ const browserCdp = engine === 'webkit' ? null : await browser.newBrowserCDPSessi
 const page = await context.newPage();
 const cdp = engine === 'webkit' ? null : await context.newCDPSession(page);
 if (cdp) await cdp.send('Performance.enable');
+// Browser frame probe (addenda, E3): requestAnimationFrame timestamps, plus a
+// performance.now() stamp for every GGUIX_METRIC console line, so frame gaps
+// can be computed per step from the browser's side, whatever the app's own probe does.
+await page.addInitScript(() => {
+  window.__gguixFrames = [];
+  window.__gguixMarks = [];
+  const loop = (t) => { window.__gguixFrames.push(t); requestAnimationFrame(loop); };
+  requestAnimationFrame(loop);
+  const orig = console.log.bind(console);
+  console.log = (...a) => {
+    const s = a.map(String).join(' ');
+    for (const line of s.split('\n')) if (line.startsWith('GGUIX_METRIC ')) {
+      try { window.__gguixMarks.push([performance.now(), JSON.parse(line.slice(13))]); } catch {}
+    }
+    orig(...a);
+  };
+});
 
 const metrics = [];
 const consoleErrors = [];
@@ -105,6 +122,23 @@ try {
   consoleErrors.push('driver: ' + String(e).slice(0, 300));
 }
 clearInterval(sampler);
+let frames = null;
+try {
+  frames = await page.evaluate(() => {
+    const f = window.__gguixFrames || [], out = {};
+    for (const [t, m] of window.__gguixMarks || []) {
+      if (m.event !== 'scroll' && m.event !== 'cards_scroll') continue;
+      const start = t - Number(m.total_ms || 0);
+      const ts = f.filter((x) => x >= start && x <= t);
+      const gaps = ts.slice(1).map((x, i) => x - ts[i]).sort((a, b) => a - b);
+      const r = (x) => Math.round(x * 10) / 10;
+      out[m.event] = { frames: ts.length, window_ms: r(t - start),
+        max_gap_ms: gaps.length ? r(gaps[gaps.length - 1]) : null,
+        p95_gap_ms: gaps.length ? r(gaps[Math.floor(gaps.length * 0.95)]) : null };
+    }
+    return out;
+  });
+} catch (e) { consoleErrors.push('frames: ' + String(e).slice(0, 200)); }
 const out = {
   url,
   wall_ms: Date.now() - t0,
@@ -123,6 +157,7 @@ const out = {
   peak_gpu_rss_mb: Math.round((peakGpu / 1024) * 10) / 10,
   memory_sampling_error: memError,
   peak_dom_nodes: peakNodes,
+  browser_frames: frames,
   metrics,
   console_errors: consoleErrors.slice(0, 20),
 };

@@ -1,0 +1,11 @@
+--- /tmp/pw.orig	2026-11-14 00:25:32.710519505 +0000
++++ frontend/playwright.config.ts	2026-11-14 00:25:32.711261880 +0000
+@@ -15,7 +15,7 @@
+   timeout: 30_000,
+   workers: 1,
+   reporter: [["list"], ["json", { outputFile: "e2e/results.json" }]],
+-  use: { baseURL: `http://127.0.0.1:${PORT}`, channel: "chrome", viewport: { width: 1600, height: 900 }, colorScheme: "light" },
++  use: { baseURL: `http://127.0.0.1:${PORT}`, viewport: { width: 1600, height: 900 }, colorScheme: "light" },
+   webServer: {
+     command: "bin/gguix-mygo-e2e",
+     url: `http://127.0.0.1:${PORT}/health`,

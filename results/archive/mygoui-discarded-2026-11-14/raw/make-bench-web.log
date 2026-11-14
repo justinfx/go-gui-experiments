@@ -1,0 +1,21 @@
+rm -rf bin/webout bin/web
+go tool mygo build -platform web -o bin/webout
+
+  MyGo!!!!! v0.9.0  build
+
+  ○ Compiling js/wasm
+  ✓ Compiled js/wasm  290ms
+
+  ✓ Built GGUIX-mygoui 0.1.0 in 402ms
+
+    bin/webout/web/
+      index.html                           3 KB
+      gguix-mygoui.0bd999da6118.wasm    13.5 MB
+      wasm_exec.js                        17 KB
+      icon.png                            86 KB
+
+mv bin/webout/web bin/web && rmdir bin/webout
+open http://localhost:8090/?bench=1
+cd ../../core && go run ./cmd/server -static ../apps/mygoui/bin/web -addr :8090
+2026/11/14 12:23:45 gguix server on :8090 (rows=1000000 latency=50ms cgoprobe=false static="../apps/mygoui/bin/web")
+make: *** [bench-web] Terminated: 15

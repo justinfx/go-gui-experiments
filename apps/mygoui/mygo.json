@@ -1,0 +1,7 @@
+{
+  "name": "GGUIX-mygoui",
+  "identifier": "com.example.gguixmygoui",
+  "version": "0.1.0",
+  "out": "build",
+  "webview": false
+}

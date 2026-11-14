@@ -1,0 +1,51 @@
+$ ['make', 'build']
+(rc=0, 3.85s)
+frontend/node_modules/.bin/mygo build -skip-dmg
+  web │
+  web │ > frontend@0.0.0 build
+  web │ > vite build --mode production
+  web │
+  web │ vite v8.3.6 building client environment for production...
+  web │ transforming...
+  web │ ✓ 1169 modules transformed.
+  web │ rendering chunks...
+  web │ computing gzip size...
+  web │ dist/index.html                                              0.43 kB │ gzip:   0.28 kB
+  web │ dist/assets/inter-vietnamese-wght-normal-CBcvBZtf.woff2     10.25 kB
+  web │ dist/assets/inter-greek-ext-wght-normal-DlzME5K_.woff2      11.23 kB
+  web │ dist/assets/inter-cyrillic-wght-normal-DqGufNeO.woff2       18.74 kB
+  web │ dist/assets/inter-greek-wght-normal-CkhJZR-_.woff2          18.99 kB
+  web │ dist/assets/inter-cyrillic-ext-wght-normal-BOeWTOD4.woff2   25.96 kB
+  web │ dist/assets/inter-latin-wght-normal-Dx4kXJAl.woff2          48.25 kB
+  web │ dist/assets/inter-latin-ext-wght-normal-DO1Apj_S.woff2      85.06 kB
+  web │ dist/assets/index-ddG2FMkg.css                              74.08 kB │ gzip:  13.70 kB
+  web │ dist/assets/index-MgNXjsKi.js                              581.89 kB │ gzip: 167.36 kB
+  web │
+  web │ ✓ built in 1.29s
+built bin/gguix-mygo
+
+  MyGo!!!!! v0.9.0  build
+
+  ○ Generating the TypeScript client
+  ✓ frontend/src/mygo.ts is up to date  858ms
+  ○ Building the frontend
+  web │ npm warn Unknown project config "minimum-release-age". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+  web │ (!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  web │   - `__dirname` (vite.config.ts:14:33). Use `import.meta.dirname` instead
+  web │ Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+  web │ [plugin builtin:vite-reporter] 
+  web │ (!) Some chunks are larger than 500 kB after minification. Consider:
+  web │ - Using dynamic import() to code-split the application
+  web │ - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+  web │ - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+  ✓ Built the frontend  1.8s
+  ○ Compiling darwin/arm64
+  ✓ Compiled darwin/arm64  467ms
+  ○ Signing gguix-mygo.app
+  ✓ Signed gguix-mygo.app  33ms
+
+  ✓ Built gguix-mygo 0.0.0 in 3.6s
+
+    build/out/darwin-arm64/
+      gguix-mygo.app    10.5 MB
+

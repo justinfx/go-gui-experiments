@@ -1,0 +1,46 @@
+bin/gguix-mygo: ELF 64-bit LSB executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, Go BuildID=lLvVaW18isXNhfMLLTFa/ndlvruudb0vtyKRuCRpx/0DbShwrxQ5L4s3FwBT-B/sX7cFrgTRMemYyJkTuqH, BuildID[sha1]=c494d80de80c861725bf660c2f86963352a82dfa, stripped
+	linux-vdso.so.1 (0x0000ffff8ef37000)
+	libdl.so.2 => /lib/aarch64-linux-gnu/libdl.so.2 (0x0000ffff8eec0000)
+	libpthread.so.0 => /lib/aarch64-linux-gnu/libpthread.so.0 (0x0000ffff8ee90000)
+	libc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000ffff8ecd0000)
+	/lib/ld-linux-aarch64.so.1 (0x0000ffff8eef0000)
+    Error: browserType.launch: Chromium distribution 'chrome' is not found at /opt/google/chrome/chrome
+    Run "npx playwright install chrome"
+
+    Error Context: test-results/gguix-T11-cards-view/error-context.md
+
+  13) e2e/gguix.spec.ts:133:1 › T12 host info ──────────────────────────────────────────────────────
+
+    Error: browserType.launch: Chromium distribution 'chrome' is not found at /opt/google/chrome/chrome
+    Run "npx playwright install chrome"
+
+    Error Context: test-results/gguix-T12-host-info/error-context.md
+
+  14) e2e/gguix.spec.ts:142:1 › T13 split divider drags ────────────────────────────────────────────
+
+    Error: browserType.launch: Chromium distribution 'chrome' is not found at /opt/google/chrome/chrome
+    Run "npx playwright install chrome"
+
+    Error Context: test-results/gguix-T13-split-divider-drags/error-context.md
+
+  14 failed
+    e2e/gguix.spec.ts:18:1 › T1 app starts and loads ───────────────────────────────────────────────
+    e2e/gguix.spec.ts:25:1 › T2 sort by name ───────────────────────────────────────────────────────
+    e2e/gguix.spec.ts:31:1 › T3 search updates the count ───────────────────────────────────────────
+    e2e/gguix.spec.ts:36:1 › T4 selection fills the form ───────────────────────────────────────────
+    e2e/gguix.spec.ts:53:1 › T5 validation blocks save ─────────────────────────────────────────────
+    e2e/gguix.spec.ts:62:1 › T6 save updates the row ───────────────────────────────────────────────
+    e2e/gguix.spec.ts:70:1 › T7 theme and prefs ────────────────────────────────────────────────────
+    e2e/gguix.spec.ts:77:1 › T8 export cancel ──────────────────────────────────────────────────────
+    e2e/gguix.spec.ts:89:1 › T9 dirty guard ────────────────────────────────────────────────────────
+    e2e/gguix.spec.ts:100:3 › T10 custom cells (light) ─────────────────────────────────────────────
+    e2e/gguix.spec.ts:100:3 › T10 custom cells (dark) ──────────────────────────────────────────────
+    e2e/gguix.spec.ts:122:1 › T11 cards view ───────────────────────────────────────────────────────
+    e2e/gguix.spec.ts:133:1 › T12 host info ────────────────────────────────────────────────────────
+    e2e/gguix.spec.ts:142:1 › T13 split divider drags ──────────────────────────────────────────────
+GGUIX_TESTS passed=20 failed=14 not_feasible=0
+make: *** [Makefile:64: test] Error 1
+
+real	0m11.009s
+user	0m16.659s
+sys	0m1.831s

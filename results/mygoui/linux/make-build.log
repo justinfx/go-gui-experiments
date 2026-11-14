@@ -1,0 +1,23 @@
+go tool mygo build -skip-dmg
+
+  MyGo!!!!! v0.9.0  build
+
+  ○ Compiling linux/arm64
+  ✓ Compiled linux/arm64  233ms
+  • Copied 1 resources next to the executable
+
+  ✓ Built GGUIX-mygoui 0.1.0 in 3.2s
+
+    build/linux-arm64/
+      gguix-mygoui                              9.8 MB
+      gguix-mygoui.png                           86 KB
+      gguix-mygoui.desktop                        1 KB
+      gguix-mygoui_0.1.0_arm64.deb              4.3 MB
+      gguix-mygoui-0.1.0-1.aarch64.rpm          4.3 MB
+      gguix-mygoui-0.1.0-linux-arm64.tar.gz     4.3 MB
+      gguix-mygoui-256x256.png                   15 KB
+      gguix-mygoui-512x512.png                   33 KB
+      PKGBUILD                                    2 KB
+      install.sh                                  8 KB
+
+built bin/gguix-mygoui

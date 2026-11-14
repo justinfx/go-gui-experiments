@@ -1,0 +1,8 @@
+bin
+build
+.mygo
+frontend/dist
+frontend/node_modules
+frontend/e2e/oracle.json
+frontend/e2e/results.json
+frontend/test-results

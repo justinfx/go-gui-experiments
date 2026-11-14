@@ -1,0 +1,17 @@
+$ ['make', 'build']
+(rc=0, 13.7s)
+go tool mygo build -skip-dmg
+built bin/gguix-mygoui
+
+  MyGo!!!!! v0.9.0  build
+
+  ○ Compiling darwin/arm64
+  ✓ Compiled darwin/arm64  6.4s
+  ○ Signing GGUIX-mygoui.app
+  ✓ Signed GGUIX-mygoui.app  37ms
+
+  ✓ Built GGUIX-mygoui 0.1.0 in 6.9s
+
+    build/darwin-arm64/
+      GGUIX-mygoui.app    10.4 MB
+
