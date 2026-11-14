@@ -4,13 +4,28 @@
 **Suggested in** [r/golang](https://www.reddit.com/r/golang/s/AKasb7nJ4P) · **Stack** [MyGo](https://mygo.run) v0.9.0 ·
 **Compared with** Wails (webview mode), Fyne and Cogent (native UI mode) · **Measured** 2026-11-14, same machine as the article
 
-## Bottom line
+## At a glance
 
-In **webview mode**, MyGo is on par with Wails: faster builds, lower memory and
-no cgo, but no browser target, so reaching both web and desktop means writing
-the UI in its native UI mode instead. In **native UI mode** it outperformed Fyne and
-Cogent on this app, on the desktop and in the browser, and scored highest on
-style. It is also younger than both (pre-1.0).
+> **Verdict:** in native UI mode, the strongest self-drawn option measured so
+> far, on the desktop and in the browser. Webview mode is on par with Wails but
+> desktop only.
+>
+> **Stronger than the comparators at:** native UI mode is fastest on nearly
+> every desktop row and has the smoothest browser scroll of any Go WASM build
+> (ahead of Fyne and Cogent), with the top blind style score; webview mode
+> builds faster and uses less memory than Wails; neither mode needs cgo.
+>
+> **Weaker at:** webview mode has no browser target (Wails can serve its UI);
+> maturity (v0.9.0, pre-1.0, no stated stability policy, a shorter history than
+> Fyne and Cogent); GTK, WebKit and GPU libraries must be on the user's machine.
+>
+> | | |
+> |---|---|
+> | **A lot of data?** | Native UI mode is the fastest measured; webview mode scrolls like Wails, stutter included. |
+> | **Need cgo?** | No, in either mode; a cgo core still runs on the desktop. |
+> | **Web, native, or both?** | Native UI mode reaches both from one codebase; webview mode is desktop only. |
+
+The rest of this page is the evidence for the box above.
 
 ## What it is
 
@@ -34,6 +49,34 @@ on the GPU, like Fyne and Cogent, and also builds to WASM for the browser.
 
 [![MyGo native UI mode, dark theme, table view](https://raw.githubusercontent.com/wiki/justinfx/go-gui-experiments/images/mygoui-desktop.png)](https://raw.githubusercontent.com/wiki/justinfx/go-gui-experiments/images/mygoui-desktop.png)
 
+Desktop, median of 5 runs. Bold is the best figure in the row.
+
+| | mygo | wails | mygoui | fyne | cogent |
+|---|---|---|---|---|---|
+| Ready (ms) | 628 | 623 | **236** | 572 | 555 |
+| Jump to row 500k (ms) | 84 | 90 | **69** | 146 | 113 |
+| Table scroll, max frame gap (ms) | 71 | 91 | **13** | 40 | 19 |
+| Blank-row steps while scrolling | 54 | 64 | 23 | **0** | 24 |
+| Switch to cards (ms) | 191 | 194 | **51** | 104 | 112 |
+| Sort (ms) | 280 | 280 | **241** | 254 | 262 |
+| Peak memory (MB) | 641 | 824 | **219** | 1412 | 513 |
+| Cold build (s) | 15.1 | 39.2 | **13.7** | 19.1 | 23.5 |
+| Style, blind (1 to 5) | 4 | 4 | **5** | 3 | 2 |
+
+Browser (Chrome, single run). Frame gaps here are timed by the browser for all
+three apps, so they compare with each other, not with the article's web table.
+
+| | mygoui | fyne | cogent |
+|---|---|---|---|
+| Download, gzip (MB) | **4.0** | 12.4 | 6.9 |
+| Ready (ms) | 921 | **830** | 1,453 |
+| Jump (ms) | **54** | 187 | 138 |
+| Table scroll, max frame gap (ms) | **67** | 217 | 317 |
+| Cards scroll, max frame gap (ms) | **33** | 135 | 717 |
+
+In a hands-on check, both modes had every native feature working (menus,
+shortcuts, dialogs, notification, clipboard, Reveal, state restore), and felt
+the same except scrolling, which was flawless in native UI mode.
 
 Desktop, median of 5 runs. Bold is the best figure in the row.
 
@@ -81,15 +124,11 @@ not at build.
 server mode, so the same UI cannot be served to a browser. Native UI mode
 reaches both from one Go UI codebase, at a third of Fyne's download size. An app
 can mix the two modes, but only its native UI windows can go to the browser.
-
-## Worth knowing
-
-- **Linux** (the article's container check, X11 and Wayland): both modes start,
-  with native GTK menus and dialogs, notifications and clipboard. Reveal selects
-  the file in the file manager, which no article app did. Real GNOME/KDE
-  sessions and the Linux GPU path were not tested.
-- **Maturity:** v0.9.0, no stated stability policy. Fyne and Cogent have longer
-  release histories.
+On Linux (the article's container check, X11 and Wayland) both modes start,
+with native GTK menus and dialogs, notifications and clipboard. Reveal selects
+the file in the file manager, which no article app did. Real GNOME/KDE sessions
+and the Linux GPU path were not tested. MyGo is at v0.9.0 with no stated
+stability policy; Fyne and Cogent have longer release histories.
 
 ---
 

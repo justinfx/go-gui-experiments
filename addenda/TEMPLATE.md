@@ -6,6 +6,25 @@
 **Suggested by** {{link}} · **Stack** {{framework + version, UI layer, shell}} ·
 **Compared with** {{one or more article options}} · **Measured** {{date}}
 
+## At a glance
+
+> **Verdict:** {{One sentence: who should pick it, ranked against the
+> comparators, in terms a reader would notice.}}
+>
+> **Stronger than the comparators at:** {{two to four short items, each naming
+> who it beats, e.g. "desktop scroll (smoother than Fyne and Cogent)"}}
+>
+> **Weaker at:** {{two to four short items, same form, including maturity or a
+> platform hole if it matters}}
+>
+> | | |
+> |---|---|
+> | **A lot of data?** | {{one line}} |
+> | **Need cgo?** | {{one line}} |
+> | **Web, native, or both?** | {{one line}} |
+
+The rest of this page is the evidence for the box above.
+
 ## What it is
 
 {{Two or three sentences: what the project is, and for each comparator the one
@@ -38,18 +57,16 @@ apply to any of them.
 
 ## The three questions
 
-**A lot of data?** {{One or two sentences, in terms of what the user notices.}}
+**A lot of data?** {{A short paragraph, in terms of what the user notices.}}
 
 **Need cgo?** {{Can a cgo core run, and what must be on the machine at run time.}}
 
 **Web, native, or both?** {{What it reaches, and what reaching both costs.}}
 
 With more than one mode, answer each question per mode where the answers differ.
-
-## Worth knowing
-
-{{Optional. Only gaps or friction a reader would want before choosing it.
-Delete the section if there is nothing.}}
+Platform notes (Linux check, runtime libraries, maturity) go under the question
+they bear on. There is no separate summary or "worth knowing" section: the box at
+the top is the summary.
 
 ---
 

@@ -6,15 +6,27 @@
 **Stack** [go-gui](https://go-gui.com/) v0.96.0 ·
 **Compared with** MyGo native UI mode, Fyne, Cogent · **Measured** 2026-11-14, same machine as the article
 
-## Bottom line
+## At a glance
 
-go-gui is fast: on the desktop it is close to MyGo's native UI mode and ahead
-of Fyne and Cogent. But it has no table that fits this app. Its `DataGrid`
-pages through large data instead of scrolling it, and draws text-only cells.
-Two agent passes, one hand-built table and one on `DataGrid`, both ended with a
-table that was quick to scroll but rough to look at and use. On Linux it has
-no menu bar. For a large-data table app it is not ready; getting a polished
-result would take a lot of custom work.
+> **Verdict:** fast, but not ready for a large-data table app. Its stock table
+> pages instead of scrolling, and a polished table needs a lot of custom work.
+>
+> **Stronger than the comparators at:** desktop speed (close to MyGo native
+> UI, ahead of Fyne and Cogent on scroll, jump and memory); no cgo on Linux or
+> Windows; a smaller browser download than Fyne.
+>
+> **Weaker at:** the table (pages of 5,000 rows, text-only cells, visual
+> glitches in both agent passes); style (2 and 4 out of 5, against MyGo native
+> UI's 5); browser scroll (more stutter than MyGo native UI); no menu bar on
+> Linux; maturity (v0.96.0, breaking changes in recent minor versions).
+>
+> | | |
+> |---|---|
+> | **A lot of data?** | Fast to scroll, but the stock table pages; continuous scrolling means building your own. |
+> | **Need cgo?** | Not on Linux or Windows; yes on macOS (Metal). |
+> | **Web, native, or both?** | Both from one Go UI codebase, with visible scroll stutter in the browser. |
+
+The rest of this page is the evidence for the box above.
 
 ## What it is
 
@@ -75,18 +87,14 @@ Wayland libraries on Wayland), X11 in pure Go. On macOS it needs cgo for Metal.
 A cgo core runs on the desktop, and in the browser through `web-remote`.
 
 **Web, native, or both?** Both from one Go UI codebase, at about half of Fyne's
-download size, with visible scroll stutter in the browser.
-
-## Worth knowing
-
-- **Linux** (the article's container check, X11 and Wayland): starts on both,
-  native Wayland by default. The menu bar is macOS only, with no in-window
-  fallback, so the app has no menus and Ctrl+Q does nothing. File dialogs run
-  zenity or kdialog if installed, otherwise go-gui's own in-window browser.
-  Notifications go through `notify-send`. Real GNOME/KDE sessions and the GPU
-  path were not tested.
-- **Maturity:** v0.96.0, released daily to weekly, with breaking changes in
-  recent minor versions.
+download size, with visible scroll stutter in the browser. On Linux (the
+article's container check, X11 and Wayland) it starts on both, native Wayland
+by default, but the menu bar is macOS only, with no in-window fallback, so the
+app has no menus and Ctrl+Q does nothing. File dialogs run zenity or kdialog if
+installed, otherwise go-gui's own in-window browser; notifications go through
+`notify-send`. Real GNOME/KDE sessions and the GPU path were not tested. It is
+at v0.96.0, released daily to weekly, with breaking changes in recent minor
+versions.
 
 ---
 
