@@ -1,0 +1,650 @@
+{
+  "app": "gogui-fit",
+  "artifacts": {
+    "bench": {
+      "binary": {
+        "mtime": "2026-11-14T03:05:26.657598+00:00",
+        "path": "apps/gogui-fit/bin/gguix-gogui",
+        "sha256": "236fcfdfff9bfc4303a1e325c5bad7e3fd0dd5a8fb32ccf9a84f2fb10ab9afe5",
+        "size": 25979666
+      },
+      "build": {
+        "rc": 0,
+        "secs": 0.25
+      }
+    },
+    "cold_build": {
+      "binary": {
+        "mtime": "2026-11-14T03:05:12.841940+00:00",
+        "path": "apps/gogui-fit/bin/gguix-gogui",
+        "sha256": "236fcfdfff9bfc4303a1e325c5bad7e3fd0dd5a8fb32ccf9a84f2fb10ab9afe5",
+        "size": 25979666
+      }
+    },
+    "idle_rss": {
+      "binary": {
+        "mtime": "2026-11-14T03:05:16.958484+00:00",
+        "path": "apps/gogui-fit/bin/gguix-gogui",
+        "sha256": "236fcfdfff9bfc4303a1e325c5bad7e3fd0dd5a8fb32ccf9a84f2fb10ab9afe5",
+        "size": 25979666
+      }
+    },
+    "incremental": {
+      "binary": {
+        "mtime": "2026-11-14T03:05:16.688998+00:00",
+        "path": "apps/gogui-fit/bin/gguix-gogui",
+        "sha256": "236fcfdfff9bfc4303a1e325c5bad7e3fd0dd5a8fb32ccf9a84f2fb10ab9afe5",
+        "size": 25979666
+      }
+    },
+    "sizes": {
+      "app_bundle": {
+        "files": 3,
+        "mtime": "2026-11-14T03:05:19.159826+00:00",
+        "path": "apps/gogui-fit/bin/GGUIX-gogui.app",
+        "size_kb": 25252,
+        "tree_sha256": "f683349906e321c77605fe51eff395bc050bcdddb2d59dc79c8fe33df742d0c5"
+      },
+      "binary": {
+        "mtime": "2026-11-14T03:05:16.688998+00:00",
+        "path": "apps/gogui-fit/bin/gguix-gogui",
+        "sha256": "236fcfdfff9bfc4303a1e325c5bad7e3fd0dd5a8fb32ccf9a84f2fb10ab9afe5",
+        "size": 25979666
+      }
+    }
+  },
+  "bench": {
+    "errors": [],
+    "events_seen": [
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ]
+    ],
+    "launch": "bin/gguix-gogui (direct, after one make build)",
+    "memory": {
+      "peak_process_tree_mb": {
+        "max": 280.7,
+        "median": 267.3
+      },
+      "peak_total_mb": {
+        "max": 280.7,
+        "median": 267.3
+      },
+      "peak_webkit_mb": {
+        "max": 0.0,
+        "median": 0.0
+      }
+    },
+    "runs": 5,
+    "summary": {
+      "cards_scroll": {
+        "max_gap_ms": {
+          "max": 17,
+          "median": 16.5,
+          "min": 16.2,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 15.4,
+          "median": 14.1,
+          "min": 14,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "switch_ms": {
+          "max": 58.9,
+          "median": 58.3,
+          "min": 56.2,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3491.2,
+          "median": 3482.8,
+          "min": 3457.9,
+          "n": 5
+        }
+      },
+      "export": {
+        "max_gap_ms": {
+          "max": 19.2,
+          "median": 11.5,
+          "min": 9.6,
+          "n": 5
+        },
+        "ms": {
+          "max": 503.1,
+          "median": 502.8,
+          "min": 502.3,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 6.8,
+          "median": 5.4,
+          "min": 4.4,
+          "n": 5
+        },
+        "rows": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "jump": {
+        "ms": {
+          "max": 73.4,
+          "median": 73.1,
+          "min": 72.6,
+          "n": 5
+        }
+      },
+      "ready": {
+        "ms": {
+          "max": 348.7,
+          "median": 339.5,
+          "min": 330.6,
+          "n": 5
+        }
+      },
+      "scroll": {
+        "max_gap_ms": {
+          "max": 16.7,
+          "median": 16.3,
+          "min": 15.8,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 13.8,
+          "median": 13.4,
+          "min": 12.1,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3398.8,
+          "median": 3382.3,
+          "min": 3374.1,
+          "n": 5
+        }
+      },
+      "search": {
+        "ms": {
+          "max": 75.1,
+          "median": 73.9,
+          "min": 68.6,
+          "n": 5
+        },
+        "total": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "sort": {
+        "ms": {
+          "max": 266.4,
+          "median": 259.2,
+          "min": 258.2,
+          "n": 5
+        }
+      }
+    }
+  },
+  "cgoprobe": {
+    "rc": 0,
+    "results": [
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "desktop"
+      },
+      {
+        "reason": "# gguix/core ../../core/checksum_nocgo.go:8:9: undefined: cgoprobe_requires_cgo_but_cgo_is_unavailable_for_this_target",
+        "result": "FAIL",
+        "target": "web"
+      },
+      {
+        "reason": "wasm client without cgoprobe, server with cgoprobe",
+        "result": "PASS",
+        "target": "web-remote"
+      }
+    ],
+    "secs": 3.61
+  },
+  "cold_build": {
+    "rc": 0,
+    "secs": 13.06
+  },
+  "cross": {
+    "cross-linux": {
+      "rc": 0,
+      "secs": 1.35,
+      "status": "PASS",
+      "tail": "GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o bin/gguix-gogui-linux-amd64 ."
+    },
+    "cross-windows": {
+      "rc": 0,
+      "secs": 1.31,
+      "status": "PASS",
+      "tail": "GOOS=windows GOARCH=amd64 CGO_ENABLED=0 go build -o bin/gguix-gogui-windows-amd64.exe ."
+    }
+  },
+  "idle_rss": {
+    "process_tree_mb": 153.9,
+    "total_mb": 153.9,
+    "webkit_mb": 0.0
+  },
+  "incremental_build": {
+    "BuildMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 2.01
+    }
+  },
+  "loc": {
+    "app": "gogui-fit",
+    "build_tagged_files": 5,
+    "by_category": {
+      "bench": 69,
+      "desktop": 228,
+      "shared": 2567,
+      "test": 282,
+      "web": 130
+    },
+    "by_category_language": {
+      "bench": {
+        "go": 69
+      },
+      "desktop": {
+        "go": 207,
+        "make": 21
+      },
+      "shared": {
+        "go": 2541,
+        "make": 26
+      },
+      "test": {
+        "go": 282
+      },
+      "web": {
+        "go": 90,
+        "html": 22,
+        "make": 18
+      }
+    },
+    "by_language": {
+      "go": 3189,
+      "html": 22,
+      "make": 65
+    },
+    "custom_rendering_lines": 0,
+    "dual_target_overhead_lines": 358,
+    "dual_target_overhead_pct": 12.2,
+    "excluded_generated_lines": {},
+    "excluded_vendored_lines": {},
+    "files": 16,
+    "inline_marker_blocks": 2,
+    "longest_go_func": "view.go:detail",
+    "longest_go_func_lines": 114
+  },
+  "plain_go_build_from_clean": {
+    "rc": 0,
+    "secs": 1.83,
+    "tail": "# gguix/apps/gogui\nld: warning: ignoring duplicate libraries: '-lobjc'"
+  },
+  "provenance": {
+    "app_tree": {
+      "files": 21,
+      "sha256": "f2c397155042819156788f8b2168c2368cf974ab1196ec0907d9a0c4bd69e3dd"
+    },
+    "core_tree": {
+      "files": 42,
+      "sha256": "2ba727b6247232f7349411b19114e763b40f5a8fa888d2155c35810e731a6e8a"
+    },
+    "gguix_env_inherited": {},
+    "gguix_env_passed": {
+      "GGUIX_DPR": "2"
+    },
+    "gguix_env_scrubbed": [],
+    "recorded_at": "2026-11-14T03:04:57.483563+00:00"
+  },
+  "sizes": {
+    "app_bundle": "bin/GGUIX-gogui.app",
+    "app_bundle_kb": 25252,
+    "binary_bytes": 25979666,
+    "bundled_frameworks_kb": null,
+    "bundled_refs": [],
+    "external_dylibs": [],
+    "package": {
+      "rc": 0,
+      "secs": 2.51
+    }
+  },
+  "step_secs": {
+    "bench": 46.7,
+    "cgoprobe": 3.8,
+    "cold_build": 13.5,
+    "cross": 2.7,
+    "idle_rss": 7.1,
+    "incremental": 3.8,
+    "loc": 0.1,
+    "plain_build": 1.9,
+    "sizes": 2.6,
+    "tests": 2.3,
+    "toolchain": 0.0,
+    "web": 54.9
+  },
+  "step_times": {
+    "bench": {
+      "end": "2026-11-14T03:06:13.108927+00:00",
+      "start": "2026-11-14T03:05:26.409874+00:00"
+    },
+    "cgoprobe": {
+      "end": "2026-11-14T03:06:19.242006+00:00",
+      "start": "2026-11-14T03:06:15.398168+00:00"
+    },
+    "cold_build": {
+      "end": "2026-11-14T03:05:12.858128+00:00",
+      "start": "2026-11-14T03:04:59.388499+00:00"
+    },
+    "cross": {
+      "end": "2026-11-14T03:06:21.908305+00:00",
+      "start": "2026-11-14T03:06:19.242440+00:00"
+    },
+    "idle_rss": {
+      "end": "2026-11-14T03:05:26.409503+00:00",
+      "start": "2026-11-14T03:05:19.265815+00:00"
+    },
+    "incremental": {
+      "end": "2026-11-14T03:05:16.705503+00:00",
+      "start": "2026-11-14T03:05:12.858528+00:00"
+    },
+    "loc": {
+      "end": "2026-11-14T03:07:16.924868+00:00",
+      "start": "2026-11-14T03:07:16.827032+00:00"
+    },
+    "plain_build": {
+      "end": "2026-11-14T03:04:59.388194+00:00",
+      "start": "2026-11-14T03:04:57.537257+00:00"
+    },
+    "sizes": {
+      "end": "2026-11-14T03:05:19.265519+00:00",
+      "start": "2026-11-14T03:05:16.705827+00:00"
+    },
+    "tests": {
+      "end": "2026-11-14T03:06:15.397872+00:00",
+      "start": "2026-11-14T03:06:13.109287+00:00"
+    },
+    "toolchain": {
+      "end": "2026-11-14T03:04:57.537056+00:00",
+      "start": "2026-11-14T03:04:57.500490+00:00"
+    },
+    "web": {
+      "end": "2026-11-14T03:07:16.825716+00:00",
+      "start": "2026-11-14T03:06:21.908655+00:00"
+    }
+  },
+  "tests": {
+    "line": {
+      "failed": 0,
+      "not_feasible": 0,
+      "passed": 12
+    },
+    "rc": 0,
+    "secs": 2.29
+  },
+  "toolchain": {
+    "make_deps_warm": {
+      "rc": 0,
+      "secs": 0.04
+    }
+  },
+  "warm_noop_build": {
+    "rc": 0,
+    "secs": 0.24
+  },
+  "web": {
+    "bench-web": {
+      "browser_frames": {
+        "cards_scroll": {
+          "frames": 401,
+          "max_gap_ms": 133.4,
+          "p95_gap_ms": 17.8,
+          "window_ms": 6883.6
+        },
+        "scroll": {
+          "frames": 408,
+          "max_gap_ms": 167.2,
+          "p95_gap_ms": 33.4,
+          "window_ms": 9831.8
+        }
+      },
+      "bundle_dir_kb": 27268,
+      "chrome_version": "157.0.8103.51",
+      "console_errors": [],
+      "dpr": 2,
+      "engine": "chrome",
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 122.3,
+          "p95_gap_ms": 16.3,
+          "placeholder_steps": 0,
+          "switch_ms": 90.9,
+          "total_ms": 6883.6
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 47.8,
+          "ms": 527.3,
+          "p95_gap_ms": 40,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 185.7
+        },
+        "ready": {
+          "ms": 732.4
+        },
+        "scroll": {
+          "max_gap_ms": 116.1,
+          "p95_gap_ms": 62.6,
+          "placeholder_steps": 0,
+          "total_ms": 9831.8
+        },
+        "search": {
+          "ms": 163.5,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 831.6
+        }
+      },
+      "initial_transfer_kb": 6801,
+      "memory_sampling_error": null,
+      "peak_dom_nodes": 792,
+      "peak_gpu_rss_mb": 109.9,
+      "peak_js_heap_mb": 58.2,
+      "peak_renderer_rss_mb": 926.5,
+      "provenance": {
+        "bundle_sha256": {
+          "gogui.js": "5f20aac7a987d70693a711a41a842ef70546d4fbe5e27e535492083cadaae1f3",
+          "main.wasm": "cae64eff8e12a95cbf6bd3329cc1558f23c2aacce44229361b431a6ebebd401a",
+          "wasm_exec.js": "0c949f4996f9a89698e4b5c586de32249c3b69b7baadb64d220073cc04acba14"
+        },
+        "ended": "2026-11-14T03:06:49.370518+00:00",
+        "index_html_sha256": "7fc7d1d8f16092ece52d14a63a86ba398b871e5cc7c223b7670891957b757c7f",
+        "served_dir": "apps/gogui-fit/bin/web",
+        "started": "2026-11-14T03:06:22.126924+00:00"
+      },
+      "renderer_pids": [
+        84224,
+        84225,
+        84223
+      ],
+      "server_ready_secs": 1.02,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "viewport": {
+        "height": 800,
+        "width": 1280
+      },
+      "wall_ms": 19780,
+      "wasm_files": {
+        "main.wasm": {
+          "gzip_kb": 6554,
+          "raw_kb": 27230
+        }
+      }
+    },
+    "web-remote": {
+      "browser_frames": {
+        "cards_scroll": {
+          "frames": 402,
+          "max_gap_ms": 83.4,
+          "p95_gap_ms": 17.8,
+          "window_ms": 6920.2
+        },
+        "scroll": {
+          "frames": 421,
+          "max_gap_ms": 133.3,
+          "p95_gap_ms": 33.5,
+          "window_ms": 9788.5
+        }
+      },
+      "bundle_dir_kb": 27212,
+      "chrome_version": "157.0.8103.51",
+      "console_errors": [],
+      "dpr": 2,
+      "engine": "chrome",
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 72.1,
+          "p95_gap_ms": 16.8,
+          "placeholder_steps": 0,
+          "switch_ms": 144.9,
+          "total_ms": 6920.2
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 51.5,
+          "ms": 576.8,
+          "p95_gap_ms": 20.3,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 444.1
+        },
+        "ready": {
+          "ms": 940.6
+        },
+        "scroll": {
+          "max_gap_ms": 71.1,
+          "p95_gap_ms": 44.7,
+          "placeholder_steps": 0,
+          "total_ms": 9788.5
+        },
+        "search": {
+          "ms": 386,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 575.8
+        }
+      },
+      "initial_transfer_kb": 6980,
+      "memory_sampling_error": null,
+      "peak_dom_nodes": 792,
+      "peak_gpu_rss_mb": 107.7,
+      "peak_js_heap_mb": 47.8,
+      "peak_renderer_rss_mb": 803.6,
+      "provenance": {
+        "bundle_sha256": {
+          "gogui.js": "5f20aac7a987d70693a711a41a842ef70546d4fbe5e27e535492083cadaae1f3",
+          "main.wasm": "cee25945597effc98610e0a7795068aeccb2ebf353fb314681d77e219140d3b8",
+          "wasm_exec.js": "0c949f4996f9a89698e4b5c586de32249c3b69b7baadb64d220073cc04acba14"
+        },
+        "ended": "2026-11-14T03:07:16.825638+00:00",
+        "index_html_sha256": "7fc7d1d8f16092ece52d14a63a86ba398b871e5cc7c223b7670891957b757c7f",
+        "served_dir": "apps/gogui-fit/bin/web",
+        "started": "2026-11-14T03:06:49.612120+00:00"
+      },
+      "renderer_pids": [
+        85454,
+        85455,
+        85453
+      ],
+      "server_ready_secs": 1.01,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "viewport": {
+        "height": 800,
+        "width": 1280
+      },
+      "wall_ms": 20251,
+      "wasm_files": {
+        "main.wasm": {
+          "gzip_kb": 6543,
+          "raw_kb": 27175
+        }
+      }
+    }
+  }
+}

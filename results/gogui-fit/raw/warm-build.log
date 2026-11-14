@@ -1,0 +1,5 @@
+$ ['make', 'build']
+(rc=0, 0.24s)
+go build -o bin/gguix-gogui .
+# gguix/apps/gogui
+ld: warning: ignoring duplicate libraries: '-lobjc'

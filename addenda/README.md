@@ -8,6 +8,7 @@ measured with the same harness, then compared with the article's results.
 |---|---|---|---|---|
 | [MyGo](mygo.md), webview mode | Wails | like Wails | not needed | desktop only |
 | [MyGo](mygo.md), native UI mode | Fyne, Cogent | fastest measured, desktop and browser | not needed | both (WASM) |
+| [go-gui](gogui.md) | MyGo native UI, Fyne, Cogent | fast, but its grid pages and a polished table needs custom work | no (Linux, Windows); yes on macOS | both (WASM) |
 
 To add one: build it from a brief, collect everything in
 `briefs/ADDENDUM_RESULTS_CHECKLIST.md`, write the page from

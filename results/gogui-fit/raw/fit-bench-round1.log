@@ -1,0 +1,10 @@
+go build -o bin/gguix-gogui .
+# gguix/apps/gogui
+GGUIX_METRIC {"event":"ready","ms":347.9}
+GGUIX_METRIC {"event":"jump","ms":72.8}
+GGUIX_METRIC {"event":"scroll","max_gap_ms":16.7,"p95_gap_ms":13.9,"placeholder_steps":0,"total_ms":3386.3}
+GGUIX_METRIC {"event":"cards_scroll","max_gap_ms":17.4,"p95_gap_ms":13.8,"placeholder_steps":0,"switch_ms":62.8,"total_ms":3464}
+GGUIX_METRIC {"event":"sort","ms":265.1}
+GGUIX_METRIC {"event":"search","ms":69.6,"total":49898}
+GGUIX_METRIC {"event":"export","max_gap_ms":14.9,"ms":503.2,"p95_gap_ms":8.4,"rows":49898}
+GGUIX_METRIC {"event":"done"}

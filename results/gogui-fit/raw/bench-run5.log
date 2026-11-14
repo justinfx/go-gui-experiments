@@ -1,0 +1,13 @@
+2026-11-14 16:06:04.952 gguix-gogui[83884:33055947] NSKeyBindingManager: Bad key binding selector for '^/' = 'noop'
+2026-11-14 16:06:04.952 gguix-gogui[83884:33055947] NSKeyBindingManager: Bad key binding selector for '@' = 'noop'
+2026-11-14 16:06:04.952 gguix-gogui[83884:33055947] NSKeyBindingManager: Bad key binding selector for '@' = 'noop'
+2026-11-14 16:06:04.952 gguix-gogui[83884:33055947] NSKeyBindingManager: Bad key binding selector for '@' = 'noop'
+GGUIX_METRIC {"event":"ready","ms":339.5}
+GGUIX_METRIC {"event":"jump","ms":73.3}
+GGUIX_METRIC {"event":"scroll","max_gap_ms":16.3,"p95_gap_ms":13.8,"placeholder_steps":0,"total_ms":3384.5}
+GGUIX_METRIC {"event":"cards_scroll","max_gap_ms":17,"p95_gap_ms":14.2,"placeholder_steps":0,"switch_ms":56.2,"total_ms":3491.2}
+GGUIX_METRIC {"event":"sort","ms":266.4}
+GGUIX_METRIC {"event":"search","ms":69.5,"total":49898}
+GGUIX_METRIC {"event":"export","max_gap_ms":12.3,"ms":502.7,"p95_gap_ms":6.8,"rows":49898}
+GGUIX_METRIC {"event":"done"}
+gguix-store service_calls=154 block_arrivals=15 ui_wakes=14 held_rows=5000

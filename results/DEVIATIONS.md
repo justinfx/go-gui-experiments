@@ -114,3 +114,9 @@ The first harness runs of `mygo` and `mygoui` were discarded and kept in `result
 - `mygoui`: the run itself completed, but while its cold-build, sizes and idle-memory steps ran, the evaluator was launching `gguix-mygo` by hand to debug the issue above. Those steps may be skewed, so the whole run was repeated rather than patched.
 
 Both apps were then measured in full, one after the other, with nothing else running.
+
+## go-gui addendum (2026-11-14)
+
+- First pass (`apps/gogui`) built its table from buttons plus `VirtualList` instead of go-gui's `DataGrid`, after about 10 minutes, on the grounds that DataGrid "has its own paging model". DataGrid takes a `DataGridDataSource` (offset/limit fetch), which can wrap the core's pager, so that gap rested partly on a wrong reading. The author's hands-on check found the hand-built table's UX poor.
+- Second pass `apps/gogui-fit` (`briefs/gogui-fit.md`) follows `briefs/FIT_ADDENDUM.md` with one go-gui-specific addition: the table MUST be built on `datagrid`, and the detail form and column widths MUST fit their pane. That layout instruction goes beyond the article's fit passes, which changed only the data path; it was added because the first pass's layout, not its speed, was the problem.
+- Third blind style pass (`results/judge-addenda3/`, all eleven desktop apps): the first attempt was discarded because the judge's notes were attached to the wrong labels (notes for one label described another image, checked against the images). Re-run with fresh labels and a judge told to view and note one image at a time.

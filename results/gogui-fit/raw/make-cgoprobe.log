@@ -1,0 +1,5 @@
+$ ['make', 'cgoprobe']
+(rc=0, 3.61s)
+CGOPROBE desktop PASS
+CGOPROBE web FAIL # gguix/core ../../core/checksum_nocgo.go:8:9: undefined: cgoprobe_requires_cgo_but_cgo_is_unavailable_for_this_target 
+CGOPROBE web-remote PASS wasm client without cgoprobe, server with cgoprobe

@@ -20,6 +20,7 @@ No file under `apps/` or `core/` was changed. Where a change was tried it was in
 | miqt-gotth (Qt WebEngine) | Y (25 s warm) | Y (11/11, 1 not feasible) | Y, **only with Chromium sandbox disabled** | Y, same | native QMenuBar | Y | Qt `QFileDialog` | P: only with a tray watcher (KDE), none on stock GNOME | Y | `xdg-open <dir>` and `<parent dir>`, no select |
 | mygo (MyGo v0.9.0, web frontend, CGO_ENABLED=0) | Y (GTK3 + WebKitGTK 4.1 loaded at run time) | Y as 34/34 with Chromium; 20/34 with the configured Chrome (no arm64 Chrome) | Y | Y | **native GtkMenuBar** | Y (Ctrl+Q too) | **native GTK3 `GtkFileChooserNative`** (no portal call) | **Y** (D-Bus from the library) | Y | `FileManager1.ShowItems` with the file (selects on a real file manager); no FileManager1 here, parent-folder fallback via GIO |
 | mygoui (MyGo v0.9.0, native UI, no webview) | **P: `make build` exits 1 on Linux (app Makefile glob `GGUIX-mygoui` vs `gguix-mygoui`)**; Y with a one-word fix in the scratch copy | Y (12/12) | Y | Y | **native GtkMenuBar** | P: all fire except **Ctrl+Q on Wayland (sway)**, which does nothing (X11 fine, File > Quit works) | **native GTK3 `GtkFileChooserNative`** | **Y** (D-Bus from the library) | Y | `FileManager1.ShowItems` with the file; same fallback |
+| gogui (go-gui v0.96.0, GPU-drawn, EGL via purego) | Y (`ldd`: libc only) | Y (12/12) | Y | Y (native Wayland by default) | **none** (go-gui menubar is macOS only; no in-window menu) | P: all fire except **Ctrl+Q, which does nothing** (no Linux quit command in the app) | **zenity/kdialog subprocess** when installed (not transient, not portal); otherwise go-gui in-window browser | **Y** (`notify-send` subprocess, app name `notify-send`) | Y | `xdg-open <parent dir>` (core helper), no select |
 
 weston headless column (all apps): Fyne and Cogent crash in `glfwInit` with SIGSEGV; GTK apps (gotth, wails GTK3) and Qt apps stay alive but print seat assertions or cannot be inspected. weston headless advertises no `wl_seat`; GLFW dereferences it at
 `github.com/go-gl/glfw/v3.4/glfw@v0.1.0-pre.2/glfw/src/wl_init.c:856`. This is a container limit, not an app failure.
@@ -34,6 +35,17 @@ Two apps added: `mygo` (web frontend, Svelte in WebKitGTK 4.1) and `mygoui` (nat
 - `mygoui` framework gap (cause not isolated): Ctrl+Q does not quit under sway while the other accelerators work; File > Quit and X11 are fine. `mygo` Ctrl+Q works on both.
 - Container notes: the image on this machine lacked `xkbcli` (`libxkbcommon-tools`, listed in the Dockerfile), which `wlinput.py` needs for sway input; it was installed into the running container only. weston headless: both apps stay alive and print GDK seat assertions (no `wl_seat`), as for the GTK apps above.
 - Not verified: real GNOME/KDE (portal chooser, Ctrl+Q on a real Wayland compositor), a real file manager's reaction to `ShowItems`, the GPU drawing path of `mygoui`, HiDPI.
+
+## Update: go-gui addendum (2026-11-14)
+
+One app added: `gogui` (go-gui v0.96.0, its own GPU renderer, no GTK, no webview). Details: `results/gogui/linux.md`. Same method as the MyGo update; no file under `apps/` or `core/` changed and no patch was needed. No sandbox or seccomp relaxation; timings not measured.
+
+- Builds with plain `go build`; the binary links only libc. At run time it dlopens `libEGL.so.1` (required), and on Wayland `libwayland-client`, `libwayland-egl`, `libxkbcommon`, optionally `libdecor`. X11 is spoken in pure Go (xgb). It defaults to native Wayland when `WAYLAND_DISPLAY` is set; `GOGUI_WAYLAND=0` under sway panicked here because the container's sway has no XWayland (container limit; a stack trace instead of a one-line error).
+- Integrations run as subprocesses: file dialogs through `zenity` or `kdialog` (separate, non-transient window, no portal), with go-gui's own in-window browser as the fallback when neither is installed (the image as built has neither; both paths worked); notification through `notify-send` (arrives on D-Bus, shows as app `notify-send`); system light/dark through `gsettings` (live switch verified on X11; GNOME family only).
+- Framework gap: no menu bar on Linux (`NativeMenubarCfg` is macOS only, no in-window fallback). App gap following from it: Ctrl+Q does nothing on X11 and sway, because Quit only exists in the macOS menu; WM close works. App bug: no `WM_CLASS` / `app_id` set, although go-gui supports `WindowCfg.WMClass`.
+- weston headless: the app stays alive (no GLFW-style crash) and logs that it has no frame without libdecor.
+- Container notes: zenity and `xkbcli` were installed into the running container only.
+- Not verified: real GPU, libdecor frames on GNOME, kdialog, KDE theme follow, HiDPI.
 
 ## Update: three fixes re-checked on Linux (X11 and sway)
 

@@ -1,0 +1,9 @@
+rm -rf bin/web
+mkdir -p bin/web
+GOOS=js GOARCH=wasm go build -tags remote -o bin/web/main.wasm .
+cp "$(go env GOROOT)/lib/wasm/wasm_exec.js" bin/web/
+cp "~/go/pkg/mod/github.com/go-gui-org/go-gui@v0.96.0/gui/backend/web/gogui.js" bin/web/
+cp web/index.html bin/web/
+cd ../../core && go run ./cmd/server -static ../apps/gogui-fit/bin/web -addr :8097
+2026/11/14 16:06:50 gguix server on :8097 (rows=1000000 latency=50ms cgoprobe=false static="../apps/gogui-fit/bin/web")
+make: *** [web-remote] Terminated: 15

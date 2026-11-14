@@ -1,0 +1,3 @@
+process alive after 12s
+(app.log) gl: wayland: the compositor draws no window frames and libdecor is not installed; windows have no frame (install libdecor-0-0 and a plugin)
+(dunst crashed in this session: Trace/breakpoint trap, unrelated to the app)

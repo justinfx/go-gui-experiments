@@ -1,0 +1,3 @@
+$ ['make', 'test']
+(rc=0, 2.11s)
+GGUIX_TESTS passed=12 failed=0 not_feasible=0

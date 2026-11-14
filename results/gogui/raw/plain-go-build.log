@@ -1,0 +1,4 @@
+$ go build ./...
+(rc=0, 1.75s)
+# gguix/apps/gogui
+ld: warning: ignoring duplicate libraries: '-lobjc'

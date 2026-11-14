@@ -1,0 +1,1 @@
+2026/11/14 01:58:09 gl: wayland: the compositor draws no window frames and libdecor is not installed; windows have no frame (install libdecor-0-0 and a plugin)

@@ -1,0 +1,10 @@
+$ ['make', 'package']
+(rc=0, 2.51s)
+go build -o bin/gguix-gogui .
+rm -rf bin/GGUIX-gogui.app bin/pkg
+go run github.com/go-gui-org/go-gui/cmd/buildapp@v0.96.0 -o bin/pkg -name GGUIX-gogui -id dev.gguix.gogui bin/gguix-gogui
+bin/pkg/GGUIX-gogui.app
+mv bin/pkg/*.app bin/GGUIX-gogui.app
+rm -rf bin/pkg
+# gguix/apps/gogui
+ld: warning: ignoring duplicate libraries: '-lobjc'

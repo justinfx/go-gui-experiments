@@ -1,0 +1,11 @@
+panic: gl: gl: create window: gl: x11 connect: empty display string
+
+goroutine 1 [running, locked to thread]:
+github.com/go-gui-org/go-gui/gui/backend/gl.exitNoGPUOrPanic({0x19210c8, 0x140bfbd2e120})
+	/gomod/github.com/go-gui-org/go-gui@v0.96.0/gui/backend/gl/gpu_exit.go:20 +0xbc
+github.com/go-gui-org/go-gui/gui/backend/gl.RunApp(0x1757fb0?, {0x140bfbe11d18?, 0x0?, 0x140bfbd2e0e0?})
+	/gomod/github.com/go-gui-org/go-gui@v0.96.0/gui/backend/gl/runapp_x11.go:107 +0x28
+github.com/go-gui-org/go-gui/gui/backend.RunApp(...)
+	/gomod/github.com/go-gui-org/go-gui@v0.96.0/gui/backend/run_linux.go:17
+main.main()
+	/work/apps/gogui/main_desktop.go:58 +0x380
