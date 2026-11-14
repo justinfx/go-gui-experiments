@@ -1,5 +1,5 @@
 > An addendum to [One Go App, Served Five Ways](https://justinfx.com/2026/11/10/go-gui-five-ways/).
-> Same spec, same shared core, same harness. Other addenda: [[Addenda]].
+> Same spec, same shared core, same harness. Other addenda: [[Home]].
 
 **Suggested in** [r/golang](https://www.reddit.com/r/golang/s/AKasb7nJ4P) · **Stack** [MyGo](https://mygo.run) v0.9.0 ·
 **Compared with** Wails (webview mode), Fyne and Cogent (native UI mode) · **Measured** 2026-11-14, same machine as the article
