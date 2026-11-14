@@ -26,9 +26,14 @@ on the GPU, like Fyne and Cogent, and also builds to WASM for the browser.
 
 ## Results
 
-| Webview mode (`mygo`) | Native UI mode (`mygoui`) |
-|---|---|
-| ![MyGo webview mode, dark theme, table view](images/mygo-desktop.png) | ![MyGo native UI mode, dark theme, table view](images/mygoui-desktop.png) |
+**Webview mode (`mygo`)**
+
+[![MyGo webview mode, dark theme, table view](https://raw.githubusercontent.com/wiki/justinfx/go-gui-experiments/images/mygo-desktop.png)](https://raw.githubusercontent.com/wiki/justinfx/go-gui-experiments/images/mygo-desktop.png)
+
+**Native UI mode (`mygoui`)**
+
+[![MyGo native UI mode, dark theme, table view](https://raw.githubusercontent.com/wiki/justinfx/go-gui-experiments/images/mygoui-desktop.png)](https://raw.githubusercontent.com/wiki/justinfx/go-gui-experiments/images/mygoui-desktop.png)
+
 
 Desktop, median of 5 runs. Bold is the best figure in the row.
 

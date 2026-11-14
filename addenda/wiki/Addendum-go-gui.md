@@ -62,9 +62,14 @@ tables were not:
   content shows through a gap under the horizontal scrollbar, and the cards
   scrollbar does not follow the mouse wheel.
 
-| First pass | Second pass (`DataGrid`) |
-|---|---|
-| ![go-gui first pass, dark theme, table view](images/gogui-desktop.png) | ![go-gui second pass with DataGrid, dark theme, table view](images/gogui-fit-desktop.png) |
+**First pass**
+
+[![go-gui first pass, dark theme, table view](https://raw.githubusercontent.com/wiki/justinfx/go-gui-experiments/images/gogui-desktop.png)](https://raw.githubusercontent.com/wiki/justinfx/go-gui-experiments/images/gogui-desktop.png)
+
+**Second pass (`DataGrid`)**
+
+[![go-gui second pass with DataGrid, dark theme, table view](https://raw.githubusercontent.com/wiki/justinfx/go-gui-experiments/images/gogui-fit-desktop.png)](https://raw.githubusercontent.com/wiki/justinfx/go-gui-experiments/images/gogui-fit-desktop.png)
+
 
 ## The three questions
 
