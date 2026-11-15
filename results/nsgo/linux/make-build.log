@@ -1,0 +1,7 @@
+CGO_ENABLED=0 go build -o bin/gguix-nsgo .
+	linux-vdso.so.1 (0x0000ffffa6b7e000)
+	libdl.so.2 => /lib/aarch64-linux-gnu/libdl.so.2 (0x0000ffffa6b00000)
+	libpthread.so.0 => /lib/aarch64-linux-gnu/libpthread.so.0 (0x0000ffffa6ad0000)
+	libc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000ffffa6910000)
+	/lib/ld-linux-aarch64.so.1 (0x0000ffffa6b30000)
+-rwxr-xr-x 1 root root 17122948 Nov 14 20:28 bin/gguix-nsgo

@@ -1,0 +1,8 @@
+$ ['make', 'package']
+(rc=0, 3.48s)
+rm -rf bin/pkg bin/GGUIX-iupgo.app
+go run github.com/gen2brain/iup-go/cmd/iupkg@cbcdf09 package --os darwin --arch arm64 --name GGUIX-iupgo --id dev.gguix.iupgo --out bin/pkg --tags ctrl,matrix .
+mv bin/pkg/GGUIX-iupgo.app bin/GGUIX-iupgo.app
+bin/pkg/GGUIX-iupgo.app: replacing existing signature
+bin/pkg/GGUIX-iupgo.app
+bin/pkg/iupgo-1.0.0-darwin-arm64.zip

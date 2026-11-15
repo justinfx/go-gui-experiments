@@ -1,0 +1,42 @@
+=== RUN   TestT1Start
+--- PASS: TestT1Start (0.00s)
+=== RUN   TestT2Sort
+--- PASS: TestT2Sort (0.01s)
+=== RUN   TestT3Search
+--- PASS: TestT3Search (0.01s)
+=== RUN   TestT4Selection
+--- PASS: TestT4Selection (0.00s)
+=== RUN   TestT5Validation
+--- PASS: TestT5Validation (0.00s)
+=== RUN   TestT6Save
+--- PASS: TestT6Save (0.00s)
+=== RUN   TestT7ThemePrefs
+    app_test.go:246: IUP DARKMODE after APPEARANCE=DARK: NO
+--- PASS: TestT7ThemePrefs (0.36s)
+=== RUN   TestT8ExportCancel
+--- PASS: TestT8ExportCancel (0.21s)
+=== RUN   TestT9DirtyGuard
+--- PASS: TestT9DirtyGuard (0.02s)
+=== RUN   TestT10CustomCells
+--- PASS: TestT10CustomCells (0.01s)
+=== RUN   TestT11Cards
+--- PASS: TestT11Cards (0.02s)
+=== RUN   TestT12Host
+--- PASS: TestT12Host (0.01s)
+PASS
+ok  	gguix/apps/iupgo	0.754s
+NATIVE
+--- PASS: TestT1Start (0.00s)
+--- PASS: TestT2Sort (0.01s)
+--- PASS: TestT3Search (0.01s)
+--- PASS: TestT4Selection (0.01s)
+--- PASS: TestT5Validation (0.00s)
+--- PASS: TestT6Save (0.01s)
+    app_test.go:246: IUP DARKMODE after APPEARANCE=DARK: NO
+--- PASS: TestT7ThemePrefs (0.35s)
+--- PASS: TestT8ExportCancel (0.22s)
+--- PASS: TestT9DirtyGuard (0.01s)
+--- PASS: TestT10CustomCells (0.00s)
+--- PASS: TestT11Cards (0.00s)
+--- PASS: TestT12Host (0.00s)
+ok  	gguix/apps/iupgo	0.714s

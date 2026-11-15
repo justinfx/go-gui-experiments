@@ -1,0 +1,4 @@
+$ ['make', 'test']
+(rc=0, 2.07s)
+    app_test.go:257: IUP DARKMODE after APPEARANCE=DARK: YES
+GGUIX_TESTS passed=12 failed=0 not_feasible=0

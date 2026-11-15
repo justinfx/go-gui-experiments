@@ -1,0 +1,14 @@
+rm -rf bin/web bin/webdist
+GOFLAGS="" go tool nsgo build -target web -output bin/webdist
+
+  NSGo v0.0.0-20261114190341-2345b2fa5aba · GGUIX-nsgo 0.1.0 · web
+
+  ✓ built web (826ms, 16.3 MB)
+    → bin/webdist/GGUIX-nsgo-0.1.0-web
+    → bin/webdist/releases/gguix-nsgo-0.1.0-web.zip
+mkdir -p bin/web
+cp -R bin/webdist/*-web/. bin/web/
+open http://localhost:8097/?bench=1
+cd ../../core && go run ./cmd/server -static ../apps/nsgo/bin/web -addr :8097
+2026/11/15 15:17:01 gguix server on :8097 (rows=1000000 latency=50ms cgoprobe=false static="../apps/nsgo/bin/web")
+make: *** [bench-web] Terminated: 15

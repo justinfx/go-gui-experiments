@@ -1,0 +1,3 @@
+$ ['make', 'cross-linux']
+(rc=0, 1.1s)
+GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -ldflags "-X 'github.com/nsgo-dev/nsgo/core.appName=GGUIX-nsgo' -X 'github.com/nsgo-dev/nsgo/core.appID=dev.gguix.nsgo' -X 'github.com/nsgo-dev/nsgo/core.appVersion=0.1.0' -X 'github.com/nsgo-dev/nsgo/core.appBuild=0.1.0'" -o bin/gguix-nsgo-linux-amd64 .

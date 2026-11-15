@@ -1,0 +1,644 @@
+{
+  "app": "iupgo",
+  "artifacts": {
+    "bench": {
+      "binary": {
+        "mtime": "2026-11-15T02:18:03.696898+00:00",
+        "path": "apps/iupgo/bin/gguix-iupgo",
+        "sha256": "4da584eae348852d079f4daa5d8504b11a87d60b560f969842a7f91405c3c7df",
+        "size": 10959522
+      },
+      "build": {
+        "rc": 0,
+        "secs": 0.3
+      }
+    },
+    "cold_build": {
+      "binary": {
+        "mtime": "2026-11-15T02:17:49.944840+00:00",
+        "path": "apps/iupgo/bin/gguix-iupgo",
+        "sha256": "4da584eae348852d079f4daa5d8504b11a87d60b560f969842a7f91405c3c7df",
+        "size": 10959522
+      }
+    },
+    "idle_rss": {
+      "binary": {
+        "mtime": "2026-11-15T02:17:52.743311+00:00",
+        "path": "apps/iupgo/bin/gguix-iupgo",
+        "sha256": "4da584eae348852d079f4daa5d8504b11a87d60b560f969842a7f91405c3c7df",
+        "size": 10959522
+      }
+    },
+    "incremental": {
+      "binary": {
+        "mtime": "2026-11-15T02:17:52.743311+00:00",
+        "path": "apps/iupgo/bin/gguix-iupgo",
+        "sha256": "4da584eae348852d079f4daa5d8504b11a87d60b560f969842a7f91405c3c7df",
+        "size": 10959522
+      }
+    },
+    "sizes": {
+      "app_bundle": {
+        "files": 4,
+        "mtime": "2026-11-15T02:17:55.232814+00:00",
+        "path": "apps/iupgo/bin/GGUIX-iupgo.app",
+        "size_kb": 6096,
+        "tree_sha256": "9cf7608113fd02976fb45b0c46155d29fc10cec7d16f239561b795e000f5f46e"
+      },
+      "binary": {
+        "mtime": "2026-11-15T02:17:52.743311+00:00",
+        "path": "apps/iupgo/bin/gguix-iupgo",
+        "sha256": "4da584eae348852d079f4daa5d8504b11a87d60b560f969842a7f91405c3c7df",
+        "size": 10959522
+      }
+    }
+  },
+  "bench": {
+    "errors": [],
+    "events_seen": [
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ]
+    ],
+    "launch": "bin/gguix-iupgo (direct, after one make build)",
+    "memory": {
+      "peak_process_tree_mb": {
+        "max": 208.8,
+        "median": 205.2
+      },
+      "peak_total_mb": {
+        "max": 208.8,
+        "median": 205.2
+      },
+      "peak_webkit_mb": {
+        "max": 0.0,
+        "median": 0.0
+      }
+    },
+    "runs": 5,
+    "summary": {
+      "cards_scroll": {
+        "max_gap_ms": {
+          "max": 6.8,
+          "median": 0.2,
+          "min": 0.1,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 0.1,
+          "median": 0.1,
+          "min": 0.1,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "switch_ms": {
+          "max": 132.5,
+          "median": 130.3,
+          "min": 129.3,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3207.6,
+          "median": 3207.1,
+          "min": 3206.5,
+          "n": 5
+        }
+      },
+      "export": {
+        "max_gap_ms": {
+          "max": 0.1,
+          "median": 0.1,
+          "min": 0.1,
+          "n": 5
+        },
+        "ms": {
+          "max": 500.5,
+          "median": 500.2,
+          "min": 500,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 0.1,
+          "median": 0.1,
+          "min": 0,
+          "n": 5
+        },
+        "rows": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "jump": {
+        "ms": {
+          "max": 105,
+          "median": 91.9,
+          "min": 90,
+          "n": 5
+        }
+      },
+      "ready": {
+        "ms": {
+          "max": 1033.5,
+          "median": 1023.1,
+          "min": 994.2,
+          "n": 5
+        }
+      },
+      "scroll": {
+        "max_gap_ms": {
+          "max": 9.2,
+          "median": 8.2,
+          "min": 2.4,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 1.4,
+          "median": 0.9,
+          "min": 0.8,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 25,
+          "median": 25,
+          "min": 25,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3219.5,
+          "median": 3218.2,
+          "min": 3216.2,
+          "n": 5
+        }
+      },
+      "search": {
+        "ms": {
+          "max": 87.7,
+          "median": 86,
+          "min": 84.9,
+          "n": 5
+        },
+        "total": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "sort": {
+        "ms": {
+          "max": 498.4,
+          "median": 496.7,
+          "min": 494.6,
+          "n": 5
+        }
+      }
+    }
+  },
+  "cgoprobe": {
+    "rc": 0,
+    "results": [
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "desktop"
+      },
+      {
+        "reason": "# gguix/core ../../core/checksum_nocgo.go:8:9: undefined: cgoprobe_requires_cgo_but_cgo_is_unavailable_for_this_target",
+        "result": "FAIL",
+        "target": "web"
+      },
+      {
+        "reason": "wasm client without cgoprobe, server with cgoprobe",
+        "result": "PASS",
+        "target": "web-remote"
+      }
+    ],
+    "secs": 2.92
+  },
+  "cold_build": {
+    "rc": 0,
+    "secs": 13.43
+  },
+  "cross": {
+    "cross-linux": {
+      "rc": 0,
+      "secs": 0.37,
+      "status": "PASS",
+      "tail": "GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o bin/gguix-iupgo-linux-amd64 ."
+    },
+    "cross-windows": {
+      "rc": 0,
+      "secs": 0.38,
+      "status": "PASS",
+      "tail": "GOOS=windows GOARCH=amd64 CGO_ENABLED=0 go build -o bin/gguix-iupgo-windows-amd64.exe ."
+    }
+  },
+  "idle_rss": {
+    "process_tree_mb": 166.0,
+    "total_mb": 166.0,
+    "webkit_mb": 0.0
+  },
+  "incremental_build": {
+    "BuildMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 1.38
+    }
+  },
+  "loc": {
+    "app": "iupgo",
+    "build_tagged_files": 14,
+    "by_category": {
+      "bench": 55,
+      "desktop": 242,
+      "shared": 3097,
+      "test": 375,
+      "web": 213
+    },
+    "by_category_language": {
+      "bench": {
+        "go": 55
+      },
+      "desktop": {
+        "go": 221,
+        "make": 21
+      },
+      "shared": {
+        "go": 3063,
+        "make": 34
+      },
+      "test": {
+        "go": 375
+      },
+      "web": {
+        "go": 120,
+        "js": 55,
+        "make": 38
+      }
+    },
+    "by_language": {
+      "go": 3834,
+      "js": 55,
+      "make": 93
+    },
+    "custom_rendering_lines": 0,
+    "dual_target_overhead_lines": 455,
+    "dual_target_overhead_pct": 12.8,
+    "excluded_generated_lines": {},
+    "excluded_vendored_lines": {},
+    "files": 28,
+    "inline_marker_blocks": 2,
+    "longest_go_func": "ui.go:buildUI",
+    "longest_go_func_lines": 147
+  },
+  "plain_go_build_from_clean": {
+    "rc": 0,
+    "secs": 1.27,
+    "tail": ""
+  },
+  "provenance": {
+    "app_tree": {
+      "files": 33,
+      "sha256": "949306b7aa7155372d96171c158afa413a319a44732d03c71588607b550d4dac"
+    },
+    "core_tree": {
+      "files": 42,
+      "sha256": "a3c001afaaa4afac45fd024f7ecc3f7d32e5d3766388b8278b1fd104500d2b1b"
+    },
+    "gguix_env_inherited": {},
+    "gguix_env_passed": {
+      "GGUIX_DPR": "2"
+    },
+    "gguix_env_scrubbed": [],
+    "recorded_at": "2026-11-15T02:17:34.881771+00:00"
+  },
+  "sizes": {
+    "app_bundle": "bin/GGUIX-iupgo.app",
+    "app_bundle_kb": 6096,
+    "binary_bytes": 10959522,
+    "bundled_frameworks_kb": null,
+    "bundled_refs": [],
+    "external_dylibs": [],
+    "package": {
+      "rc": 0,
+      "secs": 3.48
+    }
+  },
+  "step_secs": {
+    "bench": 55.3,
+    "cgoprobe": 3.1,
+    "cold_build": 13.7,
+    "cross": 0.8,
+    "idle_rss": 7.1,
+    "incremental": 2.8,
+    "loc": 0.1,
+    "plain_build": 1.3,
+    "sizes": 3.5,
+    "tests": 2.1,
+    "toolchain": 0.0,
+    "web": 35.2
+  },
+  "step_times": {
+    "bench": {
+      "end": "2026-11-15T02:18:58.703101+00:00",
+      "start": "2026-11-15T02:18:03.402255+00:00"
+    },
+    "cgoprobe": {
+      "end": "2026-11-15T02:19:03.874999+00:00",
+      "start": "2026-11-15T02:19:00.777551+00:00"
+    },
+    "cold_build": {
+      "end": "2026-11-15T02:17:49.953867+00:00",
+      "start": "2026-11-15T02:17:36.218125+00:00"
+    },
+    "cross": {
+      "end": "2026-11-15T02:19:04.633439+00:00",
+      "start": "2026-11-15T02:19:03.875360+00:00"
+    },
+    "idle_rss": {
+      "end": "2026-11-15T02:18:03.401674+00:00",
+      "start": "2026-11-15T02:17:56.262707+00:00"
+    },
+    "incremental": {
+      "end": "2026-11-15T02:17:52.752453+00:00",
+      "start": "2026-11-15T02:17:49.954358+00:00"
+    },
+    "loc": {
+      "end": "2026-11-15T02:19:39.899895+00:00",
+      "start": "2026-11-15T02:19:39.796699+00:00"
+    },
+    "plain_build": {
+      "end": "2026-11-15T02:17:36.217788+00:00",
+      "start": "2026-11-15T02:17:34.923217+00:00"
+    },
+    "sizes": {
+      "end": "2026-11-15T02:17:56.262253+00:00",
+      "start": "2026-11-15T02:17:52.752965+00:00"
+    },
+    "tests": {
+      "end": "2026-11-15T02:19:00.777024+00:00",
+      "start": "2026-11-15T02:18:58.704242+00:00"
+    },
+    "toolchain": {
+      "end": "2026-11-15T02:17:34.922583+00:00",
+      "start": "2026-11-15T02:17:34.891031+00:00"
+    },
+    "web": {
+      "end": "2026-11-15T02:19:39.792347+00:00",
+      "start": "2026-11-15T02:19:04.633808+00:00"
+    }
+  },
+  "tests": {
+    "line": {
+      "failed": 0,
+      "not_feasible": 0,
+      "passed": 12
+    },
+    "rc": 0,
+    "secs": 2.07
+  },
+  "toolchain": {
+    "make_deps_warm": {
+      "rc": 0,
+      "secs": 0.03
+    }
+  },
+  "warm_noop_build": {
+    "rc": 0,
+    "secs": 0.19
+  },
+  "web": {
+    "bench-web": {
+      "browser_frames": {},
+      "bundle_dir_kb": 8152,
+      "chrome_version": "157.0.8103.51",
+      "console_errors": [],
+      "dpr": 2,
+      "engine": "chrome",
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 168.1,
+          "p95_gap_ms": 52.1,
+          "placeholder_steps": 0,
+          "switch_ms": 191.1,
+          "total_ms": 5711.7
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 49.6,
+          "ms": 507.4,
+          "p95_gap_ms": 32.9,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 88
+        },
+        "ready": {
+          "ms": 525.7
+        },
+        "scroll": {
+          "max_gap_ms": 26,
+          "p95_gap_ms": 23.4,
+          "placeholder_steps": 25,
+          "total_ms": 3240.2
+        },
+        "search": {
+          "ms": 175.6,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 864
+        }
+      },
+      "initial_transfer_kb": 65,
+      "memory_sampling_error": null,
+      "peak_dom_nodes": 9485,
+      "peak_gpu_rss_mb": 103.1,
+      "peak_js_heap_mb": 3.6,
+      "peak_renderer_rss_mb": 726.7,
+      "provenance": {
+        "bundle_sha256": {
+          "app.wasm": "84f1cca1f0fc7af6ffc330de66e2616653c219a397ea77ac410d32872f762f42",
+          "coi-sw.js": "0ebeea10efe6ed39593af591f130a9d4dab6d2a8440e2fba3cd2c036a2454756",
+          "coi.js": "901739c35519a070f8929f164cd94f65bbe7e41e5851b9e80f3448566551aa95",
+          "gguix-main.js": "e9c50a56cacb936926fc0888131402ce9f92aebe23e979a107b677ec2705b903",
+          "iup.js": "b36acfcec263e59ca06c76af0df0fb2ad4d3abeb18586d704551b3c668179c87",
+          "iup.wasm": "815371b109cca39b52989d1672661737c91a4af503927796974fec3a7bbb9c04",
+          "iupwasm_dom.js": "34f9c0de59a516871a5a4131e764aeba08a0d9c81762a713b8d3bd30c25493da",
+          "wasm_exec.js": "0c949f4996f9a89698e4b5c586de32249c3b69b7baadb64d220073cc04acba14",
+          "worker.js": "1138577255046dc70f8d653010de49bba7e267b5da7e1ea2f5db1f209a61c82d"
+        },
+        "ended": "2026-11-15T02:19:22.493963+00:00",
+        "index_html_sha256": "7737de36e64a41d0cee195fc63b157658910c6e51efbabce53d58c0dcf07779d",
+        "served_dir": "apps/iupgo/bin/web",
+        "started": "2026-11-15T02:19:04.846119+00:00"
+      },
+      "renderer_pids": [
+        73054,
+        73052,
+        73051
+      ],
+      "server_ready_secs": 0.51,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "viewport": {
+        "height": 800,
+        "width": 1280
+      },
+      "wall_ms": 11594,
+      "wasm_files": {
+        "app.wasm": {
+          "gzip_kb": 1799,
+          "raw_kb": 6901
+        },
+        "iup.wasm": {
+          "gzip_kb": 250,
+          "raw_kb": 639
+        }
+      }
+    },
+    "web-remote": {
+      "browser_frames": {},
+      "bundle_dir_kb": 15136,
+      "chrome_version": "157.0.8103.51",
+      "console_errors": [],
+      "dpr": 2,
+      "engine": "chrome",
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 35.9,
+          "p95_gap_ms": 16.6,
+          "placeholder_steps": 1,
+          "switch_ms": 186.4,
+          "total_ms": 5212.9
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 5.4,
+          "ms": 575.5,
+          "p95_gap_ms": 5.2,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 64.4
+        },
+        "ready": {
+          "ms": 490.2
+        },
+        "scroll": {
+          "max_gap_ms": 42.9,
+          "p95_gap_ms": 17.6,
+          "placeholder_steps": 30,
+          "total_ms": 3243.5
+        },
+        "search": {
+          "ms": 134.6,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 379.3
+        }
+      },
+      "initial_transfer_kb": 65,
+      "memory_sampling_error": null,
+      "peak_dom_nodes": 9877,
+      "peak_gpu_rss_mb": 101.7,
+      "peak_js_heap_mb": 3.9,
+      "peak_renderer_rss_mb": 616.1,
+      "provenance": {
+        "bundle_sha256": {
+          "app.wasm": "286be57d82187ac8f2374d796e178b2eb39d7394b1256bb904ec6eb0c4de41c6",
+          "coi-sw.js": "0ebeea10efe6ed39593af591f130a9d4dab6d2a8440e2fba3cd2c036a2454756",
+          "coi.js": "901739c35519a070f8929f164cd94f65bbe7e41e5851b9e80f3448566551aa95",
+          "gguix-main.js": "e9c50a56cacb936926fc0888131402ce9f92aebe23e979a107b677ec2705b903",
+          "iup.js": "b36acfcec263e59ca06c76af0df0fb2ad4d3abeb18586d704551b3c668179c87",
+          "iup.wasm": "815371b109cca39b52989d1672661737c91a4af503927796974fec3a7bbb9c04",
+          "iupwasm_dom.js": "34f9c0de59a516871a5a4131e764aeba08a0d9c81762a713b8d3bd30c25493da",
+          "wasm_exec.js": "0c949f4996f9a89698e4b5c586de32249c3b69b7baadb64d220073cc04acba14",
+          "worker.js": "1138577255046dc70f8d653010de49bba7e267b5da7e1ea2f5db1f209a61c82d"
+        },
+        "ended": "2026-11-15T02:19:39.792235+00:00",
+        "index_html_sha256": "7737de36e64a41d0cee195fc63b157658910c6e51efbabce53d58c0dcf07779d",
+        "served_dir": "apps/iupgo/bin/web",
+        "started": "2026-11-15T02:19:22.733864+00:00"
+      },
+      "renderer_pids": [
+        73808,
+        73806,
+        73805
+      ],
+      "server_ready_secs": 1.01,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "viewport": {
+        "height": 800,
+        "width": 1280
+      },
+      "wall_ms": 10420,
+      "wasm_files": {
+        "app.wasm": {
+          "gzip_kb": 3532,
+          "raw_kb": 13887
+        },
+        "iup.wasm": {
+          "gzip_kb": 250,
+          "raw_kb": 639
+        }
+      }
+    }
+  }
+}

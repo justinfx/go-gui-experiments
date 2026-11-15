@@ -456,7 +456,7 @@ class Measure:
 
     def web(self):
         w = {}
-        targets = ["bench-web"] + (["web-remote"] if self.base in ("fyne", "cogent", "mygoui", "gogui") else [])
+        targets = ["bench-web"] + (["web-remote"] if self.base in ("fyne", "cogent", "mygoui", "gogui", "nsgo", "iupgo") else [])
         for t in targets:
             busy = listeners(WEBPORT)
             if busy:

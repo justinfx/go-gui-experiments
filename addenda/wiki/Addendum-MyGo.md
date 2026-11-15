@@ -22,7 +22,7 @@
 > | | |
 > |---|---|
 > | **A lot of data?** | Native UI mode is the fastest measured; webview mode scrolls like Wails, stutter included. |
-> | **Need cgo?** | No, in either mode; a cgo core still runs on the desktop. |
+> | **Need cgo?** | No, in either mode; the article's cgo test core still runs on the desktop. |
 > | **Web, native, or both?** | Native UI mode reaches both from one codebase; webview mode is desktop only. |
 
 The rest of this page is the evidence for the box above.
@@ -41,42 +41,18 @@ on the GPU, like Fyne and Cogent, and also builds to WASM for the browser.
 
 ## Results
 
-**Webview mode (`mygo`)**
+**Webview mode**
 
 [![MyGo webview mode, dark theme, table view](https://raw.githubusercontent.com/wiki/justinfx/go-gui-experiments/images/mygo-desktop.png)](https://raw.githubusercontent.com/wiki/justinfx/go-gui-experiments/images/mygo-desktop.png)
 
-**Native UI mode (`mygoui`)**
+**Native UI mode**
 
 [![MyGo native UI mode, dark theme, table view](https://raw.githubusercontent.com/wiki/justinfx/go-gui-experiments/images/mygoui-desktop.png)](https://raw.githubusercontent.com/wiki/justinfx/go-gui-experiments/images/mygoui-desktop.png)
 
-Desktop, median of 5 runs. Bold is the best figure in the row.
+**Native UI mode, browser**
 
-| | mygo | wails | mygoui | fyne | cogent |
-|---|---|---|---|---|---|
-| Ready (ms) | 628 | 623 | **236** | 572 | 555 |
-| Jump to row 500k (ms) | 84 | 90 | **69** | 146 | 113 |
-| Table scroll, max frame gap (ms) | 71 | 91 | **13** | 40 | 19 |
-| Blank-row steps while scrolling | 54 | 64 | 23 | **0** | 24 |
-| Switch to cards (ms) | 191 | 194 | **51** | 104 | 112 |
-| Sort (ms) | 280 | 280 | **241** | 254 | 262 |
-| Peak memory (MB) | 641 | 824 | **219** | 1412 | 513 |
-| Cold build (s) | 15.1 | 39.2 | **13.7** | 19.1 | 23.5 |
-| Style, blind (1 to 5) | 4 | 4 | **5** | 3 | 2 |
+[![MyGo native UI mode in Chrome, dark theme, table view](https://raw.githubusercontent.com/wiki/justinfx/go-gui-experiments/images/mygoui-web.png)](https://raw.githubusercontent.com/wiki/justinfx/go-gui-experiments/images/mygoui-web.png)
 
-Browser (Chrome, single run). Frame gaps here are timed by the browser for all
-three apps, so they compare with each other, not with the article's web table.
-
-| | mygoui | fyne | cogent |
-|---|---|---|---|
-| Download, gzip (MB) | **4.0** | 12.4 | 6.9 |
-| Ready (ms) | 921 | **830** | 1,453 |
-| Jump (ms) | **54** | 187 | 138 |
-| Table scroll, max frame gap (ms) | **67** | 217 | 317 |
-| Cards scroll, max frame gap (ms) | **33** | 135 | 717 |
-
-In a hands-on check, both modes had every native feature working (menus,
-shortcuts, dialogs, notification, clipboard, Reveal, state restore), and felt
-the same except scrolling, which was flawless in native UI mode.
 
 Desktop, median of 5 runs. Bold is the best figure in the row.
 
@@ -85,7 +61,7 @@ Desktop, median of 5 runs. Bold is the best figure in the row.
 | Ready (ms) | 628 | 623 | **236** | 572 | 555 |
 | Jump to row 500k (ms) | 84 | 90 | **69** | 146 | 113 |
 | Table scroll, max frame gap (ms) | 71 | 91 | **13** | 40 | 19 |
-| Blank-row steps while scrolling | 54 | 64 | 23 | **0** | 24 |
+| Scroll steps showing blank rows | 54 | 64 | 23 | **0** | 24 |
 | Switch to cards (ms) | 191 | 194 | **51** | 104 | 112 |
 | Sort (ms) | 280 | 280 | **241** | 254 | 262 |
 | Peak memory (MB) | 641 | 824 | **219** | 1412 | 513 |
@@ -113,7 +89,8 @@ the same except scrolling, which was flawless in native UI mode.
 stutter. Native UI mode is the fastest app measured on the desktop so far, and
 the only Go WASM build that scrolls without visible stutter in the browser.
 
-**Need cgo?** Neither mode needs it, and a cgo core still runs on the desktop.
+**Need cgo?** Neither mode needs it, and the article's cgo test core (a core that needs cgo)
+still runs on the desktop.
 In the browser, as with Fyne and Cogent, a cgo core cannot run inside WASM but
 works with `web-remote`, where the core runs on a Go server.
 GTK, WebKit and GPU libraries are loaded at launch rather than linked, so they

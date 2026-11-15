@@ -1,0 +1,652 @@
+{
+  "app": "nsgo",
+  "artifacts": {
+    "bench": {
+      "binary": {
+        "mtime": "2026-11-15T02:16:00.130428+00:00",
+        "path": "apps/nsgo/bin/gguix-nsgo",
+        "sha256": "ed70c0b2a70ff8e781fd3abaa4a229bf937531a248736dabaad8e26fe7bf054f",
+        "size": 17057170
+      },
+      "build": {
+        "rc": 0,
+        "secs": 0.2
+      }
+    },
+    "cold_build": {
+      "binary": {
+        "mtime": "2026-11-15T02:15:50.635245+00:00",
+        "path": "apps/nsgo/bin/gguix-nsgo",
+        "sha256": "ed70c0b2a70ff8e781fd3abaa4a229bf937531a248736dabaad8e26fe7bf054f",
+        "size": 17057170
+      }
+    },
+    "idle_rss": {
+      "binary": {
+        "mtime": "2026-11-15T02:15:51.898616+00:00",
+        "path": "apps/nsgo/bin/gguix-nsgo",
+        "sha256": "ed70c0b2a70ff8e781fd3abaa4a229bf937531a248736dabaad8e26fe7bf054f",
+        "size": 17057170
+      }
+    },
+    "incremental": {
+      "binary": {
+        "mtime": "2026-11-15T02:15:51.898616+00:00",
+        "path": "apps/nsgo/bin/gguix-nsgo",
+        "sha256": "ed70c0b2a70ff8e781fd3abaa4a229bf937531a248736dabaad8e26fe7bf054f",
+        "size": 17057170
+      }
+    },
+    "sizes": {
+      "app_bundle": {
+        "files": 3,
+        "mtime": "2026-11-15T02:15:52.749422+00:00",
+        "path": "apps/nsgo/bin/GGUIX-nsgo.app",
+        "size_kb": 11284,
+        "tree_sha256": "17d9560d9ae1f3db7a20a10712b099a3816d764baff4ab4470332c9c0e485a50"
+      },
+      "binary": {
+        "mtime": "2026-11-15T02:15:51.898616+00:00",
+        "path": "apps/nsgo/bin/gguix-nsgo",
+        "sha256": "ed70c0b2a70ff8e781fd3abaa4a229bf937531a248736dabaad8e26fe7bf054f",
+        "size": 17057170
+      }
+    }
+  },
+  "bench": {
+    "errors": [],
+    "events_seen": [
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ]
+    ],
+    "launch": "bin/gguix-nsgo (direct, after one make build)",
+    "memory": {
+      "peak_process_tree_mb": {
+        "max": 380.9,
+        "median": 369.3
+      },
+      "peak_total_mb": {
+        "max": 380.9,
+        "median": 369.3
+      },
+      "peak_webkit_mb": {
+        "max": 0.0,
+        "median": 0.0
+      }
+    },
+    "runs": 5,
+    "summary": {
+      "cards_scroll": {
+        "max_gap_ms": {
+          "max": 2.7,
+          "median": 2.4,
+          "min": 2,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 1.4,
+          "median": 1.4,
+          "min": 1.2,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "switch_ms": {
+          "max": 60,
+          "median": 58.5,
+          "min": 58,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3201.1,
+          "median": 3200.6,
+          "min": 3200.5,
+          "n": 5
+        }
+      },
+      "export": {
+        "max_gap_ms": {
+          "max": 1.9,
+          "median": 0.2,
+          "min": 0,
+          "n": 5
+        },
+        "ms": {
+          "max": 500.4,
+          "median": 500,
+          "min": 499.9,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 0.1,
+          "median": 0.1,
+          "min": 0,
+          "n": 5
+        },
+        "rows": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "jump": {
+        "ms": {
+          "max": 79.2,
+          "median": 77.7,
+          "min": 76.3,
+          "n": 5
+        }
+      },
+      "ready": {
+        "ms": {
+          "max": 507,
+          "median": 497.5,
+          "min": 475,
+          "n": 5
+        }
+      },
+      "scroll": {
+        "max_gap_ms": {
+          "max": 12.7,
+          "median": 11.4,
+          "min": 10.8,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 10,
+          "median": 9,
+          "min": 8,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 6,
+          "median": 4,
+          "min": 1,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 3215.6,
+          "median": 3200.2,
+          "min": 3200.2,
+          "n": 5
+        }
+      },
+      "search": {
+        "ms": {
+          "max": 77,
+          "median": 75.9,
+          "min": 71.8,
+          "n": 5
+        },
+        "total": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "sort": {
+        "ms": {
+          "max": 282.8,
+          "median": 271.8,
+          "min": 268.2,
+          "n": 5
+        }
+      }
+    }
+  },
+  "cgoprobe": {
+    "rc": 0,
+    "results": [
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "desktop"
+      },
+      {
+        "reason": "# gguix/core ../../core/checksum_nocgo.go:8:9: undefined: cgoprobe_requires_cgo_but_cgo_is_unavailable_for_this_target",
+        "result": "FAIL",
+        "target": "web"
+      },
+      {
+        "reason": "wasm client without cgoprobe, server with cgoprobe",
+        "result": "PASS",
+        "target": "web-remote"
+      }
+    ],
+    "secs": 3.68
+  },
+  "cold_build": {
+    "rc": 0,
+    "secs": 8.02
+  },
+  "cross": {
+    "cross-linux": {
+      "rc": 0,
+      "secs": 1.1,
+      "status": "PASS",
+      "tail": "GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -ldflags \"-X 'github.com/nsgo-dev/nsgo/core.appName=GGUIX-nsgo' -X 'github.com/nsgo-dev/nsgo/core.appID=dev.gguix.nsgo' -X 'github.com/nsgo-dev/nsgo/core.appVersion=0.1.0' -X 'github.com/nsgo-dev/nsgo/core.appBuild=0.1.0'\" -o bin/gguix-nsgo-linux-amd64 ."
+    },
+    "cross-windows": {
+      "rc": 0,
+      "secs": 1.07,
+      "status": "PASS",
+      "tail": "GOOS=windows GOARCH=amd64 CGO_ENABLED=0 go build -ldflags \"-X 'github.com/nsgo-dev/nsgo/core.appName=GGUIX-nsgo' -X 'github.com/nsgo-dev/nsgo/core.appID=dev.gguix.nsgo' -X 'github.com/nsgo-dev/nsgo/core.appVersion=0.1.0' -X 'github.com/nsgo-dev/nsgo/core.appBuild=0.1.0'\" -o bin/gguix-nsgo-windows-amd64.exe ."
+    }
+  },
+  "idle_rss": {
+    "process_tree_mb": 237.5,
+    "total_mb": 237.5,
+    "webkit_mb": 0.0
+  },
+  "incremental_build": {
+    "BuildMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 0.74
+    }
+  },
+  "loc": {
+    "app": "nsgo",
+    "build_tagged_files": 9,
+    "by_category": {
+      "bench": 70,
+      "desktop": 188,
+      "shared": 2244,
+      "test": 263,
+      "web": 75
+    },
+    "by_category_language": {
+      "bench": {
+        "go": 70
+      },
+      "desktop": {
+        "go": 167,
+        "make": 21
+      },
+      "shared": {
+        "go": 2188,
+        "make": 31,
+        "yaml": 25
+      },
+      "test": {
+        "go": 263
+      },
+      "web": {
+        "go": 57,
+        "make": 18
+      }
+    },
+    "by_language": {
+      "go": 2745,
+      "make": 70,
+      "yaml": 25
+    },
+    "custom_rendering_lines": 0,
+    "dual_target_overhead_lines": 263,
+    "dual_target_overhead_pct": 10.5,
+    "excluded_generated_lines": {},
+    "excluded_vendored_lines": {},
+    "files": 19,
+    "inline_marker_blocks": 2,
+    "longest_go_func": "view.go:detailView",
+    "longest_go_func_lines": 154
+  },
+  "plain_go_build_from_clean": {
+    "rc": 0,
+    "secs": 0.79,
+    "tail": ""
+  },
+  "provenance": {
+    "app_tree": {
+      "files": 25,
+      "sha256": "dca75695796353fed6b16e0253c3b4106c7534a2412af4663fe08249c91dff93"
+    },
+    "core_tree": {
+      "files": 42,
+      "sha256": "a3c001afaaa4afac45fd024f7ecc3f7d32e5d3766388b8278b1fd104500d2b1b"
+    },
+    "gguix_env_inherited": {},
+    "gguix_env_passed": {
+      "GGUIX_DPR": "2"
+    },
+    "gguix_env_scrubbed": [],
+    "recorded_at": "2026-11-15T02:15:41.459227+00:00"
+  },
+  "sizes": {
+    "app_bundle": "bin/GGUIX-nsgo.app",
+    "app_bundle_kb": 11284,
+    "binary_bytes": 17057170,
+    "bundled_frameworks_kb": null,
+    "bundled_refs": [],
+    "external_dylibs": [],
+    "package": {
+      "rc": 0,
+      "secs": 0.84
+    }
+  },
+  "step_secs": {
+    "bench": 48.9,
+    "cgoprobe": 3.9,
+    "cold_build": 8.3,
+    "cross": 2.2,
+    "idle_rss": 7.1,
+    "incremental": 1.3,
+    "loc": 0.1,
+    "plain_build": 0.8,
+    "sizes": 0.9,
+    "tests": 4.8,
+    "toolchain": 0.0,
+    "web": 35.1
+  },
+  "step_times": {
+    "bench": {
+      "end": "2026-11-15T02:16:48.803791+00:00",
+      "start": "2026-11-15T02:15:59.937097+00:00"
+    },
+    "cgoprobe": {
+      "end": "2026-11-15T02:16:57.463610+00:00",
+      "start": "2026-11-15T02:16:53.599544+00:00"
+    },
+    "cold_build": {
+      "end": "2026-11-15T02:15:50.646160+00:00",
+      "start": "2026-11-15T02:15:42.311731+00:00"
+    },
+    "cross": {
+      "end": "2026-11-15T02:16:59.631466+00:00",
+      "start": "2026-11-15T02:16:57.464021+00:00"
+    },
+    "idle_rss": {
+      "end": "2026-11-15T02:15:59.936599+00:00",
+      "start": "2026-11-15T02:15:52.790503+00:00"
+    },
+    "incremental": {
+      "end": "2026-11-15T02:15:51.909934+00:00",
+      "start": "2026-11-15T02:15:50.646629+00:00"
+    },
+    "loc": {
+      "end": "2026-11-15T02:17:34.817769+00:00",
+      "start": "2026-11-15T02:17:34.716074+00:00"
+    },
+    "plain_build": {
+      "end": "2026-11-15T02:15:42.311382+00:00",
+      "start": "2026-11-15T02:15:41.496929+00:00"
+    },
+    "sizes": {
+      "end": "2026-11-15T02:15:52.790025+00:00",
+      "start": "2026-11-15T02:15:51.910350+00:00"
+    },
+    "tests": {
+      "end": "2026-11-15T02:16:53.599162+00:00",
+      "start": "2026-11-15T02:16:48.805228+00:00"
+    },
+    "toolchain": {
+      "end": "2026-11-15T02:15:41.496600+00:00",
+      "start": "2026-11-15T02:15:41.471493+00:00"
+    },
+    "web": {
+      "end": "2026-11-15T02:17:34.714690+00:00",
+      "start": "2026-11-15T02:16:59.631865+00:00"
+    }
+  },
+  "tests": {
+    "line": {
+      "failed": 0,
+      "not_feasible": 0,
+      "passed": 12
+    },
+    "rc": 0,
+    "secs": 4.79
+  },
+  "toolchain": {
+    "make_deps_warm": {
+      "rc": 0,
+      "secs": 0.02
+    }
+  },
+  "warm_noop_build": {
+    "rc": 0,
+    "secs": 0.18
+  },
+  "web": {
+    "bench-web": {
+      "browser_frames": {
+        "cards_scroll": {
+          "frames": 189,
+          "max_gap_ms": 49.1,
+          "p95_gap_ms": 17.4,
+          "window_ms": 3201.9
+        },
+        "scroll": {
+          "frames": 82,
+          "max_gap_ms": 50.8,
+          "p95_gap_ms": 50.3,
+          "window_ms": 3223.7
+        }
+      },
+      "bundle_dir_kb": 16712,
+      "chrome_version": "157.0.8103.51",
+      "console_errors": [],
+      "dpr": 2,
+      "engine": "chrome",
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 0.2,
+          "p95_gap_ms": 0.1,
+          "placeholder_steps": 1,
+          "switch_ms": 247.2,
+          "total_ms": 3201.9
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 5.2,
+          "ms": 505.1,
+          "p95_gap_ms": 5.1,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 263.1
+        },
+        "ready": {
+          "ms": 939.8
+        },
+        "scroll": {
+          "max_gap_ms": 5.9,
+          "p95_gap_ms": 5.1,
+          "placeholder_steps": 14,
+          "total_ms": 3223.7
+        },
+        "search": {
+          "ms": 213.7,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 926.8
+        }
+      },
+      "initial_transfer_kb": 4238,
+      "memory_sampling_error": null,
+      "peak_dom_nodes": 30386,
+      "peak_gpu_rss_mb": 106.1,
+      "peak_js_heap_mb": 7.6,
+      "peak_renderer_rss_mb": 997.2,
+      "provenance": {
+        "bundle_sha256": {
+          "app.b24f6b9f9e.wasm": "b24f6b9f9ea8b27bcd9c8d5fa48834e4f0a524ed20e664cf985d9c92456c7fe4",
+          "mount.854032ffdb.js": "854032ffdb0cc4d02a5e8672fdf518d7172f2b396fe3755e1c3bac26a17d6a6b",
+          "nsgo.f0b2469c31.js": "f0b2469c312457e5cb094f5502c6f2cabbc5dd3c382e5c9af63998b5156ddaa0",
+          "wasm_exec.0c949f4996.js": "0c949f4996f9a89698e4b5c586de32249c3b69b7baadb64d220073cc04acba14"
+        },
+        "ended": "2026-11-15T02:17:17.596942+00:00",
+        "index_html_sha256": "ff121639e7f2dc6e29b502d84017b12043ee5afc1ceda31451d2001447e01466",
+        "served_dir": "apps/nsgo/bin/web",
+        "started": "2026-11-15T02:16:59.861807+00:00"
+      },
+      "renderer_pids": [
+        69558,
+        69559,
+        69557
+      ],
+      "server_ready_secs": 1.51,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "viewport": {
+        "height": 800,
+        "width": 1280
+      },
+      "wall_ms": 10093,
+      "wasm_files": {
+        "app.b24f6b9f9e.wasm": {
+          "gzip_kb": 4081,
+          "raw_kb": 16663
+        }
+      }
+    },
+    "web-remote": {
+      "browser_frames": {
+        "cards_scroll": {
+          "frames": 189,
+          "max_gap_ms": 33.4,
+          "p95_gap_ms": 17.3,
+          "window_ms": 3206.3
+        },
+        "scroll": {
+          "frames": 21,
+          "max_gap_ms": 315.8,
+          "p95_gap_ms": 315.8,
+          "window_ms": 3422.4
+        }
+      },
+      "bundle_dir_kb": 22984,
+      "chrome_version": "157.0.8103.51",
+      "console_errors": [],
+      "dpr": 2,
+      "engine": "chrome",
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 1.7,
+          "p95_gap_ms": 0.1,
+          "placeholder_steps": 0,
+          "switch_ms": 258.8,
+          "total_ms": 3206.3
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 0.1,
+          "ms": 560.2,
+          "p95_gap_ms": 0.1,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 230.1
+        },
+        "ready": {
+          "ms": 872
+        },
+        "scroll": {
+          "max_gap_ms": 13.5,
+          "p95_gap_ms": 8.4,
+          "placeholder_steps": 160,
+          "total_ms": 3422.4
+        },
+        "search": {
+          "ms": 232.1,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 442
+        }
+      },
+      "initial_transfer_kb": 5783,
+      "memory_sampling_error": null,
+      "peak_dom_nodes": 33285,
+      "peak_gpu_rss_mb": 105.5,
+      "peak_js_heap_mb": 11,
+      "peak_renderer_rss_mb": 835.3,
+      "provenance": {
+        "bundle_sha256": {
+          "app.fc495df4d1.wasm": "fc495df4d1c9b0fa452d78a8d6d66f08b4bed71c5eeb6db93710bfc1ab7317c1",
+          "mount.866e3cb924.js": "866e3cb9242fb6913bcd025c1735c2a5c2e066489971f4b30d7a913898ae850e",
+          "nsgo.f0b2469c31.js": "f0b2469c312457e5cb094f5502c6f2cabbc5dd3c382e5c9af63998b5156ddaa0",
+          "wasm_exec.0c949f4996.js": "0c949f4996f9a89698e4b5c586de32249c3b69b7baadb64d220073cc04acba14"
+        },
+        "ended": "2026-11-15T02:17:34.714603+00:00",
+        "index_html_sha256": "7b862ee930f1477dd9fb8b86294528805f9cc024654f3ac226d40370c7e5ce80",
+        "served_dir": "apps/nsgo/bin/web",
+        "started": "2026-11-15T02:17:17.836640+00:00"
+      },
+      "renderer_pids": [
+        70222,
+        70223,
+        70221
+      ],
+      "server_ready_secs": 1.51,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "viewport": {
+        "height": 800,
+        "width": 1280
+      },
+      "wall_ms": 9517,
+      "wasm_files": {
+        "app.fc495df4d1.wasm": {
+          "gzip_kb": 5538,
+          "raw_kb": 22935
+        }
+      }
+    }
+  }
+}

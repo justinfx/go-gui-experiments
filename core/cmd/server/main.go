@@ -25,9 +25,19 @@ func main() {
 	latency := flag.Int("latency-ms", int(def.Latency/time.Millisecond), "latency added per items request, in ms")
 	rps := flag.Int("export-rps", def.ExportRowsPerSec, "export rows per second (negative = unthrottled)")
 	flag.String("app", "", "app ID (informational; prefs are keyed by the request path)")
+	coi := flag.Bool("coi", false, "send COOP/COEP headers (cross-origin isolation, for SharedArrayBuffer)")
 	flag.Parse()
 
 	svc := memory.New(memory.Options{Rows: *rows, Latency: time.Duration(*latency) * time.Millisecond, ExportRowsPerSec: *rps, Seed: def.Seed})
 	log.Printf("gguix server on %s (rows=%d latency=%dms cgoprobe=%v static=%q)", *addr, svc.Rows(), *latency, core.CgoProbe, *static)
-	log.Fatal(http.ListenAndServe(*addr, server.Handler(svc, *static)))
+	h := server.Handler(svc, *static)
+	if *coi {
+		inner := h
+		h = http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			w.Header().Set("Cross-Origin-Opener-Policy", "same-origin")
+			w.Header().Set("Cross-Origin-Embedder-Policy", "require-corp")
+			inner.ServeHTTP(w, r)
+		})
+	}
+	log.Fatal(http.ListenAndServe(*addr, h))
 }

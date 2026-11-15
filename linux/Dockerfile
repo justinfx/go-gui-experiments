@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     xvfb openbox xdotool x11-utils x11-xserver-utils imagemagick xclip xsel wl-clipboard wtype libxkbcommon-tools zenity \
     weston sway grim dbus dbus-x11 dbus-user-session dunst libnotify-bin xdg-utils \
     xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-gnome shared-mime-info \
-    fonts-dejavu-core fonts-noto-core adwaita-icon-theme librsvg2-common \
+    fonts-dejavu-core fonts-noto-core adwaita-icon-theme gnome-themes-extra librsvg2-common \
     libnss3 libasound2t64 at-spi2-core \
     && rm -rf /var/lib/apt/lists/*
 

@@ -1,0 +1,6 @@
+window 6291463
+Window 6291463   Position: 162,144 (screen: 0)   Geometry: 1278x777 
+WM_CLASS(STRING) = "gguix-iupgo", "Gguix-iupgo"
+_NET_WM_NAME(UTF8_STRING) = "GGUIX - IUP-Go"
+_MOTIF_WM_HINTS(_MOTIF_WM_HINTS) = 0x3, 0x3e, 0x7e, 0x0, 0x0
+_GTK_FRAME_EXTENTS:  no such atom on any window.

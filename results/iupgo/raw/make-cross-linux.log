@@ -1,0 +1,3 @@
+$ ['make', 'cross-linux']
+(rc=0, 0.37s)
+GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o bin/gguix-iupgo-linux-amd64 .

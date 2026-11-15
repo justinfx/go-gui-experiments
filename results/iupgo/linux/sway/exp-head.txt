@@ -1,0 +1,4 @@
+id,sku,name,category,price,quantity,status,rating,featured,restock_date,updated_at,notes
+1,SKU-0000001,Deluxe Silicone Lamp,Electronics,1823.19,182,Active,3.7,false,,2025-10-18T17:24:00Z,
+2,SKU-0000002,Classic Glass Tray,Kitchen,1478.16,373,Active,3.8,false,,2025-04-24T23:35:00Z,
+3,SKU-0000003,Rugge

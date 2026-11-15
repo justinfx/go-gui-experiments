@@ -1,0 +1,5 @@
+Window 8388612   Position: 161,130 (screen: 0)   Geometry: 1280x800 
+WM_CLASS(STRING) = "dev.gguix.nsgo", "dev.gguix.nsgo"
+_NET_WM_NAME(UTF8_STRING) = "GGUIX - NSGo"
+_MOTIF_WM_HINTS(_MOTIF_WM_HINTS) = 0x3, 0x1, 0x1, 0x0, 0x0
+_GTK_FRAME_EXTENTS:  not found.

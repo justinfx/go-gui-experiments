@@ -1,0 +1,10 @@
+$ ['make', 'package']
+(rc=0, 0.84s)
+rm -rf bin/dist bin/GGUIX-nsgo.app
+go tool nsgo build -target macos_arm64 -output bin/dist
+cp -R bin/dist/*-macos_arm64/GGUIX-nsgo.app bin/GGUIX-nsgo.app
+
+  NSGo v0.0.0-20261114190341-2345b2fa5aba · GGUIX-nsgo 0.1.0 · macos_arm64
+
+  ✓ built macos_arm64 (546ms, 11.0 MB)
+    → bin/dist/GGUIX-nsgo-0.1.0-macos_arm64

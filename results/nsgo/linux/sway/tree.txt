@@ -1,0 +1,1 @@
+app_id=dev.gguix.nsgo name=GGUIX - NSGo shell=xdg_shell

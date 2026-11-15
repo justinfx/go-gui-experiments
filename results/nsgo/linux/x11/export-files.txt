@@ -1,0 +1,4 @@
+total 2296
+drwxr-xr-x 2 root root    4096 Nov 14 21:14 .
+drwxrwxrwt 1 root root    4096 Nov 14 21:13 ..
+-rw-r--r-- 1 root root 2341616 Nov 14 21:14 out.csv

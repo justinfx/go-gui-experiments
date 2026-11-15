@@ -1,0 +1,28 @@
+=== RUN   TestT1Start
+--- PASS: TestT1Start (0.00s)
+=== RUN   TestT2Sort
+--- PASS: TestT2Sort (0.01s)
+=== RUN   TestT3Search
+--- PASS: TestT3Search (0.01s)
+=== RUN   TestT4Selection
+--- PASS: TestT4Selection (0.00s)
+=== RUN   TestT5Validation
+--- PASS: TestT5Validation (0.01s)
+=== RUN   TestT6Save
+--- PASS: TestT6Save (0.00s)
+=== RUN   TestT7ThemePrefs
+    app_test.go:236: dark theme not applied
+--- FAIL: TestT7ThemePrefs (0.03s)
+=== RUN   TestT8ExportCancel
+--- PASS: TestT8ExportCancel (0.22s)
+=== RUN   TestT9DirtyGuard
+--- PASS: TestT9DirtyGuard (0.01s)
+=== RUN   TestT10CustomCells
+--- PASS: TestT10CustomCells (0.01s)
+=== RUN   TestT11Cards
+--- PASS: TestT11Cards (0.01s)
+=== RUN   TestT12Host
+--- PASS: TestT12Host (0.00s)
+FAIL
+FAIL	gguix/apps/iupgo	0.409s
+FAIL

@@ -1,0 +1,11 @@
+   ]
+   string ":1.12:user:3"
+method call time=1794690871.026102 sender=:1.5 -> destination=org.freedesktop.Notifications serial=21 path=/org/freedesktop/Notifications; interface=org.freedesktop.Notifications; member=Notify
+   string "dev.gguix.nsgo"
+   uint32 0
+   string "dev.gguix.nsgo"
+   string "Export complete"
+   string "20,000 rows written"
+   array [
+      string "default"
+      string ""

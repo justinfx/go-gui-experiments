@@ -9,20 +9,20 @@
 ## At a glance
 
 > **Verdict:** fast, but not ready for a large-data table app. Its stock table
-> pages instead of scrolling, and a polished table needs a lot of custom work.
+> shows data in pages of 5,000 rows instead of one continuous scroll, and a polished table needs a lot of custom work.
 >
 > **Stronger than the comparators at:** desktop speed (close to MyGo native
 > UI, ahead of Fyne and Cogent on scroll, jump and memory); no cgo on Linux or
 > Windows; a smaller browser download than Fyne.
 >
 > **Weaker at:** the table (pages of 5,000 rows, text-only cells, visual
-> glitches in both agent passes); style (2 and 4 out of 5, against MyGo native
+> glitches in both builds); style (2 and 4 out of 5, against MyGo native
 > UI's 5); browser scroll (more stutter than MyGo native UI); no menu bar on
 > Linux; maturity (v0.96.0, breaking changes in recent minor versions).
 >
 > | | |
 > |---|---|
-> | **A lot of data?** | Fast to scroll, but the stock table pages; continuous scrolling means building your own. |
+> | **A lot of data?** | Fast to scroll, but the stock table shows pages of 5,000 rows; continuous scrolling means building your own. |
 > | **Need cgo?** | Not on Linux or Windows; yes on macOS (Metal). |
 > | **Web, native, or both?** | Both from one Go UI codebase, with visible scroll stutter in the browser. |
 
@@ -84,7 +84,8 @@ continuous table means building your own.
 
 **Need cgo?** Not on Linux or Windows: only libEGL at run time (plus the
 Wayland libraries on Wayland), X11 in pure Go. On macOS it needs cgo for Metal.
-A cgo core runs on the desktop, and in the browser through `web-remote`.
+The article's cgo test core (a core that needs cgo) runs on the desktop, and in
+the browser through `web-remote`, where the core runs on a Go server.
 
 **Web, native, or both?** Both from one Go UI codebase, at about half of Fyne's
 download size, with visible scroll stutter in the browser. On Linux (the

@@ -91,6 +91,20 @@ dunst -print > "$GGUIX_LOG/dunst.log" 2>&1 &
 pids+=($!)
 sleep 0.5
 
+# Desktop portal: gtk for dialogs/OpenURI, gnome for Settings (color-scheme), which the gtk 1.15
+# backend no longer provides. The gnome backend runs "settings only" outside gnome-shell.
+mkdir -p "$XDG_CONFIG_HOME/xdg-desktop-portal"
+printf '[preferred]\ndefault=gtk\norg.freedesktop.impl.portal.Settings=gnome\n' \
+  > "$XDG_CONFIG_HOME/xdg-desktop-portal/portals.conf"
+/usr/libexec/xdg-desktop-portal-gnome > "$GGUIX_LOG/portal.log" 2>&1 &
+pids+=($!)
+/usr/libexec/xdg-desktop-portal-gtk >> "$GGUIX_LOG/portal.log" 2>&1 &
+pids+=($!)
+sleep 1
+/usr/libexec/xdg-desktop-portal >> "$GGUIX_LOG/portal.log" 2>&1 &
+pids+=($!)
+sleep 1
+
 # Write the session environment so another shell (docker exec) can attach: . $GGUIX_LOG/env.sh
 { for v in DISPLAY WAYLAND_DISPLAY SWAYSOCK GDK_BACKEND QT_QPA_PLATFORM DBUS_SESSION_BUS_ADDRESS XDG_RUNTIME_DIR XDG_CONFIG_HOME XDG_DATA_HOME XDG_CURRENT_DESKTOP PATH GGUIX_LOG GGUIX_MODE LIBGL_ALWAYS_SOFTWARE; do
     [ -n "${!v:-}" ] && echo "export $v='${!v}'"; done; } > "$GGUIX_LOG/env.sh"

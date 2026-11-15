@@ -1,0 +1,10 @@
+mkdir -p bin/web
+GOOS=js GOARCH=wasm CGO_ENABLED=0 go build -tags remote -o bin/web/app.wasm .
+cp ~/iupwasm/repo/iup/external/wasm/build/iup.js ~/iupwasm/repo/iup/external/wasm/build/iup.wasm ~/iupwasm/repo/iup/external/wasm/web/worker.js ~/iupwasm/repo/iup/external/wasm/web/iupwasm_dom.js bin/web/
+cp "$(go env GOROOT)/lib/wasm/wasm_exec.js" bin/web/
+cp web/coi.js web/coi-sw.js web/gguix-main.js bin/web/
+echo '[]' > bin/web/resources.json
+sed -e 's#<head>#<head><script src="coi.js"></script><script src="gguix-main.js"></script>#' -e "s#var worker = new Worker('worker.js');#var worker = new Worker('worker.js' + location.search); gguixAttach(worker);#" ~/iupwasm/repo/iup/external/wasm/web/index.html > bin/web/index.html
+cd ../../core && go run ./cmd/server -static ../apps/iupgo/bin/web -coi -addr :8097
+2026/11/15 15:19:23 gguix server on :8097 (rows=1000000 latency=50ms cgoprobe=false static="../apps/iupgo/bin/web")
+make: *** [web-remote] Terminated: 15

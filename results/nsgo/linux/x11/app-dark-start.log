@@ -1,0 +1,24 @@
+
+(dev.gguix.nsgo:93): GLib-GObject-CRITICAL **: 01:18:34.324: g_value_get_int: assertion 'G_VALUE_HOLDS_INT (value)' failed
+
+(dev.gguix.nsgo:93): GLib-GObject-CRITICAL **: 01:18:34.324: g_value_get_int: assertion 'G_VALUE_HOLDS_INT (value)' failed
+
+(dev.gguix.nsgo:93): GLib-GObject-CRITICAL **: 01:18:34.324: g_value_get_int: assertion 'G_VALUE_HOLDS_INT (value)' failed
+
+(dev.gguix.nsgo:93): GLib-GObject-CRITICAL **: 01:18:34.325: g_value_get_int: assertion 'G_VALUE_HOLDS_INT (value)' failed
+
+(dev.gguix.nsgo:93): GLib-GObject-CRITICAL **: 01:18:34.325: g_value_get_int: assertion 'G_VALUE_HOLDS_INT (value)' failed
+
+(dev.gguix.nsgo:93): GLib-GObject-CRITICAL **: 01:18:34.325: g_value_get_int: assertion 'G_VALUE_HOLDS_INT (value)' failed
+
+(dev.gguix.nsgo:93): GLib-GObject-CRITICAL **: 01:18:34.325: g_value_get_int: assertion 'G_VALUE_HOLDS_INT (value)' failed
+
+(dev.gguix.nsgo:93): GLib-GObject-CRITICAL **: 01:18:34.327: g_value_get_int: assertion 'G_VALUE_HOLDS_INT (value)' failed
+
+(dev.gguix.nsgo:93): GLib-GObject-CRITICAL **: 01:18:34.328: g_value_get_int: assertion 'G_VALUE_HOLDS_INT (value)' failed
+
+(dev.gguix.nsgo:93): GLib-GObject-CRITICAL **: 01:18:34.328: g_value_get_int: assertion 'G_VALUE_HOLDS_INT (value)' failed
+
+(dev.gguix.nsgo:93): GLib-GObject-CRITICAL **: 01:18:34.328: g_value_get_int: assertion 'G_VALUE_HOLDS_INT (value)' failed
+
+(dev.gguix.nsgo:93): GLib-GObject-CRITICAL **: 01:18:34.328: g_value_get_int: assertion 'G_VALUE_HOLDS_INT (value)' failed

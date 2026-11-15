@@ -1,0 +1,5 @@
+21:15:47 xdg-open /tmp/export-out
+21:16:38 xdg-open /tmp/export-out
+21:18:26 xdg-open /tmp/export-out
+01:03:27 xdg-open /tmp/prefs-gx
+01:03:30 xdg-open /tmp/export-out
