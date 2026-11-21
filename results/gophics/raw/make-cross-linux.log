@@ -1,0 +1,4 @@
+$ ['make', 'cross-linux']
+(rc=0, 0.87s)
+GOOS=linux GOARCH=amd64 go build -o bin/cross/gguix-gophics-linux-amd64 .
+-rwxr-xr-x@ 1 user  staff  25421830 Nov 21 16:04 bin/cross/gguix-gophics-linux-amd64

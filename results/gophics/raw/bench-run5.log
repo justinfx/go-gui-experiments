@@ -1,0 +1,10 @@
+fontscan2026/11/21 16:03:55 using system font dirs ["/Library/Fonts" "/System/Library/Fonts" "~/Library/Fonts"]
+2026/11/21 16:03:56 INFO adapter selected name="Apple M1 Max" backend=Metal type=DiscreteGPU
+GGUIX_METRIC {"event":"ready","ms":398.7}
+GGUIX_METRIC {"event":"jump","ms":91.2}
+GGUIX_METRIC {"event":"scroll","max_gap_ms":36.2,"p95_gap_ms":15.4,"placeholder_steps":0,"total_ms":6682.6}
+GGUIX_METRIC {"event":"cards_scroll","max_gap_ms":17.5,"p95_gap_ms":15,"placeholder_steps":0,"switch_ms":67.6,"total_ms":6697.5}
+GGUIX_METRIC {"event":"sort","ms":284.6}
+GGUIX_METRIC {"event":"search","ms":74.3,"total":49898}
+GGUIX_METRIC {"event":"export","max_gap_ms":16.1,"ms":523.5,"p95_gap_ms":14.4,"rows":49898}
+GGUIX_METRIC {"event":"done"}

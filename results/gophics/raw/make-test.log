@@ -1,0 +1,39 @@
+$ ['make', 'test']
+(rc=0, 6.08s)
+?   	gguix/apps/gophics	[no test files]
+=== RUN   TestT1Startup
+fontscan2026/11/21 16:04:12 using system font dirs ["/Library/Fonts" "/System/Library/Fonts" "~/Library/Fonts"]
+--- PASS: TestT1Startup (0.22s)
+=== RUN   TestT2SortByNameHeader
+--- PASS: TestT2SortByNameHeader (0.20s)
+=== RUN   TestT3Search
+--- PASS: TestT3Search (0.49s)
+=== RUN   TestT4Selection
+--- PASS: TestT4Selection (0.15s)
+=== RUN   TestT5Validation
+--- PASS: TestT5Validation (0.29s)
+=== RUN   TestT6Save
+--- PASS: TestT6Save (0.33s)
+=== RUN   TestT7ThemePrefs
+--- PASS: TestT7ThemePrefs (0.68s)
+=== RUN   TestT8ExportCancel
+--- PASS: TestT8ExportCancel (0.62s)
+=== RUN   TestT9DirtyGuard
+--- PASS: TestT9DirtyGuard (0.33s)
+=== RUN   TestT10CustomCells
+--- PASS: TestT10CustomCells (0.22s)
+=== RUN   TestT11Cards
+--- PASS: TestT11Cards (0.27s)
+=== RUN   TestT12Host
+--- PASS: TestT12Host (0.21s)
+=== RUN   TestFixShortcutInFocusedField
+--- PASS: TestFixShortcutInFocusedField (0.27s)
+=== RUN   TestFixTableScrollbars
+--- PASS: TestFixTableScrollbars (0.18s)
+=== RUN   TestFixExportFileName
+--- PASS: TestFixExportFileName (0.00s)
+=== RUN   TestFixHeaderClipped
+--- PASS: TestFixHeaderClipped (0.23s)
+PASS
+ok  	gguix/apps/gophics/ui	5.331s
+GGUIX_TESTS passed=12 failed=0 not_feasible=0

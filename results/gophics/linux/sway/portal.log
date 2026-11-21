@@ -1,0 +1,26 @@
+Non-compatible display server, exposing settings only.
+
+(xdg-desktop-portal-gtk:39): xdg-desktop-portal-gtk-WARNING **: 03:30:50.530: error: Could not connect: No such file or directory
+
+
+(/usr/libexec/xdg-desktop-portal:51): xdg-desktop-portal-WARNING **: 03:30:51.529: Failed to create RealtimeKit proxy: Could not connect: No such file or directory
+[W][00591.724313] pw.conf      | [          conf.c: 1031 try_load_conf()] can't load config client.conf: No such file or directory
+[E][00591.724348] pw.conf      | [          conf.c: 1060 pw_conf_load_conf_for_context()] can't load config client.conf: No such file or directory
+
+(/usr/libexec/xdg-desktop-portal:51): xdg-desktop-portal-WARNING **: 03:30:51.538: Failed connect to PipeWire: Couldn't create PipeWire context
+
+(/usr/libexec/xdg-desktop-portal:51): xdg-desktop-portal-WARNING **: 03:30:51.538: Choosing gnome.portal for org.freedesktop.impl.portal.Screenshot via the deprecated UseIn key
+
+(/usr/libexec/xdg-desktop-portal:51): xdg-desktop-portal-WARNING **: 03:30:51.538: The preferred method to match portal implementations to desktop environments is to use the portals.conf(5) configuration file
+
+(/usr/libexec/xdg-desktop-portal:51): xdg-desktop-portal-WARNING **: 03:30:51.540: Choosing gnome.portal for org.freedesktop.impl.portal.Background via the deprecated UseIn key
+
+(/usr/libexec/xdg-desktop-portal:51): xdg-desktop-portal-WARNING **: 03:30:51.542: Choosing gnome.portal for org.freedesktop.impl.portal.Wallpaper via the deprecated UseIn key
+
+(/usr/libexec/xdg-desktop-portal:51): xdg-desktop-portal-WARNING **: 03:30:51.546: Choosing gnome.portal for org.freedesktop.impl.portal.ScreenCast via the deprecated UseIn key
+
+(/usr/libexec/xdg-desktop-portal:51): xdg-desktop-portal-WARNING **: 03:30:51.546: Choosing gnome.portal for org.freedesktop.impl.portal.RemoteDesktop via the deprecated UseIn key
+
+(/usr/libexec/xdg-desktop-portal:51): xdg-desktop-portal-WARNING **: 03:30:51.547: Choosing gnome.portal for org.freedesktop.impl.portal.Clipboard via the deprecated UseIn key
+
+(/usr/libexec/xdg-desktop-portal:51): xdg-desktop-portal-WARNING **: 03:30:51.548: Choosing gnome.portal for org.freedesktop.impl.portal.InputCapture via the deprecated UseIn key

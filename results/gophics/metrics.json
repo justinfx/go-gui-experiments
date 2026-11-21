@@ -1,0 +1,654 @@
+{
+  "app": "gophics",
+  "artifacts": {
+    "bench": {
+      "binary": {
+        "mtime": "2026-11-21T03:02:55.222707+00:00",
+        "path": "apps/gophics/bin/gguix-gophics",
+        "sha256": "376260ca6f8556d4bdb28c7dd555efaa4add0b9a93e0bdb4b18929e0204b8073",
+        "size": 22476754
+      },
+      "build": {
+        "rc": 0,
+        "secs": 0.26
+      }
+    },
+    "cold_build": {
+      "binary": {
+        "mtime": "2026-11-21T03:02:44.102387+00:00",
+        "path": "apps/gophics/bin/gguix-gophics",
+        "sha256": "376260ca6f8556d4bdb28c7dd555efaa4add0b9a93e0bdb4b18929e0204b8073",
+        "size": 22476754
+      }
+    },
+    "idle_rss": {
+      "binary": {
+        "mtime": "2026-11-21T03:02:45.565901+00:00",
+        "path": "apps/gophics/bin/gguix-gophics",
+        "sha256": "376260ca6f8556d4bdb28c7dd555efaa4add0b9a93e0bdb4b18929e0204b8073",
+        "size": 22476754
+      }
+    },
+    "incremental": {
+      "binary": {
+        "mtime": "2026-11-21T03:02:45.565901+00:00",
+        "path": "apps/gophics/bin/gguix-gophics",
+        "sha256": "376260ca6f8556d4bdb28c7dd555efaa4add0b9a93e0bdb4b18929e0204b8073",
+        "size": 22476754
+      }
+    },
+    "sizes": {
+      "app_bundle": {
+        "files": 3,
+        "mtime": "2026-11-21T03:02:45.731322+00:00",
+        "path": "apps/gophics/bin/GGUIX-gophics.app",
+        "size_kb": 15292,
+        "tree_sha256": "a2ec5689bf48e890054222219001ab6fc73bed72bdd7243bceafa65711098b75"
+      },
+      "binary": {
+        "mtime": "2026-11-21T03:02:45.565901+00:00",
+        "path": "apps/gophics/bin/gguix-gophics",
+        "sha256": "376260ca6f8556d4bdb28c7dd555efaa4add0b9a93e0bdb4b18929e0204b8073",
+        "size": 22476754
+      }
+    }
+  },
+  "bench": {
+    "errors": [],
+    "events_seen": [
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ],
+      [
+        "cards_scroll",
+        "done",
+        "export",
+        "jump",
+        "ready",
+        "scroll",
+        "search",
+        "sort"
+      ]
+    ],
+    "launch": "bin/gguix-gophics (direct, after one make build)",
+    "memory": {
+      "peak_process_tree_mb": {
+        "max": 333.6,
+        "median": 331.5
+      },
+      "peak_total_mb": {
+        "max": 333.6,
+        "median": 331.5
+      },
+      "peak_webkit_mb": {
+        "max": 0.0,
+        "median": 0.0
+      }
+    },
+    "runs": 5,
+    "summary": {
+      "cards_scroll": {
+        "max_gap_ms": {
+          "max": 22.9,
+          "median": 17.5,
+          "min": 16.7,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 15.2,
+          "median": 15,
+          "min": 15,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "switch_ms": {
+          "max": 80.7,
+          "median": 67.6,
+          "min": 67.6,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 6697.6,
+          "median": 6697,
+          "min": 6684,
+          "n": 5
+        }
+      },
+      "export": {
+        "max_gap_ms": {
+          "max": 16.7,
+          "median": 16.1,
+          "min": 15.8,
+          "n": 5
+        },
+        "ms": {
+          "max": 523.5,
+          "median": 522.3,
+          "min": 520.3,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 15.9,
+          "median": 15,
+          "min": 14.4,
+          "n": 5
+        },
+        "rows": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "jump": {
+        "ms": {
+          "max": 92.4,
+          "median": 88.4,
+          "min": 82.9,
+          "n": 5
+        }
+      },
+      "ready": {
+        "ms": {
+          "max": 419.5,
+          "median": 398.7,
+          "min": 379.3,
+          "n": 5
+        }
+      },
+      "scroll": {
+        "max_gap_ms": {
+          "max": 36.2,
+          "median": 17.8,
+          "min": 17.4,
+          "n": 5
+        },
+        "p95_gap_ms": {
+          "max": 15.5,
+          "median": 15.4,
+          "min": 15.2,
+          "n": 5
+        },
+        "placeholder_steps": {
+          "max": 0,
+          "median": 0,
+          "min": 0,
+          "n": 5
+        },
+        "total_ms": {
+          "max": 6684.2,
+          "median": 6683.4,
+          "min": 6667.5,
+          "n": 5
+        }
+      },
+      "search": {
+        "ms": {
+          "max": 77,
+          "median": 74.3,
+          "min": 63.8,
+          "n": 5
+        },
+        "total": {
+          "max": 49898,
+          "median": 49898,
+          "min": 49898,
+          "n": 5
+        }
+      },
+      "sort": {
+        "ms": {
+          "max": 286.3,
+          "median": 283.6,
+          "min": 281.8,
+          "n": 5
+        }
+      }
+    }
+  },
+  "cgoprobe": {
+    "rc": 0,
+    "results": [
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "desktop"
+      },
+      {
+        "reason": "cgo is unavailable for js/wasm (cgoprobe_requires_cgo_but_cgo_is_unavailable_for_this_target)",
+        "result": "FAIL",
+        "target": "web"
+      },
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "web-remote-client"
+      },
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "web-remote-server"
+      }
+    ],
+    "secs": 6.57
+  },
+  "cold_build": {
+    "rc": 0,
+    "secs": 8.79
+  },
+  "cross": {
+    "cross-linux": {
+      "rc": 0,
+      "secs": 0.87,
+      "status": "PASS",
+      "tail": "GOOS=linux GOARCH=amd64 go build -o bin/cross/gguix-gophics-linux-amd64 .\n-rwxr-xr-x@ 1 user  staff  25421830 Nov 21 16:04 bin/cross/gguix-gophics-linux-amd64"
+    },
+    "cross-windows": {
+      "rc": 0,
+      "secs": 0.85,
+      "status": "PASS",
+      "tail": "GOOS=windows GOARCH=amd64 go build -o bin/cross/gguix-gophics.exe .\n-rwxr-xr-x@ 1 user  staff  24209408 Nov 21 16:04 bin/cross/gguix-gophics.exe"
+    }
+  },
+  "idle_rss": {
+    "process_tree_mb": 191.2,
+    "total_mb": 191.2,
+    "webkit_mb": 0.0
+  },
+  "incremental_build": {
+    "BuildMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 0.73
+    }
+  },
+  "loc": {
+    "app": "gophics",
+    "build_tagged_files": 3,
+    "by_category": {
+      "bench": 48,
+      "desktop": 226,
+      "shared": 2124,
+      "test": 399,
+      "web": 41
+    },
+    "by_category_language": {
+      "bench": {
+        "go": 48
+      },
+      "desktop": {
+        "go": 206,
+        "make": 20
+      },
+      "shared": {
+        "go": 2103,
+        "make": 21
+      },
+      "test": {
+        "go": 399
+      },
+      "web": {
+        "go": 32,
+        "make": 9
+      }
+    },
+    "by_language": {
+      "go": 2788,
+      "make": 50
+    },
+    "custom_rendering_lines": 126,
+    "dual_target_overhead_lines": 267,
+    "dual_target_overhead_pct": 11.2,
+    "excluded_generated_lines": {},
+    "excluded_vendored_lines": {},
+    "files": 21,
+    "inline_marker_blocks": 3,
+    "longest_go_func": "ui/form.go:formView",
+    "longest_go_func_lines": 116,
+    "marker_errors": [
+      "Makefile:66 end without start"
+    ]
+  },
+  "plain_go_build_from_clean": {
+    "rc": 0,
+    "secs": 0.89,
+    "tail": ""
+  },
+  "provenance": {
+    "app_tree": {
+      "files": 28,
+      "sha256": "324bddd544d66f63fca0f3d869a34dfde0a4dfe2aae2583c8bd5dd2164154c6f"
+    },
+    "core_tree": {
+      "files": 42,
+      "sha256": "a3c001afaaa4afac45fd024f7ecc3f7d32e5d3766388b8278b1fd104500d2b1b"
+    },
+    "gguix_env_inherited": {},
+    "gguix_env_passed": {
+      "GGUIX_DPR": "2"
+    },
+    "gguix_env_scrubbed": [],
+    "recorded_at": "2026-11-21T03:25:54.244041+00:00"
+  },
+  "sizes": {
+    "app_bundle": "bin/GGUIX-gophics.app",
+    "app_bundle_kb": 15292,
+    "binary_bytes": 22476754,
+    "bundled_frameworks_kb": null,
+    "bundled_refs": [],
+    "external_dylibs": [],
+    "package": {
+      "rc": 0,
+      "secs": 2.19
+    }
+  },
+  "step_secs": {
+    "bench": 75.9,
+    "cgoprobe": 6.8,
+    "cold_build": 9.4,
+    "cross": 1.7,
+    "idle_rss": 7.1,
+    "incremental": 1.5,
+    "loc": 0.2,
+    "plain_build": 0.9,
+    "sizes": 2.2,
+    "tests": 6.1,
+    "toolchain": 0.0,
+    "web": 56.0
+  },
+  "step_times": {
+    "bench": {
+      "end": "2026-11-21T03:04:10.910320+00:00",
+      "start": "2026-11-21T03:02:54.962218+00:00"
+    },
+    "cgoprobe": {
+      "end": "2026-11-21T03:04:23.808011+00:00",
+      "start": "2026-11-21T03:04:16.990090+00:00"
+    },
+    "cold_build": {
+      "end": "2026-11-21T03:02:44.118644+00:00",
+      "start": "2026-11-21T03:02:34.728094+00:00"
+    },
+    "cross": {
+      "end": "2026-11-21T03:04:25.530034+00:00",
+      "start": "2026-11-21T03:04:23.808322+00:00"
+    },
+    "idle_rss": {
+      "end": "2026-11-21T03:02:54.961858+00:00",
+      "start": "2026-11-21T03:02:47.815958+00:00"
+    },
+    "incremental": {
+      "end": "2026-11-21T03:02:45.581540+00:00",
+      "start": "2026-11-21T03:02:44.119015+00:00"
+    },
+    "loc": {
+      "end": "2026-11-21T03:25:54.492184+00:00",
+      "start": "2026-11-21T03:25:54.257814+00:00"
+    },
+    "plain_build": {
+      "end": "2026-11-21T03:02:34.727822+00:00",
+      "start": "2026-11-21T03:02:33.817312+00:00"
+    },
+    "sizes": {
+      "end": "2026-11-21T03:02:47.815688+00:00",
+      "start": "2026-11-21T03:02:45.581978+00:00"
+    },
+    "tests": {
+      "end": "2026-11-21T03:04:16.989707+00:00",
+      "start": "2026-11-21T03:04:10.910807+00:00"
+    },
+    "toolchain": {
+      "end": "2026-11-21T03:02:33.817098+00:00",
+      "start": "2026-11-21T03:02:33.787336+00:00"
+    },
+    "web": {
+      "end": "2026-11-21T03:05:21.550358+00:00",
+      "start": "2026-11-21T03:04:25.530367+00:00"
+    }
+  },
+  "tests": {
+    "line": {
+      "failed": 0,
+      "not_feasible": 0,
+      "passed": 12
+    },
+    "rc": 0,
+    "secs": 6.08
+  },
+  "toolchain": {
+    "make_deps_warm": {
+      "rc": 0,
+      "secs": 0.03
+    }
+  },
+  "warm_noop_build": {
+    "rc": 0,
+    "secs": 0.4
+  },
+  "web": {
+    "bench-web": {
+      "browser_frames": {
+        "cards_scroll": {
+          "frames": 402,
+          "max_gap_ms": 50.8,
+          "p95_gap_ms": 17.6,
+          "window_ms": 7035.4
+        },
+        "scroll": {
+          "frames": 402,
+          "max_gap_ms": 67.6,
+          "p95_gap_ms": 34.3,
+          "window_ms": 10100.9
+        }
+      },
+      "bundle_dir_kb": 18024,
+      "chrome_version": "158.0.8127.36",
+      "console_errors": [],
+      "dpr": 2,
+      "engine": "chrome",
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 35.2,
+          "p95_gap_ms": 17.3,
+          "placeholder_steps": 0,
+          "switch_ms": 120.6,
+          "total_ms": 7035.4
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 67.9,
+          "ms": 552.1,
+          "p95_gap_ms": 22.8,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 1254.6
+        },
+        "ready": {
+          "ms": 680.8
+        },
+        "scroll": {
+          "max_gap_ms": 28.9,
+          "p95_gap_ms": 17.3,
+          "placeholder_steps": 0,
+          "total_ms": 10100.9
+        },
+        "search": {
+          "ms": 120.9,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 790.6
+        }
+      },
+      "initial_transfer_kb": 4641,
+      "memory_sampling_error": null,
+      "peak_dom_nodes": 4513,
+      "peak_gpu_rss_mb": 105,
+      "peak_js_heap_mb": 32.6,
+      "peak_renderer_rss_mb": 792.5,
+      "provenance": {
+        "bundle_sha256": {
+          "app.wasm": "1d01c3e074bd30a23c1804e02cc25c1afdf3596ca3e7210b3a9e17f9b4b4a83c",
+          "wasm_exec.js": "0c949f4996f9a89698e4b5c586de32249c3b69b7baadb64d220073cc04acba14"
+        },
+        "ended": "2026-11-21T03:04:53.771511+00:00",
+        "index_html_sha256": "50839bca214e5d8dcb1108dd51c205835d87b720ec5380d7c89378c741a69350",
+        "served_dir": "apps/gophics/bin/web",
+        "started": "2026-11-21T03:04:25.844653+00:00"
+      },
+      "renderer_pids": [
+        9956,
+        9957,
+        9955
+      ],
+      "server_ready_secs": 1.01,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "viewport": {
+        "height": 800,
+        "width": 1280
+      },
+      "wall_ms": 20989,
+      "wasm_files": {
+        "app.wasm": {
+          "gzip_kb": 4486,
+          "raw_kb": 17996
+        }
+      }
+    },
+    "web-remote": {
+      "browser_frames": {
+        "cards_scroll": {
+          "frames": 402,
+          "max_gap_ms": 50.9,
+          "p95_gap_ms": 17.6,
+          "window_ms": 7067.7
+        },
+        "scroll": {
+          "frames": 401,
+          "max_gap_ms": 67.5,
+          "p95_gap_ms": 49.7,
+          "window_ms": 9985.9
+        }
+      },
+      "bundle_dir_kb": 25044,
+      "chrome_version": "158.0.8127.36",
+      "console_errors": [],
+      "dpr": 2,
+      "engine": "chrome",
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 31.9,
+          "p95_gap_ms": 13.7,
+          "placeholder_steps": 0,
+          "switch_ms": 126.4,
+          "total_ms": 7067.7
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 27.1,
+          "ms": 606.9,
+          "p95_gap_ms": 20.4,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 1070.6
+        },
+        "ready": {
+          "ms": 926.6
+        },
+        "scroll": {
+          "max_gap_ms": 24.2,
+          "p95_gap_ms": 15.4,
+          "placeholder_steps": 0,
+          "total_ms": 9985.9
+        },
+        "search": {
+          "ms": 106.2,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 311.5
+        }
+      },
+      "initial_transfer_kb": 6362,
+      "memory_sampling_error": null,
+      "peak_dom_nodes": 4117,
+      "peak_gpu_rss_mb": 108.5,
+      "peak_js_heap_mb": 32,
+      "peak_renderer_rss_mb": 766.5,
+      "provenance": {
+        "bundle_sha256": {
+          "app.wasm": "5356df2c11e323ca66fe7f20911417c7a0b4c6372636b99bee4ae6df585f30f1",
+          "wasm_exec.js": "0c949f4996f9a89698e4b5c586de32249c3b69b7baadb64d220073cc04acba14"
+        },
+        "ended": "2026-11-21T03:05:21.550160+00:00",
+        "index_html_sha256": "50839bca214e5d8dcb1108dd51c205835d87b720ec5380d7c89378c741a69350",
+        "served_dir": "apps/gophics/bin/web",
+        "started": "2026-11-21T03:04:54.110884+00:00"
+      },
+      "renderer_pids": [
+        11247,
+        11248,
+        11246
+      ],
+      "server_ready_secs": 1.01,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "viewport": {
+        "height": 800,
+        "width": 1280
+      },
+      "wall_ms": 20413,
+      "wasm_files": {
+        "app.wasm": {
+          "gzip_kb": 6125,
+          "raw_kb": 25019
+        }
+      }
+    }
+  }
+}

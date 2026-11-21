@@ -1,0 +1,5 @@
+Window 8388608   Position: 161,130 (screen: 0)   Geometry: 1280x800 
+WM_CLASS(STRING) = "gogpu", "GoGPU"
+_NET_WM_NAME(UTF8_STRING) = "GGUIX - Gophics"
+_MOTIF_WM_HINTS:  not found.
+_GTK_FRAME_EXTENTS:  no such atom on any window.

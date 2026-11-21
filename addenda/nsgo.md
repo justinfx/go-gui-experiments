@@ -53,6 +53,16 @@ Desktop, median of 5 runs. Bold is the best figure in the row.
 | Cold build (s) | **8.0** | 13.7 | 12.7 | 19.1 | 23.5 |
 | Style, blind (1 to 5, one pass) | 4 | **5** | 2 | 2 | 1 |
 
+How much code it took (lines, tests excluded):
+
+| | nsgo | mygoui | gogui | fyne | cogent |
+|---|---|---|---|---|---|
+| Shared | 2,244 | 1,418 | 1,877 | 2,401 | 2,561 |
+| Desktop only | 188 | 217 | 228 | 250 | 258 |
+| Web only | 75 | 154 | 130 | 130 | 100 |
+| Desktop plus web overhead | 263 (11%) | 371 (21%) | 358 (16%) | 380 (14%) | 358 (12%) |
+| Custom cells (stock bar, status, stars) | 197 | 128 | 133 | 581 | 550 |
+
 Browser (Chrome, single run, frame gaps timed by the browser for all).
 
 | | nsgo | mygoui | gogui | fyne | cogent |

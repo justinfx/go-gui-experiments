@@ -335,7 +335,7 @@
       "make": 70,
       "yaml": 25
     },
-    "custom_rendering_lines": 0,
+    "custom_rendering_lines": 197,
     "dual_target_overhead_lines": 263,
     "dual_target_overhead_pct": 10.5,
     "excluded_generated_lines": {},
@@ -352,8 +352,8 @@
   },
   "provenance": {
     "app_tree": {
-      "files": 25,
-      "sha256": "dca75695796353fed6b16e0253c3b4106c7534a2412af4663fe08249c91dff93"
+      "files": 24,
+      "sha256": "f9346e611a32c8f1ba685f2add1823353b8aa3bf7bef5021531719c8ba1d39c2"
     },
     "core_tree": {
       "files": 42,
@@ -364,7 +364,7 @@
       "GGUIX_DPR": "2"
     },
     "gguix_env_scrubbed": [],
-    "recorded_at": "2026-11-15T02:15:41.459227+00:00"
+    "recorded_at": "2026-11-21T03:25:54.575306+00:00"
   },
   "sizes": {
     "app_bundle": "bin/GGUIX-nsgo.app",
@@ -418,8 +418,8 @@
       "start": "2026-11-15T02:15:50.646629+00:00"
     },
     "loc": {
-      "end": "2026-11-15T02:17:34.817769+00:00",
-      "start": "2026-11-15T02:17:34.716074+00:00"
+      "end": "2026-11-21T03:25:54.659113+00:00",
+      "start": "2026-11-21T03:25:54.578848+00:00"
     },
     "plain_build": {
       "end": "2026-11-15T02:15:42.311382+00:00",

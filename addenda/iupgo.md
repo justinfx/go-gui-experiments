@@ -65,6 +65,18 @@ Desktop, median of 5 runs, default build. Bold is the best figure in the row.
 | Cold build (s) | 13.4 | 112.6 | 13.7 | **8.0** | 19.1 |
 | Style, blind (1 to 5, one pass) | 3 | 2 | **5** | 4 | 2 |
 
+How much code it took (lines, tests excluded):
+
+| | iupgo | miqt | mygoui | nsgo | fyne |
+|---|---|---|---|---|---|
+| Shared | 3,097 | n/a | 1,418 | 2,244 | 2,401 |
+| Desktop only | 242 | 2,305 | 217 | 188 | 250 |
+| Web only | 213 | n/a | 154 | 75 | 130 |
+| Desktop plus web overhead | 455 (13%) | n/a | 371 (21%) | 263 (11%) | 380 (14%) |
+| Custom cells (stock bar, status, stars) | 145 | 300 | 128 | 197 | 581 |
+
+MIQT has no browser build, so all of its code is desktop only.
+
 The blind pass put IUP-Go one point above Fyne and MIQT; a side-by-side
 re-check scored all three 3, a tie. Browser (Chrome, single run): ready in
 526 ms, 8.2 MB of files. Frame gaps were not measured: the app runs in a web

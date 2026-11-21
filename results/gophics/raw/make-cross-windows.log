@@ -1,0 +1,4 @@
+$ ['make', 'cross-windows']
+(rc=0, 0.85s)
+GOOS=windows GOARCH=amd64 go build -o bin/cross/gguix-gophics.exe .
+-rwxr-xr-x@ 1 user  staff  24209408 Nov 21 16:04 bin/cross/gguix-gophics.exe

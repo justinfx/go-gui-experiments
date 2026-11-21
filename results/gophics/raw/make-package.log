@@ -1,0 +1,15 @@
+$ ['make', 'package']
+(rc=0, 2.19s)
+~/src/go_gui_experiments/apps/gophics/.tools/gophics package -name GGUIX-gophics -id com.gguix.gophics -dmg=false -o bin/package .
+rm -rf bin/GGUIX-gophics.app
+mv bin/package/GGUIX-gophics.app bin/GGUIX-gophics.app
+gophics: note — no icon: pass -icon <square.png> or keep an icon.png beside the package. The app gets the platform's generic icon without one.
+gophics: building GGUIX-gophics.app (arm64)
+gophics: note — unsigned (no -identity and no $CODESIGN_ID).
+  It runs here; Gatekeeper on another Mac will refuse to open it. To sign:
+    gophics package -identity "Developer ID Application: NAME (TEAMID)"
+  `security find-identity -v -p codesigning` lists the identities you have.
+gophics: note — not notarised: notarisation needs a signed bundle, and this one is unsigned.
+gophics: packaged GGUIX-gophics for darwin/arm64 →
+  bin/package/GGUIX-gophics.app
+  bin/package/GGUIX-gophics.entitlements

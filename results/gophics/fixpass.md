@@ -1,0 +1,24 @@
+# Gophics fix pass 1
+
+Date: 2026-11-21. Source: FIX1.md (hands-on check on macOS). Data path, paging and bench code unchanged. `make build` and `make test` pass (12/12 plus three new fix-pass tests); `go test -tags gophics_gpu -run StarsClipped ./ui` passes on Metal. No window was launched; verification is headless.
+
+| # | Issue | Status | Change and API | Files | Verified |
+|---|---|---|---|---|---|
+| 1 | Stars draw over the form | fixed | The half star was filled under a nested `PushClip`; on the GPU backend that fill escaped the table viewport's clip. Now each half star is its own `paint.Path`, the star polygon with x clamped to its center line, so no clip is needed | `ui/cells.go` | Reproduced with `app.Headless.RenderGPU` (Metal): filled-star pixels inside the form area with the Rating column cut by the split; none after. Regression test `ui/stars_gpu_test.go` (tag `gophics_gpu`). CPU render never showed it |
+| 2 | Scrollbars hidden | partly fixed, rest is a gap | The vertical list was inside a horizontal `Scroll` sized to the 1,320 px table, so its bar sat off screen. Now the `LazyList` spans the visible width (bar at the pane edge) and a 10 px horizontal `widget.Scroll` strip under the table owns the horizontal offset (`Scroll.OnOffset`, `ScrollController`); header and rows are shifted with `widget.Transform` | `ui/table.go`, `ui/app.go` | `TestFixTableScrollbars`: strip is scrollable and a wheel over it moves the offset; header labels move by the offset, row taps still select |
+| 2b | Bars invisible until scrolled | gap | `widget.Scroll`'s bar is an overlay that fades to 0 when idle, and its drag target exists only while visible. No field keeps it shown. Source: `widget/scroll.go` (`scrollbarThumb` returns nil when `barFade <= 0`; `scrollbarBox.Paint` skips when faded) | | Read source. Horizontal wheel over the rows does not scroll sideways (the vertical list takes it); the strip does |
+| 3 | Selected card content shifts | fixed | Padding was `12 - (borderWidth - 1)`, so the 2 px selected border moved content 1 px. Padding is now a constant 12 px; the stroke is centered on the edge and does not reach it | `ui/cards.go` | Code reading; T11 passes |
+| 4 | Thick header dividers | fixed | Grip line used `widget.Fill`, which expands to fill the whole 6 px x header grip. Now `widget.Decorated{Color: th.Border}` 1 x 16 px, the same primitive `theme.Divider` uses | `ui/table.go` | Code reading against `widget/layout_widgets.go` (Fill doc) and `theme/list.go` (Divider) |
+| 5 | Selection too faint | fixed | Row tint was `Lerp(Bg, Primary, 0.10)` (theme.Table's); now the theme's `Selection` color (alpha 0.24 light, 0.30 dark) | `ui/table.go` | Theme values in `theme/theme.go`; T3/T9 pass |
+| 6 | Shortcuts dead in text fields | fixed | Keys reach only the focused widget (`app/input.go`, no bubbling). Every text field now sets `widget.TextField.OnKeyPreview` to `fieldKeyPreview`, which takes the app's command shortcuts and leaves Cmd+C/X/V/A to the field. `theme.Field` does not expose `OnKeyPreview`, so `ui.Field` repeats `theme.Field`'s Build with the same theme values plus that hook | `ui/field.go`, `ui/actions.go`, `ui/view.go`, `ui/form.go` | `TestFixShortcutInFocusedField`: type into the focused search field, Cmd+2 switches to Cards; fails with the hook removed |
+| 7 | Export asks for a folder | fallback | `FilePicker.Save` takes the bytes up front and never returns the path (`shell/filepicker.go`; `shell/desktop/filepicker_darwin.go` writes and returns only an error), so a streamed, cancellable export with Reveal Last Export cannot use it. Now an in-app `Export CSV` dialog asks for the file name (default `gguix-export.csv`, `.csv` added, base name only), then the native folder chooser | `ui/platform_desktop.go`, `ui/app.go` | `TestFixExportFileName`; build and T8 pass. Dialog flow not clicked through in a window |
+
+Gaps left: idle scrollbar fade (2b) and a native save panel that reports its path (7). Not checked on Linux.
+
+## Fix pass 2
+
+Date: 2026-11-21. Issue: on the web builds the table header bled across into the properties form.
+
+| Issue | Status | Change and API | Files | Verified |
+|---|---|---|---|---|
+| Header bleeds over the form (web) | fixed | The header was shifted with `widget.Transform` and nothing clipped it (only the body's `LazyList` viewport clips). It now sits in its own horizontal `widget.Scroll`, whose viewport clips to the table pane. A new `hdrCtl` `ScrollController` and `OnOffset` keep it in step with the bottom strip both ways; rows still use the `Transform` shift inside the list's clip | `ui/table.go`, `ui/app.go` | `make build`, web and web-remote build steps, `make test` (12/12 plus fix tests). New `TestFixHeaderClipped`: after scrolling the strip to the end, the header offset matches it. Not checked in a browser |

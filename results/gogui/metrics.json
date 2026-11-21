@@ -335,7 +335,7 @@
       "html": 22,
       "make": 65
     },
-    "custom_rendering_lines": 0,
+    "custom_rendering_lines": 133,
     "dual_target_overhead_lines": 358,
     "dual_target_overhead_pct": 16,
     "excluded_generated_lines": {},
@@ -352,19 +352,19 @@
   },
   "provenance": {
     "app_tree": {
-      "files": 18,
-      "sha256": "dd8417377dcc1cabd6fe2976fad1759f4a698d764dfaa22f6fe0f91c97cf74b8"
+      "files": 19,
+      "sha256": "0b6381efce0d4457d057716a81ff7dca0d26d8aae9eda12fed98f1d7bfde3dc0"
     },
     "core_tree": {
       "files": 42,
-      "sha256": "2ba727b6247232f7349411b19114e763b40f5a8fa888d2155c35810e731a6e8a"
+      "sha256": "a3c001afaaa4afac45fd024f7ecc3f7d32e5d3766388b8278b1fd104500d2b1b"
     },
     "gguix_env_inherited": {},
     "gguix_env_passed": {
       "GGUIX_DPR": "2"
     },
     "gguix_env_scrubbed": [],
-    "recorded_at": "2026-11-14T01:48:18.508740+00:00"
+    "recorded_at": "2026-11-21T03:25:54.742476+00:00"
   },
   "sizes": {
     "app_bundle": "bin/GGUIX-gogui.app",
@@ -418,8 +418,8 @@
       "start": "2026-11-14T01:48:33.427678+00:00"
     },
     "loc": {
-      "end": "2026-11-14T01:50:35.146661+00:00",
-      "start": "2026-11-14T01:50:35.038581+00:00"
+      "end": "2026-11-21T03:25:54.838258+00:00",
+      "start": "2026-11-21T03:25:54.760927+00:00"
     },
     "plain_build": {
       "end": "2026-11-14T01:48:20.323369+00:00",

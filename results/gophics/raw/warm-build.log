@@ -1,0 +1,5 @@
+$ ['make', 'build']
+(rc=0, 0.4s)
+~/src/go_gui_experiments/apps/gophics/.tools/gophics build -p desktop -o bin/desktop .
+rm -f bin/gguix-gophics && cp bin/desktop/app bin/gguix-gophics
+gophics: built desktop → bin/desktop/app

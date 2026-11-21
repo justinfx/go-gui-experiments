@@ -1,0 +1,490 @@
+{
+  "app": "gophics",
+  "artifacts": {
+    "bench": {
+      "binary": {
+        "mtime": "2026-11-21T02:50:23.605955+00:00",
+        "path": "apps/gophics/bin/gguix-gophics",
+        "sha256": "06a4b8662cf1ae6d9539c93cdd290622f004232decd0855e9ca4e4c0a8f576a9",
+        "size": 22476674
+      },
+      "build": {
+        "rc": 0,
+        "secs": 0.27
+      }
+    },
+    "cold_build": {
+      "binary": {
+        "mtime": "2026-11-21T02:50:12.326102+00:00",
+        "path": "apps/gophics/bin/gguix-gophics",
+        "sha256": "06a4b8662cf1ae6d9539c93cdd290622f004232decd0855e9ca4e4c0a8f576a9",
+        "size": 22476674
+      }
+    },
+    "idle_rss": {
+      "binary": {
+        "mtime": "2026-11-21T02:50:13.805029+00:00",
+        "path": "apps/gophics/bin/gguix-gophics",
+        "sha256": "06a4b8662cf1ae6d9539c93cdd290622f004232decd0855e9ca4e4c0a8f576a9",
+        "size": 22476674
+      }
+    },
+    "incremental": {
+      "binary": {
+        "mtime": "2026-11-21T02:50:13.805029+00:00",
+        "path": "apps/gophics/bin/gguix-gophics",
+        "sha256": "06a4b8662cf1ae6d9539c93cdd290622f004232decd0855e9ca4e4c0a8f576a9",
+        "size": 22476674
+      }
+    },
+    "sizes": {
+      "app_bundle": {
+        "files": 3,
+        "mtime": "2026-11-21T02:50:13.967398+00:00",
+        "path": "apps/gophics/bin/GGUIX-gophics.app",
+        "size_kb": 15292,
+        "tree_sha256": "96aaa7408b02ef5b6fa07102d8c66f1cb5fcb0ccadc42700b2bbc0c23203c9eb"
+      },
+      "binary": {
+        "mtime": "2026-11-21T02:50:13.805029+00:00",
+        "path": "apps/gophics/bin/gguix-gophics",
+        "sha256": "06a4b8662cf1ae6d9539c93cdd290622f004232decd0855e9ca4e4c0a8f576a9",
+        "size": 22476674
+      }
+    }
+  },
+  "bench": {
+    "errors": [],
+    "events_seen": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "launch": "bin/gguix-gophics (direct, after one make build)",
+    "memory": {
+      "peak_process_tree_mb": {
+        "max": 0.0,
+        "median": 0.0
+      },
+      "peak_total_mb": {
+        "max": 0.0,
+        "median": 0.0
+      },
+      "peak_webkit_mb": {
+        "max": 0.0,
+        "median": 0.0
+      }
+    },
+    "runs": 5,
+    "summary": {}
+  },
+  "cgoprobe": {
+    "rc": 0,
+    "results": [
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "desktop"
+      },
+      {
+        "reason": "cgo is unavailable for js/wasm (cgoprobe_requires_cgo_but_cgo_is_unavailable_for_this_target)",
+        "result": "FAIL",
+        "target": "web"
+      },
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "web-remote-client"
+      },
+      {
+        "reason": "",
+        "result": "PASS",
+        "target": "web-remote-server"
+      }
+    ],
+    "secs": 8.84
+  },
+  "cold_build": {
+    "rc": 0,
+    "secs": 8.75
+  },
+  "cross": {
+    "cross-linux": {
+      "rc": 0,
+      "secs": 1.5,
+      "status": "PASS",
+      "tail": "GOOS=linux GOARCH=amd64 go build -o bin/cross/gguix-gophics-linux-amd64 .\n-rwxr-xr-x@ 1 user  staff  25420297 Nov 21 15:50 bin/cross/gguix-gophics-linux-amd64"
+    },
+    "cross-windows": {
+      "rc": 0,
+      "secs": 1.46,
+      "status": "PASS",
+      "tail": "GOOS=windows GOARCH=amd64 go build -o bin/cross/gguix-gophics.exe .\n-rwxr-xr-x@ 1 user  staff  24207872 Nov 21 15:50 bin/cross/gguix-gophics.exe"
+    }
+  },
+  "idle_rss": {
+    "process_tree_mb": 192.5,
+    "total_mb": 192.5,
+    "webkit_mb": 0.0
+  },
+  "incremental_build": {
+    "BuildMarker": {
+      "marker_changed": true,
+      "rc": 0,
+      "secs": 0.75
+    }
+  },
+  "loc": {
+    "app": "gophics",
+    "build_tagged_files": 3,
+    "by_category": {
+      "bench": 48,
+      "desktop": 226,
+      "shared": 2110,
+      "test": 382,
+      "web": 41
+    },
+    "by_category_language": {
+      "bench": {
+        "go": 48
+      },
+      "desktop": {
+        "go": 206,
+        "make": 20
+      },
+      "shared": {
+        "go": 2089,
+        "make": 21
+      },
+      "test": {
+        "go": 382
+      },
+      "web": {
+        "go": 32,
+        "make": 9
+      }
+    },
+    "by_language": {
+      "go": 2757,
+      "make": 50
+    },
+    "custom_rendering_lines": 0,
+    "dual_target_overhead_lines": 267,
+    "dual_target_overhead_pct": 11.2,
+    "excluded_generated_lines": {},
+    "excluded_vendored_lines": {},
+    "files": 21,
+    "inline_marker_blocks": 3,
+    "longest_go_func": "ui/form.go:formView",
+    "longest_go_func_lines": 116,
+    "marker_errors": [
+      "Makefile:66 end without start"
+    ]
+  },
+  "plain_go_build_from_clean": {
+    "rc": 0,
+    "secs": 0.99,
+    "tail": ""
+  },
+  "provenance": {
+    "app_tree": {
+      "files": 27,
+      "sha256": "9da53284d29cd995a60161ba51c60a422351488cc284d20f9a4fe3852f57b0f8"
+    },
+    "core_tree": {
+      "files": 42,
+      "sha256": "a3c001afaaa4afac45fd024f7ecc3f7d32e5d3766388b8278b1fd104500d2b1b"
+    },
+    "gguix_env_inherited": {
+      "GGUIX_PREFS_DIR": "/var/folders/9z/3z50t7mn65jbcyvvfz5r8mj80000gn/T/tmp.ZHzUdApO8m"
+    },
+    "gguix_env_passed": {
+      "GGUIX_DPR": "2"
+    },
+    "gguix_env_scrubbed": [
+      "GGUIX_PREFS_DIR"
+    ],
+    "recorded_at": "2026-11-21T02:49:48.066721+00:00"
+  },
+  "sizes": {
+    "app_bundle": "bin/GGUIX-gophics.app",
+    "app_bundle_kb": 15292,
+    "binary_bytes": 22476674,
+    "bundled_frameworks_kb": null,
+    "bundled_refs": [],
+    "external_dylibs": [],
+    "package": {
+      "rc": 0,
+      "secs": 2.33
+    }
+  },
+  "step_secs": {
+    "bench": 0.6,
+    "cgoprobe": 9.1,
+    "cold_build": 9.3,
+    "cross": 3.0,
+    "idle_rss": 7.1,
+    "incremental": 1.5,
+    "loc": 0.6,
+    "plain_build": 1.0,
+    "sizes": 2.4,
+    "tests": 6.4,
+    "toolchain": 14.0,
+    "web": 61.0
+  },
+  "step_times": {
+    "bench": {
+      "end": "2026-11-21T02:50:23.891539+00:00",
+      "start": "2026-11-21T02:50:23.339036+00:00"
+    },
+    "cgoprobe": {
+      "end": "2026-11-21T02:50:39.337089+00:00",
+      "start": "2026-11-21T02:50:30.253652+00:00"
+    },
+    "cold_build": {
+      "end": "2026-11-21T02:50:12.341922+00:00",
+      "start": "2026-11-21T02:50:03.032057+00:00"
+    },
+    "cross": {
+      "end": "2026-11-21T02:50:42.298829+00:00",
+      "start": "2026-11-21T02:50:39.337432+00:00"
+    },
+    "idle_rss": {
+      "end": "2026-11-21T02:50:23.338684+00:00",
+      "start": "2026-11-21T02:50:16.201880+00:00"
+    },
+    "incremental": {
+      "end": "2026-11-21T02:50:13.821362+00:00",
+      "start": "2026-11-21T02:50:12.342216+00:00"
+    },
+    "loc": {
+      "end": "2026-11-21T02:51:43.875680+00:00",
+      "start": "2026-11-21T02:51:43.268184+00:00"
+    },
+    "plain_build": {
+      "end": "2026-11-21T02:50:03.031853+00:00",
+      "start": "2026-11-21T02:50:02.026703+00:00"
+    },
+    "sizes": {
+      "end": "2026-11-21T02:50:16.201512+00:00",
+      "start": "2026-11-21T02:50:13.821643+00:00"
+    },
+    "tests": {
+      "end": "2026-11-21T02:50:30.253297+00:00",
+      "start": "2026-11-21T02:50:23.892008+00:00"
+    },
+    "toolchain": {
+      "end": "2026-11-21T02:50:02.026445+00:00",
+      "start": "2026-11-21T02:49:48.070469+00:00"
+    },
+    "web": {
+      "end": "2026-11-21T02:51:43.267499+00:00",
+      "start": "2026-11-21T02:50:42.299192+00:00"
+    }
+  },
+  "tests": {
+    "line": {
+      "failed": 0,
+      "not_feasible": 0,
+      "passed": 12
+    },
+    "rc": 0,
+    "secs": 6.36
+  },
+  "toolchain": {
+    "make_deps_warm": {
+      "rc": 0,
+      "secs": 13.96
+    }
+  },
+  "warm_noop_build": {
+    "rc": 0,
+    "secs": 0.39
+  },
+  "web": {
+    "bench-web": {
+      "browser_frames": {
+        "cards_scroll": {
+          "frames": 402,
+          "max_gap_ms": 58.3,
+          "p95_gap_ms": 25,
+          "window_ms": 5880
+        },
+        "scroll": {
+          "frames": 403,
+          "max_gap_ms": 449.8,
+          "p95_gap_ms": 41.6,
+          "window_ms": 9930.2
+        }
+      },
+      "bundle_dir_kb": 18020,
+      "chrome_version": "158.0.8127.36",
+      "console_errors": [],
+      "dpr": 2,
+      "engine": "chrome",
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 33.9,
+          "p95_gap_ms": 16.6,
+          "placeholder_steps": 0,
+          "switch_ms": 148.5,
+          "total_ms": 5880
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 54.1,
+          "ms": 546.7,
+          "p95_gap_ms": 34.5,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 1276.4
+        },
+        "ready": {
+          "ms": 681.4
+        },
+        "scroll": {
+          "max_gap_ms": 407,
+          "p95_gap_ms": 101.7,
+          "placeholder_steps": 0,
+          "total_ms": 9930.2
+        },
+        "search": {
+          "ms": 92.7,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 790.9
+        }
+      },
+      "initial_transfer_kb": 4642,
+      "memory_sampling_error": null,
+      "peak_dom_nodes": 6395,
+      "peak_gpu_rss_mb": 101.6,
+      "peak_js_heap_mb": 35.7,
+      "peak_renderer_rss_mb": 853.8,
+      "provenance": {
+        "bundle_sha256": {
+          "app.wasm": "c9c779b427adeca7fadf68b7d688f3f77f0d7c1f79c796e56b08fd6168a66717",
+          "wasm_exec.js": "0c949f4996f9a89698e4b5c586de32249c3b69b7baadb64d220073cc04acba14"
+        },
+        "ended": "2026-11-21T02:51:16.493733+00:00",
+        "index_html_sha256": "50839bca214e5d8dcb1108dd51c205835d87b720ec5380d7c89378c741a69350",
+        "served_dir": "apps/gophics/bin/web",
+        "started": "2026-11-21T02:50:42.633830+00:00"
+      },
+      "renderer_pids": [
+        3447,
+        3448,
+        3446
+      ],
+      "server_ready_secs": 1.51,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "viewport": {
+        "height": 800,
+        "width": 1280
+      },
+      "wall_ms": 19707,
+      "wasm_files": {
+        "app.wasm": {
+          "gzip_kb": 4485,
+          "raw_kb": 17994
+        }
+      }
+    },
+    "web-remote": {
+      "browser_frames": {
+        "cards_scroll": {
+          "frames": 404,
+          "max_gap_ms": 59.2,
+          "p95_gap_ms": 25.8,
+          "window_ms": 6013.7
+        },
+        "scroll": {
+          "frames": 403,
+          "max_gap_ms": 75,
+          "p95_gap_ms": 42.3,
+          "window_ms": 9980.3
+        }
+      },
+      "bundle_dir_kb": 25044,
+      "chrome_version": "158.0.8127.36",
+      "console_errors": [],
+      "dpr": 2,
+      "engine": "chrome",
+      "events": {
+        "cards_scroll": {
+          "max_gap_ms": 30,
+          "p95_gap_ms": 17.7,
+          "placeholder_steps": 0,
+          "switch_ms": 160.5,
+          "total_ms": 6013.7
+        },
+        "done": {},
+        "export": {
+          "max_gap_ms": 15.4,
+          "ms": 605.9,
+          "p95_gap_ms": 14.3,
+          "rows": 49898
+        },
+        "jump": {
+          "ms": 1104
+        },
+        "ready": {
+          "ms": 927.9
+        },
+        "scroll": {
+          "max_gap_ms": 26.4,
+          "p95_gap_ms": 14.9,
+          "placeholder_steps": 0,
+          "total_ms": 9980.3
+        },
+        "search": {
+          "ms": 102.1,
+          "total": 49898
+        },
+        "sort": {
+          "ms": 305.9
+        }
+      },
+      "initial_transfer_kb": 6360,
+      "memory_sampling_error": null,
+      "peak_dom_nodes": 6084,
+      "peak_gpu_rss_mb": 106.5,
+      "peak_js_heap_mb": 34.6,
+      "peak_renderer_rss_mb": 779.8,
+      "provenance": {
+        "bundle_sha256": {
+          "app.wasm": "c0d643727ab630aaa96b4c66e799fb65ccbef59df332ed26ad85a8e980cc929a",
+          "wasm_exec.js": "0c949f4996f9a89698e4b5c586de32249c3b69b7baadb64d220073cc04acba14"
+        },
+        "ended": "2026-11-21T02:51:43.267453+00:00",
+        "index_html_sha256": "50839bca214e5d8dcb1108dd51c205835d87b720ec5380d7c89378c741a69350",
+        "served_dir": "apps/gophics/bin/web",
+        "started": "2026-11-21T02:51:16.829686+00:00"
+      },
+      "renderer_pids": [
+        4667,
+        4668,
+        4666
+      ],
+      "server_ready_secs": 1.01,
+      "timed_out": false,
+      "url": "http://localhost:8097/?bench=1",
+      "viewport": {
+        "height": 800,
+        "width": 1280
+      },
+      "wall_ms": 19409,
+      "wasm_files": {
+        "app.wasm": {
+          "gzip_kb": 6124,
+          "raw_kb": 25018
+        }
+      }
+    }
+  }
+}

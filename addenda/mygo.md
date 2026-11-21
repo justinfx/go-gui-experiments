@@ -57,6 +57,16 @@ Desktop, median of 5 runs. Bold is the best figure in the row.
 | Cold build (s) | 15.1 | 39.2 | **13.7** | 19.1 | 23.5 |
 | Style, blind (1 to 5) | 4 | 4 | **5** | 3 | 2 |
 
+How much code it took (lines, tests excluded):
+
+| | mygo | wails | mygoui | fyne | cogent |
+|---|---|---|---|---|---|
+| Shared | 3,049 | 3,867 | 1,418 | 2,401 | 2,561 |
+| Desktop only | 233 | 248 | 217 | 250 | 258 |
+| Web only | 40 | 197 | 154 | 130 | 100 |
+| Desktop plus web overhead | 273 (8%) | 445 (10%) | 371 (21%) | 380 (14%) | 358 (12%) |
+| Custom cells (stock bar, status, stars) | 100 | 100 | 128 | 581 | 550 |
+
 Browser (Chrome, single run). Frame gaps here are timed by the browser for all
 three apps, so they compare with each other, not with the article's web table.
 

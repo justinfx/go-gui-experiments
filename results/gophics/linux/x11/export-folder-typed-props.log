@@ -1,0 +1,4 @@
+WM_CLASS(STRING) = "zenity", "zenity"
+WM_NAME(STRING) = "zenity"
+WM_TRANSIENT_FOR:  not found.
+_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL

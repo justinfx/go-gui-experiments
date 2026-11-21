@@ -1,0 +1,62 @@
+fontscan2026/11/21 03:26:33 missing fontconfig include /tmp/xdgc.qZ1nil/fontconfig/conf.d: skipping
+fontscan2026/11/21 03:26:33 missing fontconfig include /tmp/xdgc.qZ1nil/fontconfig/fonts.conf: skipping
+fontscan2026/11/21 03:26:33 missing fontconfig include /root/.fonts.conf.d: skipping
+fontscan2026/11/21 03:26:33 missing fontconfig include /root/.fonts.conf: skipping
+fontscan2026/11/21 03:26:33 using system font dirs ["/usr/local/share/fonts" "/usr/share/fonts"]
+2026/11/21 03:26:33 INFO adapter selected name="llvmpipe (LLVM 20.1.2, 128 bits)" backend=Vulkan type=CPU
+fontscan2026/11/21 03:26:38 fontconfig referenced path "local.conf", but it could not be resolved to a real path
+fontscan2026/11/21 03:26:38 missing fontconfig include /tmp/xdgc.qZ1nil/fontconfig/conf.d: skipping
+fontscan2026/11/21 03:26:38 missing fontconfig include /tmp/xdgc.qZ1nil/fontconfig/fonts.conf: skipping
+fontscan2026/11/21 03:26:38 missing fontconfig include /root/.fonts.conf.d: skipping
+fontscan2026/11/21 03:26:38 missing fontconfig include /root/.fonts.conf: skipping
+fontscan2026/11/21 03:26:38 using system font dirs ["/usr/local/share/fonts" "/usr/share/fonts"]
+2026/11/21 03:26:38 INFO adapter selected name="llvmpipe (LLVM 20.1.2, 128 bits)" backend=Vulkan type=CPU
+fontscan2026/11/21 03:26:43 fontconfig referenced path "local.conf", but it could not be resolved to a real path
+fontscan2026/11/21 03:26:43 missing fontconfig include /tmp/xdgc.qZ1nil/fontconfig/conf.d: skipping
+fontscan2026/11/21 03:26:43 missing fontconfig include /tmp/xdgc.qZ1nil/fontconfig/fonts.conf: skipping
+fontscan2026/11/21 03:26:43 missing fontconfig include /root/.fonts.conf.d: skipping
+fontscan2026/11/21 03:26:43 missing fontconfig include /root/.fonts.conf: skipping
+fontscan2026/11/21 03:26:43 using system font dirs ["/usr/local/share/fonts" "/usr/share/fonts"]
+2026/11/21 03:26:43 INFO adapter selected name="llvmpipe (LLVM 20.1.2, 128 bits)" backend=Vulkan type=CPU
+fontscan2026/11/21 03:28:49 fontconfig referenced path "local.conf", but it could not be resolved to a real path
+fontscan2026/11/21 03:28:49 missing fontconfig include /tmp/xdgc.cZFHTq/fontconfig/conf.d: skipping
+fontscan2026/11/21 03:28:49 missing fontconfig include /tmp/xdgc.cZFHTq/fontconfig/fonts.conf: skipping
+fontscan2026/11/21 03:28:49 missing fontconfig include /root/.fonts.conf.d: skipping
+fontscan2026/11/21 03:28:49 missing fontconfig include /root/.fonts.conf: skipping
+fontscan2026/11/21 03:28:49 using system font dirs ["/usr/local/share/fonts" "/usr/share/fonts"]
+2026/11/21 03:28:49 INFO adapter selected name="llvmpipe (LLVM 20.1.2, 128 bits)" backend=Vulkan type=CPU
+fontscan2026/11/21 03:28:55 fontconfig referenced path "local.conf", but it could not be resolved to a real path
+fontscan2026/11/21 03:28:55 missing fontconfig include /tmp/xdgc.cZFHTq/fontconfig/conf.d: skipping
+fontscan2026/11/21 03:28:55 missing fontconfig include /tmp/xdgc.cZFHTq/fontconfig/fonts.conf: skipping
+fontscan2026/11/21 03:28:55 missing fontconfig include /root/.fonts.conf.d: skipping
+fontscan2026/11/21 03:28:55 missing fontconfig include /root/.fonts.conf: skipping
+fontscan2026/11/21 03:28:55 using system font dirs ["/usr/local/share/fonts" "/usr/share/fonts"]
+2026/11/21 03:28:55 INFO adapter selected name="llvmpipe (LLVM 20.1.2, 128 bits)" backend=Vulkan type=CPU
+fontscan2026/11/21 03:28:59 fontconfig referenced path "local.conf", but it could not be resolved to a real path
+fontscan2026/11/21 03:28:59 missing fontconfig include /tmp/xdgc.cZFHTq/fontconfig/conf.d: skipping
+fontscan2026/11/21 03:28:59 missing fontconfig include /tmp/xdgc.cZFHTq/fontconfig/fonts.conf: skipping
+fontscan2026/11/21 03:28:59 missing fontconfig include /root/.fonts.conf.d: skipping
+fontscan2026/11/21 03:28:59 missing fontconfig include /root/.fonts.conf: skipping
+fontscan2026/11/21 03:28:59 using system font dirs ["/usr/local/share/fonts" "/usr/share/fonts"]
+2026/11/21 03:28:59 INFO adapter selected name="llvmpipe (LLVM 20.1.2, 128 bits)" backend=Vulkan type=CPU
+fontscan2026/11/21 03:30:53 fontconfig referenced path "local.conf", but it could not be resolved to a real path
+fontscan2026/11/21 03:30:53 missing fontconfig include /tmp/xdgc.t4Phef/fontconfig/conf.d: skipping
+fontscan2026/11/21 03:30:53 missing fontconfig include /tmp/xdgc.t4Phef/fontconfig/fonts.conf: skipping
+fontscan2026/11/21 03:30:53 missing fontconfig include /root/.fonts.conf.d: skipping
+fontscan2026/11/21 03:30:53 missing fontconfig include /root/.fonts.conf: skipping
+fontscan2026/11/21 03:30:53 using system font dirs ["/usr/local/share/fonts" "/usr/share/fonts"]
+2026/11/21 03:30:53 INFO adapter selected name="llvmpipe (LLVM 20.1.2, 128 bits)" backend=Vulkan type=CPU
+fontscan2026/11/21 03:30:59 fontconfig referenced path "local.conf", but it could not be resolved to a real path
+fontscan2026/11/21 03:30:59 missing fontconfig include /tmp/xdgc.t4Phef/fontconfig/conf.d: skipping
+fontscan2026/11/21 03:30:59 missing fontconfig include /tmp/xdgc.t4Phef/fontconfig/fonts.conf: skipping
+fontscan2026/11/21 03:30:59 missing fontconfig include /root/.fonts.conf.d: skipping
+fontscan2026/11/21 03:30:59 missing fontconfig include /root/.fonts.conf: skipping
+fontscan2026/11/21 03:30:59 using system font dirs ["/usr/local/share/fonts" "/usr/share/fonts"]
+2026/11/21 03:30:59 INFO adapter selected name="llvmpipe (LLVM 20.1.2, 128 bits)" backend=Vulkan type=CPU
+fontscan2026/11/21 03:31:03 fontconfig referenced path "local.conf", but it could not be resolved to a real path
+fontscan2026/11/21 03:31:03 missing fontconfig include /tmp/xdgc.t4Phef/fontconfig/conf.d: skipping
+fontscan2026/11/21 03:31:03 missing fontconfig include /tmp/xdgc.t4Phef/fontconfig/fonts.conf: skipping
+fontscan2026/11/21 03:31:03 missing fontconfig include /root/.fonts.conf.d: skipping
+fontscan2026/11/21 03:31:03 missing fontconfig include /root/.fonts.conf: skipping
+fontscan2026/11/21 03:31:03 using system font dirs ["/usr/local/share/fonts" "/usr/share/fonts"]
+2026/11/21 03:31:03 INFO adapter selected name="llvmpipe (LLVM 20.1.2, 128 bits)" backend=Vulkan type=CPU

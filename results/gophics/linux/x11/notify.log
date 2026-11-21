@@ -1,0 +1,9 @@
+2476:method call time=1795231835.874357 sender=:1.25 -> destination=:1.1 serial=9 path=/org/freedesktop/Notifications; interface=org.freedesktop.Notifications; member=Notify
+2477-   string "notify-send"
+2478-   uint32 0
+2479-   string ""
+2480-   string "Export complete"
+2481-   string "1,000 rows written"
+2482-   array [
+2483-   ]
+2484-   array [

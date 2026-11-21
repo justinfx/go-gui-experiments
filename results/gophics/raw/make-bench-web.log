@@ -1,0 +1,7 @@
+~/src/go_gui_experiments/apps/gophics/.tools/gophics build -p web -o bin/web .
+gophics: built web → bin/web
+/Library/Developer/CommandLineTools/usr/bin/make serve
+cd ../../core && go run ./cmd/server -static ../apps/gophics/bin/web -addr :8097
+2026/11/21 16:04:26 gguix server on :8097 (rows=1000000 latency=50ms cgoprobe=false static="../apps/gophics/bin/web")
+make[1]: *** [serve] Terminated: 15
+make: *** [web] Terminated: 15

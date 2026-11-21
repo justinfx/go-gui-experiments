@@ -1,0 +1,63 @@
+fontscan2026/11/21 03:25:37 fontconfig referenced path "local.conf", but it could not be resolved to a real path
+fontscan2026/11/21 03:25:37 missing fontconfig include /tmp/xdgc.JtBUdb/fontconfig/conf.d: skipping
+fontscan2026/11/21 03:25:37 missing fontconfig include /tmp/xdgc.JtBUdb/fontconfig/fonts.conf: skipping
+fontscan2026/11/21 03:25:37 missing fontconfig include /root/.fonts.conf.d: skipping
+fontscan2026/11/21 03:25:37 missing fontconfig include /root/.fonts.conf: skipping
+fontscan2026/11/21 03:25:37 using system font dirs ["/usr/local/share/fonts" "/usr/share/fonts"]
+2026/11/21 03:25:37 INFO adapter selected name="llvmpipe (LLVM 20.1.2, 128 bits)" backend=Vulkan type=CPU
+fontscan2026/11/21 03:25:42 fontconfig referenced path "local.conf", but it could not be resolved to a real path
+fontscan2026/11/21 03:25:42 missing fontconfig include /tmp/xdgc.JtBUdb/fontconfig/conf.d: skipping
+fontscan2026/11/21 03:25:42 missing fontconfig include /tmp/xdgc.JtBUdb/fontconfig/fonts.conf: skipping
+fontscan2026/11/21 03:25:42 missing fontconfig include /root/.fonts.conf.d: skipping
+fontscan2026/11/21 03:25:42 missing fontconfig include /root/.fonts.conf: skipping
+fontscan2026/11/21 03:25:42 using system font dirs ["/usr/local/share/fonts" "/usr/share/fonts"]
+2026/11/21 03:25:42 INFO adapter selected name="llvmpipe (LLVM 20.1.2, 128 bits)" backend=Vulkan type=CPU
+fontscan2026/11/21 03:25:47 fontconfig referenced path "local.conf", but it could not be resolved to a real path
+fontscan2026/11/21 03:25:47 missing fontconfig include /tmp/xdgc.JtBUdb/fontconfig/conf.d: skipping
+fontscan2026/11/21 03:25:47 missing fontconfig include /tmp/xdgc.JtBUdb/fontconfig/fonts.conf: skipping
+fontscan2026/11/21 03:25:47 missing fontconfig include /root/.fonts.conf.d: skipping
+fontscan2026/11/21 03:25:47 missing fontconfig include /root/.fonts.conf: skipping
+fontscan2026/11/21 03:25:47 using system font dirs ["/usr/local/share/fonts" "/usr/share/fonts"]
+2026/11/21 03:25:47 INFO adapter selected name="llvmpipe (LLVM 20.1.2, 128 bits)" backend=Vulkan type=CPU
+fontscan2026/11/21 03:27:51 fontconfig referenced path "local.conf", but it could not be resolved to a real path
+fontscan2026/11/21 03:27:51 missing fontconfig include /tmp/xdgc.gX0DC5/fontconfig/conf.d: skipping
+fontscan2026/11/21 03:27:51 missing fontconfig include /tmp/xdgc.gX0DC5/fontconfig/fonts.conf: skipping
+fontscan2026/11/21 03:27:51 missing fontconfig include /root/.fonts.conf.d: skipping
+fontscan2026/11/21 03:27:51 missing fontconfig include /root/.fonts.conf: skipping
+fontscan2026/11/21 03:27:51 using system font dirs ["/usr/local/share/fonts" "/usr/share/fonts"]
+2026/11/21 03:27:51 INFO adapter selected name="llvmpipe (LLVM 20.1.2, 128 bits)" backend=Vulkan type=CPU
+fontscan2026/11/21 03:27:57 fontconfig referenced path "local.conf", but it could not be resolved to a real path
+fontscan2026/11/21 03:27:57 missing fontconfig include /tmp/xdgc.gX0DC5/fontconfig/conf.d: skipping
+fontscan2026/11/21 03:27:57 missing fontconfig include /tmp/xdgc.gX0DC5/fontconfig/fonts.conf: skipping
+fontscan2026/11/21 03:27:57 missing fontconfig include /root/.fonts.conf.d: skipping
+fontscan2026/11/21 03:27:57 missing fontconfig include /root/.fonts.conf: skipping
+fontscan2026/11/21 03:27:57 using system font dirs ["/usr/local/share/fonts" "/usr/share/fonts"]
+2026/11/21 03:27:57 INFO adapter selected name="llvmpipe (LLVM 20.1.2, 128 bits)" backend=Vulkan type=CPU
+fontscan2026/11/21 03:28:02 fontconfig referenced path "local.conf", but it could not be resolved to a real path
+fontscan2026/11/21 03:28:02 missing fontconfig include /tmp/xdgc.gX0DC5/fontconfig/conf.d: skipping
+fontscan2026/11/21 03:28:02 missing fontconfig include /tmp/xdgc.gX0DC5/fontconfig/fonts.conf: skipping
+fontscan2026/11/21 03:28:02 missing fontconfig include /root/.fonts.conf.d: skipping
+fontscan2026/11/21 03:28:02 missing fontconfig include /root/.fonts.conf: skipping
+fontscan2026/11/21 03:28:02 using system font dirs ["/usr/local/share/fonts" "/usr/share/fonts"]
+2026/11/21 03:28:02 INFO adapter selected name="llvmpipe (LLVM 20.1.2, 128 bits)" backend=Vulkan type=CPU
+fontscan2026/11/21 03:29:58 fontconfig referenced path "local.conf", but it could not be resolved to a real path
+fontscan2026/11/21 03:29:58 missing fontconfig include /tmp/xdgc.zqB3c0/fontconfig/conf.d: skipping
+fontscan2026/11/21 03:29:58 missing fontconfig include /tmp/xdgc.zqB3c0/fontconfig/fonts.conf: skipping
+fontscan2026/11/21 03:29:58 missing fontconfig include /root/.fonts.conf.d: skipping
+fontscan2026/11/21 03:29:58 missing fontconfig include /root/.fonts.conf: skipping
+fontscan2026/11/21 03:29:58 using system font dirs ["/usr/local/share/fonts" "/usr/share/fonts"]
+2026/11/21 03:29:58 INFO adapter selected name="llvmpipe (LLVM 20.1.2, 128 bits)" backend=Vulkan type=CPU
+fontscan2026/11/21 03:30:04 fontconfig referenced path "local.conf", but it could not be resolved to a real path
+fontscan2026/11/21 03:30:04 missing fontconfig include /tmp/xdgc.zqB3c0/fontconfig/conf.d: skipping
+fontscan2026/11/21 03:30:04 missing fontconfig include /tmp/xdgc.zqB3c0/fontconfig/fonts.conf: skipping
+fontscan2026/11/21 03:30:04 missing fontconfig include /root/.fonts.conf.d: skipping
+fontscan2026/11/21 03:30:04 missing fontconfig include /root/.fonts.conf: skipping
+fontscan2026/11/21 03:30:04 using system font dirs ["/usr/local/share/fonts" "/usr/share/fonts"]
+2026/11/21 03:30:04 INFO adapter selected name="llvmpipe (LLVM 20.1.2, 128 bits)" backend=Vulkan type=CPU
+fontscan2026/11/21 03:30:08 fontconfig referenced path "local.conf", but it could not be resolved to a real path
+fontscan2026/11/21 03:30:08 missing fontconfig include /tmp/xdgc.zqB3c0/fontconfig/conf.d: skipping
+fontscan2026/11/21 03:30:08 missing fontconfig include /tmp/xdgc.zqB3c0/fontconfig/fonts.conf: skipping
+fontscan2026/11/21 03:30:08 missing fontconfig include /root/.fonts.conf.d: skipping
+fontscan2026/11/21 03:30:08 missing fontconfig include /root/.fonts.conf: skipping
+fontscan2026/11/21 03:30:08 using system font dirs ["/usr/local/share/fonts" "/usr/share/fonts"]
+2026/11/21 03:30:08 INFO adapter selected name="llvmpipe (LLVM 20.1.2, 128 bits)" backend=Vulkan type=CPU

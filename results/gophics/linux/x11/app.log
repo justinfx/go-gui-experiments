@@ -1,0 +1,21 @@
+fontscan2026/11/21 02:17:52 fontconfig referenced path "local.conf", but it could not be resolved to a real path
+fontscan2026/11/21 02:17:52 missing fontconfig include /tmp/xdgc.aU660r/fontconfig/conf.d: skipping
+fontscan2026/11/21 02:17:52 missing fontconfig include /tmp/xdgc.aU660r/fontconfig/fonts.conf: skipping
+fontscan2026/11/21 02:17:52 missing fontconfig include /root/.fonts.conf.d: skipping
+fontscan2026/11/21 02:17:52 missing fontconfig include /root/.fonts.conf: skipping
+fontscan2026/11/21 02:17:52 using system font dirs ["/usr/local/share/fonts" "/usr/share/fonts"]
+2026/11/21 02:17:52 gophics/gpu: time=2026-11-21T02:17:52.255Z level=INFO msg="vulkan: instance created" apiVersion=1.2.0 validation=false
+2026/11/21 02:17:52 gophics/gpu: time=2026-11-21T02:17:52.256Z level=INFO msg="vulkan: adapter found" name="llvmpipe (LLVM 20.1.2, 128 bits)" type=CPU vendor=0x10005 apiVersion=1.4.318
+2026/11/21 02:17:52 gophics/gpu: time=2026-11-21T02:17:52.280Z level=INFO msg="gles: instance created with EGL context" version="4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.4" renderer="llvmpipe (LLVM 20.1.2, 128 bits)"
+2026/11/21 02:17:52 gophics/gpu: time=2026-11-21T02:17:52.281Z level=INFO msg="gles: surface sharing Instance EGL context"
+2026/11/21 02:17:52 gophics/gpu: time=2026-11-21T02:17:52.281Z level=INFO msg="gles: adapter capabilities detected" vendor=Mesa renderer="llvmpipe (LLVM 20.1.2, 128 bits)" version="4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.4" gl="[4 5]" es=false glsl=450 extensions=229 features=33855 maxMSAA=4
+2026/11/21 02:17:52 gophics/gpu: time=2026-11-21T02:17:52.281Z level=INFO msg="wgpu: adapter selected" name="llvmpipe (LLVM 20.1.2, 128 bits)" backend=Vulkan type=CPU
+2026/11/21 02:17:52 INFO adapter selected name="llvmpipe (LLVM 20.1.2, 128 bits)" backend=Vulkan type=CPU
+2026/11/21 02:17:52 gophics/gpu: time=2026-11-21T02:17:52.299Z level=INFO msg="vulkan: using timeline semaphore fence (VK-IMPL-001)"
+2026/11/21 02:17:52 gophics/gpu: time=2026-11-21T02:17:52.299Z level=INFO msg="vulkan: maxMemoryAllocationSize queried" maxSize=2147483648 maxSizeMB=2048
+2026/11/21 02:17:52 gophics/gpu: time=2026-11-21T02:17:52.299Z level=INFO msg="vulkan: device created" name="llvmpipe (LLVM 20.1.2, 128 bits)" queueFamily=0 syncMode="timeline semaphore (VK-IMPL-001)"
+2026/11/21 02:17:52 gophics/gpu: time=2026-11-21T02:17:52.300Z level=INFO msg="vulkan: surface configuring" width=1280 height=800 format=BGRA8Unorm presentMode=FifoRelaxed
+2026/11/21 02:17:52 gophics/gpu: time=2026-11-21T02:17:52.301Z level=INFO msg="vulkan: swapchain created" extent=1280x800 images=4 format=44 presentMode=3
+2026/11/21 02:17:52 gophics/gpu: time=2026-11-21T02:17:52.302Z level=INFO msg=ggcanvas.NewWithScale logical_w=1280 logical_h=800 scale=1 physical_w=1280 physical_h=800
+2026/11/21 02:17:52 gophics/gpu: time=2026-11-21T02:17:52.302Z level=INFO msg="gpu-shared: software adapter detected — GPU features available, performance may be reduced" adapter="llvmpipe (LLVM 20.1.2, 128 bits)"
+2026/11/21 02:17:52 gophics/gpu: time=2026-11-21T02:17:52.302Z level=INFO msg="gpu-shared: rasterAtlas strategy — SDF pipelines skipped, device ready for textures" strategy="Raster Atlas (CPU shapes, GPU textures)" softwareMode=true
